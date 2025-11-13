@@ -4,7 +4,7 @@
 **Subtitle:** Why 95% of AI Agent Projects Fail—and 3 Frameworks, Right Infrastructure, and 90-Day Fix  
 **Author:** Ram Katamaraja, CEO of Colaberry Inc.  
 **Publisher:** Colaberry Press  
-**Version:** 1.1 (Persona & Citation Corrections)  
+**Version:** 1.5 (INPACT Diagram Order Corrected)  
 **Date:** November 12, 2025
 
 ---
@@ -28,11 +28,13 @@ Here's what's puzzling: AI agents are more accurate than ever. Models like Claud
 
 Users abandon agents they can't understand—regardless of technical sophistication. July 2025 research confirms what practitioners already know: transparency and design are the mediators of trust.[2] When users can't see how agents make decisions, research shows distrust commonly spreads to both the AI and the company behind it.[3] Technical excellence means nothing without earned trust.
 
-The data paints an even grimmer picture. Between February and July 2025, Deloitte's TrustID® survey tracked a **64-percentage-point collapse** in trust for agentic AI systems—from cautious optimism to widespread distrust in just five months.[4] What caused such a dramatic shift? Organizations rushed agents into production without addressing fundamental infrastructure gaps. Users experienced the consequences firsthand: agents that couldn't access current data, couldn't understand business context, couldn't explain their decisions, and couldn't maintain consistent performance over time.
+The data paints an even grimmer picture. Between February and July 2025, Deloitte's TrustID® survey tracked a **64-percentage-point collapse** in trust for agentic AI systems.[4] The decline accelerated sharply in the later months—trust in agentic AI that can act independently (not just make recommendations) plummeted **89% between May and July alone**, as employees grew uneasy with technology taking over decisions that were once theirs to make. The research, published in Harvard Business Review, shows this represents a shift from cautious optimism to widespread distrust in just months.
+
+What caused such a dramatic shift? Organizations rushed agents into production without addressing fundamental infrastructure gaps. Users experienced the consequences firsthand: agents that couldn't access current data, couldn't understand business context, couldn't explain their decisions, and couldn't maintain consistent performance over time.
 
 The trust collapse wasn't about the technology—Claude Sonnet 4, GPT-4, and other frontier models consistently demonstrate exceptional capabilities in controlled environments. The collapse was about the infrastructure gap between what these models can do and what enterprise systems can deliver to them.
 
-McKinsey's State of AI 2025 report quantified this gap: 57% of organizations admit their data infrastructure isn't ready for AI agents.[5] But "not ready" understates the problem. The research shows most organizations have infrastructure optimized for a completely different paradigm—one where humans analyze data, make decisions, and take action. Agents need something fundamentally different: real-time context, semantic understanding, dynamic permissions, continuous learning, cross-system integration, and complete auditability.
+McKinsey's State of AI 2025 report quantified this gap: **63% of organizations remain stuck in experimentation (32%) or pilot (30%) phases, unable to scale AI enterprise-wide**—a clear indicator that infrastructure isn't ready.[5] While 62% report experimenting with AI agents, McKinsey warns that "without reliable infrastructure and governance, early AI agent deployments are likely to hit performance and trust issues." The report emphasizes that agents require AI-ready data, and "most organizations simply aren't there yet."
 
 The primary reasons for failure weren't what most expected. Not model quality. Not regulation. Not talent shortage. The core barriers were:
 
@@ -120,25 +122,70 @@ Let's understand each one.
 
 ## The INPACT™ Framework: Six Needs Agents Must Have
 
+**Diagram 1: Human Era → Agent Era Shift**
+
+The fundamental change isn't the technology—it's whose needs we optimize for.
+
+```mermaid
+graph LR
+    subgraph HUMAN["<b>HUMAN ERA</b>"]
+        direction TB
+        H_DATA["<b>Data</b><br/><b>Historical Reports</b>"]
+        H_INTERFACE["<b>Interface</b><br/><b>Visual Dashboards</b>"]
+        H_ACTION["<b>Action</b><br/><b>Humans Decide & Act</b>"]
+        
+        H_DATA --> H_INTERFACE
+        H_INTERFACE --> H_ACTION
+    end
+    
+    HUMAN -.->|<b>Paradigm Shift</b>| AGENT
+    
+    subgraph AGENT["<b>AGENT ERA</b>"]
+        direction TB
+        A_DATA["<b>Data</b><br/><b>Real-Time Context</b>"]
+        A_INTERFACE["<b>Interface</b><br/><b>Natural Language</b>"]
+        A_ACTION["<b>Action</b><br/><b>Agents Act, Humans Oversee</b>"]
+        
+        A_DATA --> A_INTERFACE
+        A_INTERFACE --> A_ACTION
+    end
+    
+    style HUMAN fill:#fff5f5,stroke:#c62828,stroke-width:2px
+    style H_DATA fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style H_INTERFACE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style H_ACTION fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style AGENT fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style A_DATA fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A_INTERFACE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A_ACTION fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
+
 In his work on human psychology, Tony Robbins identified six fundamental needs that drive human behavior: certainty, variety, significance, connection, growth, and contribution. When all six needs are met, people experience fulfillment and engagement. When needs go unfulfilled, dissatisfaction and disengagement follow.[6]
 
 Agents have needs too—not psychological, but architectural. Analysis of successful deployments across agriculture, biotech, utilities, pharmaceuticals, banking, healthcare, and manufacturing reveals a pattern: **agents that fail always lack one or more of six fundamental infrastructure capabilities.** Agents that succeed deliver all six consistently.
 
-These six needs converge on a single business outcome: **Trust** (see Diagram 1).
+These six needs converge on a single business outcome: **Trust** (see Diagram 2).
 
 Trust isn't a seventh need—it's what users experience when infrastructure meets all six agent needs consistently. Just as human fulfillment emerges from satisfying all six psychological needs, user trust in AI agents emerges from infrastructure that delivers all six architectural needs without compromise.
 
-**Diagram 1: Six Agent Needs Converging to Deliver Trust**
+**Diagram 2: Six Agent Needs Converging to Deliver Trust**
 
 ```mermaid
 graph TB
-    subgraph NEEDS["<b>SIX AGENT NEEDS</b>"]
+    subgraph NEEDS["<b>SIX AGENT NEEDS (I-N-P-A-C-T)</b>"]
+        direction LR
         I["<b>I - INSTANT</b><br/><b>Speed builds confidence</b><br/>Sub-2-second responses"]
         N["<b>N - NATURAL</b><br/><b>Understanding builds connection</b><br/>Business language queries"]
         P["<b>P - PERMITTED</b><br/><b>Security builds safety</b><br/>Dynamic authorization"]
         A["<b>A - ADAPTIVE</b><br/><b>Improvement builds reliability</b><br/>Continuous learning"]
         C["<b>C - CONTEXTUAL</b><br/><b>Completeness builds accuracy</b><br/>Cross-system data"]
         T["<b>T - TRUSTED</b><br/><b>Transparency builds confidence</b><br/>Explainable + auditable"]
+        
+        I ~~~ N ~~~ P ~~~ A ~~~ C ~~~ T
     end
     
     subgraph HITL["<b>HUMAN-IN-THE-LOOP INTEGRATION</b>"]
@@ -316,7 +363,7 @@ You don't need Level 5 maturity to succeed. Level 3 is sufficient for most organ
 
 The three frameworks aren't independent—they're designed to work together as an integrated transformation methodology:
 
-**Diagram 2: Framework Integration Map**
+**Diagram 3: Framework Integration Map**
 
 ```mermaid
 graph TB
@@ -453,9 +500,9 @@ The assessment showed Sarah what was broken (INPACT™ score 28/100). Chapter 1 
 
 [3] Park, K., Yoon, H.Y. (July 2025). "AI Algorithm Transparency, Pipelines for Trust Not Prisms: Mitigating General Negative Attitudes and Enhancing Trust Toward AI." Humanities and Social Sciences Communications, Nature. https://www.nature.com/articles/s41599-025-05116-z
 
-[4] Deloitte (Q3 2025). "TrustID® Workforce AI Report Q3 2025." Analysis of trust collapse in agentic AI systems, February-July 2025 cohort. https://d1lzrgdbvkolkd.cloudfront.net/4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025_3aa42f916c.pdf. Related analysis: https://action.deloitte.com/insight/4749/the-real-barrier-to-ai-adoption-isnt-technologyits-trust
+[4] Deloitte (Q3 2025). "TrustID® Workforce AI Report Q3 2025." Analysis of trust collapse in agentic AI systems, February-July 2025 cohort: 64-percentage-point collapse overall, 89% drop May-July 2025. Primary report: https://d1lzrgdbvkolkd.cloudfront.net/4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025_3aa42f916c.pdf. Related analysis: https://action.deloitte.com/insight/4749/the-real-barrier-to-ai-adoption-isnt-technologyits-trust. Also cited in: Reichheld, A., Brodzik, C., & Youra, R. (November 6, 2025). "Workers Don't Trust AI. Here's How Companies Can Change That." Harvard Business Review. https://hbr.org/2025/11/workers-dont-trust-ai-heres-how-companies-can-change-that
 
-[5] McKinsey & Company (2025). "The State of AI: Global Survey 2025." Infrastructure readiness analysis across 2,000+ organizations. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+[5] McKinsey & Company (November 2025). "The State of AI in 2025: Agents, Innovation, and Transformation." Global survey of 1,993 respondents across 105 countries. Key findings: 63% of organizations in experimentation/pilot phase (not yet scaled), 62% experimenting with AI agents, infrastructure and governance gaps limiting deployment success. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
 [6] Robbins, T. (n.d.). "The 6 Human Needs: Why We Do What We Do." Tony Robbins. https://www.tonyrobbins.com/mind-meaning/do-you-need-to-feel-significant/
 
@@ -466,7 +513,7 @@ The assessment showed Sarah what was broken (INPACT™ score 28/100). Chapter 1 
 **Author:** Ram Katamaraja, CEO of Colaberry Inc.  
 **Publisher:** Colaberry Press  
 **Copyright:** © 2025 Colaberry Inc.  
-**Version:** 1.1 (Persona & Citation Corrections)
+**Version:** 1.5 (INPACT Diagram Order Corrected)
 
 ---
 
