@@ -1,10 +1,21 @@
 # CHAPTER 1 MAPPING DOCUMENT
 ## "Why 95% of Agent Pilots Fail"
 
-**Version:** 1.0  
-**Date:** November 12, 2025  
-**Status:** ðŸŽ¯ READY FOR REFACTORING  
-**Target File:** `manuscript/02_chapter_1_why_agents_fail.md`
+**Version:** 1.4  
+**Date:** November 13, 2025  
+**Status:** 🎯 READY FOR REFACTORING  
+**Target File:** `manuscript/02_chapter_1_why_agents_fail.md`  
+**Compliant With:** Book Structure Codex v6.3, Book Codex Master v2.4
+
+---
+
+## BOOK IDENTITY
+
+**Title:** Trust Before Intelligence  
+**Subtitle:** Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
+**Author:** Ram Katamaraja, CEO, Colaberry Inc.
+
+**Title Finalized:** November 13, 2025
 
 ---
 
@@ -903,9 +914,9 @@ Structure:
 ### Required Source Documents
 - âœ… `chapter_00_complete.md` (legacy Chapter 0 - crisis statistics)
 - âœ… `chapter_1_complete.md` (legacy Chapter 1 - Karpathy, paradigm shift)
-- âœ… `BOOK_STRUCTURE_CODEX_v6_1_FINAL.md` (structure specifications)
-- âœ… `BOOK_CODEX_MASTER_v2_2_FINAL.md` (Moore-Kim pattern)
-- âœ… Echo canonical data (from Book Structure Codex, lines 532-564)
+- âœ… `BOOK_STRUCTURE_CODEX_v6_3_TRANSPARENT.md` (structure specifications)
+- âœ… `BOOK_CODEX_MASTER_v2_4_TRANSPARENT.md` (Moore-Kim pattern)
+- âœ… Echo canonical data (from Book Structure Codex v6.3, line 670)
 - âœ… `4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025.pdf`
 - âœ… `The_State_of_AI__Global_Survey_2025___McKinsey.pdf`
 - âœ… `The_real_barrier_to_AI_adoption_isn_t_technology_it_s_trust_.pdf`
@@ -996,6 +1007,7 @@ Structure:
 | 1.1 | November 12, 2025 | **REVISED TO 30% NEW CONTENT STRATEGY:** Reduced new content from 40% (4,000w) to 30% (3,000w) based on audience analysis. Key changes: (1) Preserved emotional depth - kept board scene at 1,000w and pilots at 900w for maximum audience impact, (2) Added content mining guidance - identified 7,000w of high-quality reusable content from legacy chapters, (3) Removed compression strategy - strategic allocation hits 10,000w exactly without sacrificing quality, (4) Added detailed source breakdown showing legacy Ch 0 (38%) + legacy Ch 1 (32%) + new (30%). Rationale: 30% balances efficiency (70% reuse) with audience needs (emotional depth + current research + specific failures). | Claude |
 | 1.2 | November 12, 2025 | **PERSONA CORRECTIONS:** Updated Echo personas to match canonical data: (1) Sarah Cedao title corrected from "Dr. Sarah Cedao (CMIO)" to "Sarah Cedao, CTO", (2) CFO name corrected from "Alex Patel" to "Krish Yadav", (3) Added explicit note that CEO and board members remain unnamed per Moore/Kim pattern (consistent with existing chapters 0-4). | Claude |
 | 1.3 | November 12, 2025 | **MARCUS WILLIAMS TITLE UPDATE:** Changed Marcus Williams from "VP Data & Analytics" to "CDO (Chief Data Officer)" for organizational realism and stronger narrative authority. Creates peer C-level collaboration between CTO (Sarah - technology/infrastructure) and CDO (Marcus - data strategy/architecture), better reflects Echo's size (4 hospitals, 12K employees), and strengthens Marcus's voice when advocating for data readiness investment. | Claude |
+| 1.4 | November 13, 2025 | **CODEX v6.3 & v2.4 COMPLIANCE UPDATE:** (1) Corrected version number from 1.0 to 1.4, (2) Added Book Identity section with canonical title "Trust Before Intelligence", (3) Updated codex references from v6.1/v2.2 to v6.3/v2.4 (T=TRANSPARENT versions), (4) Added compliance statement to header, (5) Updated Echo canonical data reference to v6.3 line 670. Document already had excellent Architecture of Trust positioning, persona consistency (from v1.2/v1.3), and comprehensive content strategy. Mapping document now fully compliant with latest codex standards. | Claude |
 
 ---
 

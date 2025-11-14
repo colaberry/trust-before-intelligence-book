@@ -101,31 +101,43 @@ Everything Echo built served human decision-makers beautifully. Data warehouses 
 The paradigm had shifted beneath them.
 
 ```mermaid
-graph LR
-    subgraph HumanEra["<b>HUMAN ERA</b><br/><b>(BI, Analytics, Dashboards)</b>"]
-        H1["<b>Batch Processing</b><br/><b>Overnight ETL acceptable</b>"]
-        H2["<b>Static Reports</b><br/><b>Historical analysis</b>"]
-        H3["<b>Role-Based Access</b><br/><b>Fixed permissions</b>"]
-    end
+graph TB
+    H["<b>HUMAN ERA</b><br/><b>BI • Analytics • Dashboards</b>"]
     
-    subgraph AgentEra["<b>AGENT ERA</b><br/><b>(Autonomous, Real-Time, Adaptive)</b>"]
-        A1["<b>Real-Time Data</b><br/><b>Sub-second latency required</b>"]
-        A2["<b>Semantic Understanding</b><br/><b>Contextual intelligence</b>"]
-        A3["<b>Dynamic Authorization</b><br/><b>Context-aware permissions</b>"]
-    end
+    H1["<b>Batch Processing</b><br/><b>Overnight ETL</b>"]
+    H2["<b>Static Reports</b><br/><b>Historical Analysis</b>"]
+    H3["<b>Fixed Permissions</b><br/><b>Role-Based Access</b>"]
     
-    HumanEra -->|<b>Infrastructure Gap</b>| AgentEra
+    Gap["<b>⚠️ INFRASTRUCTURE GAP</b>"]
+    
+    A["<b>AGENT ERA</b><br/><b>Autonomous • Real-Time • Adaptive</b>"]
+    
+    A1["<b>Real-Time Data</b><br/><b>Sub-Second Latency</b>"]
+    A2["<b>Semantic Understanding</b><br/><b>Contextual Intelligence</b>"]
+    A3["<b>Dynamic Authorization</b><br/><b>Context-Aware Permissions</b>"]
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style HumanEra fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style H1 fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style H2 fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style H3 fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style AgentEra fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A1 fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A2 fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A3 fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
+    H --> H1
+    H --> H2
+    H --> H3
+    H1 --> Gap
+    H2 --> Gap
+    H3 --> Gap
+    Gap --> A
+    A --> A1
+    A --> A2
+    A --> A3
+    
+    style H fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
+    style H1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style H2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style H3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style Gap fill:#fff9e6,stroke:#f57c00,stroke-width:3px,color:#e65100
+    style A fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
@@ -171,16 +183,18 @@ Through analysis of 40+ enterprise implementations, we've identified six essenti
 
 ```mermaid
 graph TB
-    subgraph HITL["<b>HUMAN-IN-THE-LOOP</b>"]
-        I["<b>Instant</b><br/><b>Sub-second response</b>"]
-        N["<b>Natural</b><br/><b>Language understanding</b>"]
-        P["<b>Permitted</b><br/><b>Context-aware access</b>"]
-        A["<b>Adaptive</b><br/><b>Continuous learning</b>"]
-        C["<b>Contextual</b><br/><b>Cross-domain integration</b>"]
-        T["<b>Transparent</b><br/><b>Auditable reasoning</b>"]
+    subgraph HITL["<b>HUMAN-IN-THE-LOOP VALIDATION</b>"]
+        I["<b>I - Instant</b><br/><b>Sub-second response</b>"]
+        N["<b>N - Natural</b><br/><b>Language understanding</b>"]
+        P["<b>P - Permitted</b><br/><b>Context-aware access</b>"]
+        A["<b>A - Adaptive</b><br/><b>Continuous learning</b>"]
+        C["<b>C - Contextual</b><br/><b>Cross-domain integration</b>"]
+        T["<b>T - Transparent</b><br/><b>Auditable reasoning</b>"]
+        
+        Trust["<b>✅ TRUST</b><br/><b>Users Adopt Agents</b>"]
     end
     
-    I --> Trust["<b>✅ TRUST</b><br/><b>Users adopt agents</b>"]
+    I --> Trust
     N --> Trust
     P --> Trust
     A --> Trust
@@ -269,19 +283,13 @@ These aren't three separate frameworks to implement independently. They're three
 graph TB
     Title["<b>THE ARCHITECTURE OF TRUST</b><br/><b>Three Integrated Pillars</b>"]
     
-    subgraph Pillar1["<b>PILLAR 1</b>"]
-        INPACT["<b>INPACT™</b><br/><b>What Agents Need</b><br/>Instant • Natural • Permitted<br/>Adaptive • Contextual • Transparent"]
-    end
+    INPACT["<b>PILLAR 1: INPACT™</b><br/><b>What Agents Need</b><br/>Instant • Natural • Permitted<br/>Adaptive • Contextual • Transparent"]
     
-    subgraph Pillar2["<b>PILLAR 2</b>"]
-        Layers["<b>7-LAYER ARCHITECTURE</b><br/><b>How to Build It</b><br/>Storage → Real-Time → Semantic<br/>Knowledge → Intelligence<br/>Policy → Orchestration"]
-    end
+    Layers["<b>PILLAR 2: 7-LAYER ARCHITECTURE</b><br/><b>How to Build It</b><br/>Storage → Real-Time → Semantic<br/>Knowledge → Intelligence<br/>Policy → Orchestration"]
     
-    subgraph Pillar3["<b>PILLAR 3</b>"]
-        GOALS["<b>GOALS™</b><br/><b>How to Measure Success</b><br/>Governance • Observability<br/>Accessibility • Language • Soundness"]
-    end
+    GOALS["<b>PILLAR 3: GOALS™</b><br/><b>How to Measure Success</b><br/>Governance • Observability<br/>Accessibility • Language • Soundness"]
     
-    Echo["<b>ECHO'S JOURNEY</b><br/><b>28 → 52 → 72 → 85/100</b><br/>Week 0 → Week 4 → Week 8 → Week 10"]
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
     Title --> INPACT
     Title --> Layers
@@ -291,20 +299,10 @@ graph TB
     Layers -->|<b>Infrastructure Enables</b>| GOALS
     GOALS -->|<b>Measurement Validates</b>| INPACT
     
-    INPACT --> Echo
-    Layers --> Echo
-    GOALS --> Echo
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
     style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Pillar1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style Pillar2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style Pillar3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style INPACT fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Layers fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GOALS fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Echo fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Layers fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
@@ -338,15 +336,15 @@ Sarah Cedao needed an architecture. Chapter 1 shows you why infrastructure isn't
 
 ## References
 
-[1] MIT Sloan Management Review & MIT NANDA. (2025). "GenAI Reboot: The Divide Between GenAI Starters and GenAI Achievers." https://mitsmr.com/genai2025
+[1] Challapally, A., Pease, C., Raskar, R., & Chari, P. (2025, July). "The GenAI Divide: State of AI in Business 2025." MIT NANDA (Networked Agents and Decentralized AI). https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf
 
-[2] Lockey, S., et al. (2025). "Transparency and Design Mediate Trust in AI-Augmented Decision Making." *Nature Machine Intelligence*. https://doi.org/10.1038/s42256-025-00891-5
+[2] ScienceDirect (July 2025). "The Key Role of Design and Transparency in Enhancing Trust in AI-Powered Digital Agents." *Journal of Innovation & Knowledge*. https://www.sciencedirect.com/science/article/pii/S2444569X25001155
 
-[3] Longoni, C., & Cian, L. (2022). "Artificial Intelligence in Utilitarian vs. Hedonic Contexts: The 'Word-of-Machine' Effect." *Journal of Marketing*. https://doi.org/10.1177/0022242920957347
+[3] Park, K., Yoon, H.Y. (July 2025). "AI Algorithm Transparency, Pipelines for Trust Not Prisms: Mitigating General Negative Attitudes and Enhancing Trust Toward AI." *Humanities and Social Sciences Communications, Nature*. https://www.nature.com/articles/s41599-025-05116-z
 
-[4] Deloitte Consulting LLP. (2025). "Trust in AI: Q3 2025 Workforce TrustID® Index." Harvard Business Review Digital Article. https://hbr.org/2025/10/workers-dont-trust-ai-heres-how-companies-can-change-that
+[4] Deloitte (Q3 2025). "TrustID® Workforce AI Report Q3 2025." Analysis of trust collapse in agentic AI systems, February-July 2025 cohort: 64-percentage-point collapse overall, 89% drop May-July 2025. Primary report: https://d1lzrgdbvkolkd.cloudfront.net/4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025_3aa42f916c.pdf. Related analysis: https://action.deloitte.com/insight/4749/the-real-barrier-to-ai-adoption-isnt-technologyits-trust. Also cited in: Reichheld, A., Brodzik, C., & Youra, R. (November 6, 2025). "Workers Don't Trust AI. Here's How Companies Can Change That." *Harvard Business Review*. https://hbr.org/2025/11/workers-dont-trust-ai-heres-how-companies-can-change-that
 
-[5] McKinsey & Company. (2025). "The State of AI 2025: Global Survey on Artificial Intelligence." https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+[5] McKinsey & Company (November 2025). "The State of AI in 2025: Agents, Innovation, and Transformation." Global survey of 1,993 respondents across 105 countries. Key findings: 63% of organizations in experimentation/pilot phase (not yet scaled), 62% experimenting with AI agents, infrastructure and governance gaps limiting deployment success. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
 ---
 
