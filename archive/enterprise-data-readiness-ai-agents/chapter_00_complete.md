@@ -7,7 +7,7 @@
 **Version:** 3.3.0 (INPACT™ + HITL Integration Edition)  
 **Publication Date:** October 26, 2025
 **Version History:**
-- **v3.3.0** (November 7, 2025): HITL Integration—made human-in-the-loop explicit within INPACT™ framework by adding comprehensive HITL content to P (Permitted), T (Trusted), and A (Adaptive) sections. Added new bridge section "The HITL Pattern: How P, T, and A Work Together" (69 lines) explaining integration across three needs, graduated autonomy spectrum (5 levels), autonomy paradox resolution, and enterprise adoption pattern. Enhanced Diagram 2 with HITL subgraph showing P+T+A integration through escalation/explainability/learning loop, added "+ Escalation", "+ Human Feedback", "+ HITL verification" annotations to capability boxes, and orange highlighting for HITL pattern. Total additions: ~1,300 words (11% increase from 12,000 to ~13,300 words). Positions human oversight as enabler of autonomous operation rather than limitation. References Karpathy's Iron Man Suit model. Strengthens Trust First philosophy by making HITL unmissable as core framework component. Reading time increased to 40-45 minutes.
+- **v3.3.0** (November 7, 2025): HITL Integration—made human-in-the-loop explicit within INPACT™ framework by adding comprehensive HITL content to P (Permitted), T (Transparent), and A (Adaptive) sections. Added new bridge section "The HITL Pattern: How P, T, and A Work Together" (69 lines) explaining integration across three needs, graduated autonomy spectrum (5 levels), autonomy paradox resolution, and enterprise adoption pattern. Enhanced Diagram 2 with HITL subgraph showing P+T+A integration through escalation/explainability/learning loop, added "+ Escalation", "+ Human Feedback", "+ HITL verification" annotations to capability boxes, and orange highlighting for HITL pattern. Total additions: ~1,300 words (11% increase from 12,000 to ~13,300 words). Positions human oversight as enabler of autonomous operation rather than limitation. References Karpathy's Iron Man Suit model. Strengthens Trust First philosophy by making HITL unmissable as core framework component. Reading time increased to 40-45 minutes.
 - **v3.2.0** (October 26, 2025): Reordered architecture layers based on architectural first principles. Layer 1 is now Multi-Modal Storage (foundation), Layer 2 is now Real-Time Data Fabric (streaming), Layer 3 remains Universal Semantic Layer. All references updated throughout chapter.
 - **v3.1.0** (October 23, 2025): Initial INPACT™ Framework Edition with complete six agent needs framework.
 ---
@@ -31,7 +31,7 @@
   - [P - Permitted: Security Builds Safety](#p--permitted-security-builds-safety)
   - [A - Adaptive: Improvement Builds Reliability](#a--adaptive-improvement-builds-reliability)
   - [C - Contextual: Completeness Builds Accuracy](#c--contextual-completeness-builds-accuracy)
-  - [T - Trusted: Transparency Builds Confidence](#t--trusted-transparency-builds-confidence)
+  - [T - Transparent: Transparency Builds Confidence](#t--Transparent-transparency-builds-confidence)
 - [Bringing It Together](#bringing-it-together-the-6-agent-needs--capabilities--architecture)
 - [Summary: The Path Forward](#summary-the-path-forward)
 - [References and Citations](#references-and-citations)
@@ -142,9 +142,9 @@ The acronym is **INPACT™** (sounds like "impact"), and every letter represents
 - **P** – Permitted (dynamic authorization)
 - **A** – Adaptive (continuous learning)
 - **C** – Contextual (complete cross-system data)
-- **T** – Trusted (transparency through audit trails)
+- **T** – Transparent (transparency through audit trails)
 
-**Mnemonic:** "Agents must be Instant, Natural, Permitted, Adaptive, Contextual, and Trusted—addressing each need systematically to earn trust consistently."
+**Mnemonic:** "Agents must be Instant, Natural, Permitted, Adaptive, Contextual, and Transparent—addressing each need systematically to earn trust consistently."
 
 **Diagram 2a: Six Agent Needs Converging to Deliver Trust**
 
@@ -159,7 +159,7 @@ graph TB
     
     A["<b>A: Adaptive</b><br/>Continuous learning<br/><i>Improvement builds reliability</i>"]
     C["<b>C: Contextual</b><br/>Complete cross-system data<br/><i>Completeness builds accuracy</i>"]
-    T["<b>T: Trusted</b><br/>Transparency & audit<br/><i>Transparency builds confidence</i>"]
+    T["<b>T: Transparent</b><br/>Transparency & audit<br/><i>Transparency builds confidence</i>"]
     
     I --> CENTER
     N --> CENTER
@@ -236,7 +236,7 @@ graph TB
         P["<b>P - Permitted</b><br/>Dynamic authorization<br/><i>Security builds safety</i>"]
         A["<b>A - Adaptive</b><br/>Continuous learning<br/><i>Improvement builds reliability</i>"]
         C["<b>C - Contextual</b><br/>Complete cross-system data<br/><i>Completeness builds accuracy</i>"]
-        T["<b>T - Trusted</b><br/>Explainable decisions<br/><i>Transparency builds confidence</i>"]
+        T["<b>T - Transparent</b><br/>Explainable decisions<br/><i>Transparency builds confidence</i>"]
     end
     
     subgraph CAPABILITIES["<b>INFRASTRUCTURE</b>"]
@@ -860,7 +860,7 @@ Chapter 1 details how Layer 2's real-time data fabric streams changes continuous
 
 ---
 
-## T – Trusted: Transparency Builds Confidence
+## T – Transparent: Transparency Builds Confidence
 
 ### The Need: Explainable Decisions
 
@@ -916,7 +916,7 @@ graph TB
     style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
     style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
     
-    HITL_NOTE["<b>T (Trusted) explains WHY decisions were made:</b><br/>Complete transparency enables effective human verification,<br/>audit trails capture both agent reasoning and human approvals"]
+    HITL_NOTE["<b>T (Transparent) explains WHY decisions were made:</b><br/>Complete transparency enables effective human verification,<br/>audit trails capture both agent reasoning and human approvals"]
     style HITL_NOTE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
@@ -998,7 +998,7 @@ Chapter 1 details how Layer 5 implements comprehensive audit logging with busine
 
 ## The HITL Pattern: How P, T, and A Work Together
 
-You've seen how three INPACT™ needs—Permitted (P), Trusted (T), and Adaptive (A)—each contribute essential capabilities. But notice how they interconnect through a single architectural pattern: **human-in-the-loop (HITL)**.
+You've seen how three INPACT™ needs—Permitted (P), Transparent (T), and Adaptive (A)—each contribute essential capabilities. But notice how they interconnect through a single architectural pattern: **human-in-the-loop (HITL)**.
 
 This isn't three separate capabilities working independently. It's one integrated pattern that enables enterprise agent adoption:
 
@@ -1010,7 +1010,7 @@ This isn't three separate capabilities working independently. It's one integrate
 - Confidence thresholds (agent confidence <0.85 triggers manual review)
 - Patient preferences (user-initiated "This seems wrong" button triggers immediate review)
 
-**T (Trusted) explains WHY agents made decisions:**
+**T (Transparent) explains WHY agents made decisions:**
 - Complete transparency: reasoning, data sources, confidence scores, alternatives
 - Explainability enables effective human verification (not just "yes/no" but informed judgment)
 - Audit trails capture both agent reasoning and human approval decisions
@@ -1079,7 +1079,7 @@ We've examined six fundamental agent needs in the INPACT™ framework and the in
 | **P - Permitted** | Dynamic Authorization | Layer 5 (ABAC Governance)<br>Layer 6 (Audit Logging) |
 | **A - Adaptive** | Continuous Learning | Layer 6 (Observability & Feedback)<br>Layer 2 (Fresh Training Data)<br>Layer 4 (Retrieval Quality Metrics) |
 | **C - Contextual** | Cross-Domain Integration | Layer 2 (Real-Time Fabric)<br>Layer 3 (Entity Resolution)<br>Layer 1 (Multi-Modal Storage)<br>Layer 4 (RAG Infrastructure) |
-| **T - Trusted** | Auditability & Explainability | Layer 5 (Comprehensive Audit Logs)<br>Layer 6 (Trace IDs & Lineage)<br>Layer 4 (Citation & Confidence)<br>Layer 3 (Data Provenance) |
+| **T - Transparent** | Auditability & Explainability | Layer 5 (Comprehensive Audit Logs)<br>Layer 6 (Trace IDs & Lineage)<br>Layer 4 (Citation & Confidence)<br>Layer 3 (Data Provenance) |
 
 **The pattern is clear:** No single layer solves any need. All six needs require multiple layers working together as an integrated system.
 
@@ -1112,7 +1112,7 @@ We've examined six fundamental agent needs in the INPACT™ framework and the in
 3. **P - Permitted** - Dynamic ABAC authorization (not static RBAC)
 4. **A - Adaptive** - Continuous learning loops (not quarterly reviews)
 5. **C - Contextual** - Real-time cross-domain integration (not weekly batch)
-6. **T - Trusted** - Complete audit trails with explainability (not cryptic logs)
+6.**T - Transparent** - Complete audit trails with explainability (not cryptic logs)
 
 **The Infrastructure Capabilities:** Each agent need maps to specific technical capabilities your data systems must deliver: sub-second response architecture, semantic understanding, dynamic authorization, continuous learning, cross-domain integration, and auditability with explainability.
 

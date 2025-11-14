@@ -1,11 +1,15 @@
-# BOOK CODEX MASTER v2.1
+# BOOK CODEX MASTER v2.4
 
 **Complete Reference + Repeatable Chapter Patterns**
 
-**Date:** November 12, 2025  
-**Version:** 2.1 WITH REFINEMENTS  
+**Date:** November 13, 2025  
+**Version:** 2.4 (T = TRANSPARENT)  
 **Purpose:** Single source of truth + chapter templates for consistent execution  
-**Companion to:** BOOK_STRUCTURE_CODEX_v6_1_FINAL.md
+**Companion to:** BOOK_STRUCTURE_CODEX_v6.3_FINAL.md
+
+**Change in v2.4 (November 13, 2025):** Book title and subtitle finalized. Added BOOK IDENTITY section with canonical title: "Trust Before Intelligence: Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days"
+
+**Change in v2.3:** INPACT™ framework updated - T changed from "Trusted" to "Transparent" for conceptual consistency. Trust is the business outcome; Transparency is the infrastructure capability.
 
 ---
 
@@ -60,6 +64,26 @@ Throughout this book, we cite our sources extensively. When we say "agents need 
 
 **The Synthesis:**
 First principles thinking identifies **what** agents need. Standing on the shoulders of giants shows us **how** to build it. The combination produces frameworks that are both novel (agent-specific) and proven (built on decades of research).
+
+---
+
+## BOOK IDENTITY
+
+**Title:** Trust Before Intelligence  
+**Subtitle:** Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
+**Author:** Ram Katamaraja, CEO, Colaberry Inc.
+
+**Core Promise:** Transform data chaos into agent-ready infrastructure in 90 days using proven frameworks (INPACT™, GOALS™, 7-Layer Architecture).
+
+**Target Audience:** CDOs, CTOs, VPs Data & Analytics who need to make their enterprise data infrastructure agent-ready.
+
+**Book Positioning:**
+- This is NOT another AI/ML theory book
+- This IS a practical architecture blueprint with a proven 90-day transformation roadmap
+- Focuses on the infrastructure gap that causes 95% of agent projects to fail
+- Built on 40+ real implementations and 50,000+ daily agent interactions
+
+**Title Finalized:** November 13, 2025
 
 ---
 
@@ -200,13 +224,25 @@ Echo is a progressive company with investments in Lakehouse architecture, ML era
 
 ### 2.1 Framework Terms (Use Exactly)
 
+**Architecture of Trust™:**
+- **Definition:** The primary internal structural metaphor visualizing the three-pillar relationship between INPACT™ (agent needs), 7-Layer Architecture (technical stack), and GOALS™ (operational targets)
+- **Usage:** Capitalize as proper noun ("Architecture of Trust"), can shorten to "the architecture" after first reference in chapter
+- **Positioning:** Internal framework used throughout book but does NOT appear on cover
+- **The Three Pillars:**
+  1. **INPACT™** (What agents need) - User requirements and trust dimensions
+  2. **7-Layer Architecture** (How to build it) - Technical infrastructure stack
+  3. **GOALS™** (How to measure success) - Operational excellence targets
+- **Architectural Language:** Use foundation, pillars, capstone, blueprint, structure
+- **Diagram:** Always pair with triad diagram when first introducing in a chapter
+- **First mention:** "Architecture of Trust" (proper noun, no ™ on "Trust")
+
 **INPACT™:**
 - **Instant:** Sub-second latency, real-time response
 - **Natural:** Language understanding, conversational interaction
 - **Permitted:** RBAC, policy enforcement, auditable access
 - **Adaptive:** Learns from feedback, self-improvement mechanisms, iterative refinement
 - **Contextual:** Situational awareness, history integration, environment understanding
-- **Trusted:** Auditable, explainable, HITL validation
+- **Transparent:** Auditable, explainable, HITL validation
 - **Scoring:** 0-100 scale, 70+ = agent-ready
 - **First mention:** With ™, then plain "INPACT"
 
@@ -227,6 +263,12 @@ Echo is a progressive company with investments in Lakehouse architecture, ML era
 6. Policy & Permission Mesh
 7. Conversational Interface & Reasoning Engine
 
+**VERT™ (Separate from Architecture of Trust):**
+- **Definition:** Quality certification framework for content validation
+- **Dimensions:** Verification, Ethics, Reliability, Transparency
+- **Purpose:** Chapter-level quality assurance (distinct from the Architecture of Trust operational triad)
+- **Usage:** Used for quality audits, not part of the three-pillar architecture metaphor
+
 ### 2.2 Technical Terms (Standard)
 
 - **Agent-Ready™:** Infrastructure scoring 70+ on INPACT™
@@ -239,12 +281,12 @@ Echo is a progressive company with investments in Lakehouse architecture, ML era
 
 ### 2.3 Prohibited Terms
 
-❌ **Never use:**
+âŒ **Never use:**
 - "Revolutionary," "game-changing," "transformative"
 - "Industry-leading," "best-in-class," "cutting-edge"
 - "Next-generation," "unparalleled," "groundbreaking"
 
-✅ **Use instead:**
+âœ… **Use instead:**
 - Evidence-based, specific metrics
 - Comparative analysis with citations
 - Quantified outcomes
@@ -270,35 +312,35 @@ Echo is a progressive company with investments in Lakehouse architecture, ML era
 Every chapter (except Ch 0) follows this 5-movement structure:
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│ MOVEMENT 1: MOORE OPENING (15-20% of chapter)          │
-│ Framework introduction, industry context, problem def   │
-│ Style: Authoritative, data-driven, structured          │
-└─────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│ MOVEMENT 2: KIM TRANSITION (5-10% of chapter)          │
-│ "Sarah faced this exact problem..."                    │
-│ Style: Narrative, human, relatable                     │
-└─────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│ MOVEMENT 3: MOORE DEEP-DIVE (50-60% of chapter)        │
-│ Technical architecture, implementation patterns         │
-│ Style: Detailed, prescriptive, tool-specific           │
-└─────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│ MOVEMENT 4: KIM VALIDATION (10-15% of chapter)         │
-│ Echo's implementation, results, lessons learned         │
-│ Style: Outcome-focused, metric-rich, honest            │
-└─────────────────────────────────────────────────────────┘
-                            ↓
-┌─────────────────────────────────────────────────────────┐
-│ MOVEMENT 5: MOORE SUMMARY + KIM HOOK (5-10%)           │
-│ Key takeaways (Moore) + cliffhanger to next (Kim)      │
-│ Style: Concise summary + emotional momentum            │
-└─────────────────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ MOVEMENT 1: MOORE OPENING (15-20% of chapter)          â”‚
+â”‚ Framework introduction, industry context, problem def   â”‚
+â”‚ Style: Authoritative, data-driven, structured          â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                            â†“
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ MOVEMENT 2: KIM TRANSITION (5-10% of chapter)          â”‚
+â”‚ "Sarah faced this exact problem..."                    â”‚
+â”‚ Style: Narrative, human, relatable                     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                            â†“
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ MOVEMENT 3: MOORE DEEP-DIVE (50-60% of chapter)        â”‚
+â”‚ Technical architecture, implementation patterns         â”‚
+â”‚ Style: Detailed, prescriptive, tool-specific           â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                            â†“
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ MOVEMENT 4: KIM VALIDATION (10-15% of chapter)         â”‚
+â”‚ Echo's implementation, results, lessons learned         â”‚
+â”‚ Style: Outcome-focused, metric-rich, honest            â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
+                            â†“
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ MOVEMENT 5: MOORE SUMMARY + KIM HOOK (5-10%)           â”‚
+â”‚ Key takeaways (Moore) + cliffhanger to next (Kim)      â”‚
+â”‚ Style: Concise summary + emotional momentum            â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ### 3.3 Voice Distinctions
@@ -989,7 +1031,7 @@ graph TB
     Framework --> P[**Permitted**]
     Framework --> A[**Adaptive**]
     Framework --> C[**Contextual**]
-    Framework --> T[**Trusted**]
+    Framework --> T[**Transparent**]
     
     style Framework fill:#DC143C,stroke:#8B0000,color:#FFFFFF
     style I fill:#20B2AA,stroke:#008080
@@ -1034,7 +1076,89 @@ graph LR
     style copyright fill:none,stroke:none,color:#808080
 ```
 
-### 5.2 Tables
+#### TEMPLATE 5: Architecture of Trust Triad (CRITICAL)
+
+**Usage:** Display when introducing or referencing the three-pillar framework relationship
+
+**When to Use:**
+- Chapter 0: First introduction of the Architecture of Trust
+- Chapter 2: Deep dive into INPACT™ pillar
+- Chapter 4-7: Building the 7-Layer pillar
+- Chapter 8: Introduction of GOALS™ pillar
+- Any chapter discussing relationships between the three frameworks
+
+```mermaid
+graph TB
+    subgraph AOT[" "]
+        Trust[**Architecture of Trust**<br/>Foundation: Trust-First Agent Infrastructure]
+    end
+    
+    Trust --> INPACT[**INPACT™**<br/>What Agents Need<br/>I-N-P-A-C-T]
+    Trust --> Layers[**7-Layer Architecture**<br/>How to Build It<br/>Storage → Orchestration]
+    Trust --> GOALS[**GOALS™**<br/>How to Measure Success<br/>G-O-A-L-S]
+    
+    INPACT -.->|Drives Requirements| Layers
+    Layers -.->|Enables Fulfillment| INPACT
+    Layers -.->|Produces Metrics| GOALS
+    GOALS -.->|Validates Architecture| Layers
+    GOALS -.->|Confirms Trust| INPACT
+    INPACT -.->|Defines Targets| GOALS
+    
+    style Trust fill:#DC143C,stroke:#8B0000,stroke-width:3px,color:#FFFFFF
+    style INPACT fill:#20B2AA,stroke:#008080,stroke-width:2px
+    style Layers fill:#20B2AA,stroke:#008080,stroke-width:2px
+    style GOALS fill:#20B2AA,stroke:#008080,stroke-width:2px
+    
+    copyright[© 2025 Colaberry Inc.]
+    style copyright fill:none,stroke:none,color:#808080
+```
+
+**Diagram Variations:**
+
+**Simplified Triad (for repeated references):**
+```mermaid
+graph LR
+    I[**INPACT™**<br/>What]
+    L[**7 Layers**<br/>How]
+    G[**GOALS™**<br/>Measure]
+    
+    I <--> L
+    L <--> G
+    G <--> I
+    
+    style I fill:#20B2AA,stroke:#008080
+    style L fill:#20B2AA,stroke:#008080
+    style G fill:#20B2AA,stroke:#008080
+    
+    copyright[© 2025 Colaberry Inc.]
+    style copyright fill:none,stroke:none,color:#808080
+```
+
+**Chapter-Specific Focus (highlight current pillar):**
+```mermaid
+graph TB
+    Trust[**Architecture of Trust**]
+    
+    Trust --> INPACT[**INPACT™**<br/>⬅ THIS CHAPTER]
+    Trust --> Layers[**7 Layers**]
+    Trust --> GOALS[**GOALS™**]
+    
+    style Trust fill:#DC143C,stroke:#8B0000,color:#FFFFFF
+    style INPACT fill:#DC143C,stroke:#8B0000,stroke-width:3px,color:#FFFFFF
+    style Layers fill:#D3D3D3,stroke:#808080
+    style GOALS fill:#D3D3D3,stroke:#808080
+    
+    copyright[© 2025 Colaberry Inc.]
+    style copyright fill:none,stroke:none,color:#808080
+```
+
+**Placement Guidelines:**
+- **First use in chapter:** Full triad diagram with Architecture of Trust label
+- **Repeated references:** Simplified triad or text reference only
+- **Chapter focus:** Use highlight version to show which pillar is being discussed
+- **Transitions:** Use full triad when transitioning between major framework sections
+
+
 
 **Standard Table Format:**
 
@@ -1073,72 +1197,72 @@ graph LR
 
 | Phase      | Week | Activity | Owner | Status      | Gate     |
 |------------|------|----------|-------|-------------|----------|
-| Foundation | 1-4  | Details  | Role  | ✅/⏳/❌    | Criteria |
+| Foundation | 1-4  | Details  | Role  | âœ…/â³/âŒ    | Criteria |
 
 ### 5.3 Callout Boxes
 
 **Standard Callout Types:**
 
-#### 💡 KEY INSIGHT
+#### ðŸ’¡ KEY INSIGHT
 
 ```
-┌────────────────────────────────────────────┐
-│ 💡 KEY INSIGHT                              │
-│                                            │
-│ Single most important takeaway             │
-│ Evidence or example                        │
-│ Action implication                         │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ’¡ KEY INSIGHT                              â”‚
+â”‚                                            â”‚
+â”‚ Single most important takeaway             â”‚
+â”‚ Evidence or example                        â”‚
+â”‚ Action implication                         â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
-#### ⚠️ WARNING
+#### âš ï¸ WARNING
 
 ```
-┌────────────────────────────────────────────┐
-│ ⚠️ WARNING                                  │
-│                                            │
-│ What can go wrong                          │
-│ How to avoid it                            │
-│ Recovery if it happens                     │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ âš ï¸ WARNING                                  â”‚
+â”‚                                            â”‚
+â”‚ What can go wrong                          â”‚
+â”‚ How to avoid it                            â”‚
+â”‚ Recovery if it happens                     â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
-#### ✅ CHECKLIST
+#### âœ… CHECKLIST
 
 ```
-┌────────────────────────────────────────────┐
-│ ✅ PRE-FLIGHT CHECKLIST                     │
-│                                            │
-│ □ Item 1: Description                      │
-│ □ Item 2: Description                      │
-│ □ Item 3: Description                      │
-│ □ Item 4: Description                      │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ âœ… PRE-FLIGHT CHECKLIST                     â”‚
+â”‚                                            â”‚
+â”‚ â–¡ Item 1: Description                      â”‚
+â”‚ â–¡ Item 2: Description                      â”‚
+â”‚ â–¡ Item 3: Description                      â”‚
+â”‚ â–¡ Item 4: Description                      â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
-#### 🏥 ECHO EXAMPLE
+#### ðŸ¥ ECHO EXAMPLE
 
 ```
-┌────────────────────────────────────────────┐
-│ 🏥 ECHO HEALTH SYSTEMS                      │
-│                                            │
-│ Context: "Week X, Sarah/Marcus/Jamie..."   │
-│ Challenge: Specific problem                │
-│ Solution: What they did                    │
-│ Result: Metric-based outcome               │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ¥ ECHO HEALTH SYSTEMS                      â”‚
+â”‚                                            â”‚
+â”‚ Context: "Week X, Sarah/Marcus/Jamie..."   â”‚
+â”‚ Challenge: Specific problem                â”‚
+â”‚ Solution: What they did                    â”‚
+â”‚ Result: Metric-based outcome               â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
-#### 📊 BY THE NUMBERS
+#### ðŸ“Š BY THE NUMBERS
 
 ```
-┌────────────────────────────────────────────┐
-│ 📊 BY THE NUMBERS                           │
-│                                            │
-│ • Metric 1: XX% (source)                   │
-│ • Metric 2: $XXM (source)                  │
-│ • Metric 3: XXx improvement (source)       │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ“Š BY THE NUMBERS                           â”‚
+â”‚                                            â”‚
+â”‚ ”¢ Metric 1: XX% (source)                   â”‚
+â”‚ ”¢ Metric 2: $XXM (source)                  â”‚
+â”‚ ”¢ Metric 3: XXx improvement (source)       â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
@@ -1517,7 +1641,7 @@ Before you start writing:
 
 #### Word Count:
 
-- [ ] Within ±10% of target for chapter type
+- [ ] Within Â±10% of target for chapter type
 - [ ] Overflow content moved to appendices if needed
 - [ ] Sections balanced (no 1-page then 12-page section)
 
@@ -1581,7 +1705,7 @@ Before considering chapter complete:
 - [ ] Actionable takeaways clear
 - [ ] Bridge to next chapter compelling
 - [ ] All checklists above completed
-- [ ] VERT score ≥9.0 on all dimensions
+- [ ] VERT score â‰¥9.0 on all dimensions
 - [ ] Peer review completed (if available)
 - [ ] Author satisfied with quality
 
@@ -1673,7 +1797,7 @@ Before considering chapter complete:
 - Historical awareness
 - Situational understanding
 
-#### Trusted (7 questions):
+#### Transparent (7 questions):
 - Explainability mechanisms
 - HITL workflows
 - Citation systems
@@ -1682,7 +1806,7 @@ Before considering chapter complete:
 #### Scoring Algorithm:
 
 - 1-6 scale per question
-- 6-42 raw score per dimension (7 questions × 6 levels)
+- 6-42 raw score per dimension (7 questions Ã— 6 levels)
 - Normalized to 0-100 per dimension
 - Overall score: Average of 6 dimensions
 - Minimum question score: 28/100 (all 1s)
@@ -1705,7 +1829,7 @@ Before considering chapter complete:
 2. **Dimension Breakdown** (1 page)
    - Radar chart: 6 dimensions
    - Score per dimension
-   - Strengths (≥75): "Your advantages"
+   - Strengths (â‰¥75): "Your advantages"
    - Gaps (<70): "Priority focus areas"
    - Benchmark: Industry average per dimension
 
@@ -1718,7 +1842,7 @@ Before considering chapter complete:
      - Quick wins available
 
 4. **Prioritization Matrix** (1 page)
-   - 2×2 matrix: Impact × Effort
+   - 2Ã—2 matrix: Impact Ã— Effort
    - Dimensions plotted
    - Recommended sequence (1-6)
    - Rationale for priority
@@ -1772,12 +1896,12 @@ Q: [Dimension] - [Specific Capability]
 [Clear question text with context]
 
 Select one:
-○ 6 - Optimized: [Detailed description, example]
-○ 5 - Advanced: [Detailed description, example]
-○ 4 - Proficient: [Detailed description, example]
-○ 3 - Developing: [Detailed description, example]
-○ 2 - Initial: [Detailed description, example]
-○ 1 - Not Present: [Detailed description, example]
+â—‹ 6 - Optimized: [Detailed description, example]
+â—‹ 5 - Advanced: [Detailed description, example]
+â—‹ 4 - Proficient: [Detailed description, example]
+â—‹ 3 - Developing: [Detailed description, example]
+â—‹ 2 - Initial: [Detailed description, example]
+â—‹ 1 - Not Present: [Detailed description, example]
 
 [?] Hover for explanation
 ```
@@ -1817,21 +1941,21 @@ Select one:
 **Template for CTA Boxes:**
 
 ```
-┌────────────────────────────────────────────┐
-│ 📊 MEASURE YOUR READINESS                   │
-│                                            │
-│ Take the INPACT™ Assessment to benchmark   │
-│ your agent readiness across all six        │
-│ dimensions.                                │
-│                                            │
-│ • 43 questions, 20 minutes                 │
-│ • Immediate customized roadmap             │
-│ • Technology recommendations               │
-│ • ROI projection based on your gaps        │
-│                                            │
-│ [QR CODE] colaberry.ai/assessment          │
-│           aiXcelerator.ai/assess           │
-└────────────────────────────────────────────┘
+â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+â”‚ ðŸ“Š MEASURE YOUR READINESS                   â”‚
+â”‚                                            â”‚
+â”‚ Take the INPACT™ Assessment to benchmark   â”‚
+â”‚ your agent readiness across all six        â”‚
+â”‚ dimensions.                                â”‚
+â”‚                                            â”‚
+â”‚ ”¢ 43 questions, 20 minutes                 â”‚
+â”‚ ”¢ Immediate customized roadmap             â”‚
+â”‚ ”¢ Technology recommendations               â”‚
+â”‚ ”¢ ROI projection based on your gaps        â”‚
+â”‚                                            â”‚
+â”‚ [QR CODE] colaberry.ai/assessment          â”‚
+â”‚           aiXcelerator.ai/assess           â”‚
+â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
 ```
 
 ---
@@ -1894,7 +2018,212 @@ this book are real and proprietary to Colaberry Inc. INPACT™ and
 GOALS™ are trademarks of Colaberry Inc.
 ```
 
-### 10.2 Trademark First Use
+### 10.2 Architecture of Trust Language Standards
+
+#### 10.2.1 Core Metaphor Usage
+
+**The Architecture of Trust is the primary structural metaphor** used throughout the book to unify INPACT™, 7-Layer Architecture, and GOALS™.
+
+**Capitalization:**
+- "Architecture of Trust" (proper noun, capitalize all words)
+- Subsequent references: "the architecture" (lowercase after first use in chapter)
+- Never: "architecture of trust" (incorrect capitalization)
+
+**First Introduction (Chapter 0):**
+```
+The Architecture of Trust provides a comprehensive blueprint for 
+agent-ready infrastructure. This architecture rests on three pillars:
+
+1. **INPACT™** defines what agents need from infrastructure
+2. **7-Layer Architecture** specifies how to build that infrastructure  
+3. **GOALS™** establishes how to measure and maintain it
+
+Together, these three frameworks form an integrated system—each pillar 
+reinforcing the others to create the foundation for trustworthy AI agents.
+```
+
+**Subsequent Chapter Introductions:**
+```
+[After showing triad diagram]
+
+In this chapter, we focus on [INPACT/7-Layers/GOALS], the [first/second/third] 
+pillar of the Architecture of Trust. Understanding how this pillar [supports/
+enables/validates] the others is essential for...
+```
+
+#### 10.2.2 Architectural Language Patterns
+
+**Use architectural vocabulary consistently:**
+
+**Foundation Language:**
+- "This chapter lays the foundation for..."
+- "The foundational requirement is..."
+- "Building on this foundation..."
+- "Without a solid foundation in [X]..."
+
+**Pillar Language:**
+- "The three pillars of the Architecture of Trust are..."
+- "This pillar supports..."
+- "Each pillar reinforces the others..."
+- "The [INPACT/7-Layer/GOALS] pillar provides..."
+
+**Blueprint Language:**
+- "The architecture blueprint specifies..."
+- "Following this blueprint ensures..."
+- "The blueprint calls for..."
+- "This section of the blueprint addresses..."
+
+**Structure Language:**
+- "The structural integrity of..."
+- "This structural element..."
+- "Building the structure layer by layer..."
+- "Structural dependencies between..."
+
+**Capstone Language (for final chapters):**
+- "This capstone element..."
+- "The capstone of the architecture..."
+- "Completing the structure requires..."
+
+#### 10.2.3 Triad Diagram Integration
+
+**When to Display the Triad Diagram:**
+
+**REQUIRED (must display):**
+- Chapter 0: First introduction of Architecture of Trust
+- Chapter 2: When beginning INPACT™ deep dive
+- Chapter 4: When beginning 7-Layer Architecture deep dive  
+- Chapter 8: When beginning GOALS™ deep dive
+- Any chapter that explicitly discusses relationships between all three frameworks
+
+**OPTIONAL (use judgment):**
+- Chapters 1, 3: Can reference verbally without diagram
+- Chapters 5-7: Can show simplified version highlighting 7-Layer pillar
+- Chapters 9-12: Can reference verbally or use simplified triad
+
+**Diagram Introduction Pattern:**
+
+```
+[Diagram appears]
+
+**Figure [X]: The Architecture of Trust**
+
+The Architecture of Trust visualizes the integrated relationship 
+between our three frameworks. INPACT™ defines the trust requirements 
+agents must fulfill. The 7-Layer Architecture provides the technical 
+blueprint for building infrastructure that meets those requirements. 
+GOALS™ establishes the operational disciplines needed to maintain 
+agent-ready capabilities over time.
+
+These are not separate frameworks—they are three perspectives on a 
+unified architecture. As we explore each pillar in depth, keep this 
+integrated view in mind.
+```
+
+#### 10.2.4 Cross-Pillar References
+
+**When discussing relationships between frameworks:**
+
+âœ… **GOOD (architectural throughline):**
+```
+The Instant dimension of INPACT™ drives our requirement for real-time 
+data fabric (Layer 2 of the 7-Layer Architecture), which in turn must 
+be continuously validated through the Observability pillar of GOALS™.
+```
+
+âœ… **GOOD (pillar reinforcement):**
+```
+This architectural decision strengthens both the INPACT™ pillar (by 
+enabling Natural language processing) and the GOALS™ pillar (by 
+providing accessibility metrics).
+```
+
+âŒ **BAD (disconnected):**
+```
+INPACT™ requires instant response. Separately, Layer 2 provides 
+streaming. Also, GOALS™ tracks latency.
+```
+
+#### 10.2.5 Chapter-Level Architecture Positioning
+
+**Every chapter should include** (in Moore opening or Kim transition):
+
+1. **Which pillar(s) this chapter addresses**
+   - "This chapter builds the [first/second/third] pillar..."
+   - "We now turn to the [INPACT/7-Layer/GOALS] pillar..."
+
+2. **How it relates to other pillars**
+   - "While focused on Layer 3, this chapter shows how semantic 
+     understanding enables both Natural (INPACT™) and Language (GOALS™)..."
+
+3. **Where it sits in the overall architecture**
+   - "This forms the foundation/middle layers/capstone of the 
+     Architecture of Trust..."
+
+**Template for Chapter Opening:**
+```
+[After hook and problem statement]
+
+This chapter [builds/explores/completes] the [X] pillar of the 
+Architecture of Trust—[brief pillar description]. While we focus on 
+[specific aspect], keep in mind how this pillar [reinforces/depends on/
+validates] the other elements of the architecture.
+
+[Show triad diagram if first mention in chapter]
+```
+
+#### 10.2.6 Progressive Architecture Building
+
+**The architecture should feel like it's being constructed across the book:**
+
+**Early Chapters (1-3):**
+- Establish the need for architecture
+- Introduce the three pillars
+- Explain why they must work together
+
+**Middle Chapters (4-9):**
+- Build each pillar in detail
+- Show structural connections
+- Demonstrate reinforcement patterns
+
+**Later Chapters (10-12):**
+- Complete the structure
+- Validate the architecture
+- Show the finished building in operation
+
+**Language Evolution:**
+```
+Chapter 0:  "We'll build this architecture..."
+Chapter 2:  "The first pillar takes shape..."
+Chapter 4:  "Now we construct the technical foundation..."
+Chapter 7:  "With the 7-Layer pillar complete..."
+Chapter 8:  "The final pillar ensures lasting stability..."
+Chapter 12: "The complete Architecture of Trust, now operational..."
+```
+
+#### 10.2.7 Architecture of Trust vs. VERT
+
+**CRITICAL DISTINCTION:**
+
+**Architecture of Trust:**
+- Internal book structure and metaphor
+- Three-pillar operational framework (INPACT™ + 7-Layers + GOALS™)
+- Reader-facing concept used throughout chapters
+- About building and operating agent infrastructure
+
+**VERT:**
+- Quality certification framework
+- Four dimensions (Verification, Ethics, Reliability, Transparency)
+- Internal quality assurance tool
+- About validating chapter content quality
+
+**Never confuse these:**
+âŒ "The fourth pillar of the Architecture of Trust is VERT..." (WRONG)
+âœ… "We validate our Architecture of Trust using VERT certification..." (CORRECT)
+
+âŒ "VERT is part of the architectural blueprint..." (WRONG)
+âœ… "VERT certifies the quality of our architectural guidance..." (CORRECT)
+
+### 10.3 Trademark First Use
 
 **First mention in each chapter:**
 - INPACT™ Framework (with ™)
@@ -1915,7 +2244,7 @@ enterprise deployments across multiple industries and Fortune 2000
 clients.
 ```
 
-### 10.3 Prohibited Marketing Language
+### 10.4 Prohibited Marketing Language
 
 **Never use:**
 - Revolutionary, transformative, game-changing
@@ -1932,7 +2261,7 @@ clients.
 - Qualified: "in our experience," "across [X] clients"
 - Humble: "One approach," "a methodology," "tested patterns"
 
-### 10.4 Numbers and Metrics
+### 10.5 Numbers and Metrics
 
 **Formatting:**
 - Large numbers: 50,000 (use commas)
@@ -1948,15 +2277,15 @@ clients.
 
 **Comparison Format:**
 
-❌ **BAD:** "Dramatically faster query times"
+âŒ **BAD:** "Dramatically faster query times"
 
-✅ **GOOD:** "Query time reduced from 72 hours to 12 seconds (600x improvement)"
+âœ… **GOOD:** "Query time reduced from 72 hours to 12 seconds (600x improvement)"
 
-❌ **BAD:** "Significant cost savings"
+âŒ **BAD:** "Significant cost savings"
 
-✅ **GOOD:** "$1.23M investment, $5.87M in Year 1 benefits, 477% ROI"
+âœ… **GOOD:** "$1.23M investment, $5.87M in Year 1 benefits, 477% ROI"
 
-### 10.5 Voice Consistency Enforcement
+### 10.6 Voice Consistency Enforcement
 
 **Moore Voice Red Flags (revise if present):**
 - "Sarah felt..." (too Kim-like)
@@ -1993,7 +2322,7 @@ If a Kim→Moore transition feels abrupt:
 **Columns:** Week #, Start Date, End Date, Phase, Milestone, Owner, RAG Status, Notes
 
 - 13 rows (Weeks 0-12)
-- RAG Key: 🟢 On Track | 🟡 At Risk | 🔴 Blocked
+- RAG Key: 🟢 On Track | ðŸŸ¡ At Risk | ðŸ”´ Blocked
 - Conditional formatting by status
 
 #### Tab 2: INPACT™ Progress Tracker
@@ -2150,11 +2479,23 @@ If a Kim→Moore transition feels abrupt:
 
 ## 13. DOCUMENT CONTROL & VERSIONING
 
-**Version:** 2.2  
-**Date:** November 12, 2025  
+**Version:** 2.4  
+**Date:** November 13, 2025  
 **Status:** 🟢 PRODUCTION - Moore-Kim Pattern + First Principles  
 **Owner:** Ram Katamaraja  
 **Co-Author:** Claude AI (Anthropic)
+
+### Changes from v2.3:
+
+1. **Book Title and Subtitle Finalized** (November 13, 2025)
+   - Added new BOOK IDENTITY section with canonical title/subtitle
+   - **Title:** Trust Before Intelligence
+   - **Subtitle:** Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days
+   - Emphasizes "architecture blueprint" as key differentiator
+   - More concise than previous working subtitle
+
+2. **Updated Companion Reference**
+   - Now references BOOK_STRUCTURE_CODEX_v6.3_FINAL.md (was v6.1)
 
 ### Changes from v2.1:
 
@@ -2211,7 +2552,7 @@ If a Kim→Moore transition feels abrupt:
 
 ### Related Documents:
 
-- BOOK_STRUCTURE_CODEX_v6_1_FINAL.md (primary structure)
+- BOOK_STRUCTURE_CODEX_v6.3_FINAL.md (primary structure)
 - REFACTORING_100_PERCENT_REUSE.md (content reuse strategy)
 - TCC v1.2.0 (writing standards)
 - Trademark Codex v1.0 (IP protection)
@@ -2228,4 +2569,4 @@ INPACT™ and GOALS™ are trademarks of Colaberry Inc.
 
 ---
 
-**END OF BOOK CODEX MASTER v2.2**
+**END OF BOOK CODEX MASTER v2.4**

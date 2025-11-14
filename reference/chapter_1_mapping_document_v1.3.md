@@ -3,7 +3,7 @@
 
 **Version:** 1.0  
 **Date:** November 12, 2025  
-**Status:** 🎯 READY FOR REFACTORING  
+**Status:** ðŸŽ¯ READY FOR REFACTORING  
 **Target File:** `manuscript/02_chapter_1_why_agents_fail.md`
 
 ---
@@ -20,15 +20,15 @@
 
 ### Structural Requirements (Moore-Kim 5-Movement Pattern)
 
-**⭐ 30% NEW CONTENT STRATEGY**
+**â­ 30% NEW CONTENT STRATEGY**
 
 This mapping uses a **30% new content / 70% reuse** approach based on audience analysis:
 
 **Why 30% is optimal:**
-- ✅ **Preserves emotional depth:** Board scene (1,000w) and detailed pilots (900w) create relatability
-- ✅ **Includes current research:** 2025 Deloitte/McKinsey data (800w) gives CDOs ammunition for their boards
-- ✅ **Leverages existing quality:** 7,000w of excellent content already exists in legacy chapters
-- ✅ **Maximizes efficiency:** No wasted effort rewriting what already works
+- âœ… **Preserves emotional depth:** Board scene (1,000w) and detailed pilots (900w) create relatability
+- âœ… **Includes current research:** 2025 Deloitte/McKinsey data (800w) gives CDOs ammunition for their boards
+- âœ… **Leverages existing quality:** 7,000w of excellent content already exists in legacy chapters
+- âœ… **Maximizes efficiency:** No wasted effort rewriting what already works
 
 **What we DON'T rewrite:**
 - Karpathy Software 3.0 paradigm (already excellent)
@@ -43,39 +43,108 @@ This mapping uses a **30% new content / 70% reuse** approach based on audience a
 ```
 [MOVEMENT 1: MOORE OPENING - 5 pages]
 Section 1: The Human-AI Trust Gap
-├─ Deloitte TrustID®: -64% trust collapse
-├─ McKinsey: 57% orgs not ready
-└─ Two trust dimensions (communicative + experiential)
+â”œâ”€ Deloitte TrustID®: -64% trust collapse
+â”œâ”€ McKinsey: 57% orgs not ready
+â””â”€ Two trust dimensions (communicative + experiential)
 
 [MOVEMENT 2: KIM TRANSITION - 2 pages]
 Sarah's Moment of Crisis
-├─ Board meeting, Week -2
-├─ $2M spent, nothing works
-└─ CEO ultimatum: "Fix it or kill it"
+â”œâ”€ Board meeting, Week -2
+â”œâ”€ $2M spent, nothing works
+â””â”€ CEO ultimatum: "Fix it or kill it"
 
 [MOVEMENT 3: MOORE DEEP-DIVE - 11 pages]
 Section 2: Technology Works, Infrastructure Doesn't (5p)
-├─ LLMs proven (GPT-4, Claude Sonnet 4.5)
-├─ RAG proven (Pinecone, ChromaDB)
-└─ Problem: Data infrastructure not agent-ready
+â”œâ”€ LLMs proven (GPT-4, Claude Sonnet 4.5)
+â”œâ”€ RAG proven (Pinecone, ChromaDB)
+â””â”€ Problem: Data infrastructure not agent-ready
 
 Section 3: The Infrastructure Readiness Gap (6p)
-├─ BI-era vs Agent-era comparison table
-├─ Six failure patterns (INPACT™ lens)
-└─ Real enterprise examples (healthcare focus)
+â”œâ”€ BI-era vs Agent-era comparison table
+â”œâ”€ Six failure patterns (INPACT™ lens)
+â””â”€ Real enterprise examples (healthcare focus)
 
 [MOVEMENT 4: KIM VALIDATION - 4 pages]
 Section 4: Sarah's $2M Wake-Up Call
-├─ Echo's three failing pilots in detail
-├─ Board pressure, CEO deadline
-└─ Discovery: "Fix data first, then deploy agents"
+â”œâ”€ Echo's three failing pilots in detail
+â”œâ”€ Board pressure, CEO deadline
+â””â”€ Discovery: "Fix data first, then deploy agents"
 
 [MOVEMENT 5: MOORE SUMMARY + KIM HOOK - 2 pages]
 Key Takeaways + Assessment CTA
-├─ Three core insights
-├─ "Measure your readiness" (colaberry.ai/assessment)
-└─ Bridge to Chapter 2: "Sarah needed a framework..."
+â”œâ”€ Three core insights
+â”œâ”€ "Measure your readiness" (colaberry.ai/assessment)
+â””â”€ Bridge to Chapter 2: "Sarah needed a framework..."
 ```
+
+---
+
+## ARCHITECTURE OF TRUST POSITIONING
+
+### Chapter Role in the Architecture
+**Primary Function:** Problem Motivation / Foundation Preparation
+- **Pillar Focus:** Sets up need for Pillar 1 (INPACT™) by showing what happens without it
+- **Architecture Stage:** Pre-construction analysis - establishing why architecture is needed
+- **Building Phase:** Site preparation - clearing ground for foundation
+
+### Architectural Elements Referenced
+1. **Architecture Need Established**
+   - Chapter demonstrates infrastructure failures that the Architecture of Trust will solve
+   - "Without a comprehensive architecture, enterprises face fragmented solutions and 95% failure"
+   - References back to Ch 0: "The Architecture of Trust provides the blueprint—but first, understand what happens without it"
+
+2. **INPACT™ Preview** (Section 3: Six Failure Patterns)
+   - Each failure pattern maps to an INPACT™ dimension (I-N-P-A-C-T)
+   - Position as: "These failures occur when agent needs aren't met—needs we'll formalize as INPACT™ in Chapter 2"
+   - Don't deep-dive INPACT™ yet, just preview the connection
+
+3. **7-Layer Architecture Motivation**
+   - Infrastructure gaps described in BI vs Agent comparison motivate need for 7-Layer technical blueprint
+   - "These aren't problems you can patch—you need a comprehensive technical architecture" (sets up Chapters 4-7)
+
+### Triad Diagram Placement
+**OPTIONAL/VERBAL ONLY**
+- No diagram required in this chapter
+- Verbal reference acceptable: "Recall the Architecture of Trust from Chapter 0..."
+- Or: "These failures show why we need all three pillars working together..."
+
+### Architectural Language Patterns
+**Movement 1 (Trust Gap):**
+- "The trust crisis reveals fundamental architectural inadequacies..."
+- "Enterprises lack a systematic architecture for trust..."
+
+**Movement 2 (Sarah's Crisis):**
+- "Sarah's team had tools but no architecture..."
+- "Without a blueprint, even excellent components fail to integrate..."
+
+**Movement 3 (Infrastructure Gap):**
+- "The BI-era architecture cannot support agent-era requirements..."
+- "We need to rebuild the foundation—starting with understanding what agents need"
+
+**Movement 4 (Wake-Up Call):**
+- "Sarah realized piecemeal solutions wouldn't work—she needed an integrated architecture"
+- "The solution wasn't more technology; it was architectural discipline"
+
+**Movement 5 (Summary):**
+- "Chapter 2 builds the first pillar of the Architecture of Trust: INPACT™"
+- "We'll formalize these agent needs into a systematic framework"
+
+### Cross-Pillar References
+**In this chapter:**
+- Show how failures span all three future pillars (INPACT™ + 7-Layers + GOALS™)
+- Example: "Latency failures (Instant need) require real-time architecture (Layers 1-2) validated through observability (GOALS™)"
+- Don't name all pillars explicitly yet, but foreshadow the interconnection
+
+**Bridge to Chapter 2:**
+- "Sarah needed to start with agent requirements—what we call the INPACT™ framework"
+- "Chapter 2 builds the first pillar: formalizing what agents need from infrastructure"
+
+### Success Criteria
+By end of chapter, reader should:
+- âœ… Understand why architecture (not just technology) is the solution
+- âœ… See how failures connect to future INPACT™ dimensions
+- âœ… Feel motivated to learn the systematic approach (Architecture of Trust)
+- âœ… Anticipate Chapter 2 will formalize agent needs into INPACT™ framework
 
 ---
 
@@ -89,8 +158,8 @@ Key Takeaways + Assessment CTA
 
 | Legacy Section | Line Numbers | Word Count | Content Description | Reuse Status |
 |----------------|--------------|------------|---------------------|--------------|
-| "The $40 Billion Trust Paradox" | 41-57 | ~600w | MIT NANDA 95% failure, trust not tech | ✅ USE 100% |
-| Opening crisis statistics | 43-54 | ~400w | MIT study, GenAI Divide, failure causes | ✅ USE 100% |
+| "The $40 Billion Trust Paradox" | 41-57 | ~600w | MIT NANDA 95% failure, trust not tech | âœ… USE 100% |
+| Opening crisis statistics | 43-54 | ~400w | MIT study, GenAI Divide, failure causes | âœ… USE 100% |
 
 **MODIFICATIONS NEEDED:**
 - **Expand** with Deloitte TrustID® Q3 2025 data (~500w new content):
@@ -110,7 +179,7 @@ Key Takeaways + Assessment CTA
 - **Total Section 1:** ~2,200 words (1,000w reused + 1,200w new)
 
 **DIAGRAM NEEDED:**
-- 🆕 **NEW DIAGRAM:** "Trust Collapse Chart (Feb-July 2025)"
+- ðŸ†• **NEW DIAGRAM:** "Trust Collapse Chart (Feb-July 2025)"
   - Show Deloitte data: GenAI trust (-35%) vs Agentic AI trust (-64%)
   - Timeline visualization
   - Red color scheme (crisis)
@@ -126,10 +195,10 @@ Key Takeaways + Assessment CTA
 
 | Legacy Section | Line Numbers | Word Count | Content Description | Reuse Status |
 |----------------|--------------|------------|---------------------|--------------|
-| "Software 3.0 Paradigm Shift" (Karpathy) | 122-187 | ~800w | Software 1.0/2.0/3.0 evolution, paradigm mismatch | ✅ USE 90% |
-| "Diagram 0: Software Evolution" | 142-185 | Diagram | Software 1.0 → 2.0 → 3.0 with infrastructure | ✅ REUSE |
-| "The Paradigm Mismatch" | 189-199 | ~400w | Why upgrades fail, architectural misalignment | ✅ USE 100% |
-| "Diagram 0b: Infrastructure Mismatch" | 201-249 | Diagram | Problem (60% enterprises on old infra) → Solution | ✅ REUSE |
+| "Software 3.0 Paradigm Shift" (Karpathy) | 122-187 | ~800w | Software 1.0/2.0/3.0 evolution, paradigm mismatch | âœ… USE 90% |
+| "Diagram 0: Software Evolution" | 142-185 | Diagram | Software 1.0 → 2.0 → 3.0 with infrastructure | âœ… REUSE |
+| "The Paradigm Mismatch" | 189-199 | ~400w | Why upgrades fail, architectural misalignment | âœ… USE 100% |
+| "Diagram 0b: Infrastructure Mismatch" | 201-249 | Diagram | Problem (60% enterprises on old infra) → Solution | âœ… REUSE |
 
 **MODIFICATIONS NEEDED:**
 - **Compress** Karpathy content to 600 words (currently 800w)
@@ -147,8 +216,8 @@ Key Takeaways + Assessment CTA
 - **Total Section 2:** ~2,500 words (1,200w reused + 1,300w new)
 
 **DIAGRAMS TO REUSE:**
-- ✅ **Diagram 1:** Software 1.0/2.0/3.0 Evolution (from legacy Chapter 1, lines 142-185)
-- ✅ **Diagram 2:** Infrastructure Paradigm Mismatch (from legacy Chapter 1, lines 201-249)
+- âœ… **Diagram 1:** Software 1.0/2.0/3.0 Evolution (from legacy Chapter 1, lines 142-185)
+- âœ… **Diagram 2:** Infrastructure Paradigm Mismatch (from legacy Chapter 1, lines 201-249)
 
 ---
 
@@ -156,9 +225,9 @@ Key Takeaways + Assessment CTA
 
 | Legacy Section | Line Numbers | Word Count | Content Description | Reuse Status |
 |----------------|--------------|------------|---------------------|--------------|
-| "Why This Architecture Exists" section | 3029-3105 | ~1,000w | Six agent requirements vs BI requirements | ✅ ADAPT 70% |
-| "Comparison: Agent vs BI Requirements" table | 3150-3216 | ~800w | Detailed comparison table | ✅ USE 80% |
-| INPACT need descriptions (scattered) | Various | ~1,200w | I, N, P, A, C, T explanations | ✅ CONSOLIDATE |
+| "Why This Architecture Exists" section | 3029-3105 | ~1,000w | Six agent requirements vs BI requirements | âœ… ADAPT 70% |
+| "Comparison: Agent vs BI Requirements" table | 3150-3216 | ~800w | Detailed comparison table | âœ… USE 80% |
+| INPACT need descriptions (scattered) | Various | ~1,200w | I, N, P, A, C, T explanations | âœ… CONSOLIDATE |
 
 **NEW CONTENT REQUIRED:** (~1,500w)
 
@@ -180,7 +249,7 @@ Key Takeaways + Assessment CTA
    - **Permitted failures:** Static RBAC → compliance violations → regulatory risk
    - **Adaptive failures:** No feedback loops → model drift → accuracy degradation
    - **Contextual failures:** Siloed data → incomplete answers → decision errors
-   - **Trusted failures:** Opaque decisions → no explainability → adoption resistance
+   - **Transparent failures:** Opaque decisions → no explainability → adoption resistance
    - Each pattern: Problem statement + real consequence + prevalence %
 
 3. **Real Enterprise Examples** (300w)
@@ -192,7 +261,7 @@ Key Takeaways + Assessment CTA
 **Total Section 3:** ~3,000 words (2,000w reused/adapted + 1,000w new)
 
 **DIAGRAM NEEDED:**
-- 🆕 **NEW DIAGRAM:** "BI-Era vs Agent-Era Infrastructure"
+- ðŸ†• **NEW DIAGRAM:** "BI-Era vs Agent-Era Infrastructure"
   - Two-column comparison with 8 rows
   - Left column (BI-Era): Red scheme
   - Right column (Agent-Era): Teal scheme
@@ -268,7 +337,7 @@ Key Takeaways + Assessment CTA
 **Total Section 4:** ~2,000 words (100% new content)
 
 **DIAGRAM NEEDED:**
-- 🆕 **NEW DIAGRAM:** "Echo's Three Failing Pilots"
+- ðŸ†• **NEW DIAGRAM:** "Echo's Three Failing Pilots"
   - Three boxes showing each pilot with key failure metrics
   - Investment amount, adoption rate, status
   - Red color scheme (failure)
@@ -336,7 +405,7 @@ Structure:
      - Permitted failures: Authorization gaps
      - Adaptive failures: No learning
      - Contextual failures: Incomplete data
-     - Trusted failures: No explainability
+     - Transparent failures: No explainability
 
 2. **Assessment Call-to-Action** (200w)
    - "Before you spend $2M like Sarah, measure your readiness"
@@ -385,7 +454,7 @@ Structure:
 - **Movement 2:** Already tight at 1,000w, keep as is
 - **Movement 5:** Already tight at 1,000w, keep as is
 
-### **REVISED TOTAL: 10,000 words** ✅
+### **REVISED TOTAL: 10,000 words** âœ…
 
 | Section | Revised Word Count | % of Chapter |
 |---------|-------------------|--------------|
@@ -430,7 +499,7 @@ Structure:
 | **New content** | ~3,000w | 30% |
 | **Total** | **10,000w** | **100%** |
 
-**Reuse rate: 70%** ✅ (exceeds 50% target, maximizes existing quality while preserving emotional impact)
+**Reuse rate: 70%** âœ… (exceeds 50% target, maximizes existing quality while preserving emotional impact)
 
 ---
 
@@ -440,8 +509,8 @@ Structure:
 
 | Diagram | Legacy Location | Status | Modifications Needed |
 |---------|----------------|--------|----------------------|
-| **Diagram 1:** Software 1.0/2.0/3.0 Evolution | Legacy Ch 1, lines 142-185 | ✅ REUSE 100% | None - already compliant with teal/red scheme |
-| **Diagram 2:** Infrastructure Paradigm Mismatch | Legacy Ch 1, lines 201-249 | ✅ REUSE 100% | None - shows problem (red) → solution (teal) |
+| **Diagram 1:** Software 1.0/2.0/3.0 Evolution | Legacy Ch 1, lines 142-185 | âœ… REUSE 100% | None - already compliant with teal/red scheme |
+| **Diagram 2:** Infrastructure Paradigm Mismatch | Legacy Ch 1, lines 201-249 | âœ… REUSE 100% | None - shows problem (red) → solution (teal) |
 
 ### NEW DIAGRAMS REQUIRED
 
@@ -492,10 +561,10 @@ Structure:
 ### TCC Compliance Areas to Verify
 
 - [ ] **Evidence freshness:** All statistics <18 months old
-  - MIT NANDA: July 2025 ✅
-  - Deloitte TrustID®: Q3 2025 ✅
-  - McKinsey State of AI: 2025 ✅
-  - Karpathy keynote: June 2025 ✅
+  - MIT NANDA: July 2025 âœ…
+  - Deloitte TrustID®: Q3 2025 âœ…
+  - McKinsey State of AI: 2025 âœ…
+  - Karpathy keynote: June 2025 âœ…
 - [ ] **Working URLs:** All links active and accessible
   - MIT NANDA report PDF
   - Deloitte TrustID® report (verify URL)
@@ -503,20 +572,20 @@ Structure:
   - Karpathy Y Combinator keynote
   - Trust research papers (3 PDFs in project)
 - [ ] **Source quality:** 80%+ Tier 1-2 sources
-  - MIT ✅ (Tier 1: Academic)
-  - Deloitte ✅ (Tier 1: Research firm)
-  - McKinsey ✅ (Tier 1: Research firm)
-  - Karpathy/OpenAI ✅ (Tier 1: Industry authority)
-  - Academic trust papers ✅ (Tier 1)
+  - MIT âœ… (Tier 1: Academic)
+  - Deloitte âœ… (Tier 1: Research firm)
+  - McKinsey âœ… (Tier 1: Research firm)
+  - Karpathy/OpenAI âœ… (Tier 1: Industry authority)
+  - Academic trust papers âœ… (Tier 1)
 - [ ] **Healthcare examples:** Only healthcare industry references in Echo narrative
-  - All three failing pilots are healthcare-specific ✅
-  - No examples from other industries in Echo sections ✅
+  - All three failing pilots are healthcare-specific âœ…
+  - No examples from other industries in Echo sections âœ…
 - [ ] **Echo consistency:** All Echo facts match canonical data
-  - 4 hospitals, 23 clinics ✅
-  - 847 physicians, 12K employees ✅
-  - $2M investment in pilots mentioned ✅
-  - Three pilots: Scheduling, Documentation, Revenue Cycle ✅
-  - Board meeting Week -2, assessment Week 0 ✅
+  - 4 hospitals, 23 clinics âœ…
+  - 847 physicians, 12K employees âœ…
+  - $2M investment in pilots mentioned âœ…
+  - Three pilots: Scheduling, Documentation, Revenue Cycle âœ…
+  - Board meeting Week -2, assessment Week 0 âœ…
 - [ ] **Fictional disclaimer:** Present when first introducing Echo's failing pilots
 - [ ] **Trademark notices:** INPACT™ properly marked throughout
 
@@ -533,20 +602,20 @@ Structure:
 
 ### Moore-Kim Pattern Compliance
 
-- [ ] **Movement 1:** Authoritative industry data, third-person, structured (5 pages) ✅
-- [ ] **Movement 2:** Kim narrative, character names, specific moment, emotional stakes (2 pages) ✅
-- [ ] **Movement 3:** Return to Moore voice, detailed analysis, frameworks, data (11 pages) ✅
-- [ ] **Movement 4:** Kim validation, Echo results, personas react, lessons learned (4 pages) ✅
-- [ ] **Movement 5:** Moore summary (key takeaways) + Kim hook (bridge to next) (2 pages) ✅
-- [ ] **Voice shifts:** Clear transitions between Moore (analytical) and Kim (narrative) ✅
-- [ ] **Echo integration:** Present throughout but doesn't dominate (20% of content) ✅
+- [ ] **Movement 1:** Authoritative industry data, third-person, structured (5 pages) âœ…
+- [ ] **Movement 2:** Kim narrative, character names, specific moment, emotional stakes (2 pages) âœ…
+- [ ] **Movement 3:** Return to Moore voice, detailed analysis, frameworks, data (11 pages) âœ…
+- [ ] **Movement 4:** Kim validation, Echo results, personas react, lessons learned (4 pages) âœ…
+- [ ] **Movement 5:** Moore summary (key takeaways) + Kim hook (bridge to next) (2 pages) âœ…
+- [ ] **Voice shifts:** Clear transitions between Moore (analytical) and Kim (narrative) âœ…
+- [ ] **Echo integration:** Present throughout but doesn't dominate (20% of content) âœ…
 
 ### Mermaid Diagram Standards
 
 **TOTAL DIAGRAMS: 5**
 
-- [ ] **Diagram 1 (Software Evolution):** Teal/orange/gray scheme ✅, bold text ✅, copyright ✅
-- [ ] **Diagram 2 (Infrastructure Mismatch):** Red (problem) / teal (solution) ✅, bold text ✅, copyright ✅
+- [ ] **Diagram 1 (Software Evolution):** Teal/orange/gray scheme âœ…, bold text âœ…, copyright âœ…
+- [ ] **Diagram 2 (Infrastructure Mismatch):** Red (problem) / teal (solution) âœ…, bold text âœ…, copyright âœ…
 - [ ] **Diagram 3 (Trust Collapse):** NEW - Red crisis theme, timeline, Deloitte data, bold text, copyright
 - [ ] **Diagram 4 (BI vs Agent):** NEW - Two columns, 8 rows, red/teal contrast, bold text, copyright
 - [ ] **Diagram 5 (Echo's Pilots):** NEW - Three boxes, investment/metrics, red failure theme, copyright
@@ -564,14 +633,14 @@ Structure:
 
 | Element | Chapter 1 Content | Consistency Check |
 |---------|------------------|-------------------|
-| **Personas** | Sarah Cedao (CTO), Marcus Williams (CDO), Jamie Rodriguez (Dir IT), Krish Yadav (CFO) | ✅ Matches canonical |
-| **CEO** | Unnamed - referred to as "the CEO" | ✅ Consistent with Moore/Kim pattern in legacy chapters |
-| **Board members** | Anonymous - "the board" or "a board member" | ✅ Consistent with Moore/Kim pattern in legacy chapters |
-| **Timeline** | Week -2 (board meeting), Week 0 (assessment in Ch 0) | ✅ Matches canonical |
-| **Investment** | $2M in pilots ($750K + $900K + $550K) | ✅ New detail, consistent |
-| **Three pilots** | Scheduling, Documentation, Revenue Cycle | ✅ Matches canonical |
-| **Adoption rates** | 8%, 12%, negative ROI | ✅ New detail, realistic |
-| **Board ultimatum** | 90 days to show progress | ✅ Sets up 10-week transformation |
+| **Personas** | Sarah Cedao (CTO), Marcus Williams (CDO), Jamie Rodriguez (Dir IT), Krish Yadav (CFO) | âœ… Matches canonical |
+| **CEO** | Unnamed - referred to as "the CEO" | âœ… Consistent with Moore/Kim pattern in legacy chapters |
+| **Board members** | Anonymous - "the board" or "a board member" | âœ… Consistent with Moore/Kim pattern in legacy chapters |
+| **Timeline** | Week -2 (board meeting), Week 0 (assessment in Ch 0) | âœ… Matches canonical |
+| **Investment** | $2M in pilots ($750K + $900K + $550K) | âœ… New detail, consistent |
+| **Three pilots** | Scheduling, Documentation, Revenue Cycle | âœ… Matches canonical |
+| **Adoption rates** | 8%, 12%, negative ROI | âœ… New detail, realistic |
+| **Board ultimatum** | 90 days to show progress | âœ… Sets up 10-week transformation |
 
 ---
 
@@ -807,20 +876,20 @@ Structure:
 
 ### Success Criteria
 
-✅ **Content:**
-- 10,000 words ±5% (9,500-10,500 acceptable)
+âœ… **Content:**
+- 10,000 words Â±5% (9,500-10,500 acceptable)
 - 60%+ reuse rate from legacy content
 - All new sections written and compressed
 - Clear emotional arc through Sarah's journey
 
-✅ **Quality:**
+âœ… **Quality:**
 - TCC compliance: 100% checklist items passed
 - VERT score: GREEN (9.0+/10)
 - Moore-Kim pattern: Clean voice transitions, balanced narrative
 - Echo consistency: 100% match with canonical data
 - All 5 diagrams meet Colaberry standards
 
-✅ **Readiness:**
+âœ… **Readiness:**
 - No placeholders or TODOs remaining
 - All URLs verified and working (Deloitte, McKinsey, Karpathy, MIT)
 - All trademarks properly marked (INPACT™)
@@ -832,15 +901,15 @@ Structure:
 ## DEPENDENCIES
 
 ### Required Source Documents
-- ✅ `chapter_00_complete.md` (legacy Chapter 0 - crisis statistics)
-- ✅ `chapter_1_complete.md` (legacy Chapter 1 - Karpathy, paradigm shift)
-- ✅ `BOOK_STRUCTURE_CODEX_v6_1_FINAL.md` (structure specifications)
-- ✅ `BOOK_CODEX_MASTER_v2_2_FINAL.md` (Moore-Kim pattern)
-- ✅ Echo canonical data (from Book Structure Codex, lines 532-564)
-- ✅ `4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025.pdf`
-- ✅ `The_State_of_AI__Global_Survey_2025___McKinsey.pdf`
-- ✅ `The_real_barrier_to_AI_adoption_isn_t_technology_it_s_trust_.pdf`
-- ✅ `Workers_Don_t_Trust_AI__Here_s_How_Companies_Can_Change_That_.pdf`
+- âœ… `chapter_00_complete.md` (legacy Chapter 0 - crisis statistics)
+- âœ… `chapter_1_complete.md` (legacy Chapter 1 - Karpathy, paradigm shift)
+- âœ… `BOOK_STRUCTURE_CODEX_v6_1_FINAL.md` (structure specifications)
+- âœ… `BOOK_CODEX_MASTER_v2_2_FINAL.md` (Moore-Kim pattern)
+- âœ… Echo canonical data (from Book Structure Codex, lines 532-564)
+- âœ… `4749_Deloitte_Trust_ID_Workforce_AI_Report_Q3_2025.pdf`
+- âœ… `The_State_of_AI__Global_Survey_2025___McKinsey.pdf`
+- âœ… `The_real_barrier_to_AI_adoption_isn_t_technology_it_s_trust_.pdf`
+- âœ… `Workers_Don_t_Trust_AI__Here_s_How_Companies_Can_Change_That_.pdf`
 
 ### Tools & Resources Needed
 - PDF text extraction tool (for Deloitte/McKinsey data)

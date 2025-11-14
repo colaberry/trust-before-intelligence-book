@@ -252,7 +252,7 @@ Most enterprises attempt to deploy Software 3.0 agents on Software 1.0 infrastru
 
 ### The Iron Man Suit Model: Design Philosophy for Agents
 
-Karpathy introduces the "Iron Man Suit" model: human augmentation with partial autonomy and fast generate-verify cycles, not autonomous robots. This philosophy directly implements the INPACT™ framework **Instant** responses enable practical human verification, **Natural** language lets domain experts review outputs without translation, a care coordinator reviews "Schedule Dr. Martinez for diabetes follow-up" not "UPDATE appointments SET provider_id=847, dx_code='E11.9'", **Permitted** infrastructure enforces bounded autonomy, **Adaptive** systems learn from human corrections, **Contextual** access provides relevant information without overwhelming detail, and **Trusted** observability makes reasoning visible and auditable.
+Karpathy introduces the "Iron Man Suit" model: human augmentation with partial autonomy and fast generate-verify cycles, not autonomous robots. This philosophy directly implements the INPACT™ framework **Instant** responses enable practical human verification, **Natural** language lets domain experts review outputs without translation, a care coordinator reviews "Schedule Dr. Martinez for diabetes follow-up" not "UPDATE appointments SET provider_id=847, dx_code='E11.9'", **Permitted** infrastructure enforces bounded autonomy, **Adaptive** systems learn from human corrections, **Contextual** access provides relevant information without overwhelming detail, and **Transparent** observability makes reasoning visible and auditable.
 
 The infrastructure implications are clear. Agents must retrieve context instantly (sub-second latency), present results in human-verifiable formats, operate within authorization boundaries, and escalate edge cases automatically. When these capabilities combine, you get augmentation systems that extend human capability while maintaining human judgment, not autonomous systems attempting to replace it.
 
@@ -305,7 +305,7 @@ The seven-layer architecture delivers the six INPACT™ needs from Chapter 0 thr
 | **P - Permitted** | Dynamic ABAC authorization | Layer 5, 6 | Dynamic Authorization |
 | **A - Adaptive** | Continuous improvement | Layer 6, 2, 4 | Continuous Learning |
 | **C - Contextual** | Real-time cross-domain data | Layer 2, 3, 1, 4 | Cross-Domain Integration |
-| **T - Trusted** | Complete audit trails | Layer 5, 6, 4, 3 | Auditability & Explainability |
+| **T - Transparent** | Complete audit trails | Layer 5, 6, 4, 3 | Auditability & Explainability |
 
 **The pattern is clear:** Every INPACT™ need requires multiple layers working together. No single layer solves any need alone. This is why bolt-on approaches fail, you can't just add a vector database and call it "agent-ready."
 
@@ -789,7 +789,7 @@ This layer primarily addresses:
 - **A - Adaptive**: Maintains fresh training datasets via feature stores, enabling continuous model retraining as patterns change.
 
 Supporting contributions to:
-- **T - Trusted**: CDC audit logs provide complete data lineage showing when each field was last updated and from which source system.
+- **T - Transparent**: CDC audit logs provide complete data lineage showing when each field was last updated and from which source system.
 
 ---
 
@@ -972,7 +972,7 @@ This layer primarily addresses:
 - **C - Contextual**: Unifies entity resolution across systems (patient_id in EHR = member_id in claims = user_id in portal), enabling complete cross-domain context without manual ID mapping.
 
 Supporting contributions to:
-- **T - Trusted**: Business glossary provides authoritative definitions showing what each metric means, how it's calculated, and when it was last changed, essential for explainable agent decisions.
+- **T - Transparent**: Business glossary provides authoritative definitions showing what each metric means, how it's calculated, and when it was last changed, essential for explainable agent decisions.
 
 ---
 
@@ -1341,7 +1341,7 @@ This layer primarily addresses:
 - **C - Contextual**: RAG orchestration intelligently retrieves relevant data from vector databases (clinical notes), knowledge graphs (provider relationships), and RDBMS (structured records) to assemble complete context.
 
 Supporting contributions to:
-- **T - Trusted**: Citation mechanisms link agent responses to source documents with confidence scores, enabling users to verify information and understand reasoning.
+- **T - Transparent**: Citation mechanisms link agent responses to source documents with confidence scores, enabling users to verify information and understand reasoning.
 - **A - Adaptive**: Retrieval quality metrics (NDCG, MRR) enable continuous optimization, identifying when embedding models drift or when new chunking strategies improve accuracy.
 
 ---
@@ -1416,10 +1416,10 @@ Layer 5 evaluates permissions dynamically based on four contextual factors (Who,
 
 **Implementing the HITL Pattern from Chapter 0:**
 
-Remember from Chapter 0 how Permitted (P) and Trusted (T) needs work together through human-in-the-loop patterns? Layer 5 implements those patterns through three integrated mechanisms:
+Remember from Chapter 0 how Permitted (P) and Transparent (T) needs work together through human-in-the-loop patterns? Layer 5 implements those patterns through three integrated mechanisms:
 
 1. **ABAC policies (P - Permitted)**: Define escalation thresholds (financial >$5K, clinical significance, regulatory requirements, confidence <0.85) that route high-risk decisions to human approval
-2. **Comprehensive audit logging (T - Trusted)**: Capture complete context enabling effective human verification—not just "approve/deny" but informed judgment with full reasoning visibility
+2. **Comprehensive audit logging (T - Transparent)**: Capture complete context enabling effective human verification—not just "approve/deny" but informed judgment with full reasoning visibility
 3. **Approval workflows**: Multiple patterns (synchronous 4-12 minutes for urgent, asynchronous 2.5-18 hours for planned, human-on-loop for monitoring) matching decision urgency to approval SLA
 
 The result: agents operate autonomously for routine decisions (92% at Echo) while escalating high-stakes actions (8%) to appropriate human oversight with complete transparency enabling effective verification.
@@ -1713,7 +1713,7 @@ Technologies include [NeMo Guardrails](https://github.com/NVIDIA/NeMo-Guardrails
 
 This layer primarily addresses:
 - **P - Permitted**: Dynamic ABAC evaluates permissions in real-time based on user attributes (role, clearance), data attributes (sensitivity, classification), actions (read, summarize, export), and environmental context (time, location, device) all in under 10ms per query.
-- **T - Trusted**: Comprehensive audit logging captures who accessed what data, when, why, and what was returned satisfying HIPAA's audit requirements and GDPR's right to explanation with complete traceability.
+- **T - Transparent**: Comprehensive audit logging captures who accessed what data, when, why, and what was returned satisfying HIPAA's audit requirements and GDPR's right to explanation with complete traceability.
 
 Supporting contributions to:
 - **I - Instant**: Policy caching and optimized ABAC engines evaluate permissions in <10ms without breaking agent response time SLOs.
@@ -2275,7 +2275,7 @@ User feedback indicated the agent was recalling outdated preferences: "Patient s
 
 This layer primarily addresses:
 - **A - Adaptive**: Continuous learning loops detect data quality issues, model drift, and retrieval problems automatically triggering fixes within hours instead of waiting for quarterly reviews. Accuracy improves from baseline to 85%+ within 90 days through systematic feedback.
-- **T - Trusted**: Trace IDs connect every query through all seven layers, enabling complete explainability of agent decisions. When asked "Why did the agent say X?", teams can trace back to exact data sources, retrieval decisions, and model confidence scores.
+- **T - Transparent**: Trace IDs connect every query through all seven layers, enabling complete explainability of agent decisions. When asked "Why did the agent say X?", teams can trace back to exact data sources, retrieval decisions, and model confidence scores.
 
 Supporting contributions to:
 - **I - Instant**: Performance monitoring identifies latency bottlenecks (slow queries, cache misses, overloaded services), enabling optimization that maintains sub-2-second response times.
@@ -3106,7 +3106,7 @@ Every decision is traceable, reproducible, and auditable. Multi-agent systems lo
 
 ---
 
-> **Connecting to Chapter 0:** These six requirements directly map to the INPACT™ needs we introduced in Chapter 0. Sub-second response times deliver the "I - Instant" need. Natural language understanding provides "N - Natural." Cross-domain context enables "C - Contextual." Dynamic authorization satisfies "P - Permitted." Continuous learning fulfills "A - Adaptive." And trustability through transparency addresses "T - Trusted." The seven-layer architecture is how you deliver all six INPACT™ capabilities in production.
+> **Connecting to Chapter 0:** These six requirements directly map to the INPACT™ needs we introduced in Chapter 0. Sub-second response times deliver the "I - Instant" need. Natural language understanding provides "N - Natural." Cross-domain context enables "C - Contextual." Dynamic authorization satisfies "P - Permitted." Continuous learning fulfills "A - Adaptive." And trustability through transparency addresses "T - Transparent." The seven-layer architecture is how you deliver all six INPACT™ capabilities in production.
 
 ---
 

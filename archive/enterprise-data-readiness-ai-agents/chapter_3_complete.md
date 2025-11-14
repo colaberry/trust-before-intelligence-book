@@ -849,7 +849,7 @@ The 90-day journey progresses through three distinct 4-week phases. Phase 1 buil
 | **P** - Permitted | 2/6 (basic RBAC) | 4/6 (ABAC operational) | 4/6 | 4/6 | 4/6 |
 | **A** - Adaptive | 1/6 (none) | 2/6 (monitoring) | 3/6 (dashboards) | 4/6 (feedback capture) | 4/6 |
 | **C** - Contextual | 1/6 (1-2 sources) | 3/6 (3-4 sources) | 4/6 (4-5 sources) | 5/6 (5-8 sources) | 5/6 |
-| **T** - Trusted | 2/6 (basic logs) | 3/6 (trace IDs) | 4/6 (reasoning logs) | 4/6 (audit operational) | 4/6 |
+| **T** - Transparent | 2/6 (basic logs) | 3/6 (trace IDs) | 4/6 (reasoning logs) | 4/6 (audit operational) | 4/6 |
 | **TOTAL** | **11/36** | **19/36** | **24/36** | **27/36** | **27/36** |
 
 **Phase 1 Exit Target:** 27/36 (Good Trust)
@@ -1155,7 +1155,7 @@ Every access request flows through context gathering (who, what, when, where), p
 
 ### INPACT™ Week 1 Progress
 - [ ] Permitted (P): 4/6 (ABAC operational, policies tested)
-- [ ] Trusted (T): 3/6 (Audit trails capturing access, not yet reasoning)
+- [ ] Transparent (T): 3/6 (Audit trails capturing access, not yet reasoning)
 
 ### GOALS Week 1 Progress
 - [ ] Governance (G): 4/5 (ABAC + audit operational, high maturity)
@@ -2140,7 +2140,7 @@ By end of Week 4, achieve:
 | **P** - Permitted | 4/6 | ___/6 | ✓ | ABAC operational, policies tested, <10ms evaluation |
 | **A** - Adaptive | 4/6 | ___/6 | ✓ | Monitoring capturing feedback, dashboards exist |
 | **C** - Contextual | 5/6 | ___/6 | ✓ | 5-8 data sources connected, real-time streaming |
-| **T** - Trusted | 4/6 | ___/6 | ✓ | Audit logging 100% coverage, reasoning logs basic |
+| **T** - Transparent | 4/6 | ___/6 | ✓ | Audit logging 100% coverage, reasoning logs basic |
 | **TOTAL** | **27/36** | **___/36** | ✓ | Must be ≥24/36 to proceed |
 
 **Scoring Instructions:**
@@ -2305,7 +2305,7 @@ By end of Week 4, achieve:
 | **P** - Permitted | 4/6 | 5/6 (agent ABAC) | 5/6 | 5/6 | 5/6 |
 | **A** - Adaptive | 4/6 | 5/6 (feedback loops) | 5/6 | 5/6 | 5/6 |
 | **C** - Contextual | 5/6 | 6/6 (RAG assembles context) | 6/6 | 6/6 | 6/6 |
-| **T** - Trusted | 4/6 | 5/6 (reasoning traces) | 5/6 | 5/6 | 5/6 |
+| **T** - Transparent | 4/6 | 5/6 (reasoning traces) | 5/6 | 5/6 | 5/6 |
 | **TOTAL** | **27/36** | **32/36** | **32/36** | **33/36** | **33/36** |
 
 **Phase 2 Exit Target:** 33/36 (High Trust) - a significant jump from Phase 1's 27/36
@@ -2656,7 +2656,7 @@ By end of Week 5, achieve:
 
 ### INPACT™ Week 5 Progress
 - [ ] Natural (N): 5/6 (Agent understands natural language questions)
-- [ ] Trusted (T): 4/6 (Audit trails capture all LLM calls)
+- [ ] Transparent (T): 4/6 (Audit trails capture all LLM calls)
 
 ### GOALS Week 5 Progress
 - [ ] Language (L): 5/5 (Natural language is THE interface now!)
@@ -3046,7 +3046,7 @@ Agent Answer + Citations
 ### INPACT™ Week 6 Progress
 - [ ] Natural (N): 6/6 (RAG enables natural language understanding at scale)
 - [ ] Contextual (C): 6/6 (RAG assembles multi-source context automatically)
-- [ ] Trusted (T): 5/6 (Citations provide transparency, not yet full explainability)
+- [ ] Transparent (T): 5/6 (Citations provide transparency, not yet full explainability)
 
 ### GOALS Week 6 Progress
 - [ ] Observability (O): 4/5 (RAG pipeline traced, LLM calls logged)
@@ -3366,7 +3366,7 @@ Semantic caching dramatically reduces costs and latency. Every query is embedded
 | **P** - Permitted | 5/6 | ✓ Agent ABAC working |
 | **A** - Adaptive | 5/6 | ✓ Feedback loops operational |
 | **C** - Contextual | 6/6 | ✓ RAG assembles context |
-| **T** - Trusted | 5/6 | ✓ Citations + reasoning traces |
+| **T** - Transparent | 5/6 | ✓ Citations + reasoning traces |
 | **TOTAL** | **33/36** | ✓ |
 
 **If ≥31/36:** 🟢 Excellent - Proceed to Phase 3  
@@ -4009,7 +4009,7 @@ Each phase ends with a health gate that validates readiness before proceeding. G
 | **P** - Permitted | 6/6 | Ã¢Å“â€¦ ABAC + HITL operational |
 | **A** - Adaptive | 6/6 | Ã¢Å“â€¦ Feedback loops + learning |
 | **C** - Contextual | 6/6 | Ã¢Å“â€¦ 8+ sources, real-time |
-| **T** - Trusted | 5/6 | Ã¢Å“â€¦ Audit + citations (full explainability Week 13+) |
+| **T** - Transparent | 5/6 | Ã¢Å“â€¦ Audit + citations (full explainability Week 13+) |
 | **TOTAL** | **35/36** | **97% of possible trust** |
 
 **Status:** 🟢 **EXCELLENT** - Production-ready, high-trust agents
@@ -4071,7 +4071,7 @@ Each phase ends with a health gate that validates readiness before proceeding. G
 - Implement reasoning trace visualization
 - Add "Why did you say that?" feature
 - Document decision-making process
-- **Target:** Trusted (T) = 6/6 (perfect explainability)
+- **Target:** Transparent (T) = 6/6 (perfect explainability)
 
 ### Week 14: Fine-Tuning & Customization
 - Fine-tune embeddings on domain data
@@ -4249,7 +4249,7 @@ P0 incidents demand immediate action. Alerts fire from monitoring systems. On-ca
 - **Permitted** agents that respect boundaries
 - **Adaptive** agents that learn and improve
 - **Contextual** agents that know your business
-- **Trusted** agents that explain their reasoning
+- **Transparent** agents that explain their reasoning
 
 **Your agents are ready. Your organization is ready. Go build something amazing.**
 

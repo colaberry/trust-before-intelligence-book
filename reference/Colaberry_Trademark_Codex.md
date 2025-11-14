@@ -58,7 +58,7 @@ for building and maintaining agent-ready data infrastructure:
 
 INPACT™ Framework
 The six essential needs agents must satisfy to earn user trust: Instant, 
-Natural, Permitted, Adaptive, Contextual, and Trusted. INPACT is a trademark 
+Natural, Permitted, Adaptive, Contextual, and Transparent. INPACT is a trademark 
 of Colaberry Inc.
 
 GOALS™ Framework
@@ -91,7 +91,7 @@ their respective owners.
 ```
 INPACT is a trademark of Colaberry Inc. The INPACT Framework defines 
 six essential needs agents must satisfy: Instant, Natural, Permitted, 
-Adaptive, Contextual, and Trusted. This framework emerged from analysis 
+Adaptive, Contextual, and Transparent. This framework emerged from analysis 
 of 50+ enterprise agent deployments and is validated through production 
 use in AIXcelerator, Colaberry's cognitive agent platform.
 ```

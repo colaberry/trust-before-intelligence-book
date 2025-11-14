@@ -11,7 +11,7 @@
 **Version History:**
 - **v3.7.2** (November 7, 2025): HITL framework integration cleanup—removed duplicate heading and placeholder text in Human-in-the-Loop section (Governance), renumbered diagrams sequentially (old Diagram 13 → new Diagram 4, cascading 4-12 → 5-13 for proper sequential order), updated Diagrams Reference section to include all 13 diagrams with accurate titles. Cross-references to Chapter 0's INPACT™ HITL pattern (added in earlier version) now flow cleanly into Echo's operational implementation. All diagrams maintain ⭐⭐⭐⭐⭐ certification per Colaberry Mermaid Diagram Design Codex v1.0. VERT score maintained at 9.5/10 GREEN.
 - **v3.7.1** (November 6, 2025): Visual enhancement update—added NEW Diagram 5 (Output Quality Validation Metrics) in Observability section showing 4-metric validation gate with continuous feedback loop, and ENHANCED Diagram 7 (Natural Language Pipeline) in Language section by splitting Phase 3 into Retrieve Context + Validate Quality steps with explicit NDCG@5 >0.8 metric and quality failure path. All subsequent diagrams renumbered sequentially (old 5→6, old 6→7, old 7→8, old 8→9, old 9→10, old 10→11, old 11→12). Both new diagrams achieve ⭐⭐⭐⭐⭐ certification per Colaberry Mermaid Diagram Design Codex v1.0. Total diagrams now 12 (was 11) in proper sequential order. Completes visual coverage of v3.7.0 content additions (Output Quality, Retrieval Quality). All diagrams use mandatory teal/red/neutral palette, 100% bold text, TB flow, ≤10 boxes. VERT score maintained at 9.5/10 GREEN.
-- **v3.7.0** (November 6, 2025): Complete INPACT-to-GOALS coverage achieved. Added three subsections for full spectrum operational maintenance: (1) Explainability to Governance section—completing T-Trusted transparency need with confidence calibration, trace completeness, response justification metrics; (2) Output Quality to Observability section—completing A-Adaptive accuracy monitoring with factual accuracy >95%, hallucination rate <2%, consistency 98%+ metrics; (3) Retrieval Quality to Language section—completing C-Contextual context assembly with NDCG@5 >0.8, context completeness 90%+, temporal accuracy <1% stale metrics. All six INPACT needs now have explicit operational maintenance targets in GOALS. Total additions: ~650 words maintaining chapter conciseness while achieving framework completeness. VERT score maintained at 9.5/10 GREEN.
+- **v3.7.0** (November 6, 2025): Complete INPACT-to-GOALS coverage achieved. Added three subsections for full spectrum operational maintenance: (1) Explainability to Governance section—completing T-Transparent transparency need with confidence calibration, trace completeness, response justification metrics; (2) Output Quality to Observability section—completing A-Adaptive accuracy monitoring with factual accuracy >95%, hallucination rate <2%, consistency 98%+ metrics; (3) Retrieval Quality to Language section—completing C-Contextual context assembly with NDCG@5 >0.8, context completeness 90%+, temporal accuracy <1% stale metrics. All six INPACT needs now have explicit operational maintenance targets in GOALS. Total additions: ~650 words maintaining chapter conciseness while achieving framework completeness. VERT score maintained at 9.5/10 GREEN.
 - **v3.6.8** (November 5, 2025): CRITICAL Mermaid Codex compliance—added bold tags (`<b>`) to ALL text in all 11 diagrams (100% typography compliance), simplified Diagram 6 color palette to teal/red/neutral only (removed purple/green/pink), reduced Diagram 6 box content to 2-3 lines maximum, fixed Diagram 10 to show architectural layers instead of GOALS as sequence participants, verified Diagram 7 correctly excludes layer labels (process flow not architecture). All diagrams now certified ⭐⭐⭐⭐⭐ per Colaberry Mermaid Diagram Design Codex v1.0. VERT score improved from 9.4 to 9.5/10 GREEN.
 - **v3.6.7** (November 5, 2025): CRITICAL architectural correction—updated query flow to show Layer 4 (Intelligence Orchestration & Retrieval) as entry point, not Layer 3. Flow is 4→3→2→1 where Layer 4 receives raw natural language queries and orchestrates calls to other layers as services. Updated Diagram 5 to show Layer 4 orchestration of caching strategy with explicit "Layer 4 calls Layer 3" node. Updated Diagram 6 to show Layer 4 orchestrating all three phases with Layer 3 semantic services called BY Layer 4. Added explanation of tool-based architecture where Layers 3/2/1 expose capabilities as services that Layer 4 orchestrates. This aligns with industry standard RAG architectures (LangChain, LlamaIndex) where LLM receives raw queries and orchestrates semantic operations rather than receiving pre-processed semantic queries. Cold path now correctly documented as 4→3→2→1 throughout.
 - **v3.6.6** (November 5, 2025): Architectural correction—added Layer 3 (Semantic Layer) to Diagram 5 caching flow. This version was superseded by v3.6.7 which corrected the query entry point to Layer 4.
@@ -141,7 +141,7 @@ Both are essential, but they require fundamentally different mindsets.
 
 ```mermaid
 graph TB
-    INPACT["<b>Chapter 0: INPACT™</b><br/><b>Six Agent Needs</b><br/><b>I • N • P • A • C • T</b><br/><b>Instant, Natural, Permitted,</b><br/><b>Adaptive, Contextual, Trusted</b>"]
+    INPACT["<b>Chapter 0: INPACT™</b><br/><b>Six Agent Needs</b><br/><b>I • N • P • A • C • T</b><br/><b>Instant, Natural, Permitted,</b><br/><b>Adaptive, Contextual, Transparent</b>"]
     
     ARCH["<b>Chapter 1: Seven-Layer</b><br/><b>Agent-Ready Enterprise Data Architecture</b><br/><b>Layers 1-7: Storage → Fabric → Semantic</b><br/><b>→ Intelligence → Governance → Observability → Orchestration</b>"]
     
@@ -389,7 +389,7 @@ A governance failure results in HIPAA violations, security breaches, or complian
 
 **Implementing the INPACT™ HITL Pattern:**
 
-In Chapter 0, we introduced how three INPACT™ needs—Permitted (P), Trusted (T), and Adaptive (A)—work together through human-in-the-loop patterns. P defines when agents escalate to humans based on risk thresholds, T explains why agents made decisions through complete transparency, and A learns from human corrections to refine autonomy boundaries over time.
+In Chapter 0, we introduced how three INPACT™ needs—Permitted (P), Transparent (T), and Adaptive (A)—work together through human-in-the-loop patterns. P defines when agents escalate to humans based on risk thresholds, T explains why agents made decisions through complete transparency, and A learns from human corrections to refine autonomy boundaries over time.
 
 Now we'll see exactly how Echo Health implemented this pattern—from the 6-factor risk assessment framework that determines escalation triggers, through the 5-level autonomy spectrum routing decisions from full autonomy to full manual control, to the three workflow patterns (synchronous/asynchronous/human-on-loop) matching approval speed to decision urgency, to the continuous learning loop that improved their escalation rate from 12% (Month 1) to 8% (Month 6) through refined threshold calibration.
 
@@ -2066,7 +2066,7 @@ This is why Echo reviews GOALS health weekly. Catching the language drift on Day
 
 You now have all three conceptual frameworks:
 
-**INPACT™ Framework (Chapter 0):** What agents need from the user's perspective—Instant, Natural, Permitted, Adaptive, Contextual, Trusted.
+**INPACT™ Framework (Chapter 0):** What agents need from the user's perspective—Instant, Natural, Permitted, Adaptive, Contextual, Transparent.
 
 **Seven-Layer Architecture (Chapter 1):** What you build to deliver those needs—Multi-Modal Storage, Real-Time Fabric, Semantic Layer, Intelligence Orchestration & Retrieval, Governance, Observability, Data Products.
 
@@ -2086,7 +2086,7 @@ Each INPACT™ need flows through specific architectural layers and manifests as
 
 **Contextual need** flows through Layers 1, 2, 3, 4 → **Accessibility, Language, and Soundness GOALS** maintain this through speed, understanding, and reliability.
 
-**Trusted need** flows through Layers 3, 5, 6 → **Governance, Observability, and Soundness GOALS** maintain this by ensuring audit completeness, enabling trace-based debugging, maintaining data quality that underpins accuracy.
+**Transparent need** flows through Layers 3, 5, 6 → **Governance, Observability, and Soundness GOALS** maintain this by ensuring audit completeness, enabling trace-based debugging, maintaining data quality that underpins accuracy.
 
 ### The Pattern Is Clear
 
@@ -2265,7 +2265,7 @@ Turn the page. Chapter 3 shows you exactly how to execute this transformation, w
 
 **Core Frameworks:**
 - **GOALS:** Governance, Observability, Accessibility, Language, Soundness
-- **INPACT™:** Instant, Natural, Permitted, Adaptive, Contextual, Trusted
+- **INPACT™:** Instant, Natural, Permitted, Adaptive, Contextual, Transparent
 
 **Healthcare & Compliance:**
 - **ABAC:** Attribute-Based Access Control
