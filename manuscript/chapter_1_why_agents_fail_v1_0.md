@@ -395,40 +395,45 @@ The paradigm shift Karpathy describes manifests as concrete architectural differ
 **Diagram 3: BI Era vs Agent Era Architecture**
 
 ```mermaid
-graph LR
-    subgraph BI["<b>BI ERA 1990-2020</b>"]
+graph TB
+    subgraph BI["<b>❌ BI ERA (1990-2020)</b>"]
         direction TB
-        BI1["<b>Batch ETL</b><br/>8-24 hour lag"]
-        BI2["<b>Data Warehouse</b><br/>OLAP Cubes"]
-        BI3["<b>BI Dashboards</b><br/>Fixed queries"]
-        BI4["<b>Human Analysts</b><br/>Manual decisions"]
+        BI1["<b>Batch ETL</b><br/><br/>8-24 hour<br/>data lag"]
+        BI2["<b>Data Warehouse</b><br/><br/>OLAP Cubes<br/>Fixed schemas"]
+        BI3["<b>BI Dashboards</b><br/><br/>Pre-built<br/>Fixed queries"]
+        BI4["<b>Human Analysts</b><br/><br/>Manual review<br/>Manual decisions"]
         
         BI1 --> BI2
         BI2 --> BI3
         BI3 --> BI4
     end
     
-    BI4 -.->|"<b>PARADIGM<br/>EVOLUTION</b>"| A1
+    EVOLUTION["<b>⬇ PARADIGM EVOLUTION ⬇</b><br/><br/>Software 3.0 requires<br/>fundamentally different<br/>infrastructure"]
     
-    subgraph AGENT["<b>AGENT ERA 2023-Present</b>"]
+    subgraph AGENT["<b>✅ AGENT ERA (2023-Present)</b>"]
         direction TB
-        A1["<b>Real-Time Streaming</b><br/>Sub-30s freshness"]
-        A2["<b>Multi-Modal Storage</b><br/>Vector + Graph + RDBMS"]
-        A3["<b>Intelligence Orchestration</b><br/>Natural language queries"]
-        A4["<b>Autonomous Agents</b><br/>Instant decisions"]
+        A1["<b>Real-Time Streaming</b><br/><br/>CDC & Kafka<br/>Sub-30s freshness"]
+        A2["<b>Multi-Modal Storage</b><br/><br/>Vector + Graph<br/>+ RDBMS"]
+        A3["<b>Intelligence Orchestration</b><br/><br/>RAG + Semantic<br/>Natural language"]
+        A4["<b>Autonomous Agents</b><br/><br/>Sub-2s response<br/>Instant decisions"]
         
         A1 --> A2
         A2 --> A3
         A3 --> A4
     end
     
-    style BI fill:#fff5f5,stroke:#c62828,stroke-width:3px,color:#b71c1c
+    BI --> EVOLUTION
+    EVOLUTION --> AGENT
+    
+    style BI fill:#fff5f5,stroke:#c62828,stroke-width:3px
     style BI1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style BI2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style BI3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style BI4 fill:#dc143c,color:#ffffff,stroke:#c62828,stroke-width:3px
     
-    style AGENT fill:#e8f5e9,stroke:#00897b,stroke-width:3px,color:#004d40
+    style EVOLUTION fill:#fff9e6,stroke:#f57c00,stroke-width:3px,color:#e65100
+    
+    style AGENT fill:#e8f5e9,stroke:#00897b,stroke-width:3px
     style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
