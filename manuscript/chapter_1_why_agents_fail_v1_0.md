@@ -396,43 +396,46 @@ The paradigm shift Karpathy describes manifests as concrete architectural differ
 
 ```mermaid
 graph LR
-    subgraph bi["<b>❌ BI ERA</b><br/><b>(1990-2020)</b>"]
+    subgraph BI["<b>BI ERA 1990-2020</b>"]
         direction TB
         BI1["<b>Batch ETL</b><br/>8-24 hour lag"]
         BI2["<b>Data Warehouse</b><br/>OLAP Cubes"]
         BI3["<b>BI Dashboards</b><br/>Fixed queries"]
         BI4["<b>Human Analysts</b><br/>Manual decisions"]
         
-        BI1 --> BI2 --> BI3 --> BI4
+        BI1 --> BI2
+        BI2 --> BI3
+        BI3 --> BI4
     end
     
-    subgraph agent["<b>✅ AGENT ERA</b><br/><b>(2023-Present)</b>"]
+    BI4 -.->|"<b>PARADIGM<br/>EVOLUTION</b>"| A1
+    
+    subgraph AGENT["<b>AGENT ERA 2023-Present</b>"]
         direction TB
-        A1["<b>Real-Time</b><br/><b>Streaming</b><br/>Sub-30s freshness"]
-        A2["<b>Multi-Modal</b><br/><b>Storage</b><br/>Vector + Graph<br/>+ RDBMS"]
-        A3["<b>Intelligence</b><br/><b>Orchestration</b><br/>Natural language<br/>queries"]
-        A4["<b>Autonomous</b><br/><b>Agents</b><br/>Instant decisions"]
+        A1["<b>Real-Time Streaming</b><br/>Sub-30s freshness"]
+        A2["<b>Multi-Modal Storage</b><br/>Vector + Graph + RDBMS"]
+        A3["<b>Intelligence Orchestration</b><br/>Natural language queries"]
+        A4["<b>Autonomous Agents</b><br/>Instant decisions"]
         
-        A1 --> A2 --> A3 --> A4
+        A1 --> A2
+        A2 --> A3
+        A3 --> A4
     end
     
-    BI4 -.->|"<b>Paradigm Evolution</b>"| A4
-    
-    style bi fill:#fff5f5,stroke:#c62828,stroke-width:3px,color:#b71c1c
-    style agent fill:#f0fff0,stroke:#00897b,stroke-width:3px,color:#000000
-    
+    style BI fill:#fff5f5,stroke:#c62828,stroke-width:3px,color:#b71c1c
     style BI1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style BI2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style BI3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style BI4 fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
+    style BI4 fill:#dc143c,color:#ffffff,stroke:#c62828,stroke-width:3px
     
+    style AGENT fill:#e8f5e9,stroke:#00897b,stroke-width:3px,color:#004d40
     style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A4 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style A4 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
 
-    CR["© 2025 Colaberry Inc."]
-    style CR fill:none,stroke:none,color:#999999
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:none,stroke:none,color:#808080
 ```
 
 **Key Architectural Differences**
