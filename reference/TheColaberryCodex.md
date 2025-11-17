@@ -73,9 +73,9 @@ Attribute our frameworks clearly:
 - "Multi-agent orchestration" (never "agent coordination")
 
 **Layers (use exact names):**
-- L1: Real-Time Data Fabric
-- L2: Unified Semantic Layer
-- L3: Multi-Modal Storage
+- L1: Multi-Modal Storage
+- L2: Real-Time Data Fabric
+- L3: Unified Semantic Layer
 - L4: Intelligent Retrieval (RAG)
 - L5: Agent-Aware Governance
 - L6: Observability & Feedback
