@@ -177,7 +177,7 @@ Through analysis of 40+ enterprise implementations, we've identified six essenti
 
 ```mermaid
 graph TB
-    subgraph HITL["<b>HUMAN-IN-THE-LOOP VALIDATION</b>"]
+    subgraph HITL["<b>INPACT™ Needs</b>"]
         I["<b>I - Instant</b><br/><b>Sub-second response</b>"]
         N["<b>N - Natural</b><br/><b>Language understanding</b>"]
         P["<b>P - Permitted</b><br/><b>Context-aware access</b>"]
