@@ -192,6 +192,44 @@ Every second of latency costs trust. A patient calls to schedule. The agent quer
 
 **The Infrastructure Gap**
 
+**Diagram 2: Analytics Era Batch vs. Agent Era Real-Time Response**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: Batch</b>"]
+        direction LR
+        A1["<b>Overnight<br/>ETL Job</b>"] --> B1["<b>Data<br/>Warehouse</b>"]
+        B1 --> C1["<b>BI Query<br/>8-13 seconds</b>"]
+        C1 --> D1["<b>Stale Data<br/>8-24 hours old</b>"]
+        
+        style D1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Real-Time</b>"]
+        direction LR
+        A2["<b>CDC<br/>Continuous</b>"] --> B2["<b>Streaming<br/>Platform</b>"]
+        B2 --> C2["<b>Agent Query<br/>&lt;2 seconds</b>"]
+        C2 --> D2["<b>Fresh Data<br/>&lt;30 seconds old</b>"]
+        
+        style D2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style C1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
+
 Echo's agent took 9-13 seconds to respond. Appointment availability queries hit data warehouses refreshed overnight via batch ETL. By 10 AM, data was 8+ hours stale. The database was cold—no indexes optimized for agent patterns, no caching. Every request forced table scans. Insurance eligibility checks added 3-4 more seconds of batch lag.
 
 Enterprise data systems were built for patience. Overnight batch jobs. Queries taking 9-13 seconds. Data hours or days old. That worked when humans analyzed reports over coffee. It fails when agents must respond at conversational speed.
@@ -223,6 +261,44 @@ A care coordinator asks: "Show me patients needing diabetes follow-up this quart
 Research shows GPT-4 achieves 73% execution accuracy on complex database schemas. Enterprise environments with cryptically-named tables see 40-60% accuracy without semantic optimization. **A 40% failure rate is unacceptable** in healthcare or finance where wrong answers cause harm.
 
 **The Infrastructure Gap**
+
+**Diagram 3: Analytics Era Manual Translation vs. Agent Era Semantic Understanding**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: Manual</b>"]
+        direction LR
+        A1["<b>Natural<br/>Language Query</b>"] --> B1["<b>Developer<br/>Translates to SQL</b>"]
+        B1 --> C1["<b>Cryptic Table<br/>FCT_PTNT_ENCT</b>"]
+        C1 --> D1["<b>2-3 days<br/>40-60% accuracy</b>"]
+        
+        style D1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Semantic</b>"]
+        direction LR
+        A2["<b>Natural<br/>Language Query</b>"] --> B2["<b>Semantic Layer<br/>Auto-translates</b>"]
+        B2 --> C2["<b>Business Terms<br/>Patient Encounters</b>"]
+        C2 --> D2["<b>Instant response<br/>75-85%+ accuracy</b>"]
+        
+        style D2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style C1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
 
 Echo's agent couldn't map natural language to data structures. The same patient appeared as pat_id in one table, patient_mrn in another, medical_record_number in a third. The agent had no way to know these represented one person. It couldn't resolve "my doctor" to a specific provider or understand "this quarter" meant fiscal quarter (October-December) not calendar quarter.
 
@@ -257,6 +333,55 @@ Static permissions don't work. The same agent receives hundreds of requests dail
 Research shows 78% of executives prioritize trust over speed in AI deployment. Healthcare faces HIPAA audits where inability to trace data access to specific humans results in $50,000+ penalties per violation.
 
 **The Infrastructure Gap**
+
+**Diagram 4: Analytics Era Static RBAC vs. Agent Era Dynamic ABAC (HITL)**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: Static RBAC</b>"]
+        direction LR
+        A1["<b>User: Sarah</b>"] --> B1["<b>Role:<br/>Data Analyst</b>"]
+        B1 --> C1["<b>Permission Set<br/>READ all tables</b>"]
+        C1 --> D1["<b>Access Decision<br/>2 weeks to provision</b>"]
+        D1 --> E1["<b>Result:<br/>Over-privileged</b>"]
+        
+        style E1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Dynamic ABAC (HITL)</b>"]
+        direction LR
+        A2["<b>User: Sarah</b>"] --> B2["<b>Attributes:<br/>role, dept, time</b>"]
+        B2 --> C2["<b>Data Attributes:<br/>PHI, sensitivity</b>"]
+        C2 --> D2["<b>Policy Evaluation<br/>&lt;10ms real-time</b>"]
+        D2 --> E2{"<b>Risk<br/>Assessment</b>"}
+        E2 -->|<b>High Risk</b>| F2["<b>Escalate to<br/>Human Approval</b>"]
+        E2 -->|<b>Low Risk</b>| G2["<b>Auto-approve</b>"]
+        F2 --> H2["<b>Result:<br/>Right-sized access<br/>+ Safety</b>"]
+        G2 --> H2
+        
+        style H2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+        style E2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+        style F2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style C1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style D1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style D2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style G2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
 
 Echo used traditional role-based access control with four roles: reader, writer, admin, app_service. When they gave their agent the app_service account, it could access ANY patient's data regardless of who asked. The compliance audit failed.
 
@@ -302,6 +427,58 @@ Traditional approaches wait for quarterly reviews. By then, thousands of users h
 
 **The Infrastructure Gap & HITL Learning**
 
+**Diagram 5: Analytics Era Periodic Reviews vs. Agent Era Continuous Learning (HITL)**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: Quarterly</b>"]
+        direction LR
+        A1["<b>Deploy Model</b>"] --> B1["<b>Wait 3 months</b>"]
+        B1 --> C1["<b>Users complain</b>"]
+        C1 --> D1["<b>Manual review<br/>2 weeks</b>"]
+        D1 --> E1["<b>Retrain<br/>4 weeks</b>"]
+        E1 --> F1["<b>Total:<br/>3+ months to fix</b>"]
+        
+        style F1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Adaptive (HITL)</b>"]
+        direction LR
+        A2["<b>Deploy Model</b>"] --> B2["<b>Real-time<br/>monitoring</b>"]
+        B2 --> C2["<b>Detect drift<br/>in days</b>"]
+        C2 --> D2["<b>Auto-trigger<br/>retraining</b>"]
+        D2 --> E2["<b>A/B test<br/>deploy</b>"]
+        E2 --> F2["<b>Total:<br/>days to fix</b>"]
+        
+        HUMAN["<b>Human Corrections<br/>& Approvals</b>"]
+        HUMAN -.->|<b>Pattern detection</b>| C2
+        HUMAN -.->|<b>Threshold refinement</b>| D2
+        HUMAN -.->|<b>Confidence calibration</b>| E2
+        
+        style F2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+        style HUMAN fill:#fff9e6,stroke:#f57c00,stroke-width:3px,color:#e65100
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style C1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style D1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style E1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style D2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style E2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
+
 Echo initially viewed agents as "done" once launched. Within the first week: wrong answers about specialist availability (15% error rate), couldn't understand insurance questions (8% confusion), slow during peak hours (P95 latency 4.2 seconds), outdated clinic hours (100% accuracy drop for affected locations).
 
 Their analytics tracked server uptime and API latency but provided zero insight into why agents gave wrong answers, which queries failed, whether retrieval was degrading, or how performance changed over time. When investigating the 15% specialist availability error, manual root cause analysis took 3 days.
@@ -337,6 +514,44 @@ Real questions span multiple data sources. A patient asking "Am I eligible for t
 Traditional integration operates at weeks: 6-8 weeks per new source connection, overnight ETL jobs, point-to-point integrations creating N(N-1)/2 maintenance nightmares, no entity resolution (same patient = 3 different IDs).
 
 **The Infrastructure Gap**
+
+**Diagram 6: Analytics Era Siloed Data vs. Agent Era Unified Context**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: Manual</b>"]
+        direction LR
+        A1["<b>3 Systems:<br/>EHR, Claims, Portal</b>"] -->|<b>6-8 weeks each</b>| B1["<b>Data<br/>Warehouse</b>"]
+        B1 --> C1["<b>Query takes<br/>8-13 seconds</b>"]
+        C1 --> D1["<b>Often incomplete<br/>or stale</b>"]
+        
+        style D1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Real-Time</b>"]
+        direction LR
+        A2["<b>3 Systems:<br/>EHR, Claims, Portal</b>"] -->|<b>CDC instant</b>| B2["<b>Real-Time<br/>Fabric</b>"]
+        B2 --> C2["<b>RAG assembles<br/>&lt;2 seconds</b>"]
+        C2 --> D2["<b>Complete, fresh<br/>contextual answer</b>"]
+        
+        style D2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style C1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
 
 Echo's agent could query one system at a time but assembling context across systems required custom code for every question type. Example failure: "Show high-risk diabetic patients overdue for HbA1c tests with upcoming appointments" required data from EHR (diagnoses, appointments), lab system (test dates), care management (risk scores), and scheduling (upcoming dates).
 
@@ -377,6 +592,44 @@ Transparency serves three purposes: **user trust** (understanding builds confide
 Research shows transparency and design are the mediators of trust in AI. When users can't see agent reasoning, distrust spreads to both the AI and the company. Technical excellence means nothing without earned trust through transparency.
 
 **The Infrastructure Gap & HITL Explanation**
+
+**Diagram 7: Analytics Era No Audit vs. Agent Era Complete Audit (HITL)**
+
+```mermaid
+graph TB
+    subgraph ERA1["<b>Analytics Era: No Audit</b>"]
+        direction LR
+        A1["<b>Query executed</b>"] --> B1["<b>Basic DB log<br/>No business context</b>"]
+        B1 --> C1["<b>Result:<br/>Can't prove compliance</b>"]
+        
+        style C1 fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    end
+    
+    ERA1 -.->|<b>Evolution</b>| ERA2
+    
+    subgraph ERA2["<b>Agent Era: Complete Audit (HITL)</b>"]
+        direction LR
+        A2["<b>Query executed</b>"] --> B2["<b>Complete logging<br/>Who, What, When, Why<br/>Trace ID, Policy, Result</b>"]
+        B2 --> C2["<b>Real-time<br/>observability</b>"]
+        C2 --> D2["<b>Explainability<br/>for human verification</b>"]
+        D2 --> E2["<b>Result:<br/>Every decision<br/>fully traceable</b>"]
+        
+        style E2 fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+        style D2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    end
+    
+    style ERA1 fill:#ffebee,stroke:#c62828,stroke-width:2px
+    style A1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style B1 fill:#ffffff,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style ERA2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style A2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#757575
+```
 
 When compliance audited Echo's scheduling agent, they asked: "When the agent accessed patient John Smith's clinical notes on October 15 at 2:34 PM, why? Was access appropriate? Which human user triggered it?"
 
