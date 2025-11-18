@@ -31,16 +31,16 @@ graph TB
     subgraph ARCH["<b>THE ARCHITECTURE OF TRUST</b>"]
         PILLAR1["<b>PILLAR 1: INPACT™</b><br/><b>What Agents Need</b><br/><b>I·N·P·A·C·T</b><br/><b>Instant • Natural • Permitted</b><br/><b>Adaptive • Contextual • Transparent</b>"]
         
-        PILLAR2["<b>PILLAR 2: 7-LAYER</b><br/><b>How to Build It</b><br/><b>Storage → Real-Time → Semantic</b><br/><b>→ RAG → Governance</b><br/><b>→ Observability → Orchestration</b>"]
+        PILLAR2["<b>PILLAR 2: 7-LAYER</b><br/><b>How to Build It</b><br/><b>Storage → Real-Time → Semantic</b><br/><b>→ Intelligence → Governance</b><br/><b>→ Observability → Orchestration</b>"]
         
         PILLAR3["<b>PILLAR 3: GOALS™</b><br/><b>How to Measure Success</b><br/><b>G·O·A·L·S</b><br/><b>Governance • Observability</b><br/><b>Accessibility • Language • Soundness</b>"]
         
-        PILLAR1 -->|<b>Requirements drive</b>| PILLAR2
-        PILLAR2 -->|<b>Implementation enables</b>| PILLAR3
-        PILLAR3 -->|<b>Operations validate</b>| PILLAR1
+        PILLAR1 -->|<b>Agent needs fulfilled by</b>| PILLAR2
+        PILLAR2 -->|<b>Infrastructure enables</b>| PILLAR3
+        PILLAR3 -->|<b>Drives operational efficiency</b>| PILLAR1
     end
     
-    FOUNDATION["<b>FOUNDATION</b><br/><b>Trust Before Intelligence</b><br/><b>Trust = Infrastructure Fulfilling Needs</b>"]
+    FOUNDATION["<b>FOUNDATION</b><br/><b>The Architecture of Trust</b>"]
     
     FOUNDATION --> ARCH
     
