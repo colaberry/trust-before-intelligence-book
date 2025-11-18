@@ -3,9 +3,10 @@
 **Book:** Trust Before Intelligence  
 **Subtitle:** Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
 **Author:** Ram Katamaraja, CEO of Colaberry Inc.  
-**Version:** 2.8 | November 17, 2025
+**Version:** 2.9 | November 17, 2025
 
 **Version History:**
+- **v2.9** (November 17, 2025): Fixed Diagram 1 subgraph title visibility - added explicit text color to timeline and analysis subgraph styles (color:#b71c1c for timeline, color:#004d40 for analysis) so titles remain visible on both light and dark backgrounds.
 - **v2.8** (November 17, 2025): Fixed Diagram 1 emoji rendering - removed 📉 and ⚠️ emojis from subgraph headers as they don't render consistently across all platforms. Headers now read "TRUST COLLAPSE (Feb-July 2025)" and "ROOT CAUSE ANALYSIS" in plain text.
 - **v2.7** (November 17, 2025): Fixed Diagram 5 header cutoff - moved "(6 months)" from header into TOTAL box content as "6-month pilots". Header now reads "ECHO'S $2M INVESTMENT" without parenthetical to prevent text cutoff.
 - **v2.6** (November 17, 2025): Fixed Diagram 5 rendering - shortened all labels to prevent text cutoff, removed emojis from subgraph headers (💰, ❌, 📊), compressed content ("$2,000,000" → "$2M", "adoption" → "adopt", "HIPAA violation" → "HIPAA", "Not agent-ready" → "Not ready"). Removed "direction TB" declarations and second-line headers. Result: More compact layout, all text fully visible.
@@ -138,13 +139,13 @@ graph TB
     
     timeline --> analysis
     
-    style timeline fill:#fff5f5,stroke:#c62828,stroke-width:3px
+    style timeline fill:#fff5f5,stroke:#c62828,stroke-width:3px,color:#b71c1c
     style FEB fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style MAR fill:#ef9a9a,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style MAY fill:#e57373,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style JUL fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff
     
-    style analysis fill:#e8f5e9,stroke:#00897b,stroke-width:3px
+    style analysis fill:#e8f5e9,stroke:#00897b,stroke-width:3px,color:#004d40
     style CAUSE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style RESULT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     
