@@ -322,7 +322,7 @@ Results: 87% overall accuracy (44 percentage point improvement). Simple queries:
 
 ---
 
-### ✅ Progress Check: Speed & Understanding
+### 📍 CHECKPOINT: Speed & Understanding
 
 **What You've Learned (2 of 6 needs complete - 33% through Part 3):**
 
@@ -520,7 +520,7 @@ Results: Feedback automated and comprehensive. Root cause under 24 hours (95% im
 
 ---
 
-### ✅ Progress Check: Security & Learning
+### 📍 CHECKPOINT: Security & Learning
 
 **What You've Learned (4 of 6 needs complete - 67% through Part 3):**
 
@@ -693,7 +693,7 @@ Results: Complete audit trails meeting healthcare compliance. Physicians confide
 
 ---
 
-### ✅ Progress Check: Context & Trust Complete
+### 📍 CHECKPOINT: Context & Trust Complete
 
 **What You've Learned (6 of 6 needs complete - 100% through Part 3):**
 
