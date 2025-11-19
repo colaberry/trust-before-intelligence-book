@@ -130,6 +130,45 @@ The six needs interconnect through architecture. Instant (I) requires real-time 
 
 INPACT™ assessment quantifies infrastructure readiness using a 1-6 scoring system per dimension, creating a 36-point maximum (6 dimensions × 6 points). Convert to 100-point scale: (score/36) × 100.
 
+**Diagram 2: INPACT™ Assessment Methodology—From Dimensions to Decision**
+
+```mermaid
+graph LR
+    subgraph ASSESS["<b>STEP 1: ASSESS</b>"]
+        I["<b>Instant (I)</b><br/>Score: 1-6"]
+        N["<b>Natural (N)</b><br/>Score: 1-6"]
+        P["<b>Permitted (P)</b><br/>Score: 1-6"]
+        A["<b>Adaptive (A)</b><br/>Score: 1-6"]
+        C["<b>Contextual (C)</b><br/>Score: 1-6"]
+        T["<b>Transparent (T)</b><br/>Score: 1-6"]
+    end
+    
+    ASSESS --> CALC["<b>STEP 2: CALCULATE</b><br/>Sum: 6 dimensions × 6 points<br/>=36 points maximum<br/><br/>Convert:<br/>(score/36) × 100"]
+    
+    CALC --> DECISION{"<b>STEP 3: DECISION</b><br/>Score ≥ 85/100?"}
+    
+    DECISION -->|<b>YES: ≥85/100</b>| READY["<b>AGENT-READY</b><br/>Production deployment<br/>Sustainable adoption<br/>Manageable risk"]
+    
+    DECISION -->|<b>NO: <85/100</b>| GAPS["<b>GAP ANALYSIS</b><br/>High abandonment risk<br/>Infrastructure gaps<br/>Prioritized roadmap needed"]
+    
+    style ASSESS fill:#e0f2f1,stroke:#00897b,stroke-width:2px
+    style I fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style N fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style P fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style T fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    
+    style CALC fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style DECISION fill:#fff3e0,stroke:#f57c00,stroke-width:3px,color:#e65100
+    
+    style READY fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+    style GAPS fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Score 1-2 (Critical/Weak):** Infrastructure blocks agent deployment. Major capability gaps would cause compliance failures or user abandonment.
 
 **Score 3 (Moderate):** Pilot-appropriate but not production-ready. Requires significant improvement.
@@ -162,6 +201,46 @@ Krish studied the breakdown. "What's the production threshold?"
 "85/100," Marcus replied. "We need 31 points. We have 22. That's a 9-point gap—roughly 15 weeks of focused work."
 
 The transformation roadmap began there.
+
+**Diagram 3: Echo Health's INPACT™ Transformation—28/100 to 85/100 in 10 Weeks**
+
+```mermaid
+graph LR
+    subgraph BEFORE["<b>WEEK 0: NOT READY</b><br/>Echo Health Assessment"]
+        B_SCORE["<b>28/100</b><br/>(22/36 points)"]
+        B_I["I=3 🔴"]
+        B_N["N=4 🟡"]
+        B_P["P=3 🔴"]
+        B_A["A=3 🔴"]
+        B_C["C=6 ✅"]
+        B_T["T=3 🔴"]
+        B_STATUS["<b>5 Critical Gaps</b><br/>High abandonment risk<br/>Infrastructure blocks deployment"]
+    end
+    
+    BEFORE -->|<b>90-DAY ROADMAP</b><br/>$1.23M Investment<br/>I→N+P→C→A+T Sequence| AFTER
+    
+    subgraph AFTER["<b>WEEK 10: AGENT-READY</b><br/>Echo Health Assessment"]
+        A_SCORE["<b>85/100</b><br/>(31/36 points)"]
+        A_I["I=5 ✅"]
+        A_N["N=5 ✅"]
+        A_P["P=5 ✅"]
+        A_A["A=5 ✅"]
+        A_C["C=6 ✅"]
+        A_T["T=5 ✅"]
+        A_STATUS["<b>All Dimensions ≥5</b><br/>Production-ready<br/>Sustainable adoption<br/><b>477% ROI</b>"]
+    end
+    
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:3px
+    style B_SCORE fill:#b71c1c,color:#ffffff,stroke:#c62828,stroke-width:3px
+    style B_STATUS fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:3px
+    style A_SCORE fill:#00695c,color:#ffffff,stroke:#00897b,stroke-width:3px
+    style A_STATUS fill:#00897b,color:#ffffff,stroke:#004d40,stroke-width:2px
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 ---
 
@@ -226,7 +305,7 @@ Every second of latency costs trust. A patient calls to schedule. The agent quer
 
 **The Infrastructure Gap**
 
-**Diagram 2: Analytics Era Batch vs. Agent Era Real-Time Response**
+**Diagram 4: Analytics Era Batch vs. Agent Era Real-Time Response**
 
 ```mermaid
 graph TB
@@ -296,7 +375,7 @@ Research shows GPT-4 achieves 73% execution accuracy on complex database schemas
 
 **The Infrastructure Gap**
 
-**Diagram 3: Analytics Era Manual Translation vs. Agent Era Semantic Understanding**
+**Diagram 5: Analytics Era Manual Translation vs. Agent Era Semantic Understanding**
 
 ```mermaid
 graph TB
@@ -366,7 +445,7 @@ Traditional role-based access control (RBAC) operates at table level: grant all 
 
 **The Infrastructure Gap**
 
-**Diagram 4: RBAC Era Static Roles vs. ABAC Era Dynamic Policies**
+**Diagram 6: RBAC Era Static Roles vs. ABAC Era Dynamic Policies**
 
 ```mermaid
 graph TB
@@ -432,7 +511,7 @@ Manual quarterly retraining creates 3-month windows where agents operate with de
 
 **The Infrastructure Gap**
 
-**Diagram 5: Manual Era Quarterly Retraining vs. Adaptive Era Continuous Learning**
+**Diagram 7: Manual Era Quarterly Retraining vs. Adaptive Era Continuous Learning**
 
 ```mermaid
 graph TB
@@ -502,7 +581,7 @@ Agents operating on single-system data provide incomplete answers: "You have an 
 
 **The Infrastructure Gap**
 
-**Diagram 6: Siloed Era Single-System vs. Contextual Era Cross-System Integration**
+**Diagram 8: Siloed Era Single-System vs. Contextual Era Cross-System Integration**
 
 ```mermaid
 graph TB
@@ -570,7 +649,7 @@ Without transparency, physicians override 70% of agent recommendations—not bec
 
 **The Infrastructure Gap**
 
-**Diagram 7: Black-Box Era Opaque Decisions vs. Transparent Era Explainable Reasoning**
+**Diagram 9: Black-Box Era Opaque Decisions vs. Transparent Era Explainable Reasoning**
 
 ```mermaid
 graph TB
