@@ -28,7 +28,7 @@ Chapter 1 revealed why 95% of enterprise AI agent projects fail—not from inade
 
 ```mermaid
 graph TB
-    subgraph ARCH["<b>THE ARCHITECTURE OF TRUST</b>"]
+    subgraph ARCH["<b>Three Integrated Pillars</b>"]
         PILLAR1["<b>PILLAR 1: INPACT™</b><br/><b>What Agents Need</b><br/><b>I·N·P·A·C·T</b><br/><b>Instant • Natural • Permitted</b><br/><b>Adaptive • Contextual • Transparent</b>"]
         
         PILLAR2["<b>PILLAR 2: 7-LAYER</b><br/><b>How to Build It</b><br/><b>Storage → Real-Time → Semantic</b><br/><b>→ Intelligence → Governance</b><br/><b>→ Observability → Orchestration</b>"]
@@ -40,7 +40,7 @@ graph TB
         PILLAR3 -->|<b>Drives operational efficiency</b>| PILLAR1
     end
     
-    FOUNDATION["<b>FOUNDATION</b><br/><b>The Architecture of Trust - Three Integrated Pillars</b>"]
+    FOUNDATION["<b>FOUNDATION</b><br/><b>THE ARCHITECTURE OF TRUST</b>"]
     
     FOUNDATION --> ARCH
     
@@ -80,14 +80,14 @@ Tony Robbins built an empire on one insight: humans have six core needs—certai
 
 ```mermaid
 graph TB
-    TITLE["<b>HUMAN NEEDS → AGENT NEEDS PARALLEL</b>"]
+    TITLE["<b>6 HUMAN NEEDS → 6 AGENT NEEDS PARALLEL</b>"]
     
     TITLE --> ROW
     
     subgraph ROW[" "]
         direction LR
         
-        subgraph HUMAN["<b>HUMAN NEEDS(Tony Robbins)</b>"]
+        subgraph HUMAN["<b>HUMAN NEEDS (Tony Robbins) </b>"]
             direction TB
             H1["<b>Certainty</b><br/>Predictability<br/>Safety"]
             H2["<b>Variety</b><br/>Challenge<br/>Novelty"]
@@ -97,7 +97,7 @@ graph TB
             H6["<b>Contribution</b><br/>Purpose<br/>Meaning"]
         end
         
-        subgraph AGENT["<b>AGENT NEEDS(INPACT™)</b>"]
+        subgraph AGENT["<b>AGENT NEEDS (INPACT™ )</b>"]
             direction TB
             A1["<b>P - Permitted</b><br/>Authorization<br/>Security boundaries"]
             A2["<b>N - Natural</b><br/>Business language<br/>Understanding"]
@@ -183,7 +183,7 @@ Traditional enterprise software could require trust: "You must use this ERP syst
 
 ```mermaid
 graph TB
-    subgraph BOX["<b>6 INPACT™ NEEDS FULFILLED AGENT</b>"]
+    subgraph BOX["<b>INPACT™ AGENT</b>"]
         I["<b>I - Instant</b><br/><b>Users trust responses are current</b>"]
         N["<b>N - Natural</b><br/><b>Users trust agent understands</b>"]
         P["<b>P - Permitted</b><br/><b>Users trust agent respects boundaries</b>"]
@@ -191,7 +191,7 @@ graph TB
         C["<b>C - Contextual</b><br/><b>Users trust agent sees complete picture</b>"]
         T["<b>T - Transparent</b><br/><b>Users trust agent's reasoning</b>"]
         
-        TRUST["<b>✅ TRUSTED INPACT™ AGENT</b><br/><b>Users Delegate with Confidence</b>"]
+        TRUST["<b>✅ TRUSTED AGENT</b><br/><b>Users Delegate with Confidence</b>"]
         
         I --> TRUST
         N --> TRUST
@@ -775,7 +775,7 @@ Without transparency, physicians override 70% of agent recommendations—not bec
 
 ```mermaid
 graph TB
-    subgraph ERA1["<b>Black-Box Era: Opaque</b>"]
+    subgraph ERA1["<b>Black-Box: Opaque</b>"]
         direction LR
         A1["<b>Agent<br/>Recommendation</b>"] --> B1["<b>No<br/>Explanation</b>"]
         B1 --> D1["<b>70% Override<br/>Rate</b>"]
@@ -785,7 +785,7 @@ graph TB
     
     ERA1 -.->|<b>Evolution</b>| ERA2
     
-    subgraph ERA2["<b>Transparent Era: Explainable</b>"]
+    subgraph ERA2["<b>Transparent: Explainable</b>"]
         direction LR
         A2["<b>Agent<br/>Recommendation</b>"] --> B2["<b>Audit<br/>Trail</b>"]
         B2 --> C2["<b>Clinical<br/>Evidence</b>"]
