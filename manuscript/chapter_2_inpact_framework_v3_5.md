@@ -889,7 +889,7 @@ Traditional frameworks focus on AI model quality, prompt engineering, or RAG opt
 - **Diagnostic:** Reveals where infrastructure fails agent needs
 - **Prioritized:** Dependencies determine optimal sequence
 - **Measurable:** 1-6 scoring enables gap tracking
-- **Actionable:** Maps to 7-layer architecture (Chapter 4)
+- **Actionable:** Maps to 7-layer architecture (Chapters 4-7)
 
 **INPACT™ is not:**
 - Model selection guidance (choose GPT-4 vs Claude vs Llama)
@@ -903,9 +903,9 @@ Those topics matter. But they assume infrastructure readiness. INPACT™ establi
 
 **Chapter 2 established Pillar 1:** What agents need (INPACT™ six needs).
 
-**Chapter 4 establishes Pillar 2:** How to build infrastructure fulfilling those needs (7-layer architecture).
+**Chapters 4-7 establish Pillar 2:** How to build infrastructure fulfilling those needs (7-layer architecture built across four chapters).
 
-**Chapter 6 establishes Pillar 3:** How to measure operational success (GOALS™ operational framework).
+**Chapter 8 establishes Pillar 3:** How to measure operational success (GOALS™ operational framework).
 
 **Together, the three pillars form The Architecture of Trust**—an integrated system ensuring agents operate reliably, compliantly, and effectively in production environments.
 
@@ -962,4 +962,4 @@ Your organization's journey follows the same pattern. The specifics differ—you
 **Word Count:** ~7,988 words  
 **Citations:** 16 sources (38% Tier 1, 6% Tier 2, 56% Tier 3 vendor documentation = 44% Tier 1+2 combined)  
 **Target Achieved:** +6.5% vs 7,500w target (acceptable range)  
-**Next:** Chapter 3 - The 90-Day Transformation Roadmap
+**Next:** Chapter 3 - From BI-Era to Agent-Era
