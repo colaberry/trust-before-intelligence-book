@@ -39,7 +39,7 @@ For three decades (1990-2020), enterprise data architecture optimized for human 
 
 **Wave 1: Data Warehousing (1990s-2000s)**
 
-Organizations built centralized warehouses using Ralph Kimball's dimensional modeling. ETL jobs ran overnight, extracting from transactional systems, transforming into star schemas, loading by 6 AM. Analysts arrived to find yesterday's data ready.
+Organizations built centralized warehouses using Ralph Kimball's dimensional modeling methodology. [3] ETL jobs ran overnight, extracting from transactional systems, transforming into star schemas, loading by 6 AM. Analysts arrived to find yesterday's data ready.
 
 This worked because:
 - Decisions took days or weeks (strategic planning, quarterly reviews)
@@ -49,7 +49,7 @@ This worked because:
 
 **Wave 2: BI Dashboards (2000s-2010s)**
 
-OLAP cubes pre-aggregated calculations. Tableau and Power BI democratized data access. Executives got their "single pane of glass"--sales pipeline, inventory, customer metrics, all updated daily.
+OLAP cubes pre-aggregated calculations. [Tableau](https://www.tableau.com) and [Power BI](https://powerbi.microsoft.com) democratized data access. Executives got their "single pane of glass"--sales pipeline, inventory, customer metrics, all updated daily.
 
 This worked because:
 - Self-service reduced analyst bottlenecks
@@ -59,7 +59,7 @@ This worked because:
 
 **Wave 3: Big Data & Cloud (2010s-2020)**
 
-Data lakes on HDFS, then cloud storage (Azure Data Lake, AWS S3). Databricks combined data lake flexibility with warehouse performance. Machine learning appeared as point solutions--fraud detection, recommendations, predictive maintenance--but ran in batch on historical data.
+Data lakes on HDFS, then cloud storage (Azure Data Lake, AWS S3). [Databricks](https://www.databricks.com) combined data lake flexibility with warehouse performance. Machine learning appeared as point solutions--fraud detection, recommendations, predictive maintenance--but ran in batch on historical data.
 
 This worked because:
 - Cloud economics made storage cheap
@@ -83,7 +83,7 @@ Then agents arrived--and everything that made Echo's infrastructure excellent fo
 
 ### The Agent Era: Real-Time, Autonomous, Conversational
 
-Andrej Karpathy, former Director of AI at Tesla and co-founder of OpenAI, explains the paradigm shift: "Software is changing quite fundamentally again. LLMs are a new kind of computer, and you program them in English."
+Andrej Karpathy, former Director of AI at Tesla and co-founder of OpenAI, explains the paradigm shift: "Software is changing quite fundamentally again. LLMs are a new kind of computer, and you program them in English." [1]
 
 He identifies three distinct eras:
 
@@ -91,7 +91,9 @@ He identifies three distinct eras:
 
 **Software 2.0: (2010s-2023)** Neural networks where "code" became learned weights. Enterprises adopted this selectively (computer vision, recommendations) but as point solutions within Software 1.0 architectures.
 
-**Software 3.0: (2023-Present)** Large Language Models programmable in natural language. As Karpathy emphasizes: "Software 3.0 is eating Software 1.0/2.0"--existing software will be rewritten.
+**Software 3.0: (2023-Present)** Large Language Models programmable in natural language. As Karpathy emphasizes: "Software 3.0 is eating Software 1.0/2.0"--existing software will be rewritten. [1]
+
+The implications for enterprise infrastructure are profound. MIT research examining 300+ enterprise GenAI initiatives found that 95% fail to deliver measurable business value. [2] The primary barrier isn't model quality--it's infrastructure designed for the wrong paradigm.
 
 **Diagram 3.1: Software 1.0 to 3.0 Evolution**
 
@@ -680,9 +682,11 @@ Chapter 3 revealed why transformation is necessary: BI-era infrastructure cannot
 
 ## References
 
-[1] Challapally, A., et al. (2025). "The GenAI Divide: State of AI in Business 2025." MIT NANDA. https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf
+[1] Karpathy, A. (2025, June). "Building AGI in Real-Time." Y Combinator AI Startup School Keynote. https://www.youtube.com/watch?v=c3b-JASoPi0
 
-[15] Karpathy, A. (2025, June). "Building AGI in Real-Time." Y Combinator AI Startup School. Software 3.0 paradigm keynote. https://www.youtube.com/watch?v=c3b-JASoPi0
+[2] Challapally, A., Pease, C., Raskar, R., & Chari, P. (2025, July). "The GenAI Divide: State of AI in Business 2025." MIT NANDA. https://mlq.ai/media/quarterly_decks/v0.1_State_of_AI_in_Business_2025_Report.pdf
+
+[3] Kimball, R., & Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling* (3rd ed.). Wiley. https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/
 
 ---
 
