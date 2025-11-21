@@ -87,11 +87,11 @@ Andrej Karpathy, former Director of AI at Tesla and co-founder of OpenAI, explai
 
 He identifies three distinct eras:
 
-**Software 1.0 (1950s-2010s):** Explicit logic in C++, Java, Python. BI infrastructure was built here--rigid schemas, predefined queries, deterministic outputs.
+**Software 1.0:** Explicit logic in C++, Java, Python. BI infrastructure was built here--rigid schemas, predefined queries, deterministic outputs.
 
-**Software 2.0 (2010s-2023):** Neural networks where "code" became learned weights. Enterprises adopted this selectively (computer vision, recommendations) but as point solutions within Software 1.0 architectures.
+**Software 2.0:** Neural networks where "code" became learned weights. Enterprises adopted this selectively (computer vision, recommendations) but as point solutions within Software 1.0 architectures.
 
-**Software 3.0 (2023-present):** Large Language Models programmable in natural language. As Karpathy emphasizes: "Software 3.0 is eating Software 1.0/2.0"--existing software will be rewritten.
+**Software 3.0:** Large Language Models programmable in natural language. As Karpathy emphasizes: "Software 3.0 is eating Software 1.0/2.0"--existing software will be rewritten.
 
 **Diagram 3.1: Software 1.0 to 3.0 Evolution**
 
@@ -172,7 +172,7 @@ Capturing that learning requires feedback loops, validation mechanisms, and cont
 
 ```mermaid
 graph TB
-    subgraph old["<b>BI-ERA: HUMAN ANALYSIS</b>"]
+    subgraph old["<b>BI-ERA:HUMAN ANALYSIS</b>"]
         direction LR
         O1["<b>Batch ETL</b><br/><b>8-24 hour lag</b>"]
         O2["<b>Data Warehouse</b><br/><b>OLAP cubes</b>"]
@@ -184,7 +184,7 @@ graph TB
     
     Shift["<b>PARADIGM EVOLUTION</b>"]
     
-    subgraph new["<b>AGENT-ERA: AUTONOMOUS SYSTEMS</b>"]
+    subgraph new["<b>AGENT-ERA:AUTONOMOUS SYSTEMS</b>"]
         direction LR
         N1["<b>Real-Time</b><br/><b>Sub-30s freshness</b>"]
         N2["<b>Multi-Modal</b><br/><b>Vector + Graph + SQL</b>"]
