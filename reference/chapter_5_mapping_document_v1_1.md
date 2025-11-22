@@ -1,11 +1,12 @@
 # CHAPTER 5 MAPPING DOCUMENT
-## "Intelligence Layers: Semantic Understanding, RAG, and LLM Integration"
+## "Intelligence Layers: Semantic Understanding and RAG with LLM Integration"
 
-**Version:** 1.0  
+**Version:** 1.1 CORRECTED  
 **Date:** November 21, 2025  
 **Status:** 🎯 READY FOR REFACTORING  
 **Target File:** `manuscript/06_chapter_5_intelligence_layers.md`  
 **Compliant With:** Book Structure Codex v6.4, Book Codex Master v3.0
+**Correction:** Layer numbering clarified - LLM integration is part of Layer 4 (RAG Infrastructure), not separate Layer 5
 
 ---
 
@@ -25,9 +26,14 @@
 
 This is the SECOND technical construction chapter, building upon Chapter 4's foundation:
 - Chapter 4: Built foundation layers (Layers 1-2: Storage + Real-Time)
-- **Chapter 5: Builds intelligence layers (Layers 3-5: Semantic + RAG + LLM)**
-- Chapter 6: Will build trust layers (Layer 6: Governance + Observability)
+- **Chapter 5: Builds intelligence layers (Layers 3-4: Semantic + RAG with LLM Integration)**
+- Chapter 6: Will build trust layers (Layers 5-6: Governance + Observability)
 - Chapter 7: Will build orchestration layer (Layer 7: Multi-Agent Orchestration)
+
+**CRITICAL ARCHITECTURAL NOTE:**
+- **Layer 4 = RAG Infrastructure INCLUDING LLM Integration**
+- LLMs are NOT a separate layer - they are the reasoning engine within Layer 4
+- Layer 4 pipeline: Query Understanding → Embeddings → Retrieval → Reranking → Context Assembly → **LLM Generation**
 
 **Chapter 5 completes the intelligence capability of Pillar 2: The 7-Layer Architecture**
 
@@ -40,8 +46,8 @@ Chapters 4-7 construct the complete technical architecture, layer by layer. Chap
 ### Chapter Objectives
 - **Target Word Count:** 12,000 words (24 pages at 500 words/page)
 - **Target Pages:** 24 pages
-- **Primary Purpose:** Build intelligence layers (Layers 3-5) of 7-Layer Architecture
-- **Key Frameworks:** Semantic modeling, RAG architecture, LLM selection (GPT-4 vs Claude vs Llama)
+- **Primary Purpose:** Build intelligence layers (Layers 3-4) of 7-Layer Architecture
+- **Key Frameworks:** Semantic modeling, RAG architecture with LLM integration (GPT-4 vs Claude vs Llama)
 - **Echo Integration:** Sarah's Week 5-8 build, INPACT™ score improvement (42 → 67)
 - **Reading Time:** ~48 minutes
 
@@ -52,8 +58,8 @@ Chapter 5 follows the standard Moore-Kim pattern for technical deep-dive chapter
 [MOVEMENT 1: MOORE OPENING - 3 pages]
 Section 1: Intelligence Architecture Introduction
   "Foundation is complete. Now we build intelligence..."
-  TRIAD DIAGRAM (7-Layer pillar, Layers 3-5 highlighted)
-  Intelligence layers enable INPACT™ Natural (N) and Adaptive (A)
+  TRIAD DIAGRAM (7-Layer pillar, Layers 3-4 highlighted)
+  Intelligence layers enable INPACT™ Natural (N), Contextual (C), and Adaptive (A)
   Bridge from Ch 4 foundation to Ch 5 intelligence
   Echo's Week 4 state: 42/100, foundation solid but not intelligent
 
@@ -71,32 +77,33 @@ Section 3: Layer 3 - Semantic Layer (5 pages)
   dbt semantic models, data catalog (Alation)
   Echo's choices: dbt Cloud, Alation, custom entity resolution
   
-Section 4: Layer 4 - RAG Infrastructure (5 pages)
-  What it is, why agents need it
-  Embeddings (text-embedding-3-large), chunking, vector indexing
-  Reranking (Cohere), hybrid search
-  Echo's choices: OpenAI embeddings, Pinecone (from Ch 4), Cohere reranking
-  
-Section 5: Layer 5 - LLM Integration (5 pages) ⭐ NEW
-  What it is, why agents need it
-  LLM vs SLM comparison (GPT-4, Claude Sonnet 4, Llama 3)
-  Model Context Protocol (MCP) for tool integration
-  Prompt engineering best practices
-  Echo's choices: Claude Sonnet 4 (primary), GPT-4 (fallback), Llama 3 (cost-sensitive)
+Section 4: Layer 4 - RAG Infrastructure with LLM Integration (10 pages) ⭐ EXPANDED
+  Subsection 4.1: What RAG Is & Why Agents Need It (1p)
+  Subsection 4.2: Query Understanding & Embeddings (2p)
+    • text-embedding-3-large, chunking strategies
+  Subsection 4.3: Hybrid Retrieval Architecture (2p)
+    • Vector search, keyword search, graph traversal
+    • Reranking (Cohere)
+  Subsection 4.4: LLM Integration (4p) ← LLMs ARE PART OF LAYER 4
+    • LLM vs SLM comparison (GPT-4, Claude Sonnet 4, Llama 3)
+    • Model Context Protocol (MCP) for tool integration
+    • Multi-LLM router pattern
+    • Prompt engineering best practices
+  Subsection 4.5: Echo's RAG+LLM Pipeline (1p)
+    • End-to-end workflow: Query → Embed → Retrieve → Rerank → Assemble → LLM → Cache
 
 [MOVEMENT 4: KIM VALIDATION - 2 pages]
-Section 6: Echo's Week 5-8 Build
+Section 5: Echo's Week 5-8 Build
   Week 5-6: Layer 3 deployment (semantic understanding)
-  Week 7: Layer 4 deployment (RAG pipeline)
-  Week 8: Layer 5 deployment (LLM integration)
+  Week 7-8: Layer 4 deployment (RAG pipeline + LLM integration)
   First intelligent query success: "Find high-risk diabetic patients needing intervention"
-  INPACT™ score: 42 → 67 (Natural: 5→6, Adaptive: 3→5)
+  INPACT™ score: 42 → 67 (Natural: 5→6, Contextual: 4→5, Adaptive: 3→5)
 
 [MOVEMENT 5: MOORE SUMMARY + KIM HOOK - 2 pages]
-Section 7: Intelligence Complete + Bridge
-  Intelligence layers 3-5 functional
+Section 6: Intelligence Complete + Bridge
+  Intelligence layers 3-4 functional
   Gap 2 (semantic) and Gap 3 (retrieval) addressed
-  Three INPACT™ dimensions improved (N, A, and C refined)
+  Three INPACT™ dimensions improved (N, C, A)
   Bridge to Chapter 6: "With intelligence built, we must govern it..."
 ```
 
@@ -106,7 +113,7 @@ Section 7: Intelligence Complete + Bridge
 
 ### Chapter Role in the Architecture
 **Primary Function:** Continue Pillar 2 Construction - Intelligence Layers
-- **Pillar Focus:** Layers 3-5 of 7-Layer Architecture (Pillar 2)
+- **Pillar Focus:** Layers 3-4 of 7-Layer Architecture (Pillar 2)
 - **Architecture Stage:** Intelligence construction - transforming data into reasoning capability
 - **Building Phase:** Active construction continues (midpoint of Pillar 2)
 
@@ -117,20 +124,18 @@ Section 7: Intelligence Complete + Bridge
    - Semantic models (dbt) deployed
    - Fulfills: Natural (N) INPACT™ need - business language understanding
 
-2. **Layer 4: RAG Infrastructure** (Complete in this chapter)
-   - Embedding generation operational
-   - Vector retrieval optimized
-   - Reranking implemented
-   - Fulfills: Contextual (C) INPACT™ need - intelligent context assembly
+2. **Layer 4: RAG Infrastructure with LLM Integration** (Complete in this chapter) ⭐ EXPANDED
+   - **Stage 1-2:** Query understanding & embedding generation
+   - **Stage 3:** Hybrid retrieval (vector + keyword + graph)
+   - **Stage 4:** Reranking for relevance optimization
+   - **Stage 5:** Context assembly with token management
+   - **Stage 6:** LLM generation (Claude + GPT-4 + Llama multi-LLM architecture)
+   - **Stage 7:** Semantic caching for cost optimization
+   - Model Context Protocol (MCP) integration
+   - Fulfills: Natural (N), Contextual (C), and Adaptive (A) INPACT™ needs
 
-3. **Layer 5: LLM Integration** (Complete in this chapter) ⭐ NEW
-   - Multi-LLM architecture (Claude + GPT-4 + Llama)
-   - Model Context Protocol integration
-   - Prompt engineering framework
-   - Fulfills: Natural (N) and Adaptive (A) INPACT™ needs - reasoning and learning
-
-4. **Cross-Pillar Connections Established**
-   - How Layers 3-5 enable INPACT™ dimensions (Pillar 1)
+3. **Cross-Pillar Connections Established**
+   - How Layers 3-4 enable INPACT™ dimensions (Pillar 1)
    - How intelligence requires foundation (Chapter 4 dependency)
    - Preview of GOALS™ governance validation (Pillar 3, Chapter 8)
 
@@ -138,39 +143,40 @@ Section 7: Intelligence Complete + Bridge
 **REQUIRED:** Section 1 (Intelligence Architecture Introduction)
 - **Diagram Type:** Full Architecture of Trust Triad with 7-Layer pillar highlighted
 - **Placement:** Chapter opening, before technical content
-- **Caption:** "Figure 5.1: The Architecture of Trust - Building Pillar 2 (7-Layer Architecture, Intelligence Layers 3-5)"
-- **Visual Treatment:** 7-Layer pillar in bright teal, Layers 3-5 highlighted within pillar
+- **Caption:** "Figure 5.1: The Architecture of Trust - Building Pillar 2 (7-Layer Architecture, Intelligence Layers 3-4)"
+- **Visual Treatment:** 7-Layer pillar in bright teal, Layers 3-4 highlighted within pillar
 - **Text Integration:**
   - "This chapter builds the intelligence layers of the 7-Layer Architecture"
-  - "Layers 3-5 transform foundation data into agent reasoning capability"
+  - "Layers 3-4 transform foundation data into agent reasoning capability"
   - "Intelligence layers directly address Gaps 2 and 3 identified in Chapter 3"
+  - "Layer 4 includes complete RAG pipeline with LLM integration"
 
 ### Architectural Language Patterns
 **Movement 1 (Architecture Introduction):**
 - "We now build intelligence on our foundation - the layers that transform data into understanding"
-- "Foundation layers (1-2) provided data availability; intelligence layers (3-5) provide data understanding"
+- "Foundation layers (1-2) provided data availability; intelligence layers (3-4) provide data understanding and reasoning"
 - "These layers directly address the semantic and retrieval gaps from Chapter 3"
+- "Layer 4 is a complete pipeline: from query understanding through LLM generation"
 
 **Movement 2 (Echo's Challenge):**
-- "Sarah's team had proven they could deliver fast, multi-modal data. Now came the harder challenge: making agents understand it."
-- "Without Layers 3-5 operational, agents have data but no comprehension"
+- "Sarah's team had proven they could deliver fast, multi-modal data. Now came the harder challenge: making agents understand it and reason over it."
+- "Without Layers 3-4 operational, agents have data but no comprehension"
 - "Build intelligence layers to bridge the data-to-reasoning gap"
 
 **Movement 3 (Technical Deep-Dive):**
 - For Layer 3: "This layer fulfills the Natural (N) need from INPACT™..."
-- For Layer 4: "This layer enhances the Contextual (C) need from INPACT™..."
-- For Layer 5: "This layer fulfills both Natural (N) and Adaptive (A) needs from INPACT™..."
-- "Each intelligence layer queries the foundation layers..."
-- "Semantic models resolve business concepts, RAG retrieves relevant context, LLMs reason over assembled knowledge..."
+- For Layer 4: "This layer is the complete intelligence pipeline - retrieval AND reasoning..."
+- "Layer 4 has seven stages, with LLM generation as the final reasoning stage..."
+- "Semantic models resolve business concepts, RAG retrieves relevant context, LLMs reason over assembled knowledge - all within Layer 4..."
 
 **Movement 4 (Echo's Build):**
 - "With intelligence layers operational, Sarah's team measured dramatic INPACT™ improvements"
-- "Natural dimension: 5/6 → 6/6 (business language understanding achieved)"
-- "Adaptive dimension: 3/6 → 5/6 (continuous learning enabled)"
+- "Natural dimension: 5/6 → 6/6 (business language understanding + LLM reasoning achieved)"
+- "Adaptive dimension: 3/6 → 5/6 (continuous learning enabled through feedback loops)"
 - "Contextual dimension: 4/6 → 5/6 (intelligent context assembly working)"
 
 **Movement 5 (Summary + Bridge):**
-- "Intelligence layers 3-5 are now complete - data has become understanding"
+- "Intelligence layers 3-4 are now complete - data has become understanding and reasoning capability"
 - "Chapter 6 builds trust layers (Governance + Observability) to govern this intelligence"
 - "Without governance, intelligence becomes risk - we must constrain and monitor these powerful capabilities"
 
@@ -178,13 +184,15 @@ Section 7: Intelligence Complete + Bridge
 **In this chapter:**
 - **7-Layer → INPACT™:** Explicit connection showing how each layer enables specific needs
   - Layer 3 enables: Natural (N) - business language understanding
-  - Layer 4 enables: Contextual (C) - intelligent retrieval
-  - Layer 5 enables: Natural (N) and Adaptive (A) - reasoning and learning
+  - Layer 4 enables: Natural (N), Contextual (C), and Adaptive (A)
+    - Natural: LLM reasoning in business language
+    - Contextual: Intelligent retrieval and context assembly
+    - Adaptive: Multi-LLM routing and continuous learning from feedback
   
 - **7-Layer → GOALS™:** Preview operational validation
   - "Once operational, GOALS™ (Chapter 8) ensures these layers remain healthy"
   - "Governance (G) validates semantic model security"
-  - "Observability (O) monitors RAG retrieval quality"
+  - "Observability (O) monitors RAG retrieval quality and LLM performance"
 
 **Bridge to Chapter 6:**
 - "With intelligence built, Chapter 6 adds trust layers: governance to constrain and observability to monitor"
@@ -192,14 +200,15 @@ Section 7: Intelligence Complete + Bridge
 
 ### Success Criteria
 By end of chapter, reader should:
-- ✅ Understand why Layers 3-5 are "intelligence" (transform data into reasoning)
+- ✅ Understand why Layers 3-4 are "intelligence" (transform data into reasoning)
 - ✅ Know semantic modeling and why business glossaries matter
-- ✅ Understand RAG architecture (embeddings → retrieval → reranking)
-- ✅ Understand LLM selection criteria (GPT-4 vs Claude vs Llama)
-- ✅ See how Layers 3-5 enable INPACT™ Natural (N), Contextual (C), Adaptive (A) needs
+- ✅ Understand complete RAG+LLM pipeline (7 stages from query to cached response)
+- ✅ Understand LLM selection criteria and multi-LLM architecture patterns
+- ✅ See how Layers 3-4 enable INPACT™ Natural (N), Contextual (C), Adaptive (A) needs
 - ✅ Know Echo's specific technology choices and rationale
 - ✅ Understand INPACT™ score improvement (42 → 67 after intelligence built)
 - ✅ Anticipate Chapter 6 will add governance to protect intelligence
+- ✅ Understand that LLMs are part of Layer 4 (Intelligence), not a separate layer
 
 ---
 
@@ -238,7 +247,7 @@ By end of chapter, reader should:
 
 ---
 
-#### SECTION 4: LAYER 4 - RAG INFRASTRUCTURE (Target: 2,500 words)
+#### SECTION 4: LAYER 4 - RAG INFRASTRUCTURE WITH LLM INTEGRATION (Target: 5,000 words) ⭐ EXPANDED
 
 **SOURCE CONTENT TO REUSE:**
 
@@ -267,9 +276,11 @@ By end of chapter, reader should:
 
 ---
 
-### FROM NEW CONTENT + RESEARCH
+### LAYER 4 EXPANDED CONTENT - LLM INTEGRATION SUBSECTION
 
-#### SECTION 5: LAYER 5 - LLM INTEGRATION (Target: 2,500 words) ⭐ NEW
+**Note:** The following LLM integration content (previously incorrectly labeled as "Layer 5") is actually **part of Layer 4 (RAG Infrastructure)**. LLMs are the reasoning engine within the intelligence pipeline, not a separate layer.
+
+#### Subsection 4.4: LLM Integration (Part of Layer 4) - Target: 2,500 words ⭐ NEW
 
 **NEW CONTENT REQUIRED:** (~2,500 words - 100% new)
 
@@ -334,25 +345,31 @@ By end of chapter, reader should:
 1. **Opening: Intelligence Begins** (~300w)
    - "Foundation complete. Chapter 4 built Layers 1-2: fast, multi-modal data availability."
    - "But availability ≠ understanding. Agents need intelligence to transform data into reasoning."
-   - "This chapter builds Layers 3-5: Semantic understanding + Intelligent retrieval + LLM reasoning"
+   - "This chapter builds Layers 3-4: Semantic understanding + RAG with LLM integration"
+   - "Layer 4 is a complete 7-stage pipeline from query to cached response, with LLM generation as the reasoning engine"
    - **Part II progression:** Foundation (Ch 4) → Intelligence (Ch 5) → Trust (Ch 6) → Orchestration (Ch 7)
 
 2. **Architecture of Trust Triad Diagram** (~200w + diagram)
    - Full triad diagram with 7-Layer pillar highlighted
-   - Layers 3-5 emphasized within pillar (bright teal)
-   - Caption: "Figure 5.1: Building Pillar 2 - Intelligence Layers (3-5) of 7-Layer Architecture"
+   - Layers 3-4 emphasized within pillar (bright teal)
+   - Caption: "Figure 5.1: Building Pillar 2 - Intelligence Layers (3-4) of 7-Layer Architecture"
    - Text: "The 7-Layer Architecture is the second pillar of the Architecture of Trust"
+   - Note: "Layer 4 includes complete RAG + LLM pipeline (7 stages)"
 
 3. **Why Intelligence Matters** (~400w)
    - Data availability without understanding is useless for agents
    - **Layer 3 (Semantic):** Resolves business language to entities
      - Addresses Gap 2 from Chapter 3 (semantic understanding)
-     - Enables INPACT™ Natural (N) dimension
-   - **Layer 4 (RAG):** Retrieves relevant context intelligently
-     - Addresses Gap 3 from Chapter 3 (intelligent retrieval)
-     - Enhances INPACT™ Contextual (C) dimension
-   - **Layer 5 (LLM):** Reasons over assembled knowledge
-     - Enables INPACT™ Natural (N) and Adaptive (A) dimensions
+     - Enables INPACT™ Natural (N) dimension - business vocabulary
+   - **Layer 4 (RAG with LLM Integration):** Complete intelligence pipeline
+     - Addresses Gap 3 from Chapter 3 (intelligent retrieval + reasoning)
+     - **Stage 1-2:** Query understanding & embeddings
+     - **Stage 3:** Hybrid retrieval (vector + keyword + graph)
+     - **Stage 4:** Reranking for relevance
+     - **Stage 5:** Context assembly
+     - **Stage 6:** LLM generation (reasoning engine)
+     - **Stage 7:** Semantic caching
+     - Enables INPACT™ Contextual (C), Natural (N), and Adaptive (A) dimensions
    - Without intelligence layers, agents have data but no comprehension
 
 4. **Echo's Week 4 State** (~300w)
@@ -406,22 +423,24 @@ By end of chapter, reader should:
    - Sarah's realization: "We're moving data fast, but agents aren't understanding it"
 
 2. **The Intelligence Decision** (~300w)
-   - Sarah to team: "We build intelligence layers: semantic → retrieval → reasoning"
+   - Sarah to team: "We build intelligence layers: semantic understanding → RAG with LLM integration"
    - Marcus Williams (CDO) concern: "That's 4 weeks just to add smart features"
-   - Priya's rationale: "Without intelligence, agents are sophisticated grep tools. Layer 3 gives them vocabulary. Layer 4 gives them memory. Layer 5 gives them reasoning."
+   - Priya's rationale: "Without intelligence, agents are sophisticated grep tools. Layer 3 gives them vocabulary. Layer 4 gives them memory AND reasoning - it's a complete pipeline from retrieval through LLM generation."
    - Architecture principle established: **"Data without understanding is noise"**
    - Week 5-6: Layer 3 (semantic layer)
-   - Week 7: Layer 4 (RAG infrastructure)
-   - Week 8: Layer 5 (LLM integration)
+   - Week 7-8: Layer 4 (RAG infrastructure + LLM integration - complete 7-stage pipeline)
    - Weeks 9-10: Trust layers (Chapter 6)
 
 3. **Technology Selection Constraints** (~300w)
    - **Cloud provider:** Azure (existing infrastructure, enterprise agreement)
    - **Team expertise:** SQL, Python, basic ML (no deep learning experts yet)
    - **Budget:** $130K remaining (from $180K total, $50K spent on foundation)
-     - Semantic layer: $25K (first year)
-     - RAG infrastructure: $30K (first year - mostly OpenAI embeddings)
-     - LLM integration: $35K (first year - Claude + GPT-4 subscriptions)
+     - Semantic layer (Layer 3): $25K (first year - dbt Cloud + Alation)
+     - RAG + LLM integration (Layer 4): $65K (first year)
+       - OpenAI embeddings: $12K
+       - Cohere reranking: $8K
+       - Claude Sonnet 4 (primary LLM): $30K
+       - GPT-4 Turbo (fallback): $15K
      - Remaining: $40K for trust/orchestration layers
    - **Compliance:** HIPAA, HITECH, state regulations (LLMs must be HIPAA-compliant)
    - **Timeline:** 4 weeks for intelligence (non-negotiable, board checkpoint at Week 8)
@@ -458,9 +477,9 @@ By end of chapter, reader should:
    - Result: Schedule retrieved, appointment suggestions made
    - Sarah's reaction: "The agent understood 'my doctor' - that's comprehension, not just search"
 
-2. **Week 7: Layer 4 Deployment** (~300w)
+2. **Week 7-8: Layer 4 Deployment (RAG + LLM Integration)** (~600w)
    
-   **RAG Pipeline Setup**
+   **Week 7: RAG Pipeline Setup (Layer 4 Stages 1-5)**
    - OpenAI text-embedding-3-large configured ($0.13/1M tokens)
    - Chunking strategy: 512 tokens, 50 token overlap
    - Pinecone indexing (from Layer 1): 1.2M chunks (clinical policies, patient records)
@@ -472,17 +491,18 @@ By end of chapter, reader should:
    - Precision@10 target: 80% (achieved 78% in testing)
    - Latency: p95 < 200ms (achieved 180ms average)
    
-   **First RAG Success:**
+   **First RAG Success (Mid-Week 7):**
    - Friday, Week 7, 2:15 PM
    - Query: "What's our policy on after-hours urgent care?"
    - RAG retrieval: Policy doc (section 4.2) + precedent cases (3 similar queries)
-   - Agent response: "After-hours urgent care is covered for emergencies. Here's our triage protocol..."
-   - **Before RAG:** Would have missed policy nuances, provided generic answer
-   - **After RAG:** Retrieved exact policy, included context from similar cases
+   - Agent response: Retrieved content assembled, but no reasoning yet
+   - **Before RAG:** Would have missed policy nuances
+   - **After RAG:** Retrieved exact policy with context
+   - Sarah: "Retrieval is working. Now we need reasoning."
 
-3. **Week 8: Layer 5 Deployment** (~300w)
+   **Week 8: LLM Integration (Layer 4 Stages 6-7)**
    
-   **LLM Integration**
+   **LLM Integration (Stage 6 of Layer 4 pipeline)**
    - Claude Sonnet 4 API configured (HIPAA BAA signed)
    - GPT-4 Turbo fallback configured
    - Llama 3.1 70B deployed on Azure ML (self-hosted)
@@ -495,19 +515,28 @@ By end of chapter, reader should:
    - Complexity < 0.4: Llama 3.1 70B (bulk tasks, summarization)
    - Monthly costs: Claude ($15K), GPT-4 ($8K), Llama ($3K infrastructure)
    
-   **First Intelligent Query Success:**
+   **Semantic Caching (Stage 7 of Layer 4 pipeline)**
+   - Redis-based caching for repeated queries
+   - 50-90% cost reduction on common patterns
+   - TTL: 6 hours for clinical queries, 24 hours for policies
+   
+   **First Complete Intelligence Success:**
    - Friday, Week 8, 11:18 AM
    - Query (clinician): "Find high-risk diabetic patients needing intervention"
-   - **Intelligence stack activated:**
-     - Layer 3 (Semantic): Resolved "high-risk diabetic" to HbA1c > 9%, no visit in 6 months
-     - Layer 4 (RAG): Retrieved 347 matching patients, guidelines (ADA standards)
-     - Layer 5 (LLM - Claude): Reasoned through risk factors, prioritized by urgency
+   - **Complete Layer 4 pipeline activated (all 7 stages):**
+     - Stage 1-2: Query understanding & embedding generation
+     - Stage 3: Hybrid retrieval (vector + keyword + graph)
+     - Stage 4: Reranking by relevance
+     - Stage 5: Context assembly (guidelines + patient data)
+     - **Stage 6: LLM reasoning (Claude Sonnet 4)** ← Reasoning engine
+     - Stage 7: Semantic caching
+   - **Plus Layer 3 (Semantic):** Resolved "high-risk diabetic" to HbA1c > 9%, no visit in 6 months
    - **Result:** 52 patients ranked by intervention priority with reasoning for each
    - **Response time:** 3.2 seconds (vs 9-13s in Week 0)
    - **Accuracy:** 94% (vs 40-60% in Week 0)
    - Sarah's reaction: "The agent understood, retrieved, and reasoned. That's intelligence."
 
-4. **INPACT™ Score Improvement** (~200w measured and documented)
+3. **INPACT™ Score Improvement** (~200w measured and documented)
    
    **Baseline (Week 4, end of Chapter 4): 42/100**
    - I (Instant): 5/6 - 2.8s responses ✓
@@ -521,13 +550,13 @@ By end of chapter, reader should:
    - I (Instant): 5/6 - 3.2s responses (unchanged, still fast)
    - N (Natural): 6/6 - business language mastered (↑ from 5/6)
      - Layer 3 semantic: Entity resolution working
-     - Layer 5 LLM: Natural language reasoning operational
-   - P (Permitted): 2/6 - unchanged (Layer 6 addresses this in Chapter 6)
+     - Layer 4 LLM stage: Natural language reasoning operational
+   - P (Permitted): 2/6 - unchanged (Layers 5-6 address this in Chapter 6)
    - A (Adaptive): 5/6 - continuous learning enabled (↑ from 3/6)
-     - Layer 5 LLM: Model feedback loops operational
-     - Layer 4 RAG: Query performance tracking
+     - Layer 4 LLM stage: Model feedback loops operational
+     - Layer 4 RAG stages: Query performance tracking
    - C (Contextual): 5/6 - intelligent context assembly (↑ from 4/6)
-     - Layer 4 RAG: Semantic retrieval working
+     - Layer 4 complete pipeline: Semantic retrieval + reasoning
      - Layer 3 semantic: Cross-domain entity linking
    - T (Transparent): 2/6 - unchanged (Layer 6 addresses this in Chapter 6)
    
@@ -1209,7 +1238,8 @@ Each layer follows this pattern:
 
 | Version | Date | Changes | Author |
 |---------|------|---------|--------|
-| 1.0 | November 21, 2025 | Initial mapping document created. Compliant with Book Structure Codex v6.4 and Book Codex Master v3.0. Includes: (1) Complete content mapping from legacy Chapter 1 (Layer 3 lines 814-1083, Layer 4 lines 1084-1352), (2) Target 12,000 words with 37% reuse rate (justified by new LLM/MCP content), (3) Moore-Kim 5-movement pattern (80% Moore / 20% Kim), (4) Architecture of Trust positioning (Pillar 2 intelligence construction), (5) Intelligence layers (3-5) complete technical coverage, (6) NEW Layer 5 content: LLM selection, MCP integration, prompt engineering (2,500w), (7) Six diagrams specified (2 reused, 1 adapted, 3 new), (8) Echo canonical data compliance (42→67 INPACT™ progression), (9) Echo Week 5 → Week 8 build narrative, (10) Technology selections with alternatives and costs, (11) Six-phase implementation plan with quality assurance. Document created following established pattern from Chapters 0-4 mapping documents. This chapter continues Part II: "The 95% Solution - Building the Seven Layers That Work." | Claude |
+| 1.0 | November 21, 2025 | Initial mapping document created. [Original description] | Claude |
+| 1.1 CORRECTED | November 21, 2025 | **ARCHITECTURAL CORRECTION:** Clarified that LLM integration is PART OF Layer 4 (RAG Infrastructure), NOT a separate Layer 5. Changes: (1) Updated title to "Semantic Understanding and RAG with LLM Integration", (2) Corrected all references from "Layers 3-5" to "Layers 3-4", (3) Restructured Section 4 to show Layer 4 as complete 7-stage pipeline (Query Understanding → Embeddings → Retrieval → Reranking → Context Assembly → **LLM Generation** → Caching), (4) Updated INPACT™ mapping to show Layer 4 enables N, C, and A dimensions, (5) Corrected Echo Week 7-8 narrative to show RAG+LLM as unified Layer 4 deployment, (6) Updated all triad diagram references to highlight Layers 3-4 (not 3-5), (7) Clarified that Layers 5-6 in 7-Layer Architecture are Governance+Observability (Chapter 6), (8) Maintained 12,000 word target with same reuse rates. **Rationale:** The 7-Layer Architecture represents infrastructure concerns, not technology lists. Layer 4 = complete intelligence pipeline from query to cached response. LLMs are the reasoning engine within this pipeline, not a separate infrastructure layer. | Claude |
 
 ---
 
@@ -1219,9 +1249,11 @@ Each layer follows this pattern:
 - [ ] **Word count allocation approved**
 - [ ] **Diagram specifications approved**
 - [ ] **Architecture of Trust positioning verified**
-- [ ] **Intelligence layers (3-5) technical coverage approved**
+- [ ] **Intelligence layers (3-4) technical coverage approved** ← CORRECTED
+- [ ] **Layer 4 = RAG + LLM integration confirmed** ← ADDED
 - [ ] **NEW LLM/MCP content specifications approved**
 - [ ] **Quality standards confirmed**
+- [ ] **Architectural correction verified (v1.1)** ← ADDED
 - [ ] **Ready to proceed with refactoring**
 
 ---
