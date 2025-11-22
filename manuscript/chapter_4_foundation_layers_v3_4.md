@@ -170,6 +170,29 @@ Sarah turned to the next concern. "Data freshness. Show me the ETL timeline."
 
 Priya pulled up the pipeline diagram. "Overnight batch. Operational databases—Epic for EHR, Workday for HR, Cerner for labs—run continuously. Our reporting database refreshes at 2 AM via ETL. During business hours, data lags 8-24 hours behind operational reality."
 
+```mermaid
+graph LR
+    subgraph "<b>❌ Week 0: Batch ETL Problem</b>"
+        OPS["<b>Operational Systems</b><br/><b>Epic, Cerner, Workday</b><br/><b>Real-time updates</b>"]
+        ETL["<b>⏰ 2 AM ETL</b><br/><b>Overnight batch</b><br/><b>24-hour cycle</b>"]
+        REPORT["<b>Reporting Database</b><br/><b>Stale by afternoon</b><br/><b>8-24 hour lag</b>"]
+    end
+    
+    RISK["<b>⚠️ Patient Safety Risk</b><br/><b>Medication orders invisible for 12+ hours</b>"]
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    OPS -->|<b>Continuous changes</b>| ETL
+    ETL -->|<b>Batch load</b>| REPORT
+    REPORT -.->|<b>Agents query stale data</b>| RISK
+    
+    style OPS fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
+    style ETL fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
+    style REPORT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style RISK fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 "Concrete example," Sarah requested.
 
 "Friday afternoon, physician schedules Monday appointment. That appointment exists in Epic immediately. Our agent infrastructure won't see it until Saturday morning's ETL. Patient calls Friday at 4 PM asking about Monday appointments—agents query stale data. They might say 'no appointments available' when three slots opened an hour ago."
@@ -221,6 +244,8 @@ The team documented their constraints—boundaries within which technology decis
 **Risk Tolerance:** Medium. Echo accepted some vendor lock-in (Pinecone for vectors, Tecton for features) for faster deployment. Avoided bleeding-edge technologies (early-stage startups, version 1.0 releases). Preferred technologies with healthcare customer references (Mayo Clinic on MongoDB, Mount Sinai on Databricks).
 
 "These constraints eliminate 80% of technology options before we even evaluate," Sarah observed. "That's good. Decision paralysis kills projects. Clear constraints accelerate decisions."
+
+**For detailed technology selection criteria, product comparisons with INPACT™ + GOALS™ scoring, healthcare-specific guidance, and budget-tier recommendations across all storage and real-time data technologies, see Appendix A: Technology Selection Guide (Sections 2.1-2.2).**
 
 The team was ready to build.
 
@@ -525,6 +550,8 @@ Echo started with SQL Server only. Here's what failed:
 - Transparent: 2/6 → 2/6 (unchanged, requires Layer 2 lineage)
 - **Week 2 total: 32/100 (+4 points from Layer 1 alone)**
 
+**Technology Selection Note:** Echo's vendor selections (Pinecone, Neo4j, MongoDB, Tecton, etc.) reflect their specific constraints (Azure-first, HIPAA compliance, 4-week timeline). Your organization's optimal choices may differ based on cloud platform, budget tier, team expertise, and compliance requirements. For comprehensive vendor comparisons with INPACT™ + GOALS™ scoring, alternative options, and decision criteria for each storage category, see **Appendix A, Section 2.1: Layer 1 Multi-Modal Storage.**
+
 ---
 
 ## SECTION 4: LAYER 2—REAL-TIME DATA FABRIC
@@ -737,6 +764,8 @@ async def stream_clinical_response(query, patient_context):
 - Contextual: 3/6 → 4/6 (+1, enriched events improve context)
 - Transparent: 2/6 → 3/6 (+1, event log provides complete lineage)
 - **Week 4 total: 42/100 (+10 points from Layer 2)**
+
+**Technology Selection Note:** Echo's real-time fabric choices (Debezium CDC, Confluent Cloud Kafka, Apache Flink on Databricks) reflect their Azure-first strategy and managed services preference. Alternative architectures include AWS-native (Kinesis + DMS), Google Cloud-native (Pub/Sub + Datastream), or open-source (self-hosted Kafka + Flink). For comprehensive CDC, streaming, and event processing vendor comparisons, see **Appendix A, Section 2.2: Layer 2 Real-Time Data Fabric.**
 
 ---
 
@@ -953,6 +982,8 @@ Friday afternoon, Week 4. Sarah convened the leadership team for foundation revi
 - Foundation layers: $793,200 (64.5% of total)
 - Remaining for Weeks 5-12: $436,800 (intelligence + orchestration)
 
+**Note:** These costs reflect Echo's specific context (mid-size healthcare system, Azure-native, managed services preference, 10-week accelerated timeline, HIPAA compliance). Your organization's costs will vary based on scale, existing infrastructure, team expertise, cloud platform, vendor negotiations, and timeline requirements. For detailed budget methodology, cost breakdowns by category (technology 56%, services 31%, staff 13%), ROI calculations, and sensitivity analysis across low/medium/high cost scenarios, see **Appendix E: Budget Methodology.**
+
 **ROI Calculation:**
 
 Foundation layers generate measurable value before intelligence layers complete:
@@ -1027,7 +1058,7 @@ Chapter 5 begins: "With foundation solid beneath our feet, we build upward—sem
 **Final Statistics:**
 - **Total Word Count:** ~9,500 words (tightened from 12,500)
 - **Reading Time:** ~38 minutes  
-- **Diagrams:** 7 (Architecture of Trust, 7-Layer, Real-Time Flow, INPACT Score, 11 Storage Grid, Training vs. Inference, Week 1-4 Timeline)
+- **Diagrams:** 8 (Architecture of Trust, 7-Layer, Overnight ETL Problem, Real-Time Flow, INPACT Score, 11 Storage Grid, Training vs. Inference, Week 1-4 Timeline)
 - **Tables:** 4 (Storage Selection, INPACT Progression, Foundation Status, Investment Summary)
 - **Code Examples:** 1 (Python streaming)
 - **Storage Categories Covered:** 11 distinct categories with full detail
@@ -1048,6 +1079,6 @@ Chapter 5 begins: "With foundation solid beneath our feet, we build upward—sem
 - Bridges to Chapter 5 (intelligence layers)
 - All budget tables integrated
 - All 11 storage types integrated
-- Visual density: 7 diagrams + 4 tables + 1 code block = professional presentation
+- Visual density: 8 diagrams + 4 tables + 1 code block = professional presentation
 
 **END OF CHAPTER 4**
