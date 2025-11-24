@@ -49,7 +49,7 @@ graph TB
 
 Think of enterprise architecture like building construction. You cannot build floors three through seven without a solid foundation. Skip the foundation, and the structure becomes unstable—regardless of the intelligence layers above.
 
-Foundation equals data availability and accessibility. Before agents understand language (Layer 3), retrieve context (Layer 4), or invoke LLMs (Layer 5), they need two fundamental capabilities:
+Foundation equals data availability and accessibility. Before agents can understand language (Layer 3) or generate intelligent responses (Layer 4), they need two fundamental capabilities:
 
 **Layer 1 (Multi-Modal Storage):** Right storage for the right query pattern. Patient records need semantic search (vector database). Provider relationships need graph traversal (graph database). Clinical notes need flexible schema (document store). Medical imaging needs object storage. Model training needs lakehouse platforms. Each query pattern requires specialized, optimized storage.
 
@@ -59,8 +59,8 @@ Foundation equals data availability and accessibility. Before agents understand 
 graph TB
     L7["<b>Layer 7: Control Plane</b><br/><b>Orchestration & Workflow</b>"]
     L6["<b>Layer 6: Observability</b><br/><b>Monitoring & Governance</b>"]
-    L5["<b>Layer 5: LLM Integration</b><br/><b>Natural Language Generation</b>"]
-    L4["<b>Layer 4: RAG Retrieval</b><br/><b>Context Assembly</b>"]
+    L5["<b>Layer 5: Governance</b><br/><b>Dynamic Permissions</b>"]
+    L4["<b>Layer 4: Intelligence</b><br/><b>LLM + RAG Pipeline</b>"]
     L3["<b>Layer 3: Semantic Layer</b><br/><b>Business Logic</b>"]
     
     subgraph "<b>🏗️ FOUNDATION (Chapter 4)</b>"
@@ -85,13 +85,31 @@ graph TB
 
 These foundation layers directly address specific gaps from Chapter 3:
 
-- **Gap 1 (Real-Time Access):** Overnight ETL creates 8-24 hour lag → Layer 2 solves with CDC and streaming (sub-30 second freshness)
-- **Gap 7 (Multi-Modal Storage):** RDBMS-only architecture can't handle vectors, graphs, or unstructured data → Layer 1 solves with eleven distinct categories
+### The Seven Infrastructure Gaps
+
+Chapter 3 identified seven infrastructure gaps preventing agent deployment. Chapter 4 addresses the foundation: **Gaps 1-2**.
+
+| Gap | Infrastructure Need | Addressed By | Coverage |
+|-----|---------------------|--------------|----------|
+| **Gap 1** | Multi-Modal Storage | Layer 1: Storage | Chapter 4 ✓ |
+| **Gap 2** | Real-Time Data | Layer 2: Real-Time | Chapter 4 ✓ |
+| **Gap 3** | Semantic Understanding | Layer 3: Semantic | Chapter 5 |
+| **Gap 4** | Intelligent Retrieval | Layer 4: Intelligence | Chapter 5 |
+| **Gap 5** | Dynamic Permissions | Layer 5: Governance | Chapter 6 |
+| **Gap 6** | Reasoning Observability | Layer 6: Observability | Chapter 6 |
+| **Gap 7** | Multi-Agent Coordination | Layer 7: Orchestration | Chapter 7 |
+
+**This Chapter's Scope:** Layers 1-2 build the foundation that enables intelligence (Chapters 5), governance (Chapter 6), and orchestration (Chapter 7).
+
+**Specific Solutions:**
+
+- **Gap 1 (Multi-Modal Storage):** RDBMS-only architecture can't handle vectors, graphs, or unstructured data → Layer 1 solves with eleven distinct categories
+- **Gap 2 (Real-Time Data):** Overnight ETL creates 8-24 hour lag → Layer 2 solves with CDC and streaming (sub-30 second freshness)
 
 Without foundation, intelligence layers fail:
 - Semantic models (Layer 3) query stale data → outdated answers
-- RAG retrieval (Layer 4) searches limited storage → missed context
-- LLM integration (Layer 5) operates incomplete → poor decisions
+- Intelligence layer (Layer 4) searches limited storage → missed context
+- Governance layer (Layer 5) operates on incomplete data → poor access control
 
 **Build the foundation first. Build it right. Everything else depends on it.**
 
@@ -105,13 +123,13 @@ Echo Health Systems started from a familiar position: strong BI infrastructure f
 
 *Data Freshness:* 24-hour batch ETL. Operational data changes continuously, but reporting database refreshes overnight at 2 AM. Agents querying at 3 PM see data 13 hours stale—unacceptable for clinical decision support.
 
-*INPACT™ Score:* 28/100
-- **Instant (I): 3/6** - Response times 9-13 seconds (slow queries, no caching)
+*INPACT™ Score:* 28/100 (10 out of 36 points)
+- **Instant (I): 1/6** - Response times 9-13 seconds (critical gap: >10s unacceptable)
 - **Natural (N): 2/6** - No semantic understanding (keyword search only)
-- **Permitted (P): 4/6** - Strong RBAC, but no agent-specific governance
-- **Adaptive (A): 1/6** - No model versioning, feature stores, or drift detection
-- **Contextual (C): 2/6** - Siloed systems, no multi-source synthesis
-- **Transparent (T): 2/6** - Basic audit logs, no lineage or explainability
+- **Permitted (P): 1/6** - Basic RBAC with shared service accounts (no agent governance)
+- **Adaptive (A): 2/6** - Manual model versioning (Excel tracking, no automation)
+- **Contextual (C): 3/6** - Point-to-point integrations (3 systems, brittle connections)
+- **Transparent (T): 1/6** - Basic audit logs only (no lineage or explainability)
 
 **Target State (Week 4):**
 
@@ -119,25 +137,39 @@ Echo Health Systems started from a familiar position: strong BI infrastructure f
 
 *Data Freshness:* Sub-30 second CDC and streaming. Change data capture from operational systems feeds real-time pipelines. Agents query current state with <30 second lag.
 
-*INPACT™ Score:* 42/100 (foundation only—intelligence layers will bring to 71+)
-- **Instant (I): 5/6** - 2.8 second response times (cache + optimized queries)
-- **Natural (N): 2/6** - Unchanged (requires Layer 3 semantic layer)
-- **Permitted (P): 4/6** - Unchanged (requires Layer 7 orchestration)
-- **Adaptive (A): 3/6** - Feature store versioning, lakehouse time travel, drift detection
-- **Contextual (C): 4/6** - Multi-modal storage enables cross-source synthesis
-- **Transparent (T): 3/6** - Complete lineage, audit trails, feature provenance
+*INPACT™ Score:* 42/100 (15 out of 36 points - foundation only, intelligence layers will bring to 67+)
+- **Instant (I): 4/6** - 2.8 second response times (functional: cache + optimized storage + real-time data)
+- **Natural (N): 2/6** - Unchanged (requires Layer 3 semantic understanding in Chapter 5)
+- **Permitted (P): 1/6** - Unchanged (requires Layer 5 dynamic permissions in Chapter 6)
+- **Adaptive (A): 3/6** - Feature store operational, model registry live, basic versioning (+1 from infrastructure)
+- **Contextual (C): 4/6** - Multi-modal storage (11 categories) + real-time CDC enables cross-source queries (+1 from foundation)
+- **Transparent (T): 1/6** - Unchanged (requires Layer 6 observability in Chapter 6)
 
 **Gap to Close: 14 points in 4 weeks** through foundation deployment alone.
+
+### Foundation Layers' INPACT™ Impact
+
+| Dimension | Week 0 | Week 4 | Change | Primary Driver |
+|-----------|--------|--------|--------|----------------|
+| **Instant (I)** | 1/6 | 4/6 | **+3** | Cache layer + optimized storage (Layer 1) + real-time data (Layer 2) |
+| **Natural (N)** | 2/6 | 2/6 | ±0 | No change - requires semantic layer (Layer 3, Chapter 5) |
+| **Permitted (P)** | 1/6 | 1/6 | ±0 | No change - requires dynamic permissions (Layer 5, Chapter 6) |
+| **Adaptive (A)** | 2/6 | 3/6 | **+1** | Model registry + feature store (Layer 1 infrastructure) |
+| **Contextual (C)** | 3/6 | 4/6 | **+1** | Multi-modal storage (Layer 1) + real-time freshness (Layer 2) |
+| **Transparent (T)** | 1/6 | 1/6 | ±0 | No change - requires observability layer (Layer 6, Chapter 6) |
+| **TOTAL** | **10/36** | **15/36** | **+5 points** | **Foundation enables 14-point gain** |
+
+**Key Insight:** Foundation layers (1-2) directly improve three dimensions: Instant, Adaptive, and Contextual. Natural, Permitted, and Transparent require intelligence and governance layers (Chapters 5-6).
 
 ### Bridge from Chapter 3
 
 Chapter 3's seven infrastructure gaps revealed the failures of BI-era architecture confronting agent-era requirements. This chapter addresses two gaps—the foundation for the other five solutions.
 
-**Gap 1 (Real-Time Access):** Traditional BI refreshes overnight. Agents need current state. Layer 2's CDC and streaming eliminates batch lag, providing <30 second freshness.
+**Gap 1 (Multi-Modal Storage):** Traditional BI stores everything in RDBMS or warehouses. Agents need specialized storage for vectors, graphs, documents, objects, time-series, and ML artifacts. Layer 1's eleven categories match storage to query pattern.
 
-**Gap 7 (Multi-Modal Storage):** Traditional BI stores everything in RDBMS or warehouses. Agents need specialized storage for vectors, graphs, documents, objects, time-series, and ML artifacts. Layer 1's eleven categories match storage to query pattern.
+**Gap 2 (Real-Time Data):** Traditional BI refreshes overnight. Agents need current state. Layer 2's CDC and streaming eliminates batch lag, providing <30 second freshness.
 
-Chapters 5-7 address the remaining five gaps (semantic understanding, RAG, LLM integration, control plane, observability). But those depend on foundation. You cannot build semantic understanding on stale data. You cannot implement RAG without vector and graph storage. You cannot deploy LLMs without model registries and feature stores.
+Chapters 5-7 address the remaining five gaps (semantic understanding, intelligent retrieval, dynamic permissions, observability, orchestration). But those depend on foundation. You cannot build semantic understanding on stale data. You cannot implement intelligence without vector and graph storage. You cannot deploy governance without proper data access patterns.
 
 **Foundation first. Intelligence second. Let's build.**
 
@@ -147,11 +179,11 @@ Chapters 5-7 address the remaining five gaps (semantic understanding, RAG, LLM i
 
 Monday morning, Week 0. Sarah Cedao's office at Echo Health Systems headquarters.
 
-Priya Singh, Echo's Lead Data Engineer, connected her laptop to the conference room display. Infrastructure audit results filled the screen—three months of analysis compressed into harsh reality.
+Swapna Ram, Echo's Lead Data Engineer, connected her laptop to the conference room display. Infrastructure audit results filled the screen—three months of analysis compressed into harsh reality.
 
 "Show me the storage limitations first," Sarah said.
 
-Priya advanced to the next slide. "We have one storage type: SQL Server. 2.4 terabytes, normalized schema, optimized for transactional workflows." She paused. "Excellent for what it was designed for—billing, scheduling, clinical documentation. Inadequate for what we're asking it to do now."
+Swapna advanced to the next slide. "We have one storage type: SQL Server. 2.4 terabytes, normalized schema, optimized for transactional workflows." She paused. "Excellent for what it was designed for—billing, scheduling, clinical documentation. Inadequate for what we're asking it to do now."
 
 Sarah leaned forward. "Spell it out."
 
@@ -165,11 +197,11 @@ Sarah leaned forward. "Spell it out."
 
 Marcus Williams, Echo's CDO, interrupted. "We've discussed this. We can't rip out SQL Server and rebuild everything. We have a 90-day timeline to demonstrate agent readiness, not a 2-year modernization project."
 
-"We're not ripping anything out," Priya said. "SQL Server stays. We're adding storage types for agent workloads—vector databases for semantic search, graph for relationships, document stores for flexible schema, object storage for training data. Expanding our portfolio, not replacing the core."
+"We're not ripping anything out," Swapna said. "SQL Server stays. We're adding storage types for agent workloads—vector databases for semantic search, graph for relationships, document stores for flexible schema, object storage for training data. Expanding our portfolio, not replacing the core."
 
 Sarah turned to the next concern. "Data freshness. Show me the ETL timeline."
 
-Priya pulled up the pipeline diagram. "Overnight batch. Operational databases—Epic for EHR, Workday for HR, Cerner for labs—run continuously. Our reporting database refreshes at 2 AM via ETL. During business hours, data lags 8-24 hours behind operational reality."
+Swapna pulled up the pipeline diagram. "Overnight batch. Operational databases—Epic for EHR, Workday for HR, Cerner for labs—run continuously. Our reporting database refreshes at 2 AM via ETL. During business hours, data lags 8-24 hours behind operational reality."
 
 ```mermaid
 graph LR
@@ -202,7 +234,7 @@ graph LR
 
 Marcus shook his head. "Real-time CDC is expensive. Apache Kafka (https://kafka.apache.org) clusters, stream processing, operational overhead. Our infrastructure team is two people."
 
-"It's expensive to build yourself," Priya countered. "Managed services—Confluent Cloud for Kafka, Debezium (https://debezium.io) for CDC, Databricks (https://www.databricks.com) for stream processing—eliminate operational burden. We configure, not manage. Yes, it costs $8,200 per month for Layer 2 infrastructure. But compare that to the cost of agents making decisions on stale data. One wrong medication interaction because we didn't see the latest drug order? That's a patient safety event, possibly a sentinel event. The financial and reputational cost exceeds our annual real-time infrastructure budget."
+"It's expensive to build yourself," Swapna countered. "Managed services—Confluent Cloud for Kafka, Debezium (https://debezium.io) for CDC, Databricks (https://www.databricks.com) for stream processing—eliminate operational burden. We configure, not manage. Yes, it costs $8,200 per month for Layer 2 infrastructure. But compare that to the cost of agents making decisions on stale data. One wrong medication interaction because we didn't see the latest drug order? That's a patient safety event, possibly a sentinel event. The financial and reputational cost exceeds our annual real-time infrastructure budget."
 
 Sarah made the decision. "We build foundation first, intelligence second."
 
@@ -212,9 +244,9 @@ Sarah made the decision. "We build foundation first, intelligence second."
 
 Marcus raised the concern every CDO raises. "That's 4 weeks just on plumbing. The board expects to see agents doing something intelligent."
 
-Priya provided the technical counter. "Intelligence layers *query* foundation layers. If foundation is slow or incomplete, intelligence fails. Try to build semantic search (Layer 3) without vector storage—fails. Try RAG (Layer 4) without real-time freshness—serves outdated context. Try LLM deployment (Layer 5) without model registries—no version control, rollback, or governance."
+Swapna provided the technical counter. "Intelligence layers *query* foundation layers. If foundation is slow or incomplete, intelligence fails. Try to build semantic search (Layer 3) without vector storage—fails. Try to implement intelligent retrieval (Layer 4) without real-time freshness—serves outdated context. Try to deploy governance (Layer 5) without proper data organization—incomplete access control."
 
-"It's not plumbing," Priya continued. "It's the architectural prerequisite for everything above it. We're following the principle every structural engineer knows: **build bottom-up, not top-down.**"
+"It's not plumbing," Swapna continued. "It's the architectural prerequisite for everything above it. We're following the principle every structural engineer knows: **build bottom-up, not top-down.**"
 
 Sarah established the timeline:
 - **Week 1-2:** Layer 1 (Multi-Modal Storage)—11 categories deployed
@@ -488,7 +520,7 @@ No single storage technology handles all these patterns efficiently. Multi-modal
 - **INPACT™ Impact:** Instant +1.5 (cache reduces p95 latency from 3.2s to 1.1s)
 
 **Deployment Details:**
-- Setup: 4 days (MemoryDB cluster, Pinecone vector cache, integration with Layer 5 LLM gateway)
+- Setup: 4 days (MemoryDB cluster, Pinecone vector cache, integration with intelligence layer)
 - Cost: $3,600/month ($2,400 MemoryDB + $1,200 Pinecone cache index), **savings: $12,200/month LLM costs**
 - Net cost: -$8,600/month (cache pays for itself)
 - Team: 1 infrastructure engineer + 1 ML engineer
@@ -726,7 +758,7 @@ graph LR
 **Echo's Implementation:**
 
 ```python
-# Layer 5 LLM calls Layer 2's streaming service
+# Intelligence layer uses Layer 2's streaming service
 async def stream_clinical_response(query, patient_context):
     prompt = assemble_prompt(query, patient_context)
     
@@ -813,7 +845,7 @@ graph TB
 Sarah established three parallel teams:
 
 **Team 1 (AI/ML Storage):** Vector database, graph database, model registry, feature store
-- Lead: Priya Singh (data engineering)
+- Lead: Swapna Ram (data engineering)
 - Engineers: 2 ML engineers, 1 data engineer, 1 backend developer
 - Timeline: Week 1-2
 
@@ -833,7 +865,7 @@ NoSQL and lakehouse deployment split between teams (MongoDB to Team 1, Databrick
 
 **Day 4: Neo4j Graph Database Operational**
 
-Priya ran the benchmark query: "Find all physicians within three reporting levels of Dr. Sarah Chen."
+Swapna ran the benchmark query: "Find all physicians within three reporting levels of Dr. Sarah Chen."
 
 SQL Server recursive CTE: 8.2 seconds.  
 Neo4j Cypher query: 340 milliseconds.
@@ -844,9 +876,9 @@ Neo4j Cypher query: 340 milliseconds.
 
 Sarah asked the critical question. "Does this speed matter for agents?"
 
-Priya demonstrated. Care coordination agent analyzing provider referral networks for high-risk patients. SQL version: 8.2 seconds per patient × 40 patients/day = 5.5 minutes total. Neo4j version: 340ms × 40 = 13.6 seconds total. 
+Swapna demonstrated. Care coordination agent analyzing provider referral networks for high-risk patients. SQL version: 8.2 seconds per patient × 40 patients/day = 5.5 minutes total. Neo4j version: 340ms × 40 = 13.6 seconds total. 
 
-"Agents need sub-second response times," Priya said. "Neo4j delivers. SQL doesn't."
+"Agents need sub-second response times," Swapna said. "Neo4j delivers. SQL doesn't."
 
 **Day 8: Pinecone Vector Database Live**
 
@@ -859,7 +891,7 @@ Week 2 (Pinecone semantic): 42ms, semantic matches (finds all glucose control is
 
 ML engineer demonstrated: Query embedding (patient clinical summary) → cosine similarity search across 10M patient embeddings → top 20 most similar cases retrieved in 42ms.
 
-"This enables RAG," Priya explained. "Before invoking GPT-4, we retrieve semantically similar cases as context. LLM sees patterns from analogous patients. Better clinical reasoning."
+"This enables RAG," Swapna explained. "Before invoking GPT-4, we retrieve semantically similar cases as context. LLM sees patterns from analogous patients. Better clinical reasoning."
 
 **Day 12: Feature Store Operational (Tecton)**
 
@@ -1013,41 +1045,29 @@ However, this calculation excludes intelligence layer value (Weeks 5-12). When f
 
 Foundation layers provide the bedrock. Now we build intelligence.
 
-**Chapter 5 constructs Layers 3, 4, and 5:**
+**Chapter 5 constructs Layers 3 and 4:**
 
-**Layer 3 (Semantic Layer):** Business logic and semantic understanding. Echo's agents need to understand "readmission risk" means specific clinical criteria, "high-risk medication" follows evidence-based definitions, "care gap" reflects quality measures. Semantic layer translates clinical concepts into computable logic.
+**Layer 3 (Semantic Layer):** Business logic and semantic understanding. Echo's agents need to understand "readmission risk" means specific clinical criteria, "high-risk medication" follows evidence-based definitions, "care gap" reflects quality measures.
 
-**Layer 4 (RAG Retrieval):** Context assembly for LLM augmentation. Before invoking GPT-4, agents retrieve relevant context: patient history from graph database, similar cases from vector search, clinical guidelines from document store, recent vitals from time-series database. RAG synthesizes this context into coherent prompt.
-
-**Layer 5 (LLM Integration):** Natural language generation and reasoning. With semantic understanding (Layer 3) and assembled context (Layer 4), Layer 5 invokes LLMs to generate natural responses, explain clinical reasoning, translate medical jargon for patients.
+**Layer 4 (Intelligence):** Context assembly and LLM integration. Layer 4 retrieves relevant context (patient history, similar cases, clinical guidelines) and integrates LLMs for natural language understanding and generation.
 
 **Why foundation enables intelligence:**
 
-Without Layer 1's multi-modal storage, RAG can't retrieve context from diverse sources—limited to single database, missing graph relationships and document insights.
+Without Layer 1's multi-modal storage, intelligence layers can't access diverse data sources—limited to single database, missing graph relationships and document insights.
 
 Without Layer 2's real-time data, semantic layer operates on stale concepts—risk scores calculated on yesterday's vitals, medication lists missing this morning's orders.
 
-Without object storage (Layer 1 Category 7), LLM fine-tuning lacks training data—can't customize medical language models without petabyte-scale training corpus.
+Without object storage (Layer 1 Category 7), intelligence layers lack training data—can't access petabyte-scale medical datasets.
 
 Without feature stores (Layer 1 Category 6), semantic layer can't reuse features—every agent rebuilds "30-day readmission risk" independently, creating inconsistent definitions.
 
-**How Layers 1-2 specifically enable LLM deployment (Chapter 5):**
+**How Layers 1-2 enable intelligence deployment (Chapter 5):**
 
-The foundation Echo built in Weeks 1-4 proves critical when LLMs deploy in Week 7-8:
+The foundation Echo built in Weeks 1-4 enables intelligence layers in Weeks 5-8. Layer 1's model registry provides version control. Layer 1's semantic cache reduces costs through intelligent response reuse. Layer 2's streaming fabric delivers real-time responses. Layer 2's CDC pipeline ensures current context.
 
-1. **Layer 1's model registry** stores Llama 3.1 70B weights (14GB) and 47 versioned prompt templates. When Echo switches from GPT-4 to self-hosted Llama for cost-sensitive queries, the registry provides instant rollback if performance degrades. The prompt library enables A/B testing without code changes.
+**Foundation first, intelligence second.** With Layers 1-2 operational, Echo progresses to Weeks 5-8: building the intelligence that transforms accessible data into trustworthy agent capabilities.
 
-2. **Layer 1's semantic cache** reduces LLM costs 70% through intelligent response reuse. The Pinecone vector cache (deployed Week 2, sitting idle until LLMs arrive) detects that "Can I prescribe ibuprofen?" semantically matches "Is ibuprofen safe to give?" (0.94 cosine similarity) and returns cached response in 50ms instead of invoking $0.06 GPT-4 call. Annual savings: $180,000 from infrastructure costing $36,000—foundation pays for itself.
-
-3. **Layer 2's streaming fabric** delivers LLM responses token-by-token for superior user experience. The SSE endpoint (deployed and tested Week 4 with mock data) streams GPT-4's output at 40 tokens/second, creating perceived latency <1 second even when actual generation takes 3.2 seconds. Physicians see responses building in real-time instead of staring at frozen screens, improving completion rates from 73% to 94%.
-
-4. **Layer 2's CDC pipeline** pushes real-time context updates to LLM reasoning mid-generation. When medication order arrives during clinical decision query, streaming processor injects updated context into LLM prompt before response completes. This real-time enrichment (impossible with batch ETL) prevents medication interaction errors that would otherwise slip through 8-24 hour data lag.
-
-**Foundation first, intelligence second.** With Layers 1-2 operational, Echo progresses to Weeks 5-8: building the intelligence that transforms accessible data into trustworthy agent capabilities. But that intelligence depends entirely on the foundation.
-
-Sarah's team learned the hard lesson that many AI projects miss: **trust before intelligence starts with infrastructure before reasoning.** You cannot bolt LLMs onto inadequate infrastructure and expect reliable results. The foundation enables intelligence; intelligence without foundation fails.
-
-Chapter 5 begins: "With foundation solid beneath our feet, we build upward—semantic understanding, context retrieval, and natural language generation that together create agents physicians trust..."
+Chapter 5 begins the intelligence build.
 
 
 ---
