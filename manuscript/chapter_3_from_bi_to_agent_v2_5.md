@@ -443,13 +443,13 @@ Sarah: "We gate investments with checkpoints:
 **Week 8:** Intelligence layers operational. Target 65-70/100. This is point of no return. 
 **Week 10:** First production agent. 85/100 minimum.
 
-We don't commit $1.23M day one. We validate: $492K Phase 1, $369K Phase 2, $369K Phase 3."
+We don't commit $1.23M day one. We validate: $470K Phase 1, $380K Phase 2, $380K Phase 3."
 
 **The vote: Unanimous approval.**
 
 Conditions: weekly progress reviews, mandatory checkpoints, first agent by Week 10, ROI tracking from Week 12.
 
-Team: Sarah (architecture), Marcus Williams (governance), Jamie Rodriguez (infrastructure), Swapna Ram (technical lead), +4 engineers full-time.
+Team: Sarah (architecture), Marcus Williams (governance), Jamie Rodriguez (Director of IT), Swapna Ram (technical lead), +4 engineers full-time.
 
 ### Sarah's Reflection
 
@@ -583,7 +583,7 @@ graph LR
 
 ### Echo's Three-Phase Roadmap
 
-**Phase 1: Foundation (Weeks 1-4) -- $492K**
+**Phase 1: Foundation (Weeks 1-4) -- $470K**
 
 Build Layers 1-2: Multi-Modal Storage + Real-Time Data Fabric
 
@@ -599,7 +599,7 @@ Build Layers 1-2: Multi-Modal Storage + Real-Time Data Fabric
 
 **Checkpoint Week 4:** Foundation functional or stop.
 
-**Phase 2: Intelligence (Weeks 5-8) -- $369K**
+**Phase 2: Intelligence (Weeks 5-8) -- $380K**
 
 Build Layers 3-6: Semantic + RAG + Governance + Observability
 
@@ -617,7 +617,7 @@ Build Layers 3-6: Semantic + RAG + Governance + Observability
 
 **Checkpoint Week 8:** Intelligence functional or don't deploy agents.
 
-**Phase 3: Production (Weeks 9-10) -- $369K**
+**Phase 3: Production (Weeks 9-10) -- $380K**
 
 Build Layer 7: Orchestration + Deploy Care Coordination Agent
 

@@ -988,12 +988,12 @@ Sarah established three parallel teams:
 - Timeline: Week 1-2
 
 **Team 2 (Specialized Storage):** Object storage, time-series database, search index, cache layer
-- Lead: James Rodriguez (infrastructure)
+- Lead: Jamie Rodriguez (Director of IT)
 - Engineers: 1 infrastructure engineer, 1 search engineer, 1 backend developer
 - Timeline: Week 1-2
 
 **Team 3 (Real-Time Data):** CDC connectors, Kafka cluster, Flink stream processing
-- Lead: Ananya Krishnan (integration)
+- Lead: Ruth Ganesh (integration)
 - Engineers: 2 integration engineers, 1 data engineer, 1 clinical informaticist
 - Timeline: Week 3-4
 
@@ -1139,7 +1139,7 @@ graph TB
 
 ## SECTION 6: FOUNDATION COMPLETE
 
-Friday afternoon, Week 4. Sarah convened the leadership team for foundation review.
+Friday afternoon, Week 4. Sarah convened the leadership team for foundation review. CFO Krish Yadav joined via video to verify Phase 1 spend against the approved $470,000 budget.
 
 ### Foundation Status (Week 4 Complete)
 

@@ -82,17 +82,18 @@ Sarah knew the problem wasn't talent—her team was excellent. It wasn't budget�
 
 That's when Marcus Williams, Echo's Chief Data Officer, discovered the INPACT™ assessment framework. The 28/100 score wasn't arbitrary—it measured six specific needs their infrastructure failed to deliver:
 
-**I - Instant (3/6):** Queries took 9-13 seconds because overnight ETL created data staleness and batch processing dominated. Agent speed equals infrastructure speed, and Echo's infrastructure was built for humans reviewing yesterday's data, not agents needing this second's context.
+**I - Instant (1/6):** Queries took 9-13 seconds because overnight ETL created data staleness and batch processing dominated. No caching layer existed. Agent speed equals infrastructure speed, and Echo's infrastructure was built for humans reviewing yesterday's data, not agents needing this second's context.
 
-**N - Natural (4/6):** Understanding rate of 40-60% stemmed from cryptic table names like `TBL_PT_ENC_DTL` and undocumented column relationships. No semantic layer existed to translate "patient's last three visits" into the complex joins required across seven tables.
+**N - Natural (2/6):** Understanding rate of 40-60% stemmed from cryptic table names like `TBL_PT_ENC_DTL` and undocumented column relationships. No semantic layer existed to translate "patient's last three visits" into the complex joins required across seven tables.
 
-**P - Permitted (2/6):** Static role-based access control (RBAC) couldn't handle dynamic contexts. A nurse authorized to view Patient A's records during her shift shouldn't access them at 3 AM from home. HIPAA requires this contextual authorization, but Echo's fifteen-year-old permission system couldn't deliver it.
+**P - Permitted (1/6):** Static role-based access control (RBAC) couldn't handle dynamic contexts. A nurse authorized to view Patient A's records during her shift shouldn't access them at 3 AM from home. HIPAA requires this contextual authorization, but Echo's fifteen-year-old permission system couldn't deliver it.
 
-**A - Adaptive (3/6):** No feedback loops existed. When agents got queries wrong, there was no mechanism to learn from corrections. Model performance drifted over time with no detection or retraining workflows. Quarterly manual reviews were their only "improvement" process.
+**A - Adaptive (2/6):** No feedback loops existed. When agents got queries wrong, there was no mechanism to learn from corrections. Model performance drifted over time with no detection or retraining workflows. Quarterly manual reviews were their only "improvement" process.
 
-**C - Contextual (2/6):** Each system was a silo. The care coordination agent couldn't see clinical history. The documentation agent couldn't access billing status. Weekly batch jobs moved data between systems—agents needed real-time cross-domain integration.
+**C - Contextual (3/6):** EHR integration existed but systems remained siloed. The care coordination agent couldn't see clinical history. The documentation agent couldn't access billing status. Weekly batch jobs moved data between systems—agents needed real-time cross-domain integration.
 
-**T - Transparent (2/6):** Incomplete audit logs violated HIPAA Section 164.312(b). When agents made recommendations, clinicians couldn't see the reasoning. When errors occurred, no trace existed to diagnose root causes. Transparency was theoretical, not technical.
+**T - Transparent (1/6):** Incomplete audit logs violated HIPAA Section 164.312(b). When agents made recommendations, clinicians couldn't see the reasoning. When errors occurred, no trace existed to diagnose root causes. Transparency was theoretical, not technical.
+
 
 Sarah realized something profound: **Her infrastructure wasn't broken. It was brilliant—for the wrong era.**
 
