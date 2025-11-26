@@ -801,31 +801,31 @@ Similar queries should not incur redundant LLM costs. Semantic caching stores re
 graph TB
     QUERY["<b>Incoming Query</b><br/>'High-risk diabetic patients'"]
     
-    EXACT["<b>Level 1: Exact Match</b><br/><b>Redis Cache</b><br/><b>Character-for-character</b>"]
+    EXACT["<b>Level 1: Exact Match</b><br/><b>Redis Cache</b>"]
     
-    SEMANTIC["<b>Level 2: Semantic Match</b><br/><b>Pinecone Vector Cache</b><br/><b>Similarity > 0.92</b>"]
+    SEMANTIC["<b>Level 2: Semantic Match</b><br/><b>Pinecone Vector Cache</b>"]
     
     PIPELINE["<b>Full RAG Pipeline</b><br/><b>If no cache hit</b>"]
     
     RESPONSE["<b>Response</b>"]
     
-    CDC["<b>CDC Events</b><br/><b>Patient data changed</b>"]
+    CDC["<b>CDC Events</b>"]
     
-    INVALIDATE["<b>Cache Invalidation</b><br/><b>Clear related entries</b>"]
+    INVALIDATE["<b>Cache Invalidation</b>"]
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
     QUERY --> EXACT
-    EXACT -->|<b>Hit (15%)</b>| RESPONSE
-    EXACT -->|<b>Miss</b>| SEMANTIC
-    SEMANTIC -->|<b>Hit (70%)</b>| RESPONSE
-    SEMANTIC -->|<b>Miss (15%)</b>| PIPELINE
+    EXACT -->|Hit 15%| RESPONSE
+    EXACT -->|Miss| SEMANTIC
+    SEMANTIC -->|Hit 70%| RESPONSE
+    SEMANTIC -->|Miss 15%| PIPELINE
     PIPELINE --> RESPONSE
-    RESPONSE -.->|<b>Cache for future</b>| SEMANTIC
+    RESPONSE -.->|Cache| SEMANTIC
     
     CDC --> INVALIDATE
-    INVALIDATE -.->|<b>Remove stale entries</b>| EXACT
-    INVALIDATE -.->|<b>Remove stale entries</b>| SEMANTIC
+    INVALIDATE -.->|Clear| EXACT
+    INVALIDATE -.->|Clear| SEMANTIC
     
     style QUERY fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
     style EXACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
