@@ -612,7 +612,7 @@ graph TB
 - [ ] Volume: 340,000 encounters
 - [ ] Investment: $1.23M
 - [ ] Timeline: 28→52→72→85/100 (Weeks 0, 4, 8, 10)
-- [ ] ROI: 477%, Payback: 2.4 months
+- [ ] ROI: 477%, Payback: 10 weeks
 - [ ] Latency: 72hr → 12sec (600x improvement)
 
 ### Architectural Framework Compliance

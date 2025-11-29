@@ -89,7 +89,7 @@
 **ROI Metrics:**
 - Net Benefit: $3.8M - $1.23M = **$2.57M**
 - ROI: **209%**
-- Payback: **3.9 months**
+- Payback: **10 weeks**
 
 **Validation:** Time savings verified through pilot (N=50 scheduling, N=30 documentation). Adoption curve validated against historical Echo IT deployments. Loaded costs: base salary × 1.3 benefits multiplier.
 

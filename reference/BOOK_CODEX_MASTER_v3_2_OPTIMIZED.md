@@ -102,7 +102,7 @@ First principles identifies **what** agents need. Giants' shoulders shows **how*
 - Revenue: $1.8M (value-based contracts)
 - Cost Avoidance: $800K (readmissions $500K + utilization $300K)
 - Efficiency: $1.2M (productivity $700K + reconciliation $300K + authorizations $200K)
-- **Total Value: $3.8M | Net: $2.57M | ROI: 209% | Payback: 3.9 months**
+- **Total Value: $3.8M | Net: $2.57M | ROI: 209% | Payback: 10 weeks**
 
 **Key Characters (CANONICAL - NO DEVIATIONS):**
 - **Sarah Cedao, CTO:** Technology strategy (NOT physician, no "Dr." title)
