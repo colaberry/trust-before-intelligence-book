@@ -4,10 +4,10 @@
 **Book:** Trust Before Intelligence: Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
 **Author:** Ram Katamaraja, CEO, Colaberry Inc.  
 **Chapter Length:** ~12,500 words (25 pages)  
-**Version:** 2.12 | December 3, 2025  
+**Version:** 3.0 | December 3, 2025  
 **Status:** PRODUCTION READY - TCC COMPLIANCE FIXES APPLIED
 
-**Changes in v2.12:**
+**Changes in v3.0:**
 - TCC Compliance Fixes (5 items addressed):
   - Fix #1: Citation [5] Google SRE 2016 retained as foundational standard (canonical source for "golden signals" terminology, parallel to NIST SP 800-162 for ABAC)
   - Fix #2: Citation [19] updated from Orca Security 2022 to ACM Computing Surveys 2025 (Tariq et al., peer-reviewed systematic review)
@@ -431,11 +431,11 @@ graph TB
     subgraph DASHBOARD["<b>GOALS™ Health Dashboard - Week 10</b>"]
         TITLE["<b>Overall Health: 15/25</b><br/><b>Status: Below Production Threshold</b>"]
         
-        G["<b>G - Governance</b><br/><b>3/5 🟡</b><br/><b>Audit coverage gap</b>"]
-        O["<b>O - Observability</b><br/><b>3/5 🟡</b><br/><b>Need explainability</b>"]
-        A["<b>A - Availability</b><br/><b>4/5 🟢</b><br/><b>Scale testing needed</b>"]
-        L["<b>L - Lexicon</b><br/><b>3/5 🟠</b><br/><b>Disambiguation gap</b>"]
-        S["<b>S - Solid</b><br/><b>4/5 🟡</b><br/><b>Cross-system consistency</b>"]
+        G["<b>G - Governance</b><br/><b>3/5 ðŸŸ¡</b><br/><b>Audit coverage gap</b>"]
+        O["<b>O - Observability</b><br/><b>3/5 ðŸŸ¡</b><br/><b>Need explainability</b>"]
+        A["<b>A - Availability</b><br/><b>4/5 ðŸŸ¢</b><br/><b>Scale testing needed</b>"]
+        L["<b>L - Lexicon</b><br/><b>2/5 ðŸŸ </b><br/><b>Disambiguation gap</b>"]
+        S["<b>S - Solid</b><br/><b>3/5 ðŸŸ¡</b><br/><b>Cross-system consistency</b>"]
     end
     
     TITLE --> G
@@ -470,8 +470,8 @@ graph TB
 | **G - Governance** | 3/5 | 5/5 | 2 | Week 11 |
 | **O - Observability** | 3/5 | 4/5 | 1 | Week 11 |
 | **A - Availability** | 4/5 | 4/5 | 0 | Maintain |
-| **L - Lexicon** | 3/5 | 4/5 | 1 | Week 12 |
-| **S - Solid** | 4/5 | 4/5 | 0 | Maintain |
+| **L - Lexicon** | 2/5 | 4/5 | 2 | Week 11-12 |
+| **S - Solid** | 3/5 | 4/5 | 1 | Week 11 |
 | **Total** | **15/25** | **21/25** | **6** | — |
 
 "Let's go through each dimension," Sarah said. "I want everyone to understand not just what we need to do, but why it matters."
@@ -509,11 +509,11 @@ Traditional RBAC asks one question: "What role does this user have?"
 
 Dynamic ABAC asks five questions simultaneously:
 
-- **👤 Who:** Patient ID 12345 requesting data (not just "a patient role")
-- **📋 What:** Specific table and columns being accessed (lab_results, not all patient data)
-- **📅 When:** Timestamp and business context (normal business hours vs. suspicious 3am access)
-- **📱 Where:** Access channel and location (mobile app from registered device vs. unknown location)
-- **🎯 Why:** Business justification (patient self-access vs. administrative lookup)
+- **ðŸ‘¤ Who:** Patient ID 12345 requesting data (not just "a patient role")
+- **ðŸ“‹ What:** Specific table and columns being accessed (lab_results, not all patient data)
+- **ðŸ“… When:** Timestamp and business context (normal business hours vs. suspicious 3am access)
+- **ðŸ“± Where:** Access channel and location (mobile app from registered device vs. unknown location)
+- **ðŸŽ¯ Why:** Business justification (patient self-access vs. administrative lookup)
 
 These five dimensions enable policies that are dynamically evaluated in real-time, achieving the sub-10ms latency agents require while maintaining HIPAA's "minimum necessary" compliance standard. [1]
 
@@ -637,10 +637,10 @@ graph TB
     FULL -->|<b>Low risk</b>| EXECUTE["<b>✅ Auto-Execute</b>"]
     COND -->|<b>Medium risk</b>| CHECK{<b>Trigger?</b>}
     CHECK -->|<b>No</b>| EXECUTE
-    CHECK -->|<b>Yes</b>| APPROVE["<b>⏸️ Human Approval</b>"]
+    CHECK -->|<b>Yes</b>| APPROVE["<b>⏸️¸ Human Approval</b>"]
     HITL -->|<b>High risk</b>| APPROVE
-    HONL -->|<b>High stakes</b>| MONITOR["<b>👁️ Human Monitor</b>"]
-    MANUAL -->|<b>Critical</b>| INFORM["<b>ℹ️ Information Only</b>"]
+    HONL -->|<b>High stakes</b>| MONITOR["<b>ðŸ‘ï¸ Human Monitor</b>"]
+    MANUAL -->|<b>Critical</b>| INFORM["<b>ℹ️¸ Information Only</b>"]
     
     APPROVE -->|<b>Approved</b>| EXECUTE
     MONITOR --> EXECUTE
@@ -680,8 +680,8 @@ Marcus outlined the key metrics:
 
 **Governance Operational Metrics:**
 - ABAC policy evaluation: <10ms (currently: 6ms ✓)
-- Audit log coverage: 100% of data access (currently: 95% ⚠️)
-- HITL escalation time: <30 seconds (currently: 45 seconds ⚠️)
+- Audit log coverage: 100% of data access (currently: 95% ⚠️¸)
+- HITL escalation time: <30 seconds (currently: 45 seconds ⚠️¸)
 - Secrets encryption: 100% (currently: 100% ✓)
 - Model rollback capability: <15 minutes (currently: untested ❌)
 
@@ -729,17 +729,7 @@ Model versioning with tested rollback capability (<15 minutes to revert) provide
 
 ### Key Technologies for Agent Governance
 
-Marcus shared the technology stack they'd evaluated:
-
-**ABAC Policy Engines:**
-- [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) — Open-source CNCF-graduated policy engine with Rego policy language
-- [Amazon Verified Permissions](https://aws.amazon.com/verified-permissions/) — Managed ABAC service with Cedar policy language
-- [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/) — Cloud-native governance with policy-as-code
-
-**Audit Logging Platforms:**
-- [Panther](https://panther.com/) — Real-time security analytics with compliance automation
-- [Datadog Security](https://www.datadoghq.com/product/security-platform/) — Unified observability and security monitoring
-- [Splunk Enterprise Security](https://www.splunk.com/en_us/products/enterprise-security.html) — SIEM with compliance reporting
+*For detailed vendor recommendations including ABAC policy engines and audit logging platforms, see Appendix A: Technology Selection Guide, Layer 5 (Security & Policy) section.*
 
 **Selection criteria:** Prioritize ABAC over RBAC for dynamic permissions, sub-10ms policy evaluation latency, comprehensive audit trails with business context, and integration with your cloud provider's identity systems.
 
@@ -777,7 +767,7 @@ Dr. Chen nodded. "I'll work with the clinical staff on HITL workflows. We need t
 
 ---
 
-## 📍 Checkpoint 1: Governance Foundation Complete
+## ðŸ“ Checkpoint 1: Governance Foundation Complete
 
 **What we've covered:**
 
@@ -857,17 +847,17 @@ sequenceDiagram
     
     U->>L7: Show Dr. Martinez's availability tomorrow
     activate L7
-    L7->>L6: 📊 Log: Query received (trace: abc-123-def)
+    L7->>L6: ðŸ“Š Log: Query received (trace: abc-123-def)
     
     L7->>L3: Translate: Dr. Martinez + availability
     activate L3
-    L3->>L6: 📊 Log: Semantic translation 0.3s
+    L3->>L6: ðŸ“Š Log: Semantic translation 0.3s
     L3-->>L7: provider_id=789, date=2025-10-28
     deactivate L3
     
     L7->>L5: Check: User authorized for provider schedule?
     activate L5
-    L5->>L6: 📊 Log: ABAC policy eval 8ms ✓
+    L5->>L6: ðŸ“Š Log: ABAC policy eval 8ms ✓
     L5-->>L7: Authorized (policy: patient-provider-access)
     deactivate L5
     
@@ -875,19 +865,19 @@ sequenceDiagram
     activate L4
     L4->>L2: Subscribe: schedule_updates stream
     activate L2
-    L2->>L6: 📊 Log: Stream check 15ms (fresh)
+    L2->>L6: ðŸ“Š Log: Stream check 15ms (fresh)
     L2-->>L4: Last update: 12s ago ✓
     deactivate L2
     L4->>L1: Query: provider_schedule WHERE id=789
     activate L1
-    L1->>L6: ⚠️ Log: Query 2.3s - SLOW
+    L1->>L6: ⚠️¸ Log: Query 2.3s - SLOW
     Note over L1: Missing index!
     L1-->>L4: Result: 3 time slots
     deactivate L1
     L4-->>L7: Context: [8am, 10am, 2pm]
     deactivate L4
     
-    L7->>L6: 📊 Log: Response 2.9s total | All layers traced
+    L7->>L6: ðŸ“Š Log: Response 2.9s total | All layers traced
     L7->>U: Dr. Martinez has 3 openings tomorrow
     deactivate L7
     
@@ -919,7 +909,7 @@ EU AI Act Article 13 requires transparency for high-risk AI systems—which incl
 
 **Explainability Metrics:**
 
-- **Confidence calibration:** When an agent says it's 90% confident, it should be correct 85-95% of the time. Track calibration curves monthly, recalibrating when drift exceeds ±5%.
+- **Confidence calibration:** When an agent says it's 90% confident, it should be correct 85-95% of the time. Track calibration curves monthly, recalibrating when drift exceeds Â±5%.
 - **Trace completeness:** 100% of responses include full lineage—which data sources, which policies applied, which models generated the response.
 - **Response justification:** Every recommendation includes reasoning. Not just "approved" but "approved because HbA1c >7.0 AND insurance covers program AND patient engagement score 85."
 
@@ -939,7 +929,7 @@ graph TB
     VALIDATE{<b>All metrics<br/>passing?</b>}
     
     PASS["<b>✅ Production Ready</b><br/><b>Quality validated</b>"]
-    FAIL["<b>⚠️ Investigation</b><br/><b>Review required</b>"]
+    FAIL["<b>⚠️¸ Investigation</b><br/><b>Review required</b>"]
     
     FEEDBACK["<b>Continuous Loop</b><br/><b>Daily • Weekly • Monthly</b>"]
     
@@ -978,11 +968,11 @@ graph TB
 ### Measuring Observability
 
 **Observability Operational Metrics:**
-- APM coverage: All services instrumented (currently: 94% ⚠️)
+- APM coverage: All services instrumented (currently: 94% ⚠️¸)
 - LLM call tracing: 100% with cost attribution (currently: 100% ✓)
-- MTTD (Mean Time to Detection): <5 minutes (currently: 8 minutes ⚠️)
+- MTTD (Mean Time to Detection): <5 minutes (currently: 8 minutes ⚠️¸)
 - Daily LLM cost visibility: Yes (currently: $850/day)
-- High-risk decisions retrievable: Explainability enabled (currently: partial ⚠️)
+- High-risk decisions retrievable: Explainability enabled (currently: partial ⚠️¸)
 
 ### Observability Scoring Calibration
 
@@ -1005,22 +995,7 @@ When resource constraints require sequencing, follow this prioritization: **O→
 
 ### Key Technologies for Agent Observability
 
-Marcus shared the technology stack for observability:
-
-**ML/LLM Monitoring Platforms:**
-- [Evidently AI](https://www.evidentlyai.com/) — ML observability with drift detection and data quality monitoring
-- [Arize AI](https://arize.com/) — ML observability platform with model performance tracking
-- [LangSmith](https://smith.langchain.com/) — LLM application observability with trace-level debugging (LangChain)
-- [Weights & Biases](https://wandb.ai/) — Experiment tracking and model monitoring
-
-**Data Quality Platforms:**
-- [Monte Carlo](https://www.montecarlodata.com/) — Data observability with anomaly detection
-- [Great Expectations](https://greatexpectations.io/) — Open-source data validation framework
-- [Datafold](https://www.datafold.com/) — Data quality monitoring and testing
-
-**Application Performance Monitoring (with AI extensions):**
-- [Datadog](https://www.datadoghq.com/) — Unified observability with LLM monitoring
-- [New Relic](https://newrelic.com/) — Full-stack observability with AI insights
+*For detailed vendor recommendations including ML/LLM monitoring platforms and data quality tools, see Appendix A: Technology Selection Guide, Layer 6 (Observability) section.*
 
 **Selection criteria:** Choose platforms supporting trace IDs across all seven layers, model drift detection for embeddings and LLMs, data quality monitoring with automated alerting, and closed-loop feedback capabilities.
 
@@ -1054,7 +1029,7 @@ Observability requires continuous vigilance at multiple cadences:
 
 ---
 
-## 📍 Checkpoint 3: Observability Foundation Complete
+## ðŸ“ Checkpoint 2: Observability Foundation Complete
 
 **What we've covered:**
 
@@ -1144,7 +1119,7 @@ Semantic caching achieving 60%+ hit rates. Common queries returned from cache in
 - Data freshness (p95): <30 seconds (currently: 28s ✓)
 - System uptime: 99.9%+ (currently: 99.95% ✓)
 - Cache hit rate: >60% (currently: 65% ✓)
-- Scale capacity: 10x current load (currently: tested to 5x ⚠️)
+- Scale capacity: 10x current load (currently: tested to 5x ⚠️¸)
 
 ### Availability Scoring Calibration
 
@@ -1159,29 +1134,7 @@ Semantic caching achieving 60%+ hit rates. Common queries returned from cache in
 
 ### Key Technologies for Availability
 
-**Event Streaming:**
-- [Apache Kafka](https://kafka.apache.org/) — Distributed event streaming platform
-- [Azure Event Hubs](https://learn.microsoft.com/en-us/azure/event-hubs/) — Managed event ingestion service
-- [AWS Kinesis](https://aws.amazon.com/kinesis/) — Real-time data streaming
-
-**Change Data Capture:**
-- [Debezium](https://debezium.io/) — Open-source CDC for databases
-- [AWS Database Migration Service](https://aws.amazon.com/dms/) — Managed AWS CDC
-- [Azure Data Factory](https://learn.microsoft.com/en-us/azure/data-factory/) — Cloud-native ETL/CDC
-
-**Stream Processing:**
-- [Apache Flink](https://flink.apache.org/) — Low-latency complex processing
-- [Spark Streaming](https://spark.apache.org/streaming/) — Batch + streaming unified
-- [Databricks Delta Live Tables](https://www.databricks.com/product/delta-live-tables) — Declarative managed pipelines
-
-**Vector Databases for Query-Optimized Storage:**
-- [Pinecone](https://www.pinecone.io/) — Managed vector database
-- [Weaviate](https://weaviate.io/) — Open-source vector search
-- [Qdrant](https://qdrant.tech/) — High-performance vector similarity
-
-**Caching:**
-- [Redis](https://redis.io/) — In-memory data structure store
-- [Momento](https://www.gomomento.com/) — Serverless caching
+*For detailed vendor recommendations including event streaming, CDC, vector databases, and caching platforms, see Appendix A: Technology Selection Guide, Layers 1-2 (Storage & Processing) sections.*
 
 **Selection criteria:** Prioritize sub-30-second data freshness for critical tables, semantic caching with >60% hit rates, parallel retrieval capabilities, and proven 10x scale capacity.
 
@@ -1237,12 +1190,12 @@ graph TD
     
     L3 -->|<b>✅ Hit - 7%</b>| C3["<b>⚡ 1.2s</b><br/><b>$0.015/query</b>"]
     
-    L3 -->|<b>❌ Miss - 3%</b>| COLD["<b>Level 4: Cold Path</b><br/><b>Full orchestration</b><br/><b>⏱️ 2.8-4.2s</b><br/><b>$0.12/query</b>"]
+    L3 -->|<b>❌ Miss - 3%</b>| COLD["<b>Level 4: Cold Path</b><br/><b>Full orchestration</b><br/><b>⏱️¸ 2.8-4.2s</b><br/><b>$0.12/query</b>"]
     
     C1 --> R["<b>✅ Response</b><br/><b>Sub-2-seconds</b>"]
     C2 --> R
     C3 --> R
-    COLD --> SLOW["<b>⚠️ Response</b><br/><b>2.8-4.2s</b>"]
+    COLD --> SLOW["<b>⚠️¸ Response</b><br/><b>2.8-4.2s</b>"]
     
     COLD -.->|<b>Cache warming</b>| L1
     
@@ -1263,19 +1216,16 @@ graph TD
 
 ---
 
-## 📍 Checkpoint 2: Operations Monitoring Complete
+## ðŸ“ Checkpoint 3: Availability Foundation Complete
 
-**What we've covered since Checkpoint 1:**
-
-✅ **GOAL 2 (Observability):** Visibility into agent behavior—end-to-end tracing with global trace IDs, output quality validation (accuracy >95%, hallucination <2%, consistency 98%+), explainability requirements for EU AI Act compliance, and continuous feedback loops. [5]
+**What we've covered since Checkpoint 2:**
 
 ✅ **GOAL 3 (Availability):** Speed and freshness at scale—multi-level caching strategy achieving 97% cache coverage, sub-2-second response targets, sub-30-second data freshness, and 10x scale capacity validation. [2][7]
 
 **Key metrics established:**
-- Observability: MTTD <5 minutes, trace coverage 100%, explainability enabled
 - Availability: p95 response <2 seconds, cache hit rate >60%, uptime 99.9%+
 
-**The prioritization insight:** When resources are limited, fix Observability first (O→S→G→L→A). Without visibility, you can't detect failures in other dimensions. Implementation experience shows teams that establish observability early resolve downstream issues significantly faster—you can't improve what you can't measure.
+**Echo's status:** Availability at 4/5 → maintaining through Week 12 (scale validation needed)
 
 **Coming next:** Lexicon (semantic understanding) and Solid (data quality)—the foundational GOALS that enable all others.
 
@@ -1430,20 +1380,7 @@ Additionally, implement **human evaluation sampling**: review 100 random queries
 
 ### Key Technologies for Semantic Understanding
 
-**Semantic Layer Platforms:**
-- [dbt Semantic Layer](https://www.getdbt.com/product/semantic-layer) — Open-source semantic modeling with metric definitions
-- [Cube](https://cube.dev/) — Headless BI platform with semantic layer for APIs
-- [AtScale](https://www.atscale.com/) — Semantic layer for cloud data platforms
-
-**Metadata Management:**
-- [Atlan](https://atlan.com/) — Active metadata platform with business glossaries
-- [Collibra](https://www.collibra.com/) — Data intelligence platform with governance
-- [Alation](https://www.alation.com/) — Data catalog with collaborative curation
-
-**Ontology Management:**
-- [Stardog](https://www.stardog.com/) — Knowledge graph platform with reasoning and SPARQL
-- [Protégé](https://protege.stanford.edu/) — Open-source ontology editor from Stanford University
-- [Apache Jena](https://jena.apache.org/) — Open-source framework for semantic web and linked data
+*For detailed vendor recommendations including semantic layer platforms, metadata management, and ontology tools, see Appendix A: Technology Selection Guide, Layer 3 (Semantic) section.*
 
 **Selection criteria:** Choose platforms with natural language query support, versioned metric definitions, entity resolution across systems, integration with your semantic storage (vector DB, knowledge graph), and collaborative curation workflows for domain experts.
 
@@ -1491,7 +1428,7 @@ When a patient asks "What's my diabetes care plan?", the semantic layer correctl
 
 ---
 
-## 📍 Checkpoint 4: Semantic Understanding Complete
+## ðŸ“ Checkpoint 4: Semantic Understanding Complete
 
 **What we've covered:**
 
@@ -1499,7 +1436,7 @@ When a patient asks "What's my diabetes care plan?", the semantic layer correctl
 
 **Key connection:** Lexicon validates the INPACT™ Natural (N) and Contextual (C) dimensions by measuring Layer 3 (Semantic Layer) health.
 
-**Echo's status:** Lexicon at 3/5 → targeting 4/5 by Week 12 (disambiguation and continuous learning gaps)
+**Echo's status:** Lexicon at 2/5 → targeting 4/5 by Week 12 (disambiguation and continuous learning gaps)
 
 **Coming next:** Solid (the data quality foundation that enables everything else).
 
@@ -1576,7 +1513,7 @@ Silent data corruption is the most dangerous failure mode. When data becomes inc
 |--------|--------|--------------|-----------------|
 | Data accuracy | >95% | ~97% ✓ | 95%+ for clinical data |
 | Completeness (critical fields) | >98% | ~99% ✓ | 98%+ required |
-| Cross-system consistency | >95% | ~92% ⚠️ | 95%+ for master data |
+| Cross-system consistency | >95% | ~92% ⚠️¸ | 95%+ for master data |
 | Schema validation | 100% | 100% ✓ | 100% enforced |
 | Error rate | <1% | ~0.4% ✓ | <1% for production |
 
@@ -1595,21 +1532,7 @@ Silent data corruption is the most dangerous failure mode. When data becomes inc
 
 ### Key Technologies for Data Quality
 
-**Data Quality Monitoring:**
-- [Monte Carlo](https://www.montecarlodata.com/) — Data observability platform with anomaly detection
-- [Great Expectations](https://greatexpectations.io/) — Open-source data validation with testing framework
-- [Datafold](https://www.datafold.com/) — Data quality monitoring with automated testing
-- [DataKitchen](https://datakitchen.io/) — DataOps orchestration with quality gates
-
-**Data Lineage & Governance:**
-- [Collibra](https://www.collibra.com/) — Data intelligence with quality management
-- [Alation](https://www.alation.com/) — Data catalog with quality scoring
-- [Atlan](https://atlan.com/) — Active metadata with data health monitoring
-
-**Schema Validation:**
-- [Apache Avro](https://avro.apache.org/) — Schema evolution and validation
-- [JSON Schema](https://json-schema.org/) — Document structure validation
-- [Protocol Buffers](https://protobuf.dev/) — Efficient schema-based serialization
+*For detailed vendor recommendations including data quality monitoring, lineage platforms, and schema validation tools, see Appendix A: Technology Selection Guide, Layer 1 (Foundation) section.*
 
 **Selection criteria:** Choose platforms supporting real-time quality monitoring (not just batch), automated anomaly detection with ML, quality gates that block bad data from reaching agents, and comprehensive lineage tracking to source systems.
 
@@ -1721,7 +1644,7 @@ graph TB
 
 ---
 
-## 📍 Checkpoint 5: Data Quality Foundation Complete
+## ðŸ“ Checkpoint 5: Data Quality Foundation Complete
 
 **What we've covered:**
 
@@ -1733,9 +1656,9 @@ graph TB
 - G: 3/5 → 5/5 (Week 11 priority)
 - O: 3/5 → 4/5 (Week 11)
 - A: 4/5 → 4/5 (maintain)
-- L: 3/5 → 4/5 (Week 12)
-- S: 4/5 → 4/5 (maintain)
-- **Total: 17/25 → 21/25**
+- L: 2/5 → 4/5 (Week 12)
+- S: 3/5 → 4/5 (Week 11)
+- **Total: 15/25 → 21/25**
 
 **Coming next:** The Trust Flywheel—how all three pillars work together in continuous motion.
 
@@ -1920,11 +1843,11 @@ Marcus displayed the operational dashboard they'd designed.
 ```mermaid
 graph TB
     subgraph SCORING["<b>GOALS™ Health Scoring (5-Point Scale)</b>"]
-        EXCELLENT["<b>5/5: 🟢 EXCELLENT</b><br/><b>Production-ready</b><br/><b>Continuous improvement</b>"]
-        GOOD["<b>4/5: 🟢 GOOD</b><br/><b>Healthy operations</b><br/><b>Monitor trends</b>"]
-        ADEQUATE["<b>3/5: 🟡 ADEQUATE</b><br/><b>Functional</b><br/><b>Improvement needed</b>"]
-        NEEDS["<b>2/5: 🟠 NEEDS WORK</b><br/><b>Gaps present</b><br/><b>Action required</b>"]
-        CRITICAL["<b>1/5: 🔴 CRITICAL</b><br/><b>Major gaps</b><br/><b>Immediate intervention</b>"]
+        EXCELLENT["<b>5/5: ðŸŸ¢ EXCELLENT</b><br/><b>Production-ready</b><br/><b>Continuous improvement</b>"]
+        GOOD["<b>4/5: ðŸŸ¢ GOOD</b><br/><b>Healthy operations</b><br/><b>Monitor trends</b>"]
+        ADEQUATE["<b>3/5: ðŸŸ¡ ADEQUATE</b><br/><b>Functional</b><br/><b>Improvement needed</b>"]
+        NEEDS["<b>2/5: ðŸŸ  NEEDS WORK</b><br/><b>Gaps present</b><br/><b>Action required</b>"]
+        CRITICAL["<b>1/5: ðŸ”´ CRITICAL</b><br/><b>Major gaps</b><br/><b>Immediate intervention</b>"]
     end
     
     THRESHOLD["<b>Healthcare Threshold: 21/25</b><br/><b>G=5, O/A/L/S ≥4</b>"]

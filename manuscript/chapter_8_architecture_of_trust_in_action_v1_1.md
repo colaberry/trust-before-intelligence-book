@@ -29,11 +29,11 @@ The conference room felt different.
 
 For ten weeks, this room had been a war room—whiteboards covered with architecture diagrams, cables snaking to temporary equipment, the barely controlled chaos of building something new. Today, the whiteboards were clean. The architecture was complete. The cables were gone.
 
-Sarah looked at the team assembled around the table: Marcus, the CDO whose technical precision had guided them through seven architectural layers. Dr. Chen, the clinical liaison who had translated physician workflows into system requirements. James, the infrastructure lead who had spent countless nights nursing Layer 6 observability to life. Priya, the data engineer who had wrangled Echo's fragmented data landscape into something an AI could trust.
+Sarah looked at the team assembled around the table: Marcus, the CDO whose technical precision had guided them through seven architectural layers. Dr. Chen, the clinical liaison who had translated physician workflows into system requirements. Jamie, the infrastructure lead who had spent countless nights nursing Layer 6 observability to life. Swapna, the data engineer who had wrangled Echo's fragmented data landscape into something an AI could trust.
 
 "We built it," Sarah said. "Now we operate it."
 
-The distinction mattered. Building and operating were different disciplines. Building required vision, creativity, problem-solving. Operating required discipline, consistency, vigilance. The skills that got you to Week 10 weren't the same skills that would get you through Week 12.
+The distinction mattered—as Marcus had explained Friday, the skills that built the architecture weren't the same skills that would sustain it.
 
 Marcus pulled up the GOALS™ dashboard on the main screen. Five gauges, each representing a dimension of operational excellence. The display showed Echo's current state—the baseline established Friday, at the end of Week 10.
 
@@ -48,11 +48,11 @@ The dashboard was new—designed during Week 10 to give the operations team real
 ```mermaid
 graph LR
     subgraph BASELINE["<b>ECHO HEALTH GOALS™ BASELINE - WEEK 10</b>"]
-        G["<b>G - Governance</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
-        O["<b>O - Observability</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
-        A["<b>A - Availability</b><br/><b>4/5</b><br/><b>🟢 Proficient</b>"]
-        L["<b>L - Lexicon</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
-        S["<b>S - Solid</b><br/><b>4/5</b><br/><b>🟢 Proficient</b>"]
+        G["<b>G - Governance</b><br/><b>3/5</b><br/><b>ðŸŸ¡ Developing</b>"]
+        O["<b>O - Observability</b><br/><b>3/5</b><br/><b>ðŸŸ¡ Developing</b>"]
+        A["<b>A - Availability</b><br/><b>4/5</b><br/><b>ðŸŸ¢ Proficient</b>"]
+        L["<b>L - Lexicon</b><br/><b>2/5</b><br/><b>ðŸŸ¡ Developing</b>"]
+        S["<b>S - Solid</b><br/><b>3/5</b><br/><b>ðŸŸ¢ Developing</b>"]
         
         TOTAL["<b>TOTAL: 15/25</b><br/><b>Target: 21/25</b><br/><b>Gap: 6 points</b>"]
     end
@@ -87,37 +87,23 @@ But architecture alone didn't create trust. Dr. Raj's question echoed in her min
 
 The answer was GOALS™. And in two weeks, they would prove it.
 
-### The Trust Equation
+### Starting the Trust Flywheel
 
-Sarah turned back to the team. "Let me remind everyone what we're validating."
+Sarah turned back to the team. "The Trust Equation—INPACT™ plus 7-Layer plus GOALS™. We've proven the first two pillars. Now we validate the third and start the flywheel turning."
 
-She wrote on the whiteboard:
-
-> **TRUSTED AGENTS = INPACT™ + 7-Layer + GOALS™**
-
-"INPACT™ defines what agents need—we're at eighty-five out of one hundred. The seven-layer architecture fulfills those needs—all layers operational. GOALS™ validates that fulfillment is sustained. That's what we prove over the next two weeks."
-
-She underlined the word "sustained." That was the key difference between Week 10 and Week 12. Week 10 proved they could build the infrastructure. Week 12 would prove they could operate it.
-
-Marcus nodded. "Each operational win we achieve connects back to all three pillars. When we improve Governance, we're not just checking a box—we're proving that Layer 5's policy engine is fulfilling the Permitted need from INPACT™."
-
-"The Trust Flywheel," Priya added. "We saw the diagram Friday. This is where it starts turning."
-
-The Trust Flywheel was the continuous improvement cycle they had introduced in Chapter 7. INPACT™ defined needs. The 7-Layer Architecture fulfilled needs. GOALS™ measured fulfillment. And the measurements fed back into better need understanding—which improved the architecture—which improved the measurements. Each revolution built more trust.
-
-"Week 11 and 12 are about starting that flywheel," Sarah confirmed. "Once it's turning, it builds momentum. But the first turns are the hardest."
+She underlined the word "sustained" on the whiteboard. Week 10 proved they could build. Weeks 11-12 would prove they could operate.
 
 ### Operations Team Structure
 
-James had prepared the operational rhythm. "I've set up three-tier coverage," he explained.
+Jamie had prepared the operational rhythm. "I've set up three-tier coverage," he explained.
 
-The operations structure was straightforward but comprehensive. Sarah would lead overall operations and serve as the GOALS™ champion. Marcus provided technical oversight as CDO and architecture owner. Dr. Chen owned clinical governance and Human-in-the-Loop (HITL) oversight—every escalation involving clinical decisions would flow through her. James handled infrastructure operations and Layer 6 monitoring. Priya managed data operations across Layers 1 through 3.
+The operations structure was straightforward but comprehensive. Sarah would lead overall operations and serve as the GOALS™ champion. Marcus provided technical oversight as CDO and architecture owner. Dr. Chen owned clinical governance and Human-in-the-Loop (HITL) oversight—every escalation involving clinical decisions would flow through her. Jamie handled infrastructure operations and Layer 6 monitoring. Swapna managed data operations across Layers 1 through 3.
 
 The team had expanded slightly from the architecture phase. Two additional engineers—a junior developer named Alex and a database administrator named Maria—had joined to provide operational coverage. They wouldn't be making architectural decisions, but they would be monitoring dashboards, responding to alerts, and escalating issues to the senior team.
 
-"We have 18-hour coverage now," James explained. "6 AM to midnight, with on-call for overnight. If something breaks at 3 AM, someone's phone buzzes within 2 minutes."
+"We have 18-hour coverage now," Jamie explained. "6 AM to midnight, with on-call for overnight. If something breaks at 3 AM, someone's phone buzzes within 2 minutes."
 
-"Daily standups at nine AM, fifteen minutes maximum," James continued. "We review the GOALS™ dashboard throughout the day. End-of-day retrospective at five PM, thirty minutes. Friday afternoon we do the weekly deep-dive."
+"Daily standups at nine AM, fifteen minutes maximum," Jamie continued. "We review the GOALS™ dashboard throughout the day. End-of-day retrospective at five PM, thirty minutes. Friday afternoon we do the weekly deep-dive."
 
 "And Dr. Raj?" Sarah asked.
 
@@ -154,8 +140,8 @@ gantt
 - **Governance:** Move from 3/5 to 4/5. Complete audit trails for cached responses, reduce HITL escalation time from 45 seconds to under 30, test model rollback capability.
 - **Observability:** Move from 3/5 to 4/5. Reduce mean time to detection from 8 minutes to under 5, enable explainability for EU AI Act compliance.
 - **Availability:** Maintain 4/5. Validate the system handles 10x current load.
-- **Lexicon:** Move from 3/5 to 4/5. Implement disambiguation prompts, reduce clarification rate from 12% to under 5%.
-- **Solid:** Maintain 4/5. Fix cross-system primary care physician (PCP) consistency issue affecting 3% of patients.
+- **Lexicon:** Move from 2/5 to 4/5. Implement disambiguation prompts, reduce clarification rate from 12% to under 5%.
+- **Solid:** Move from 3/5 to 4/5. Fix cross-system primary care physician (PCP) consistency issue affecting 3% of patients.
 
 "By Friday," Sarah said, "we should be at twenty out of twenty-five. Then Week 12, we push Governance to five out of five and validate everything for production."
 
@@ -173,7 +159,7 @@ Sarah nodded. "First production queries go live at ten AM. Let's make this work.
 
 The audit trail gap surfaced Monday afternoon.
 
-James had been reviewing cache behavior when he noticed it. "We're logging all direct queries," he reported at the 5 PM retrospective. "But cached responses aren't generating audit entries. About 65% of our queries hit the cache—and 65% of our access patterns are invisible."
+Jamie had been reviewing cache behavior when he noticed it. "We're logging all direct queries," he reported at the 5 PM retrospective. "But cached responses aren't generating audit entries. About 65% of our queries hit the cache—and 65% of our access patterns are invisible."
 
 The room went quiet. In healthcare, audit trails weren't optional. HIPAA required the ability to demonstrate who accessed what patient data and when. The Montefiore case—$4.75 million in penalties for access control failures—was fresh in everyone's mind.
 
@@ -183,7 +169,7 @@ Marcus pulled up the Cross-Pillar Mapping from Chapter 7. "Governance gap means 
 
 "How fast can we fix it?" Sarah asked.
 
-"Overnight," Priya said. "We pipe cache hits through the same logging endpoint as direct queries. The infrastructure is already there—we just need to connect it."
+"Overnight," Swapna said. "We pipe cache hits through the same logging endpoint as direct queries. The infrastructure is already there—we just need to connect it."
 
 The fix was straightforward but critical. Every query—whether served from cache or fetched fresh—would now generate a complete access record:
 
@@ -215,18 +201,18 @@ The routing logic was implemented Wednesday afternoon:
 
 By Thursday, escalation time had dropped to 28 seconds.
 
-Model rollback testing happened Thursday afternoon. James simulated a scenario where a model update caused degraded performance—confidence scores dropping, accuracy declining.
+Model rollback testing happened Thursday afternoon. Jamie simulated a scenario where a model update caused degraded performance—confidence scores dropping, accuracy declining.
 
 "We need to prove we can recover quickly," he explained. "If a model goes bad, we can't wait for a fix. We need to roll back to the previous version."
 
-The test was deliberately stressful. James triggered a simulated model degradation at 2:15 PM, then measured how long it took to detect the problem, decide to roll back, and restore the previous version.
+The test was deliberately stressful. Jamie triggered a simulated model degradation at 2:15 PM, then measured how long it took to detect the problem, decide to roll back, and restore the previous version.
 
 - **Detection:** 2 minutes (observability caught the confidence drop)
 - **Decision:** 3 minutes (automatic alert plus human confirmation)
 - **Rollback execution:** 7 minutes (restore previous model, verify functionality)
 - **Total recovery:** 12 minutes
 
-"Twelve minutes from problem to recovery," James reported. "Within our 15-minute target."
+"Twelve minutes from problem to recovery," Jamie reported. "Within our 15-minute target."
 
 ### The Governance Win
 
@@ -244,19 +230,21 @@ The entire interaction took 23 seconds from escalation to resolution.
 
 By Friday, Governance stood at 4/5. Audit coverage was complete. HITL escalation time averaged 28 seconds. The team had successfully tested model rollback, restoring a previous version in 12 minutes during a controlled drill.
 
+The Trust Flywheel was visible in Governance too. Faster HITL resolution meant clinicians trusted the escalation process. That trust meant they engaged with escalations rather than ignoring them. Engagement improved response quality. Quality reinforced the value of human oversight. Trust—with humans in the loop.
+
 ### Observability: Week 11 Journey
 
 Observability presented different challenges.
 
-The distributed tracing infrastructure was solid—James had built it carefully across Layer 6. But the mean time to detection for anomalies was running at 8 minutes, above their 5-minute target. And explainability—the ability to show *why* an agent made a particular recommendation—wasn't fully enabled.
+The distributed tracing infrastructure was solid—Jamie had built it carefully across Layer 6. But the mean time to detection for anomalies was running at 8 minutes, above their 5-minute target. And explainability—the ability to show *why* an agent made a particular recommendation—wasn't fully enabled.
 
 "The EU AI Act requires explainability for high-risk AI applications," Marcus reminded the team Monday. "Healthcare is explicitly classified as high-risk. We need every agent response to include reasoning that can be audited."
 
 The Act's August 2026 compliance deadline was still months away, but Marcus insisted on getting ahead of it. "We're not building to minimum compliance. We're building to best practice. When regulators come asking, we want to be the example they point to."
 
-The tracing issue was straightforward. Alert thresholds had been set conservatively during architecture build-out, erring toward caution. Now that the system was stable, James could tune them more aggressively.
+The tracing issue was straightforward. Alert thresholds had been set conservatively during architecture build-out, erring toward caution. Now that the system was stable, Jamie could tune them more aggressively.
 
-"We're generating 340 alerts per month," James said Tuesday. "Most are false positives—normal variations that trigger our conservative thresholds. That noise is masking real issues and slowing our detection time."
+"We're generating 340 alerts per month," Jamie said Tuesday. "Most are false positives—normal variations that trigger our conservative thresholds. That noise is masking real issues and slowing our detection time."
 
 He analyzed two weeks of alert data, categorizing each alert by type and outcome:
 
@@ -268,7 +256,7 @@ He analyzed two weeks of alert data, categorizing each alert by type and outcome
 | Confidence drop | 42 | 68% |
 | Resource usage | 10 | 40% |
 
-The response time and cache miss alerts were almost entirely noise—normal variance triggering overly sensitive thresholds. James adjusted the thresholds based on two weeks of baseline data. By Wednesday, false positive alerts had dropped to 12 per month. Mean time to detection dropped to 4.2 minutes.
+The response time and cache miss alerts were almost entirely noise—normal variance triggering overly sensitive thresholds. Jamie adjusted the thresholds based on two weeks of baseline data. By Wednesday, false positive alerts had dropped to 12 per month. Mean time to detection dropped to 4.2 minutes.
 
 Explainability was more complex. Every agent response needed to show how it traversed the architecture—from Attribute-Based Access Control (ABAC) permission checks in Layer 5 to Retrieval-Augmented Generation (RAG) context assembly in Layer 4.
 
@@ -287,19 +275,19 @@ sequenceDiagram
     Note over U,T: Trace ID: abc-123-def | Every step logged with reasoning
     
     U->>O: "When is my next cardiology appointment?"
-    O->>T: ⚙️ Log: Query received, routing to Care Coord Agent
+    O->>T: ⚙️ Log: Query received, routing to Care Coord Agent
     O->>P: Check permissions for user
-    P->>T: ⚙️ Log: ABAC check passed (patient viewing own data)
+    P->>T: ⚙️ Log: ABAC check passed (patient viewing own data)
     P-->>O: ✅ Permitted
     O->>S: Resolve "cardiology appointment"
-    S->>T: ⚙️ Log: Entity resolved → Dr. Patel + appointment type
+    S->>T: ⚙️ Log: Entity resolved → Dr. Patel + appointment type
     S-->>O: Entities: provider_id=789, type=cardiology
     O->>R: Retrieve context for response
     R->>D: Query appointment data
-    D->>T: ⚙️ Log: Query 0.8s - appointment found
+    D->>T: ⚙️ Log: Query 0.8s - appointment found
     D-->>R: Appointment: Dec 5, 2:30 PM
     R-->>O: Context assembled with citations
-    O->>T: ⚙️ Log: Response generated with 3 citations
+    O->>T: ⚙️ Log: Response generated with 3 citations
     O-->>U: "Your next cardiology appointment with Dr. Patel is Thursday, December 5 at 2:30 PM at Main Campus."
     
     Note over U,T: Total: 1.6s | All steps traceable and explainable
@@ -309,7 +297,7 @@ sequenceDiagram
 
 Every agent response needed to carry its reasoning chain. When the Clinical Documentation Agent summarized a patient's diabetes management, it needed to show which lab values it retrieved, which clinical guidelines it applied, and how it synthesized the recommendation.
 
-Priya worked with the RAG layer to expose reasoning metadata. "Layer 4 already tracks which documents inform each response," she explained. "We just need to surface that in a human-readable format."
+Swapna worked with the RAG layer to expose reasoning metadata. "Layer 4 already tracks which documents inform each response," she explained. "We just need to surface that in a human-readable format."
 
 The explainability implementation had three components:
 
@@ -325,7 +313,7 @@ By Thursday, every agent response included a collapsible "reasoning" section sho
 
 Thursday, 3:17 AM. An alert triggered.
 
-James's phone buzzed on his nightstand. Response time spike on the Care Coordination Agent—p95 latency had jumped from 1.8 seconds to 4.2 seconds.
+Jamie's phone buzzed on his nightstand. Response time spike on the Care Coordination Agent—p95 latency had jumped from 1.8 seconds to 4.2 seconds.
 
 He pulled up the trace dashboard from his laptop. The distributed tracing system immediately showed the bottleneck: Layer 1 storage queries were taking 2.3 seconds instead of the expected 0.5 seconds. He drilled into the specific query pattern—provider schedule lookups.
 
@@ -333,7 +321,7 @@ He pulled up the trace dashboard from his laptop. The distributed tracing system
 
 He documented the issue, tagged it for morning follow-up, and went back to sleep. The system was degraded but functional—response times were still under the 9-second abandonment threshold.
 
-At the 9 AM standup, James walked through the incident. "Root cause identified in 4 minutes," he reported. "Before end-to-end tracing, this would have taken 4 hours of log analysis. I knew exactly which layer and which query were causing the problem."
+At the 9 AM standup, Jamie walked through the incident. "Root cause identified in 4 minutes," he reported. "Before end-to-end tracing, this would have taken 4 hours of log analysis. I knew exactly which layer and which query were causing the problem."
 
 The index fix was deployed by 10 AM. Response times returned to baseline.
 
@@ -341,9 +329,11 @@ The index fix was deployed by 10 AM. Response times returned to baseline.
 
 By Friday, Observability stood at 4/5. Mean time to detection was 4.2 minutes. Trace coverage was 100%. Explainability was enabled across all three agents. And cost visibility showed LLM spend at $850 per day—within budget and fully attributable.
 
+The Trust Flywheel applied to Observability as well. Faster detection meant faster fixes. Faster fixes meant fewer user-visible problems. Fewer problems built user confidence. Confidence drove adoption. Adoption generated more data for better anomaly detection. Trust—in plain sight.
+
 ---
 
-## 📍 Checkpoint 1: Foundation Monitoring Active
+## ðŸ“ Checkpoint 1: Foundation Monitoring Active
 
 Two days into Week 11, and the diagnostic foundation was in place.
 
@@ -375,13 +365,13 @@ Two days into Week 11, and the diagnostic foundation was in place.
 
 Availability was already at 4/5—the architecture team had built performance into the infrastructure from the start. Week 11's task was validation: proving the system could handle growth.
 
-"We're currently running at about 2,000 queries per day," James said Monday. "That's our baseline. We need to prove we can handle 20,000."
+"We're currently running at about 2,000 queries per day," Jamie said Monday. "That's our baseline. We need to prove we can handle 20,000."
 
 The stakes were real. Healthcare organizations face unpredictable demand spikes—flu season, public health announcements, holiday coverage periods. If Echo's agents couldn't scale, they would fail precisely when they were needed most.
 
-"Here's the test plan," James explained. "We'll simulate peak load across all three agents simultaneously, mimicking a scenario where every department uses their agent at morning rounds. We'll run it Tuesday and Wednesday, monitoring every metric."
+"Here's the test plan," Jamie explained. "We'll simulate peak load across all three agents simultaneously, mimicking a scenario where every department uses their agent at morning rounds. We'll run it Tuesday and Wednesday, monitoring every metric."
 
-The 10x scale test began Tuesday at 6 AM—before the production workload ramped up. James's team generated synthetic queries that mirrored actual usage patterns: care coordination questions about appointments and insurance, clinical documentation requests for patient summaries, revenue cycle inquiries about claim status.
+The 10x scale test began Tuesday at 6 AM—before the production workload ramped up. Jamie's team generated synthetic queries that mirrored actual usage patterns: care coordination questions about appointments and insurance, clinical documentation requests for patient summaries, revenue cycle inquiries about claim status.
 
 **Diagram 4: Multi-Level Cache Performance Under Load**
 
@@ -428,13 +418,15 @@ graph TB
 
 The results validated the architecture. Under 10x load, response time p95 held at 2.1 seconds—within the 3-second target. Cache hit rate actually improved slightly under load as common query patterns became more likely.
 
-"The cache warming strategy is working," Priya noted. "We're pre-loading the most common query patterns during off-peak hours. When load spikes, most queries hit warm cache."
+"The cache warming strategy is working," Swapna noted. "We're pre-loading the most common query patterns during off-peak hours. When load spikes, most queries hit warm cache."
 
 The cold path—queries that couldn't be served from any cache level—remained the bottleneck. But even at 10x load, only 10% of queries took the cold path, and those still completed in 2.1 seconds.
 
-"Layer 2's real-time fabric is doing its job," Priya observed. "The Instant need from INPACT™—we're fulfilling it even under stress."
+"Layer 2's real-time fabric is doing its job," Swapna observed. "The Instant need from INPACT™—we're fulfilling it even under stress."
 
-James documented the findings for the Week 12 presentation. "We can handle 10x current load with no degradation in user experience. And we have capacity to add more cache nodes if we need to scale further."
+Jamie documented the findings for the Week 12 presentation. "We can handle 10x current load with no degradation in user experience. And we have capacity to add more cache nodes if we need to scale further."
+
+The Trust Flywheel was turning. Faster responses meant more queries completed. More completed queries built user habits. User habits drove adoption. Higher adoption justified infrastructure investment. Investment enabled further speed improvements. Trust—at the speed of thought.
 
 Availability remained at 4/5, but now with validated capacity for growth. The difference between "should work" and "proven to work" was the difference between hope and trust.
 
@@ -442,13 +434,13 @@ Availability remained at 4/5, but now with validated capacity for growth. The di
 
 Lexicon was the gap that worried Sarah most.
 
-At 3/5, Echo's semantic understanding was functional but incomplete. The 12% clarification rate meant one in eight queries required the agent to ask for more information before it could respond. For busy clinicians, that friction was a trust-killer.
+At 2/5, Echo's semantic understanding was functional but incomplete. The 12% clarification rate meant one in eight queries required the agent to ask for more information before it could respond. For busy clinicians, that friction was a trust-killer.
 
 Marcus had studied the patterns. "The primary issue is ambiguity in entity references," he explained Monday. "When someone says 'my doctor,' we don't always know if they mean their PCP, their specialist, or the physician they saw last week."
 
 The problem ran deeper than simple ambiguity. Healthcare language is inherently contextual. "My appointment" could mean the next scheduled visit or the one just completed. "My medication" could refer to any of a dozen prescriptions. "My results" could mean lab work, imaging, or pathology—and from when?
 
-"We've identified three categories of ambiguity," Priya reported, sharing her analysis:
+"We've identified three categories of ambiguity," Swapna reported, sharing her analysis:
 
 1. **Entity ambiguity:** "My doctor" when the patient has multiple providers
 2. **Temporal ambiguity:** "My appointment" when timing isn't specified
@@ -498,7 +490,7 @@ graph TD
 
 The team implemented smart disambiguation. When the system's confidence in entity resolution dropped below 0.90, it would ask a clarifying question—but a *smart* question that presented the most likely options.
 
-"We're not just asking 'which doctor?'" Priya explained. "We're saying 'Do you mean your PCP Dr. Nguyen or your cardiologist Dr. Patel?' The system knows the patient's providers and offers relevant choices."
+"We're not just asking 'which doctor?'" Swapna explained. "We're saying 'Do you mean your PCP Dr. Nguyen or your cardiologist Dr. Patel?' The system knows the patient's providers and offers relevant choices."
 
 The implementation required coordination across multiple layers:
 
@@ -508,7 +500,7 @@ The implementation required coordination across multiple layers:
 
 By Wednesday, the confidence threshold had been tuned from 0.88 to 0.90—slightly more aggressive about asking clarifying questions when certainty was borderline.
 
-"We also added 47 new clinical terms to the medical glossary," Priya noted. "Things like 'A1c' as a synonym for HbA1c, 'sugar' for glucose, 'blood pressure meds' for antihypertensives. The informal language patients actually use."
+"We also added 47 new clinical terms to the medical glossary," Swapna noted. "Things like 'A1c' as a synonym for HbA1c, 'sugar' for glucose, 'blood pressure meds' for antihypertensives. The informal language patients actually use."
 
 By Thursday, the clarification rate had dropped from 12% to 4.8%. More importantly, user feedback showed that when clarification was needed, patients found the questions helpful rather than frustrating.
 
@@ -522,22 +514,22 @@ Lexicon moved to 4/5.
 
 ### Solid: Data Quality Foundation
 
-Solid was the foundation that everything else depended upon. At 4/5, Echo's data quality was good—but the 3% cross-system inconsistency for primary care provider data was causing problems.
+Solid was the foundation that everything else depended upon. At 3/5, Echo's data quality needed improvement—and the 3% cross-system inconsistency for primary care provider data was causing problems.
 
-"Here's the scenario," Priya said Monday. "A patient asks 'who is my doctor?' The Electronic Health Record (EHR) says Dr. Nguyen. But the scheduling system still shows Dr. Martinez—their previous PCP who retired three months ago. The agent gives different answers depending on which system it queries first."
+"Here's the scenario," Swapna said Monday. "A patient asks 'who is my doctor?' The Electronic Health Record (EHR) says Dr. Nguyen. But the scheduling system still shows Dr. Martinez—their previous PCP who retired three months ago. The agent gives different answers depending on which system it queries first."
 
 Cross-system inconsistency was a classic data quality problem. Echo's infrastructure had grown organically, with different systems maintained by different teams. Provider assignments weren't synchronized in real-time.
 
 Marcus framed the stakes. "This isn't just an inconvenience. If a patient gets conflicting information about their provider, they lose trust in the system. And if a clinician gets conflicting data about a patient's care team, it could affect clinical decisions."
 
-The root cause analysis took most of Monday. Priya mapped the data flows:
+The root cause analysis took most of Monday. Swapna mapped the data flows:
 
 1. **EHR (source of truth):** Updated when provider assignment changes
 2. **Scheduling system:** Updated nightly from EHR extract
 3. **Claims system:** Updated when claims are processed
 4. **Patient portal:** Pulls from scheduling system
 
-"The lag is in the EHR-to-scheduling sync," Priya reported. "When a patient's PCP changes in the EHR, it can take up to 24 hours for the scheduling system to reflect the change. During that window, the agent might query scheduling first and return stale data."
+"The lag is in the EHR-to-scheduling sync," Swapna reported. "When a patient's PCP changes in the EHR, it can take up to 24 hours for the scheduling system to reflect the change. During that window, the agent might query scheduling first and return stale data."
 
 **Diagram 6: Quality Gates in Production**
 
@@ -551,7 +543,7 @@ graph TD
         GATE3["<b>Gate 3: Anomaly Detection</b><br/><b>Statistical outliers?</b>"]
         
         PASS["<b>✅ Quality Verified</b><br/><b>Data available to agents</b>"]
-        QUARANTINE["<b>⚠️ Quarantine</b><br/><b>Flag for review</b>"]
+        QUARANTINE["<b>⚠️¸ Quarantine</b><br/><b>Flag for review</b>"]
         
         SOURCE --> GATE1
         GATE1 -->|<b>Pass</b>| GATE2
@@ -576,11 +568,11 @@ graph TD
 
 The solution was real-time synchronization. When a provider assignment changed in the EHR—the source of truth—that change would propagate to scheduling within 30 seconds rather than waiting for the nightly batch.
 
-"We're implementing event-driven sync," Priya explained Tuesday. "The EHR publishes a change event. Our integration layer catches it and updates all downstream systems immediately."
+"We're implementing event-driven sync," Swapna explained Tuesday. "The EHR publishes a change event. Our integration layer catches it and updates all downstream systems immediately."
 
 The implementation required coordination with the scheduling vendor—a common challenge when modernizing legacy healthcare systems. Fortunately, the scheduling system supported webhook notifications, even if Echo hadn't previously used them.
 
-By Wednesday evening, the real-time sync was operational. Priya ran validation queries against 1,000 patient records, comparing PCP data across all four systems.
+By Wednesday evening, the real-time sync was operational. Swapna ran validation queries against 1,000 patient records, comparing PCP data across all four systems.
 
 "Ninety-eight percent consistency," she reported Thursday morning. "Up from 97%. The remaining 2% are edge cases—patients in the process of transferring providers, complex care arrangements with multiple PCPs, situations that legitimately vary by context."
 
@@ -592,11 +584,13 @@ By Thursday, PCP consistency had reached 98%. The remaining 2% were edge cases�
 
 "Layer 1's storage foundation is solid," Marcus said Friday. "The Adaptive need from INPACT™ depends on data quality. You can't adapt to what you can't trust. Solid data enables everything else."
 
-Solid remained at 4/5, but with the cross-system consistency issue resolved. More importantly, the quality gates now provided ongoing protection—any future consistency issues would be caught and flagged automatically.
+The Trust Flywheel was visible in the Solid improvement too. Better data consistency led to more accurate agent responses. Accurate responses built clinician confidence. Confident clinicians used the system more. More usage revealed edge cases that informed quality gate refinements. Trust—from the foundation up.
+
+Solid improved to 4/5, with the cross-system consistency issue resolved. More importantly, the quality gates now provided ongoing protection—any future consistency issues would be caught and flagged automatically.
 
 ---
 
-## 📍 Checkpoint 2: All Five GOALS Operational
+## ðŸ“ Checkpoint 2: All Five GOALS Operational
 
 End of Week 11. All five GOALS dimensions were at production-ready levels.
 
@@ -608,23 +602,23 @@ End of Week 11. All five GOALS dimensions were at production-ready levels.
 - Baseline response time: 1.8s p95
 - **Three-pillar validation:** Layer 2 real-time fabric delivers Instant (I) need
 
-✅ **Lexicon (L):** 3/5 → 4/5
+✅ **Lexicon (L):** 2/5 → 4/5
 - Clarification rate: 12% → 4.8%
 - Confidence threshold: 0.88 → 0.90
 - Entity resolution: 97% accurate
 - **Three-pillar validation:** Layer 3 semantic layer fulfills Natural (N) and Contextual (C) needs
 
-✅ **Solid (S):** Maintained 4/5
+✅ **Solid (S):** 3/5 to 4/5
 - Cross-system PCP consistency: 97% → 98%
 - Data accuracy: 97%
 - Quality gates: Active on all data flows
 - **Three-pillar validation:** Layer 1 storage foundation enables Adaptive (A) need
 
-**GOALS™ Progress:** 17/25 → 20/25 (+3 points from Lexicon improvement)
+**GOALS™ Progress:** 15/25 → 20/25 (+5 points: G+1, O+1, L+2, S+1)
 
-**The Trust Flywheel in Motion:** Week 11 showed the flywheel turning. Clinicians noticed the improved disambiguation—the Lexicon enhancement. Their positive feedback validated that the Natural need was being met. That feedback informed further tuning of confidence thresholds. Trust built on trust.
+**The Trust Flywheel in Motion:** Week 11 showed the flywheel turning. Clinicians noticed the improved disambiguation—the Lexicon enhancement. Their positive feedback validated that the Natural need was being met. That feedback informed further tuning of confidence thresholds. Trust—one conversation at a time.
 
-**Key insight:** All five GOALS are at 4/5 or maintained. Only one gap remains: Governance needs to reach 5/5 for healthcare's clinical AI requirements.
+**Key insight:** All five GOALS are now at 4/5. Only one gap remains: Governance needs to reach 5/5 for healthcare's clinical AI requirements.
 
 ---
 
@@ -642,7 +636,7 @@ The gap between 4/5 and 5/5 Governance was subtle but important. At 4/5, Echo ha
 
 "The difference between proficient and advanced," Marcus explained, "is whether the system learns from its own governance events. At 4/5, we catch issues and fix them. At 5/5, the system recognizes patterns and adapts policies proactively."
 
-James had been analyzing the Week 11 governance data. "We processed 847 HITL escalations last week. Most followed predictable patterns—medication timing, dosage confirmations, routine clinical checks. The outcomes were also predictable: 94% were confirmed as the agent recommended."
+Jamie had been analyzing the Week 11 governance data. "We processed 847 HITL escalations last week. Most followed predictable patterns—medication timing, dosage confirmations, routine clinical checks. The outcomes were also predictable: 94% were confirmed as the agent recommended."
 
 "That's a lot of human time spent confirming what the system already knew," Sarah observed.
 
@@ -652,9 +646,9 @@ James had been analyzing the Week 11 governance data. "We processed 847 HITL esc
 
 The team spent the first three days of Week 12 on optimization—refining the work from Week 11 based on operational data.
 
-**Alert threshold optimization:** James adjusted alerting rules to reduce noise further. The 12 false positives per month from Week 11 dropped to 4. "We're only alerting on things that actually need attention now."
+**Alert threshold optimization:** Jamie adjusted alerting rules to reduce noise further. The 12 false positives per month from Week 11 dropped to 4. "We're only alerting on things that actually need attention now."
 
-**Cache warming refinement:** Priya optimized the cache warming schedule based on actual query patterns. "We were pre-loading appointment data at midnight, but most appointment queries come between 7 and 9 AM. Now we warm that cache at 6:30 AM—fresher data when users need it."
+**Cache warming refinement:** Swapna optimized the cache warming schedule based on actual query patterns. "We were pre-loading appointment data at midnight, but most appointment queries come between 7 and 9 AM. Now we warm that cache at 6:30 AM—fresher data when users need it."
 
 **HITL routing improvement:** Dr. Chen worked with the clinical team to refine escalation routing. "We identified three physician specialists who were getting escalations outside their expertise. Re-routing those to appropriate specialists reduced review time by 15%."
 
@@ -666,7 +660,7 @@ The breakthrough came Tuesday afternoon.
 
 Dr. Chen had been reviewing HITL escalation patterns when she noticed something interesting. "We're escalating the same type of query repeatedly," she said. "Medication timing questions for controlled substances. The agent keeps flagging them, a pharmacist reviews them, and 94% of the time the agent's recommendation is confirmed."
 
-"That's appropriate caution," James said.
+"That's appropriate caution," Jamie said.
 
 "Yes, but it's also a pattern," Dr. Chen replied. "These aren't edge cases—they're routine. We're adding human overhead without adding safety value."
 
@@ -682,7 +676,7 @@ The approach was carefully designed to maintain safety:
 4. **Safety bounds:** Novel queries, unusual combinations, and high-risk categories would always escalate regardless of pattern confidence
 5. **Continuous monitoring:** Any rejected recommendation would reset the pattern's confidence score
 
-Priya implemented the learning loop Wednesday. The policy engine would track HITL outcomes by query pattern. When a pattern accumulated enough confirmed approvals—threshold set at 50 with 95% confirmation rate—the confidence threshold for that pattern would adjust automatically.
+Swapna implemented the learning loop Wednesday. The policy engine would track HITL outcomes by query pattern. When a pattern accumulated enough confirmed approvals—threshold set at 50 with 95% confirmation rate—the confidence threshold for that pattern would adjust automatically.
 
 "The system is learning governance, not just enforcing it," Sarah observed.
 
@@ -711,8 +705,8 @@ Marcus displayed the GOALS™ dashboard. The five gauges had all moved to green.
 | **G - Governance** | 3/5 | 4/5 | **5/5** | ✅ Healthcare requirement |
 | **O - Observability** | 3/5 | 4/5 | 4/5 | ✅ Production ready |
 | **A - Availability** | 4/5 | 4/5 | 4/5 | ✅ Production ready |
-| **L - Lexicon** | 3/5 | 4/5 | 4/5 | ✅ Production ready |
-| **S - Solid** | 4/5 | 4/5 | 4/5 | ✅ Production ready |
+| **L - Lexicon** | 2/5 | 4/5 | 4/5 | ✅ Production ready |
+| **S - Solid** | 3/5 | 4/5 | 4/5 | ✅ Production ready |
 | **Total** | **15/25** | **20/25** | **21/25** | ✅ Threshold achieved |
 
 "Twenty-one out of twenty-five," Marcus said. "Threshold achieved."
@@ -1120,8 +1114,8 @@ Now it's your turn.
 | Governance | 3/5 | 5/5 | Continuous learning from HITL outcomes |
 | Observability | 3/5 | 4/5 | 4.2 min MTTD, full explainability |
 | Availability | 4/5 | 4/5 | 10x scale validated |
-| Lexicon | 3/5 | 4/5 | 4.8% clarification rate |
-| Solid | 4/5 | 4/5 | 98% cross-system consistency |
+| Lexicon | 2/5 | 4/5 | 4.8% clarification rate |
+| Solid | 3/5 | 4/5 | 98% cross-system consistency |
 | **Total** | **15/25** | **21/25** | **Threshold achieved** |
 
 **Agent Performance Summary:**
