@@ -20,7 +20,7 @@
 ## BOOK IDENTITY
 
 **Title:** Trust Before Intelligence  
-**Subtitle:** Why 95% of Agent Projects Fail--and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
+**Subtitle:** Why 95% of AI Projects Fail—3 Frameworks, 90-Day Fix  
 **Author:** Ram Katamaraja, CEO, Colaberry Inc.
 
 **Core Promise:** Transform data chaos into agent-ready infrastructure in 90 days using proven frameworks (INPACT™, GOALS™, 7-Layer Architecture).
