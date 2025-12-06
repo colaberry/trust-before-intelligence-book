@@ -4,7 +4,51 @@
 
 ---
 
-*Echo Health Systems scored 28 out of 100. That single number revealed everything: why their agents failed, which infrastructure gaps blocked them, and exactly where to invest their $1.23M transformation budget. This chapter gives you the same diagnostic power—36 questions that measure your readiness across all three pillars of the Architecture of Trust. In 30 minutes, you'll know your score. In the chapters that follow, you'll build your custom roadmap to fix it.*
+*Chapter 8 showed Echo's transformation in action—the Architecture of Trust delivering real results across real weeks. Now it's your turn. Echo Health Systems scored 28 out of 100. That single number revealed everything: why their agents failed, which infrastructure gaps blocked them, and exactly where to invest their $1.23M transformation budget. This chapter gives you the same diagnostic power—36 questions that measure your readiness across all three pillars of the Architecture of Trust. In 30 minutes, you'll know your score. In the chapters that follow, you'll build your custom roadmap to fix it.*
+
+---
+
+<!-- CHAPTER OPENING GRAPHIC -->
+
+```mermaid
+graph LR
+    subgraph BEFORE["❌ WITHOUT ASSESSMENT"]
+        B1["<b>Where do we start?</b>"]
+        B2["<b>Multiple consultants</b>"]
+        B3["<b>Contradictory advice</b>"]
+        B4["<b>Months of analysis</b>"]
+    end
+    
+    subgraph TRANSFORM["INPACT™"]
+        T1["<b>36 Questions</b>"]
+    end
+    
+    subgraph AFTER["✅ WITH INPACT™ ASSESSMENT"]
+        A1["<b>Clear 0-100 score</b>"]
+        A2["<b>One unified framework</b>"]
+        A3["<b>Dimension-by-dimension clarity</b>"]
+        A4["<b>30-minute assessment</b>"]
+    end
+    
+    BEFORE --> TRANSFORM --> AFTER
+    
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+```
+
+> **Key Takeaway:** One assessment. Six dimensions. Complete clarity on where to invest.
+
+<!-- END CHAPTER OPENING GRAPHIC -->
 
 ---
 
@@ -43,6 +87,47 @@ The Architecture of Trust integrates three frameworks into one coherent system. 
 
 These three frameworks form a chain of dependency. INPACT™ requirements drive architecture decisions. Architecture capabilities enable operational excellence. Operational excellence delivers the trust that makes agent adoption successful.
 
+**Diagram: Architecture of Trust Assessment Flow**
+
+```mermaid
+graph LR
+    subgraph ASSESS["ASSESSMENT"]
+        A1["<b>36 Questions</b><br/><b>30 Minutes</b>"]
+    end
+    
+    subgraph INPACT["INPACT™"]
+        I1["<b>6 Dimensions</b><br/><b>Agent Needs</b>"]
+    end
+    
+    subgraph ARCH["7-LAYER"]
+        A2["<b>7 Layers</b><br/><b>Architecture</b>"]
+    end
+    
+    subgraph GOALS["GOALS™"]
+        G1["<b>5 Dimensions</b><br/><b>Operations</b>"]
+    end
+    
+    subgraph RESULT["RESULT"]
+        R1["<b>0-100 Score</b><br/><b>+ Roadmap</b>"]
+    end
+    
+    A1 --> I1 --> A2 --> G1 --> R1
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style ASSESS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style ARCH fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style GOALS fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style RESULT fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#1b5e20
+    style A1 fill:#eeeeee,stroke:#666666,color:#333333
+    style I1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style G1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style R1 fill:#a5d6a7,stroke:#388e3c,color:#1b5e20
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 The integration principle is simple: **if you assess INPACT™ comprehensively, you've assessed everything.**
 
 When you measure whether your infrastructure delivers *Instant* responses, you're simultaneously assessing Layer 1 (storage performance), Layer 2 (data freshness), and Layer 4 (caching efficiency). When you evaluate *Permitted* access control, you're measuring Layer 5 (governance) and Layer 6 (audit trails). Every INPACT™ dimension maps to specific layers and indicates GOALS™ readiness.
@@ -57,7 +142,7 @@ By the end of this chapter, you will have:
 2. **Dimension-by-dimension breakdown**: Which of the six needs your infrastructure fulfills and which remain gaps
 3. **Layer priorities**: Which of the seven architecture layers need the most investment
 4. **Timeline guidance**: How long your transformation will take based on your starting point
-5. **Benchmark comparison**: How your journey compares to Echo Health Systems' 28→88 progression
+5. **Benchmark comparison**: How your journey compares to Echo Health Systems' 28→89 progression
 
 The assessment takes approximately 30 minutes. The clarity it provides saves months of misdirected effort.
 
@@ -103,6 +188,47 @@ For example, Echo Health Systems' Week 0 assessment:
 
 Raw scores translate into five trust bands that indicate agent readiness:
 
+**Diagram: The Five Trust Bands**
+
+```mermaid
+graph LR
+    subgraph VERYLOW["⚫ 6-11 pts (17-33%)"]
+        VL["<b>Very Low Trust</b><br/><b>Complete rebuild</b>"]
+    end
+    
+    subgraph LOW["🔴 12-17 pts (33-50%)"]
+        L["<b>Low Trust</b><br/><b>Major transformation</b>"]
+    end
+    
+    subgraph MOD["🟠 18-23 pts (50-67%)"]
+        M["<b>Moderate Trust</b><br/><b>Significant work</b>"]
+    end
+    
+    subgraph GOOD["🟡 24-30 pts (67-83%)"]
+        G["<b>Good Trust</b><br/><b>Pilot-ready</b>"]
+    end
+    
+    subgraph HIGH["🟢 31-36 pts (86-100%)"]
+        H["<b>High Trust</b><br/><b>Production-ready</b>"]
+    end
+    
+    VL --> L --> M --> G --> H
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style VERYLOW fill:#424242,stroke:#212121,stroke-width:2px,color:#ffffff
+    style LOW fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style MOD fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style GOOD fill:#fffde7,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style HIGH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style VL fill:#616161,stroke:#424242,color:#ffffff
+    style L fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style M fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style G fill:#fff9c4,stroke:#f9a825,color:#f57f17
+    style H fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 | Raw Score | Percentage | Trust Band | Agent Readiness |
 |-----------|------------|------------|-----------------|
 | 31-36 | 86-100% | 🟢 **High Trust** | Production-ready for patient-facing agents |
@@ -120,6 +246,61 @@ These thresholds aren't arbitrary. They emerge from pattern recognition across 4
 ### 1.3 How INPACT™ Assesses the 7-Layer Architecture
 
 The elegance of INPACT™ lies in its architecture coverage. Each dimension doesn't exist in isolation—it requires specific infrastructure layers to be fulfilled. When you score an INPACT™ dimension, you're simultaneously assessing the health of those underlying layers.
+
+**Diagram: INPACT™ Dimension to Layer Mapping**
+
+```mermaid
+graph LR
+    subgraph INPACT["INPACT™ DIMENSIONS"]
+        I["<b>I - Instant</b>"]
+        N["<b>N - Natural</b>"]
+        P["<b>P - Permitted</b>"]
+        A["<b>A - Adaptive</b>"]
+        C["<b>C - Contextual</b>"]
+        T["<b>T - Transparent</b>"]
+    end
+    
+    subgraph LAYERS["7-LAYER ARCHITECTURE"]
+        L1["<b>L1 Storage</b>"]
+        L2["<b>L2 Data Fabric</b>"]
+        L3["<b>L3 Semantic</b>"]
+        L4["<b>L4 Retrieval</b>"]
+        L5["<b>L5 Governance</b>"]
+        L6["<b>L6 Observability</b>"]
+    end
+    
+    I --> L1
+    I --> L2
+    N --> L3
+    N --> L4
+    P --> L5
+    P --> L6
+    A --> L4
+    A --> L6
+    C --> L1
+    C --> L2
+    C --> L4
+    T --> L5
+    T --> L6
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style LAYERS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style I fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style N fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style P fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style C fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style T fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L4 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L5 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L6 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **The Mapping Principle**
 
@@ -805,7 +986,7 @@ Accurate scores lead to accurate roadmaps. Accurate roadmaps lead to successful 
 
 ## Part 3: Echo's Benchmark
 
-Your INPACT™ score gains meaning through comparison. Echo Health Systems' transformation from 28/100 to 88/100 provides the definitive benchmark—a real progression through real infrastructure challenges with real investment decisions.
+Your INPACT™ score gains meaning through comparison. Echo Health Systems' transformation from 28/100 to 89/100 provides the definitive benchmark—a real progression through real infrastructure challenges with real investment decisions.
 
 This section establishes Echo's journey as your reference point. Whether you're starting higher or lower, Echo's experience illuminates what each score means in practice.
 
@@ -842,7 +1023,48 @@ The assessment delivered painful but clarifying truth that saved months of misdi
 
 ### 3.2 Echo's Transformation Journey
 
-Echo's progression from 28/100 to 88/100 followed a deliberate sequence. Each phase addressed specific dimensions, building capability that enabled subsequent phases.
+Echo's progression from 28/100 to 89/100 followed a deliberate sequence. Each phase addressed specific dimensions, building capability that enabled subsequent phases.
+
+**Diagram: Echo's 90-Day INPACT™ Transformation**
+
+```mermaid
+graph LR
+    subgraph WEEK0["⚫ WEEK 0"]
+        W0["<b>28/100</b><br/><b>Very Low Trust</b><br/><b>5 dimensions critical</b>"]
+    end
+    
+    subgraph WEEK4["🔴 WEEK 4"]
+        W4["<b>42/100</b><br/><b>Low Trust</b><br/><b>Foundation complete</b>"]
+    end
+    
+    subgraph WEEK7["🟠 WEEK 7"]
+        W7["<b>67/100</b><br/><b>Moderate Trust</b><br/><b>Intelligence live</b>"]
+    end
+    
+    subgraph WEEK10["🟢 WEEK 10"]
+        W10["<b>86/100</b><br/><b>High Trust</b><br/><b>Governance complete</b>"]
+    end
+    
+    subgraph WEEK12["🟢 WEEK 12"]
+        W12["<b>89/100</b><br/><b>High Trust</b><br/><b>Production stable</b>"]
+    end
+    
+    W0 -->|<b>+14 pts</b>| W4 -->|<b>+25 pts</b>| W7 -->|<b>+19 pts</b>| W10 -->|<b>+3 pts</b>| W12
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style WEEK0 fill:#424242,stroke:#212121,stroke-width:2px,color:#ffffff
+    style WEEK4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style WEEK7 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style WEEK10 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style WEEK12 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W0 fill:#616161,stroke:#424242,color:#ffffff
+    style W4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style W7 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style W10 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style W12 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Echo's INPACT™ Progression — Milestone View**
 
@@ -851,8 +1073,8 @@ Echo's progression from 28/100 to 88/100 followed a deliberate sequence. Each ph
 | **Baseline** | 0 | 28/100 | Assessment complete, gaps identified | ⚫ Very Low Trust |
 | **Foundation** | 4 | 42/100 | L1-L2 operational, real-time data flowing | 🔴 Low Trust |
 | **Intelligence** | 7 | 67/100 | L3-L4 operational, semantic layer live | 🟠 Moderate Trust |
-| **Trust** | 10 | 85/100 | L5-L7 operational, governance complete | 🟢 High Trust |
-| **Operations** | 12 | 88/100 | GOALS™ validated, production stable | 🟢 High Trust |
+| **Trust** | 10 | 86/100 | L5-L7 operational, governance complete | 🟢 High Trust |
+| **Operations** | 12 | 89/100 | GOALS™ validated, production stable | 🟢 High Trust |
 
 **Dimension-by-Dimension Improvement**
 
@@ -865,7 +1087,7 @@ Echo's progression from 28/100 to 88/100 followed a deliberate sequence. Each ph
 | C - Contextual | 3 | 4 | 5 | 5 | 6 |
 | T - Transparent | 1 | 2 | 3 | 5 | 6 |
 | **Raw Total** | 10 | 15 | 23 | 30 | 32 |
-| **INPACT™ Score** | 28% | 42% | 67% | 85% | 88% |
+| **INPACT™ Score** | 28% | 42% | 67% | 86% | 89% |
 
 **What Drove Each Jump**
 
@@ -875,9 +1097,9 @@ Each score increase reflected specific infrastructure achievements:
 
 **42→67 (+25 points, Weeks 5-7)**: Intelligence phase deployed semantic layer and RAG pipeline. The N dimension reached 4 as NLU accuracy jumped from 23% to 78%.
 
-**67→85 (+18 points, Weeks 8-10)**: Trust phase completed governance, observability, and orchestration. P and T dimensions reached 5—production-ready for HIPAA.
+**67→86 (+19 points, Weeks 8-10)**: Trust phase completed governance, observability, and orchestration. P and T dimensions reached 5—production-ready for HIPAA.
 
-**85→88 (+3 points, Weeks 11-12)**: Operations phase refined and matured feedback loops. C and T dimensions reached 6 (excellent).
+**86→89 (+3 points, Weeks 11-12)**: Operations phase refined and matured feedback loops. C and T dimensions reached 6 (excellent).
 
 *For complete metrics at each milestone, see Appendix I (Quick Reference Card).*
 
@@ -931,7 +1153,7 @@ Consider extended timeline (16+ weeks), AIXcelerator acceleration, or phased app
 
 ## Part 4: Interpreting Your Results
 
-You have your INPACT™ score. You've seen how Echo progressed from 28 to 88. Now translate your specific results into action.
+You have your INPACT™ score. You've seen how Echo progressed from 28 to 89. Now translate your specific results into action.
 
 ---
 
@@ -995,6 +1217,52 @@ Organizations in this band face a choice: invest in systematic transformation or
 
 Not all gaps are equal. Your lowest-scoring dimensions reveal where to focus first.
 
+**Diagram: Gap-to-Phase Prioritization Flow**
+
+```mermaid
+graph TD
+    subgraph ASSESS["IDENTIFY LOWEST DIMENSIONS"]
+        A["<b>Your INPACT™<br/>Assessment</b>"]
+    end
+    
+    subgraph FOUND["FOUNDATION FIRST"]
+        F1["<b>I (Instant)</b><br/><b>→ L1, L2</b>"]
+        F2["<b>C (Contextual)</b><br/><b>→ L1, L2, L3</b>"]
+    end
+    
+    subgraph INTEL["INTELLIGENCE SECOND"]
+        I1["<b>N (Natural)</b><br/><b>→ L3, L4</b>"]
+    end
+    
+    subgraph TRUST["TRUST THIRD"]
+        T1["<b>P (Permitted)</b><br/><b>→ L5</b>"]
+        T2["<b>T (Transparent)</b><br/><b>→ L5, L6</b>"]
+        T3["<b>A (Adaptive)</b><br/><b>→ L4, L6</b>"]
+    end
+    
+    A --> F1
+    A --> F2
+    A --> I1
+    A --> T1
+    A --> T2
+    A --> T3
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style ASSESS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style FOUND fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style INTEL fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style TRUST fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style A fill:#eeeeee,stroke:#666666,color:#333333
+    style F1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style F2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style I1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style T1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style T2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style T3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Gap Prioritization Matrix**
 
 | If Your Lowest Dimension Is... | Priority Layers | Chapter 10 Phase |
@@ -1023,7 +1291,7 @@ If several dimensions score 1-2, prioritize based on dependencies: I and C first
 
 ## Bridge to Chapter 10
 
-You now have your INPACT™ score and know which dimensions need work. You understand how Echo progressed from 28/100 to 88/100 and where your journey fits that benchmark.
+You now have your INPACT™ score and know which dimensions need work. You understand how Echo progressed from 28/100 to 89/100 and where your journey fits that benchmark.
 
 Chapter 10 translates your score into a week-by-week implementation plan. Whether you're starting at 28/100 like Echo or entering at 60/100 with partial infrastructure already in place, Chapter 10 customizes the 90-day roadmap to your starting point.
 
@@ -1039,7 +1307,7 @@ Turn the page to build your plan.
 |---------|--------------|
 | **Part 1: Methodology** | One INPACT™ assessment measures all three pillars—needs, architecture, and operations |
 | **Part 2: The 36 Questions** | Complete self-assessment tool covering six dimensions with 1-6 scoring |
-| **Part 3: Echo's Benchmark** | 28→88 progression provides calibration for your own journey |
+| **Part 3: Echo's Benchmark** | 28→89 progression provides calibration for your own journey |
 | **Part 4: Interpretation** | Trust bands determine timeline; lowest dimensions reveal priorities |
 
 **Your INPACT™ Score**: ___/100

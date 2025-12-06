@@ -4,6 +4,50 @@
 
 ---
 
+<!-- CHAPTER OPENING GRAPHIC -->
+
+```mermaid
+graph LR
+    subgraph BEFORE["❌ AD-HOC PROJECTS"]
+        B1["<b>No clear timeline</b>"]
+        B2["<b>Unknown costs</b>"]
+        B3["<b>Scope creep</b>"]
+        B4["<b>Missed dependencies</b>"]
+    end
+    
+    subgraph TRANSFORM["90-DAY ROADMAP"]
+        T1["<b>Structured Phases</b>"]
+    end
+    
+    subgraph AFTER["✅ SYSTEMATIC TRANSFORMATION"]
+        A1["<b>Week-by-week plan</b>"]
+        A2["<b>Defined costs</b>"]
+        A3["<b>Clear checkpoints</b>"]
+        A4["<b>Sequenced layers</b>"]
+    end
+    
+    BEFORE --> TRANSFORM --> AFTER
+    
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+```
+
+> **Key Takeaway:** Ninety days from assessment to production. Week-by-week structure eliminates guesswork.
+
+<!-- END CHAPTER OPENING GRAPHIC -->
+
+---
+
 *Ninety days. That's all it took Echo Health Systems to transform from 28/100 to 86/100—from agents that couldn't answer basic questions to three specialized AI assistants handling 50,000 daily interactions. This chapter gives you their exact playbook: week-by-week implementation plans, specific costs, team structures, and the checkpoints that kept them on track. Your INPACT™ score (Chapter 9) revealed where you stand. Now build your roadmap to fix it.*
 
 ---
@@ -54,6 +98,41 @@ This chapter focuses on *when* to build. Other chapters provide complementary gu
 
 Echo's transformation followed four distinct phases, each building on the previous. The sequence matters—attempting Phase 3 governance work before Phase 1 foundations produces the failures that give AI agents their 95% failure reputation.
 
+**Diagram: The 90-Day Four-Phase Roadmap**
+
+```mermaid
+graph TD
+    subgraph PHASE1["PHASE 1: FOUNDATION"]
+        P1["<b>Weeks 1-4</b><br/><b>L1 Storage + L2 Data Fabric</b><br/><b>$470K · 28→42 pts</b>"]
+    end
+    
+    subgraph PHASE2["PHASE 2: INTELLIGENCE"]
+        P2["<b>Weeks 5-7</b><br/><b>L3 Semantic + L4 Retrieval</b><br/><b>$380K · 42→67 pts</b>"]
+    end
+    
+    subgraph PHASE3["PHASE 3: TRUST"]
+        P3["<b>Weeks 8-10</b><br/><b>L5 Governance + L7 Orchestration</b><br/><b>$250K · 67→86 pts</b>"]
+    end
+    
+    subgraph PHASE4["PHASE 4: OPERATIONS"]
+        P4["<b>Weeks 11-12</b><br/><b>L6 Observability + GOALS™</b><br/><b>$130K · 86→89 pts</b>"]
+    end
+    
+    P1 --> P2 --> P3 --> P4
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style PHASE1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style PHASE2 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PHASE3 fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
+    style PHASE4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style P1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style P2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style P3 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style P4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Phase 1: Foundation (Weeks 1-4)**
 
 | Attribute | Detail |
@@ -99,7 +178,7 @@ Echo's 10-week implementation achieved 86/100 INPACT™ score—production-ready
 |-----------|--------|
 | **Validate** | All 7 layers operational, GOALS™ excellence |
 | **Activities** | UAT with 50 nurses, edge case resolution, production cutover |
-| **INPACT™ Result** | 85→88 (+3 points through operational refinement) |
+| **INPACT™ Result** | 86→89 (+3 points through operational refinement) |
 | **Primary Focus** | User Acceptance Testing, production readiness validation |
 
 Phase 4 validates everything works together. Real users test real scenarios. Edge cases surface and get resolved. Echo achieved 94% UAT success rate and production approval. Operations costs become ongoing monthly recurring expenses ($52K/month) covered separately from implementation.
@@ -120,6 +199,47 @@ Phase 4 validates everything works together. Real users test real scenarios. Edg
 ### 1.3 Risk Management Approach
 
 Echo's transformation wasn't friction-free. They encountered technical challenges, integration delays, and scope pressures. What kept them on track was disciplined risk management at every phase.
+
+**Diagram: Risk Escalation Framework**
+
+```mermaid
+graph TD
+    subgraph STATUS["STATUS INDICATORS"]
+        GREEN["<b>🟢 On Track</b><br/><b>Continue</b>"]
+        YELLOW["<b>🟡 At Risk</b><br/><b>Assign Owner</b>"]
+        RED["<b>🔴 Blocked</b><br/><b>Escalate 24h</b>"]
+    end
+    
+    subgraph RESPONSE["RESPONSE ACTIONS"]
+        R1["<b>Daily Check-ins</b>"]
+        R2["<b>Mitigation Plan</b>"]
+        R3["<b>Leadership Escalation</b>"]
+    end
+    
+    GREEN --> CONTINUE["<b>Proceed<br/>to Next Week</b>"]
+    YELLOW --> R1
+    YELLOW --> R2
+    RED --> R3
+    
+    R1 --> RESOLVED["<b>Resolved?</b>"]
+    R2 --> RESOLVED
+    RESOLVED -->|<b>Yes</b>| GREEN
+    RESOLVED -->|<b>No</b>| RED
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style STATUS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style RESPONSE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style GREEN fill:#c8e6c9,stroke:#388e3c,color:#1b5e20
+    style YELLOW fill:#fff9c4,stroke:#f9a825,color:#f57f17
+    style RED fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style R1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style R2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style R3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style CONTINUE fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style RESOLVED fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Phase Gate Checkpoints**
 
@@ -200,6 +320,43 @@ Echo invested $470K and four weeks to transform their data foundation. The payof
 ### 2.1 Phase 1 Overview
 
 **Phase 1 Goal:** Establish data foundation enabling real-time agent access
+
+**Diagram: Foundation Layer Stack**
+
+```mermaid
+graph TD
+    subgraph OBS["OBSERVABILITY (L6 Start)"]
+        O1["<b>Baseline Metrics</b><br/><b>Before Building</b>"]
+    end
+    
+    subgraph FABRIC["DATA FABRIC (L2)"]
+        F1["<b>Debezium CDC</b>"]
+        F2["<b>Kafka Streaming</b>"]
+        F3["<b>Event Hub</b>"]
+    end
+    
+    subgraph STORAGE["MULTI-MODAL STORAGE (L1)"]
+        S1["<b>Databricks</b><br/><b>Lakehouse</b>"]
+        S2["<b>Redis Cache</b>"]
+        S3["<b>Vector Store</b>"]
+    end
+    
+    OBS --> FABRIC --> STORAGE
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style FABRIC fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style STORAGE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style O1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style F1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style F2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style F3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style S1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style S3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Layers Built:**
 - **Layer 1**: Multi-Modal Storage (vector + relational + document)
@@ -654,6 +811,47 @@ The vector infrastructure performed well, but Echo's team recognized that retrie
 
 Week 6 built the Retrieval-Augmented Generation pipeline that transforms retrieved documents into accurate, cited responses. This is where raw retrieval becomes intelligent answering.
 
+**Diagram: Echo's Five-Stage RAG Pipeline**
+
+```mermaid
+graph LR
+    subgraph STAGE1["STAGE 1"]
+        S1["<b>Query<br/>Understanding</b><br/><b>Intent · Entities</b>"]
+    end
+    
+    subgraph STAGE2["STAGE 2"]
+        S2["<b>Retrieval</b><br/><b>Top 20 Candidates</b>"]
+    end
+    
+    subgraph STAGE3["STAGE 3"]
+        S3["<b>Reranking</b><br/><b>Cross-Encoder</b>"]
+    end
+    
+    subgraph STAGE4["STAGE 4"]
+        S4["<b>Augmentation</b><br/><b>Context + Citations</b>"]
+    end
+    
+    subgraph STAGE5["STAGE 5"]
+        S5["<b>Generation</b><br/><b>LLM Response</b>"]
+    end
+    
+    S1 -->|<b>Embedding</b>| S2 -->|<b>Top 5</b>| S3 -->|<b>Prompt</b>| S4 -->|<b>API Call</b>| S5
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style STAGE1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style STAGE2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style STAGE3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style STAGE4 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style STAGE5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style S3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style S4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style S5 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Day 1-3: RAG Architecture Implementation**
 
 Echo implemented a five-stage RAG pipeline:
@@ -895,6 +1093,45 @@ Echo invested $380K and three weeks to build trust infrastructure. The payoff: P
 ### 4.1 Phase 3 Overview
 
 **Phase 3 Goal:** Enable trustworthy, auditable, orchestrated agent operations
+
+**Diagram: Trust Layer Stack**
+
+```mermaid
+graph TD
+    subgraph ORCH["ORCHESTRATION (L7)"]
+        O1["<b>Multi-Agent<br/>Coordination</b>"]
+        O2["<b>Intent<br/>Routing</b>"]
+    end
+    
+    subgraph OBS["OBSERVABILITY (L6 Complete)"]
+        B1["<b>Full Audit Trails</b>"]
+        B2["<b>Tracing</b>"]
+        B3["<b>Explainability</b>"]
+    end
+    
+    subgraph GOV["GOVERNANCE (L5)"]
+        G1["<b>ABAC Policies</b>"]
+        G2["<b>HITL Workflows</b>"]
+        G3["<b>HIPAA Controls</b>"]
+    end
+    
+    ORCH --> OBS --> GOV
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style ORCH fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style GOV fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
+    style O1 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style O2 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style B1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style B2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style B3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style G1 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style G2 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style G3 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Layers Built:**
 - **Layer 5**: Agent-Aware Governance (ABAC policies, HITL workflows)
@@ -1368,6 +1605,48 @@ This section introduces the seven tracking tools that kept Echo on course. Use t
 
 The 90-Day Tracker System consists of seven interconnected sheets:
 
+**Diagram: Seven-Tab Tracker System**
+
+```mermaid
+graph TD
+    subgraph EXECUTIVE["EXECUTIVE VIEW"]
+        T1["<b>Tab 1</b><br/><b>Weekly Progress</b>"]
+    end
+    
+    subgraph PILLARS["THREE PILLARS"]
+        T2["<b>Tab 2</b><br/><b>INPACT™ Tracker</b>"]
+        T3["<b>Tab 3</b><br/><b>GOALS™ Dashboard</b>"]
+        T4["<b>Tab 4</b><br/><b>7-Layer Status</b>"]
+    end
+    
+    subgraph OPS["OPERATIONS"]
+        T5["<b>Tab 5</b><br/><b>Risk & Blocker Log</b>"]
+        T6["<b>Tab 6</b><br/><b>Communication Log</b>"]
+        T7["<b>Tab 7</b><br/><b>Budget Tracker</b>"]
+    end
+    
+    T2 --> T1
+    T3 --> T1
+    T4 --> T1
+    T5 --> T1
+    T6 --> T1
+    T7 --> T1
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style EXECUTIVE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PILLARS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style OPS fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style T1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style T2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style T3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style T4 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style T5 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style T6 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style T7 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 | Tab | Purpose | Update Frequency |
 |-----|---------|------------------|
 | 1. Weekly Progress Dashboard | Overall status at a glance | Weekly |
@@ -1622,6 +1901,42 @@ Chapter 11 answers these questions with a comprehensive technology selection gui
 **Echo's Complete Journey:**
 
 Echo progressed from 28/100 to 89/100 INPACT™ score across 12 weeks, transforming 47-second queries into 1.8-second responses with 96%+ accuracy. *For complete metrics and progression detail, see Appendix I (Quick Reference Card).*
+
+---
+
+## References
+
+**Academic Research (Tier 1)**
+
+[1] Armbrust, M., Ghodsi, A., Xin, R., & Zaharia, M. (2021). "Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics." *CIDR Conference*. Foundation for unified data architecture patterns. https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf (Accessed November 2025)
+
+[2] Lewis, P., Perez, E., Piktus, A., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *Advances in Neural Information Processing Systems (NeurIPS)*, 33:9459-9474. Foundational RAG architecture paper. https://arxiv.org/abs/2005.11401 (Accessed November 2025)
+
+[3] Jin, C., Zhang, Z., Jiang, X., et al. (2024). "RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation." *arXiv preprint arXiv:2404.12457*. Caching strategies for RAG systems achieving 4x TTFT reduction. https://arxiv.org/abs/2404.12457 (Accessed November 2025)
+
+[4] Kamel Rahimi, A., et al. (2024). "Implementing AI in Hospitals to Achieve a Learning Health System: Systematic Review of Current Enablers and Barriers." *Journal of Medical Internet Research*, 26:e49655. Systematic review of healthcare AI implementation. https://www.jmir.org/2024/1/e49655 (Accessed November 2025)
+
+**Government & Standards (Tier 2)**
+
+[5] National Institute of Standards and Technology. (2023). "AI Risk Management Framework (AI RMF 1.0)." NIST AI 100-1. Governance framework for AI system deployment. https://www.nist.gov/itl/ai-risk-management-framework (Accessed November 2025)
+
+[6] U.S. Department of Health & Human Services. (2023). "HIPAA Security Rule: Technical Safeguards." 45 CFR § 164.312 - Requirements for audit controls, access management, and PHI protection. https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html (Accessed November 2025)
+
+[7] HIPAA Journal. (2024). "HIPAA Retention Requirements." Seven-year retention requirements for PHI access documentation. https://www.hipaajournal.com/hipaa-record-retention-requirements/ (Accessed November 2025)
+
+**Technology Documentation (Tier 4)**
+
+[8] Debezium. (2024). "Change Data Capture for Databases." Sub-second CDC latency for real-time EHR data streaming. https://debezium.io/documentation/reference/stable/features.html (Accessed November 2025)
+
+[9] Apache Kafka. (2024). "Kafka Streams Documentation." Event streaming platform for real-time data pipelines. https://kafka.apache.org/documentation/streams/ (Accessed November 2025)
+
+[10] dbt Labs. (2024). "dbt (data build tool)." SQL-first transformation layer with version control and data lineage. https://www.getdbt.com/ (Accessed November 2025)
+
+[11] Pinecone. (2024). "Vector Database for AI Applications." HIPAA BAA available, sub-50ms P99 latency. https://www.pinecone.io/ (Accessed November 2025)
+
+[12] OpenAI. (2024). "Embeddings API Documentation." text-embedding-ada-002 for semantic search and RAG applications. https://platform.openai.com/docs/guides/embeddings (Accessed November 2025)
+
+*For comprehensive technology selection guidance and vendor comparisons, see Chapter 11.*
 
 ---
 

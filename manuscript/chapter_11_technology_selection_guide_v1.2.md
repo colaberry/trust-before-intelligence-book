@@ -4,6 +4,50 @@
 
 ---
 
+<!-- CHAPTER OPENING GRAPHIC -->
+
+```mermaid
+graph LR
+    subgraph BEFORE["❌ VENDOR HYPE"]
+        B1["<b>Feature-driven choices</b>"]
+        B2["<b>Integration afterthought</b>"]
+        B3["<b>Mismatched capabilities</b>"]
+        B4["<b>Compliance gaps</b>"]
+    end
+    
+    subgraph TRANSFORM["THREE-PILLAR TEST"]
+        T1["<b>INPACT™ + 7-Layer<br/>+ GOALS™</b>"]
+    end
+    
+    subgraph AFTER["✅ VALIDATED STACK"]
+        A1["<b>Need-driven selection</b>"]
+        A2["<b>Layer-by-layer fit</b>"]
+        A3["<b>Unified architecture</b>"]
+        A4["<b>Built-in compliance</b>"]
+    end
+    
+    BEFORE --> TRANSFORM --> AFTER
+    
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+```
+
+> **Key Takeaway:** Every vendor must pass the three-pillar test. No exceptions.
+
+<!-- END CHAPTER OPENING GRAPHIC -->
+
+---
+
 *Every vendor in Echo's production stack passed the same test: Does it meet INPACT™ agent needs? Does it fit the 7-Layer Architecture? Does it enable GOALS™ operational excellence? This chapter gives you their exact selection criteria, vendor scorecards, and the rationale behind every choice. Your roadmap (Chapter 10) shows when to build. This chapter shows what to build with.*
 
 ---
@@ -44,6 +88,48 @@ Every vendor evaluation follows three principles:
 ### 1.2 The Three-Pillar Vendor Test
 
 Every technology in Echo's stack passed the same evaluation. Three pillars, weighted to reflect their importance, combine into a single score that separates recommended vendors from rejected ones.
+
+**Diagram: The Three-Pillar Vendor Evaluation Framework**
+
+```mermaid
+graph TD
+    subgraph VENDOR["VENDOR UNDER EVALUATION"]
+        V["<b>Technology<br/>Candidate</b>"]
+    end
+    
+    subgraph PILLAR1["PILLAR 1: INPACT™ (40%)"]
+        P1["<b>Agent Needs</b><br/><b>6 Dimensions</b>"]
+    end
+    
+    subgraph PILLAR2["PILLAR 2: ARCHITECTURE (30%)"]
+        P2["<b>Layer Fit</b><br/><b>7-Layer Integration</b>"]
+    end
+    
+    subgraph PILLAR3["PILLAR 3: GOALS™ (30%)"]
+        P3["<b>Operations</b><br/><b>5 Dimensions</b>"]
+    end
+    
+    V --> P1
+    V --> P2
+    V --> P3
+    
+    P1 --> SCORE["<b>Combined Score</b><br/><b>≥77% = Recommend</b>"]
+    P2 --> SCORE
+    P3 --> SCORE
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style VENDOR fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style PILLAR1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PILLAR2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style PILLAR3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style V fill:#eeeeee,stroke:#666666,color:#333333
+    style P1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style P2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style P3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style SCORE fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#1b5e20
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Pillar 1: INPACT™ Agent Needs (40% Weight)**
 
@@ -133,6 +219,40 @@ Use these bands to interpret combined scores:
 ### 1.3 Build vs Buy vs Partner
 
 Not every component requires a vendor purchase. The Architecture of Trust supports a hybrid approach: buy commodity capabilities, build differentiators, partner for expertise.
+
+**Diagram: Build vs Buy vs Partner Decision Flow**
+
+```mermaid
+graph TD
+    START["<b>Component<br/>Needed</b>"]
+    
+    Q1{"<b>Competitive<br/>differentiator?</b>"}
+    Q2{"<b>Proven vendor<br/>solutions exist?</b>"}
+    Q3{"<b>Team has<br/>expertise?</b>"}
+    
+    BUILD["<b>BUILD</b><br/><b>Custom Dev</b><br/><b>5-10%</b>"]
+    BUY["<b>BUY</b><br/><b>SaaS/Cloud</b><br/><b>85-90%</b>"]
+    PARTNER["<b>PARTNER</b><br/><b>Consulting</b><br/><b>0-5%</b>"]
+    
+    START --> Q1
+    Q1 -->|<b>Yes</b>| BUILD
+    Q1 -->|<b>No</b>| Q2
+    Q2 -->|<b>Yes</b>| BUY
+    Q2 -->|<b>No</b>| Q3
+    Q3 -->|<b>Yes</b>| BUILD
+    Q3 -->|<b>No</b>| PARTNER
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style START fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style Q1 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style Q2 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style Q3 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style BUILD fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style BUY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PARTNER fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **Build (Custom Development) — 5-10% of Stack**
 
@@ -298,6 +418,43 @@ INPACT™ and GOALS™ are trademarks of Colaberry Inc.
 This section provides top vendor recommendations for each of the seven architecture layers. Every vendor includes INPACT™ and GOALS™ scores, healthcare applicability, and Echo's specific choice with rationale.
 
 For implementation timing, reference Chapter 10's week-by-week roadmap. For scoring methodology details, reference Chapter 9, Part 1.2.
+
+**Diagram: The 7-Layer Architecture Technology Stack**
+
+```mermaid
+graph TD
+    subgraph TRUST["TRUST LAYERS"]
+        L7["<b>Layer 7: Orchestration</b><br/><b>LangChain · CrewAI · AutoGen</b>"]
+        L6["<b>Layer 6: Observability</b><br/><b>LangSmith · Datadog · Arize</b>"]
+        L5["<b>Layer 5: Governance</b><br/><b>Collibra · Alation · Privacera</b>"]
+    end
+    
+    subgraph INTEL["INTELLIGENCE LAYERS"]
+        L4["<b>Layer 4: Retrieval</b><br/><b>LlamaIndex · Haystack · Vectara</b>"]
+        L3["<b>Layer 3: Semantic</b><br/><b>dbt · Cube · AtScale</b>"]
+    end
+    
+    subgraph FOUND["FOUNDATION LAYERS"]
+        L2["<b>Layer 2: Data Fabric</b><br/><b>Debezium · Kafka · Flink</b>"]
+        L1["<b>Layer 1: Storage</b><br/><b>Pinecone · Weaviate · Neo4j</b>"]
+    end
+    
+    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style TRUST fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style INTEL fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style FOUND fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style L7 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L6 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L5 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style L3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style L2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 ---
 
@@ -1177,6 +1334,60 @@ This section provides the authoritative reference for Echo Health Systems' techn
 
 ### 4.1 Echo's Stack Through Three Pillars
 
+**Diagram: Echo's Complete Technology Stack**
+
+```mermaid
+graph TD
+    subgraph L7["LAYER 7: ORCHESTRATION"]
+        L7a["<b>LangGraph</b>"]
+        L7b["<b>Prefect</b>"]
+    end
+    
+    subgraph L6["LAYER 6: OBSERVABILITY"]
+        L6a["<b>Datadog</b>"]
+        L6b["<b>Grafana Cloud</b>"]
+    end
+    
+    subgraph L5["LAYER 5: GOVERNANCE"]
+        L5a["<b>OPA + Styra</b>"]
+        L5b["<b>Custom HITL</b>"]
+    end
+    
+    subgraph L4["LAYER 4: RETRIEVAL"]
+        L4a["<b>LangChain</b>"]
+        L4b["<b>OpenAI</b>"]
+    end
+    
+    subgraph L3["LAYER 3: SEMANTIC"]
+        L3a["<b>dbt Cloud</b>"]
+        L3b["<b>Alation</b>"]
+    end
+    
+    subgraph L2["LAYER 2: DATA FABRIC"]
+        L2a["<b>Fivetran</b>"]
+        L2b["<b>AWS Kinesis</b>"]
+    end
+    
+    subgraph L1["LAYER 1: STORAGE"]
+        L1a["<b>Snowflake</b>"]
+        L1b["<b>Pinecone</b>"]
+        L1c["<b>Neo4j</b>"]
+    end
+    
+    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style L7 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style L6 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L5 fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
+    style L4 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style L3 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style L2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style L1 fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#1b5e20
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Complete Technology Stack**
 
 | Layer | Technology | Annual Cost | Primary INPACT™ | Primary GOALS™ | Selection Rationale |
@@ -1261,6 +1472,78 @@ Chapter 12 completes your journey with MLOps practices for versioning and testin
 | Part 4 | Echo's Stack | Complete technology reference |
 
 *For complete canonical metrics (investment, ROI, timeline), see Appendix I (Quick Reference Card).*
+
+---
+
+## References
+
+**Academic Research (Tier 1)**
+
+[1] Malkov, Y. A., & Yashunin, D. A. (2018). "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs." *IEEE Transactions on Pattern Analysis and Machine Intelligence*, 42(4), 824-836. Foundation for vector database indexing. https://arxiv.org/abs/1603.09320 (Accessed November 2025)
+
+[2] Gao, Y., Xiong, Y., Gao, X., et al. (2024). "Retrieval-Augmented Generation for Large Language Models: A Survey." *arXiv preprint arXiv:2312.10997*. Comprehensive RAG architecture patterns. https://arxiv.org/abs/2312.10997 (Accessed November 2025)
+
+[3] Armbrust, M., Ghodsi, A., Xin, R., & Zaharia, M. (2021). "Lakehouse: A New Generation of Open Platforms that Unify Data Warehousing and Advanced Analytics." *CIDR Conference*. Foundation for unified storage architecture. https://www.cidrdb.org/cidr2021/papers/cidr2021_paper17.pdf (Accessed November 2025)
+
+[4] Regmi, S. K., & Aryal, S. (2024). "Semantic Caching for Retrieval-Augmented Generation Systems." *arXiv preprint arXiv:2409.02878*. Semantic caching achieving 60%+ cache hit rates. https://arxiv.org/abs/2409.02878 (Accessed November 2025)
+
+[5] Cormack, G. V., Clarke, C. L. A., & Buettcher, S. (2009). "Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods." *Proceedings of the 32nd International ACM SIGIR Conference*, 758-759. Foundation for hybrid search ranking. https://dl.acm.org/doi/10.1145/1571941.1572114 (Accessed November 2025)
+
+[6] Johnson, J., Douze, M., & Jégou, H. (2019). "Billion-scale similarity search with GPUs." *IEEE Transactions on Big Data*, 7(3), 535-547. Foundation for FAISS vector search. https://arxiv.org/abs/1702.08734 (Accessed November 2025)
+
+**Government & Standards (Tier 2)**
+
+[7] National Institute of Standards and Technology. (2014). "Guide to Attribute Based Access Control (ABAC) Definition and Considerations." NIST Special Publication 800-162. https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-162.pdf (Accessed November 2025)
+
+[8] National Institute of Standards and Technology. (2023). "AI Risk Management Framework (AI RMF 1.0)." NIST AI 100-1. https://www.nist.gov/itl/ai-risk-management-framework (Accessed November 2025)
+
+**Layer 1: Storage & Retrieval (Tier 4)**
+
+[9] Pinecone. (2024). "Vector Database for AI Applications." HIPAA BAA available, sub-50ms P99 latency at billion-scale. https://www.pinecone.io/ (Accessed November 2025)
+
+[10] Weaviate. (2024). "Open Source Vector Database." Hybrid search capabilities combining vector and keyword search. https://weaviate.io/ (Accessed November 2025)
+
+[11] pgvector. (2024). "Open-source vector similarity search for Postgres." Used by Notion and OpenAI for production workloads. https://github.com/pgvector/pgvector (Accessed November 2025)
+
+[12] Snowflake. (2024). "Healthcare & Life Sciences Data Cloud." HIPAA certification, zero-copy cloning, cross-cloud deployment. https://www.snowflake.com/en/data-cloud/workloads/healthcare/ (Accessed November 2025)
+
+[13] Google Cloud. (2024). "BigQuery Overview." Serverless data warehouse with HIPAA eligibility and BigQuery ML. https://cloud.google.com/bigquery (Accessed November 2025)
+
+[14] Neo4j. (2024). "Neo4j Graph Database Platform." Enterprise graph database with native graph storage. https://neo4j.com/ (Accessed November 2025)
+
+**Layer 2: Data Fabric (Tier 4)**
+
+[15] Fivetran. (2024). "Automated Data Movement Platform." 300+ pre-built connectors with sub-30-minute sync latency. https://www.fivetran.com/ (Accessed November 2025)
+
+[16] Debezium. (2024). "Change Data Capture for Databases." Sub-second CDC latency for real-time streaming. https://debezium.io/ (Accessed November 2025)
+
+[17] dbt Labs. (2024). "dbt (data build tool)." SQL-first transformation layer with version control and lineage. https://www.getdbt.com/ (Accessed November 2025)
+
+**Layer 3: Semantic Layer (Tier 4)**
+
+[18] Databricks. (2024). "Unity Catalog." Unified governance for data and AI with centralized metadata management. https://docs.databricks.com/data-governance/unity-catalog/ (Accessed November 2025)
+
+**Layer 4: Intelligence Orchestration & Retrieval (Tier 4)**
+
+[19] LangChain. (2024). "LangGraph for Agentic Workflows." Agent orchestration with state management and tool integration. https://www.langchain.com/langgraph (Accessed November 2025)
+
+[20] Redis. (2024). "Redis Caching Solutions." In-memory caching achieving 60%+ hit rates with sub-millisecond latency. https://redis.io/solutions/caching/ (Accessed November 2025)
+
+**Layer 5: Governance (Tier 4)**
+
+[21] Open Policy Agent. (2024). "Policy-based control for cloud native environments." Sub-10ms policy evaluation for ABAC authorization. https://www.openpolicyagent.org/ (Accessed November 2025)
+
+**Layer 6: Observability (Tier 4)**
+
+[22] LangSmith. (2024). "LLM Observability and Tracing Platform." Trace ID correlation, prompt versioning, and cost tracking for LLM applications. https://docs.langchain.com/langsmith/observability (Accessed November 2025)
+
+[23] Datadog. (2024). "Application Performance Monitoring." End-to-end APM with LLM-specific integrations. https://www.datadoghq.com/product/apm/ (Accessed November 2025)
+
+**Layer 7: Agent Platform (Tier 4)**
+
+[24] Anthropic. (2024). "Claude AI Model Documentation." Claude 3.5 Sonnet capabilities for healthcare agent applications. https://docs.anthropic.com/ (Accessed November 2025)
+
+[25] OpenAI. (2024). "GPT-4 API Documentation." GPT-4 Turbo 128K context window for complex healthcare queries. https://platform.openai.com/docs (Accessed November 2025)
 
 ---
 

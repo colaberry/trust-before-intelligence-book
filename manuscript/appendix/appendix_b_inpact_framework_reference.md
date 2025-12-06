@@ -1,18 +1,18 @@
-# Appendix B: INPACTÃ¢â€žÂ¢ Framework Reference
+# Appendix B: INPACT™ Framework Reference
 ## Quick Reference Guide for Agent Trust Requirements
 
-**Purpose:** Quick reference for the INPACTÃ¢â€žÂ¢ Framework introduced in Chapter 0  
+**Purpose:** Quick reference for the INPACT™ Framework introduced in Chapter 0  
 **Use:** Measure agent trust during implementation (Chapters 3-12)  
 **Date:** November 27, 2025  
 **Version:** 1.1 (RBAC+ABAC Hybrid Framing)
 
 ---
 
-## What is INPACTÃ¢â€žÂ¢?
+## What is INPACT™?
 
-**INPACTÃ¢â€žÂ¢** (pronounced "impact") is a framework for building agents users trust.
+**INPACT™** (pronounced "impact") is a framework for building agents users trust.
 
-Just as Tony Robbins identified six human needs for fulfillment, the INPACTÃ¢â€žÂ¢ framework identifies **six architectural needs agents must have to earn user trust.**
+Just as Tony Robbins identified six human needs for fulfillment, the INPACT™ framework identifies **six architectural needs agents must have to earn user trust.**
 
 The acronym stands for:
 - **I** - Instant
@@ -28,7 +28,7 @@ The acronym stands for:
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e0f2f1','primaryTextColor':'#004d40','primaryBorderColor':'#00897b','lineColor':'#00897b','secondaryColor':'#f0fff0','tertiaryColor':'#fff'}}}%%
 
 graph TB
-    subgraph INPACT["<b>INPACTâ„¢ Framework</b><br/>Six Agent Needs for User Trust"]
+    subgraph INPACT["<b>INPACT™ Framework</b><br/>Six Agent Needs for User Trust"]
         I["<b>I - Instant</b><br/>Speed Builds Confidence<br/>&lt;2s response time"]
         N["<b>N - Natural</b><br/>Understanding Builds Connection<br/>75-85% NLU accuracy"]
         P["<b>P - Permitted</b><br/>Security Builds Safety<br/>ABAC + HITL authorization"]
@@ -61,13 +61,13 @@ graph TB
     class Note1 note
 ```
 
-**Figure B.1: INPACTâ„¢ Six Agent Needs Framework**
+**Figure B.1: INPACT™ Six Agent Needs Framework**
 
-The INPACTâ„¢ framework identifies six architectural requirements agents must fulfill to earn user trust. All six needs are interdependentâ€"missing even one significantly increases the risk of joining the 95% of AI pilots that fail to achieve ROI.
+The INPACT™ framework identifies six architectural requirements agents must fulfill to earn user trust. All six needs are interdependent—missing even one significantly increases the risk of joining the 95% of AI pilots that fail to achieve ROI.
 
 ---
 
-## The Six INPACTÃ¢â€žÂ¢ Needs
+## The Six INPACT™ Needs
 
 ### I - Instant: Speed Builds Confidence
 
@@ -243,9 +243,9 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## INPACTÃ¢â€žÂ¢ Scoring System
+## INPACT™ Scoring System
 
-### Overall INPACTÃ¢â€žÂ¢ Score
+### Overall INPACT™ Score
 
 **Total Score:** Sum of 6 dimensions (1-6 each) = **6 to 36 points**
 
@@ -258,7 +258,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## INPACTÃ¢â€žÂ¢ Scoring Template
+## INPACT™ Scoring Template
 
 **Use this template during Chapter 3 implementation to track progress:**
 
@@ -279,11 +279,11 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## How INPACTÃ¢â€žÂ¢ Maps to Architecture
+## How INPACT™ Maps to Architecture
 
-**The 7-layer architecture (Chapter 1) delivers the 6 INPACTÃ¢â€žÂ¢ needs:**
+**The 7-layer architecture (Chapter 1) delivers the 6 INPACT™ needs:**
 
-| INPACTÃ¢â€žÂ¢ Need | Primary Layers | Infrastructure Capability |
+| INPACT™ Need | Primary Layers | Infrastructure Capability |
 |--------------|----------------|---------------------------|
 | **I** - Instant | L2, L1, L4, L7 | Sub-Second Response Architecture |
 | **N** - Natural | L3, L4, L1 | Semantic Understanding |
@@ -292,13 +292,13 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 | **C** - Contextual | L2, L3, L1, L4 | Cross-Domain Integration |
 | **T** - Trusted | L5, L6, L4, L3 | Auditability & Explainability |
 
-**Key Insight:** Every INPACTÃ¢â€žÂ¢ need requires **multiple layers working together**. No single layer solves any need alone.
+**Key Insight:** Every INPACT™ need requires **multiple layers working together**. No single layer solves any need alone.
 
 ---
 
-## Common INPACTÃ¢â€žÂ¢ Anti-Patterns
+## Common INPACT™ Anti-Patterns
 
-### Ã¢ÂÅ’ Anti-Pattern 1: "We Have a Vector DB, So We're Agent-Ready"
+### ❌ Anti-Pattern 1: "We Have a Vector DB, So We're Agent-Ready"
 
 **Problem:** Vector DB alone only addresses part of "I" (Instant) and "N" (Natural). Missing: real-time data (C), governance (P), observability (A, T).
 
@@ -306,7 +306,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-### Ã¢ÂÅ’ Anti-Pattern 2: "We'll Add HITL Later"
+### ❌ Anti-Pattern 2: "We'll Add HITL Later"
 
 **Problem:** Starting without HITL means training users to trust agent recommendations. When you add HITL later, users resist human oversight.
 
@@ -314,7 +314,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-### Ã¢ÂÅ’ Anti-Pattern 3: "Accuracy Will Improve Over Time Without Feedback"
+### ❌ Anti-Pattern 3: "Accuracy Will Improve Over Time Without Feedback"
 
 **Problem:** Static agents degrade as data and business logic drift. Accuracy drops 1-2% per month without feedback loops.
 
@@ -322,7 +322,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-### Ã¢ÂÅ’ Anti-Pattern 4: "Batch ETL is Fine for Agents"
+### ❌ Anti-Pattern 4: "Batch ETL is Fine for Agents"
 
 **Problem:** Agents need real-time context. 24-hour-old data = wrong answers (e.g., "Is this patient still in the hospital?" using yesterday's data).
 
@@ -330,7 +330,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-### Ã¢ÂÅ’ Anti-Pattern 5: "Users Don't Need to See Sources"
+### ❌ Anti-Pattern 5: "Users Don't Need to See Sources"
 
 **Problem:** Black-box agents erode trust. "Because I said so" doesn't work for humans or agents.
 
@@ -338,11 +338,11 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## Using INPACTÃ¢â€žÂ¢ in Practice
+## Using INPACT™ in Practice
 
 ### During Design (Before Week 1)
 
-**Question:** Which INPACTÃ¢â€žÂ¢ needs are most critical for our use case?
+**Question:** Which INPACT™ needs are most critical for our use case?
 
 **Healthcare Example:**
 - **Critical:** P (Permitted - HIPAA compliance), T (Trusted - audit trails)
@@ -355,26 +355,26 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ### During Implementation (Weeks 1-12)
 
-**Question:** Are we on track to achieve target INPACTÃ¢â€žÂ¢ scores?
+**Question:** Are we on track to achieve target INPACT™ scores?
 
 **Use the scoring template above.** Measure weekly during Phase 1-2, then at phase exits.
 
 **Example (Week 4 - Phase 1 Exit):**
-- I (Instant): 5/6 - Real-time data <1hr Ã¢Å“â€¦
-- N (Natural): 5/6 - Semantic layer operational Ã¢Å“â€¦
-- P (Permitted): 4/6 - ABAC operational Ã¢Å“â€¦
-- A (Adaptive): 4/6 - Monitoring in place Ã¢Å“â€¦
-- C (Contextual): 5/6 - 5-8 sources connected Ã¢Å“â€¦
-- T (Trusted): 4/6 - Audit logs 100% coverage Ã¢Å“â€¦
-- **Total: 27/36 (Good Trust - on track!)** Ã¢Å“â€¦
+- I (Instant): 5/6 - Real-time data <1hr ✓
+- N (Natural): 5/6 - Semantic layer operational ✓
+- P (Permitted): 4/6 - ABAC operational ✓
+- A (Adaptive): 4/6 - Monitoring in place ✓
+- C (Contextual): 5/6 - 5-8 sources connected ✓
+- T (Trusted): 4/6 - Audit logs 100% coverage ✓
+- **Total: 27/36 (Good Trust - on track!)** ✓
 
 ---
 
 ### During Operations (Post-Week 12)
 
-**Question:** Is INPACTÃ¢â€žÂ¢ trust degrading over time?
+**Question:** Is INPACT™ trust degrading over time?
 
-**Monthly Re-Assessment:** Re-score INPACTÃ¢â€žÂ¢ needs monthly. Watch for degradation:
+**Monthly Re-Assessment:** Re-score INPACT™ needs monthly. Watch for degradation:
 - **I (Instant):** Did latency increase? (Cache hit rate declining?)
 - **N (Natural):** Did accuracy drop? (Semantic layer drift?)
 - **P (Permitted):** Are ABAC policies still enforced? (Policy evaluation working?)
@@ -386,7 +386,7 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## INPACTÃ¢â€žÂ¢ by Industry
+## INPACT™ by Industry
 
 ### Healthcare
 
@@ -404,13 +404,13 @@ The INPACTâ„¢ framework identifies six architectural requirements agents mus
 
 ---
 
-## INPACTÃ¢â€žÂ¢ Scoring Quick Reference
+## INPACT™ Scoring Quick Reference
 
 ```mermaid
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e0f2f1','primaryTextColor':'#004d40','primaryBorderColor':'#00897b','lineColor':'#00897b','secondaryColor':'#f0fff0','tertiaryColor':'#fff'}}}%%
 
 graph TD
-    subgraph SCORING["<b>INPACTâ„¢ Scoring Guide</b><br/>Total: 6 needs Ã— 6 points = 36 max"]
+    subgraph SCORING["<b>INPACT™ Scoring Guide</b><br/>Total: 6 needs × 6 points = 36 max"]
         HIGH["<b>30-36 Points</b><br/>HIGH TRUST<br/>Healthcare-ready<br/>Production-grade"]
         GOOD["<b>24-29 Points</b><br/>GOOD TRUST<br/>Enterprise-ready<br/>Most use cases"]
         MOD["<b>18-23 Points</b><br/>MODERATE TRUST<br/>Internal tools acceptable<br/>Not patient-facing"]
@@ -422,9 +422,9 @@ graph TD
     
     SCORING --- PER_NEED
     
-    DEPLOY["Ã¢Å"â€¦ Deploy to Production<br/>Patient-facing OK"]
-    PILOT["Ã¢Å¡ Ã¯Â¸ Internal Pilot Only<br/>Monitor closely"]
-    STOP["Ã¢Å' Do Not Deploy<br/>Address gaps first"]
+    DEPLOY["✓ Deploy to Production<br/>Patient-facing OK"]
+    PILOT["⚠ Internal Pilot Only<br/>Monitor closely"]
+    STOP["❌ Do Not Deploy<br/>Address gaps first"]
     
     HIGH --> DEPLOY
     GOOD --> DEPLOY
@@ -445,9 +445,9 @@ graph TD
     class DEPLOY,PILOT,STOP action
 ```
 
-**Figure B.2: INPACTâ„¢ Scoring Interpretation Guide**
+**Figure B.2: INPACT™ Scoring Interpretation Guide**
 
-INPACTâ„¢ scores range from 6 to 36 points (6 needs Ã— 1-6 points each). Scores of 30-36 indicate High Trust suitable for production healthcare environments. Scores of 24-29 represent Good Trust for most enterprise use cases. Scores below 18 indicate the system is not ready for deployment and requires improvement.
+INPACT™ scores range from 6 to 36 points (6 needs × 1-6 points each). Scores of 30-36 indicate High Trust suitable for production healthcare environments. Scores of 24-29 represent Good Trust for most enterprise use cases. Scores below 18 indicate the system is not ready for deployment and requires improvement.
 
 | Need | Score | Interpretation |
 |------|-------|----------------|
@@ -457,7 +457,7 @@ INPACTâ„¢ scores range from 6 to 36 points (6 needs Ã— 1-6 points each). 
 | 3/6 | At Risk | Significant gaps, may fail user trust |
 | 1-2/6 | Not Ready | Critical failures, do not deploy |
 
-**Overall INPACTâ„¢ Score:**
+**Overall INPACT™ Score:**
 - **30-36/36 (83-100%):** High Trust - Deploy to production
 - **24-29/36 (67-83%):** Good Trust - Deploy with monitoring
 - **18-23/36 (50-67%):** Moderate Trust - Internal pilots only
@@ -467,7 +467,7 @@ INPACTâ„¢ scores range from 6 to 36 points (6 needs Ã— 1-6 points each). 
 %%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#e0f2f1','primaryTextColor':'#004d40','primaryBorderColor':'#00897b','lineColor':'#00897b','secondaryColor':'#f0fff0','tertiaryColor':'#fff'}}}%%
 
 graph TD
-    subgraph INPACT["<b>INPACTâ„¢ Needs</b>"]
+    subgraph INPACT["<b>INPACT™ Needs</b>"]
         I["<b>I - Instant</b><br/>Speed"]
         N["<b>N - Natural</b><br/>Understanding"]
         P["<b>P - Permitted</b><br/>Security"]
@@ -519,19 +519,19 @@ graph TD
     class L1,L2,L3,L4,L5,L6,L7 layer
 ```
 
-**Figure B.3: INPACTâ„¢ Needs Mapped to 7-Layer Architecture**
+**Figure B.3: INPACT™ Needs Mapped to 7-Layer Architecture**
 
-Each INPACTâ„¢ need is fulfilled by specific architectural layers. For example, Instant (speed) requires Layer 2 (Real-Time Data) and Layer 1 (Storage with caching). Natural (understanding) depends on Layer 3 (Semantic Layer) and Layer 4 (RAG). This mapping helps teams prioritize layer development based on which INPACTâ„¢ needs are most critical for their use case.
+Each INPACT™ need is fulfilled by specific architectural layers. For example, Instant (speed) requires Layer 2 (Real-Time Data) and Layer 1 (Storage with caching). Natural (understanding) depends on Layer 3 (Semantic Layer) and Layer 4 (RAG). This mapping helps teams prioritize layer development based on which INPACT™ needs are most critical for their use case.
 
 ---
 
-## INPACTÃ¢â€žÂ¢ Glossary
+## INPACT™ Glossary
 
 **ABAC:** Attribute-Based Access Control - Contextual authorization layer evaluating user attributes, resource attributes, and context, layered on top of RBAC
 
 **Adaptive:** Continuous learning and improvement (vs quarterly reviews or static models)
 
-**Agent Needs:** The six requirements agents must have to earn user trust (INPACTÃ¢â€žÂ¢)
+**Agent Needs:** The six requirements agents must have to earn user trust (INPACT™)
 
 **Audit Trail:** Complete log of data access, decisions, and reasoning (for compliance and explainability)
 
@@ -561,16 +561,16 @@ Each INPACTâ„¢ need is fulfilled by specific architectural layers. For examp
 
 ## Reference
 
-**For complete details on INPACTÃ¢â€žÂ¢, see Chapter 0.**
+**For complete details on INPACT™, see Chapter 0.**
 
-**For architecture that delivers INPACTÃ¢â€žÂ¢, see Chapter 1.**
+**For architecture that delivers INPACT™, see Chapter 1.**
 
 **For implementation guidance, see Chapter 3.**
 
 ---
 
-**Ã‚Â© 2025 Colaberry Inc. All rights reserved.**  
-**INPACTÃ¢â€žÂ¢ is a trademark of Colaberry Inc.**
+**© 2025 Colaberry Inc. All rights reserved.**  
+**INPACT™ is a trademark of Colaberry Inc.**
 
 ---
 

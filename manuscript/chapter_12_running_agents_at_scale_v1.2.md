@@ -4,6 +4,50 @@
 
 ---
 
+<!-- CHAPTER OPENING GRAPHIC -->
+
+```mermaid
+graph LR
+    subgraph BEFORE["❌ WORKS ON MY MACHINE"]
+        B1["<b>Ad-hoc monitoring</b>"]
+        B2["<b>Reactive firefighting</b>"]
+        B3["<b>Manual processes</b>"]
+        B4["<b>Performance drift</b>"]
+    end
+    
+    subgraph TRANSFORM["PRODUCTION READINESS"]
+        T1["<b>15 Criteria<br/>+ GOALS™</b>"]
+    end
+    
+    subgraph AFTER["✅ OPERATIONS EXCELLENCE"]
+        A1["<b>Proactive observability</b>"]
+        A2["<b>Structured incidents</b>"]
+        A3["<b>MLOps automation</b>"]
+        A4["<b>Continuous improvement</b>"]
+    end
+    
+    BEFORE --> TRANSFORM --> AFTER
+    
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+```
+
+> **Key Takeaway:** Building is easy. Operating at scale requires systematic excellence.
+
+<!-- END CHAPTER OPENING GRAPHIC -->
+
+---
+
 *You've built the architecture. All seven layers operational. Three agents validated. Now comes the harder part: keeping it running. This chapter transforms you from architect to operator—15 readiness criteria to validate, MLOps practices to master, incidents to handle, and continuous improvement cycles that turned Echo's 85% accuracy into 88% in just five weeks. The Architecture of Trust is built. Now learn to sustain it.*
 
 ---
@@ -36,19 +80,75 @@ Let's begin with the question every organization faces at Week 10: are we actual
 
 Production readiness isn't a feeling—it's a measurable state. Echo validated against 15 specific criteria organized around the Architecture of Trust's three pillars. Each criterion has a clear target, measurement method, and evidence requirement.
 
+**Diagram: The 15-Criteria Production Readiness Framework**
+
+```mermaid
+graph TD
+    subgraph INPACT["PILLAR 1: INPACT™ READINESS"]
+        I1["<b>1. Score ≥ 80</b>"]
+        I2["<b>2. Response < 5s</b>"]
+        I3["<b>3. NLU ≥ 85%</b>"]
+        I4["<b>4. Escalation < 15%</b>"]
+        I5["<b>5. Audit 100%</b>"]
+    end
+    
+    subgraph ARCH["PILLAR 2: ARCHITECTURE"]
+        A1["<b>6. 7 Layers Live</b>"]
+        A2["<b>7. 3+ Agents</b>"]
+        A3["<b>8. Orchestration < 3s</b>"]
+        A4["<b>9. BAAs Signed</b>"]
+        A5["<b>10. Data Residency</b>"]
+    end
+    
+    subgraph GOALS["PILLAR 3: GOALS™"]
+        G1["<b>11. GOALS Score ≥ 4.0</b>"]
+        G2["<b>12. SLAs Defined</b>"]
+        G3["<b>13. Runbooks Ready</b>"]
+        G4["<b>14. Rollback < 5min</b>"]
+        G5["<b>15. Team Trained</b>"]
+    end
+    
+    INPACT --> READY["<b>PRODUCTION<br/>READY</b>"]
+    ARCH --> READY
+    GOALS --> READY
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style INPACT fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style ARCH fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style READY fill:#c8e6c9,stroke:#388e3c,stroke-width:3px,color:#1b5e20
+    style I1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style I2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style I3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style I4 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style I5 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style A1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style A2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style A3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style A4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style A5 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style G1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style G2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style G3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style G4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style G5 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Pillar 1: INPACT™ Readiness (5 Criteria)**
 
 These criteria validate that your infrastructure genuinely meets agent needs:
 
 | # | Criterion | INPACT™ Need | Target | How to Measure | Echo Week 10 |
 |---|-----------|--------------|--------|----------------|--------------|
-| 1 | INPACT™ Score ≥ 80 | All 6 | 80/100 minimum | Chapter 9 assessment | ✅ 85/100 |
+| 1 | INPACT™ Score ≥ 80 | All 6 | 80/100 minimum | Chapter 9 assessment | ✅ 86/100 |
 | 2 | Response Time < 5s | I (Instant) | <5s P95 | Load testing, APM traces | ✅ 4.8s P95 |
 | 3 | NLU Accuracy ≥ 85% | N (Natural) | ≥85% | Validation set testing | ✅ 87% |
 | 4 | HITL Escalation < 15% | P (Permitted) | <15% rate | Governance logs | ✅ 8% |
 | 5 | Audit Coverage 100% | T (Transparent) | 100% | Audit log validation | ✅ 100% |
 
-**Criterion 1: INPACT™ Score ≥ 80** validates overall readiness. Scores below 80 indicate infrastructure gaps that will surface in production. Echo achieved 85/100 at Week 10, comfortably above the threshold.
+**Criterion 1: INPACT™ Score ≥ 80** validates overall readiness. Scores below 80 indicate infrastructure gaps that will surface in production. Echo achieved 86/100 at Week 10, comfortably above the threshold.
 
 **Criterion 2: Response Time < 5s** ensures users won't abandon agents mid-query. Healthcare workflows can't wait 10 seconds for answers. Echo's P95 latency of 4.8 seconds meant 95% of queries completed in under 5 seconds—acceptable for clinical use.
 
@@ -199,6 +299,48 @@ Three agents went live Monday morning. Fifty nurses across three shifts became f
 ## Part 2: MLOps for Agents
 
 Traditional MLOps practices—model versioning, A/B testing, performance monitoring—require adaptation for agentic systems. Agents combine multiple models, orchestration logic, and prompt configurations that evolve together. This section provides practical MLOps patterns validated through Echo's production operations.
+
+**Diagram: Agent MLOps Lifecycle**
+
+```mermaid
+graph LR
+    subgraph DEVELOP["DEVELOP"]
+        D1["<b>Version<br/>Control</b>"]
+    end
+    
+    subgraph TEST["TEST"]
+        T1["<b>A/B<br/>Testing</b>"]
+    end
+    
+    subgraph DEPLOY["DEPLOY"]
+        P1["<b>Staged<br/>Rollout</b>"]
+    end
+    
+    subgraph MONITOR["MONITOR"]
+        M1["<b>Performance<br/>Tracking</b>"]
+    end
+    
+    subgraph OPTIMIZE["OPTIMIZE"]
+        O1["<b>Cost<br/>Optimization</b>"]
+    end
+    
+    D1 --> T1 --> P1 --> M1 --> O1
+    O1 -->|<b>Feedback</b>| D1
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style DEVELOP fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style TEST fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style DEPLOY fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
+    style MONITOR fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style OPTIMIZE fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style D1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style T1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style P1 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style M1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style O1 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 ---
 
@@ -569,6 +711,53 @@ The two P1 alerts were legitimate issues: one LLM API degradation (18-minute res
 
 When alerts fire, structured response prevents chaos. Echo adopted a six-phase incident response process mapped to the Architecture of Trust:
 
+**Diagram: Six-Phase Incident Response**
+
+```mermaid
+graph LR
+    subgraph P1["PHASE 1"]
+        D["<b>DETECT</b><br/><b>Alert Fires</b>"]
+    end
+    
+    subgraph P2["PHASE 2"]
+        T["<b>TRIAGE</b><br/><b>Map to Pillars</b>"]
+    end
+    
+    subgraph P3["PHASE 3"]
+        M["<b>MITIGATE</b><br/><b>Stop Bleeding</b>"]
+    end
+    
+    subgraph P4["PHASE 4"]
+        C["<b>COMMUNICATE</b><br/><b>Stakeholders</b>"]
+    end
+    
+    subgraph P5["PHASE 5"]
+        R["<b>RESOLVE</b><br/><b>Root Cause</b>"]
+    end
+    
+    subgraph P6["PHASE 6"]
+        L["<b>LEARN</b><br/><b>Post-Mortem</b>"]
+    end
+    
+    D --> T --> M --> C --> R --> L
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style P1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style P2 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style P3 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
+    style P4 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style P5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style P6 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style D fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style M fill:#fff9c4,stroke:#f9a825,color:#f57f17
+    style C fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style R fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Phase 1: DETECT**
 
 Automated monitoring triggers alert. On-call engineer acknowledges within response time SLA.
@@ -701,13 +890,55 @@ Post-mortems prevent repeat incidents. Echo conducts post-mortems within 48 hour
 
 ## Part 4: Continuous Improvement
 
-The Architecture of Trust isn't a destination—it's a foundation for continuous improvement. Echo's INPACT™ score didn't stop at 85/100. Through systematic weekly improvement cycles, they reached 88/100 within five weeks of production launch. This section provides the processes that drive ongoing excellence.
+The Architecture of Trust isn't a destination—it's a foundation for continuous improvement. Echo's INPACT™ score didn't stop at 86/100. Through systematic weekly improvement cycles, they reached 89/100 within five weeks of production launch. This section provides the processes that drive ongoing excellence.
 
 ---
 
 ### 4.1 Weekly Improvement Cycle
 
 Structured weekly cycles transform operational data into agent improvements. Echo followed a five-day pattern that yielded consistent 1-2% weekly accuracy gains.
+
+**Diagram: Five-Day Improvement Cycle**
+
+```mermaid
+graph LR
+    subgraph MON["MONDAY"]
+        M["<b>Review<br/>Metrics</b>"]
+    end
+    
+    subgraph TUE["TUESDAY"]
+        T["<b>Analyze<br/>Failures</b>"]
+    end
+    
+    subgraph WED["WEDNESDAY"]
+        W["<b>Propose<br/>Fixes</b>"]
+    end
+    
+    subgraph THU["THURSDAY"]
+        H["<b>Implement<br/>Changes</b>"]
+    end
+    
+    subgraph FRI["FRIDAY"]
+        F["<b>A/B Test<br/>Launch</b>"]
+    end
+    
+    M --> T --> W --> H --> F
+    F -->|<b>Next Week</b>| M
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style MON fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style TUE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style WED fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style THU fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style FRI fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style M fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style T fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style W fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style H fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style F fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
 
 **The Five-Day Cycle**
 
@@ -879,6 +1110,36 @@ For organizations seeking to accelerate their journey, Colaberry's AIXcelerator 
 
 AIXcelerator is a comprehensive platform that accelerates agent infrastructure deployment while maintaining all three pillars of the Architecture of Trust. Rather than building every component from scratch, organizations leverage production-validated modules.
 
+**Diagram: AIXcelerator Five-Component Platform**
+
+```mermaid
+graph TD
+    subgraph PLATFORM["AIXcelerator PLATFORM"]
+        C1["<b>Multi-Agent Core</b><br/><b>L4, L7 · All 6 Needs</b>"]
+        C2["<b>MCP Server</b><br/><b>L1-L2 · Contextual</b>"]
+        C3["<b>Agent Syndication</b><br/><b>L7 · Natural</b>"]
+        C4["<b>Governance Engine</b><br/><b>L5 · Permitted, Transparent</b>"]
+        C5["<b>Assessment Platform</b><br/><b>L6 · All 6 Needs</b>"]
+    end
+    
+    C1 --> RESULT["<b>90 Days → 45 Days</b><br/><b>All Three Pillars</b>"]
+    C2 --> RESULT
+    C3 --> RESULT
+    C4 --> RESULT
+    C5 --> RESULT
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style PLATFORM fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style C1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style C2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style C3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style C4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style C5 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style RESULT fill:#c8e6c9,stroke:#388e3c,stroke-width:3px,color:#1b5e20
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+```
+
 **Five Core Components**
 
 | Component | INPACT™ Coverage | Layers Accelerated | Time Saved |
@@ -1033,6 +1294,56 @@ Trust before intelligence. Architecture before agents. The three pillars are you
 | Part 5 | AIXcelerator | Platform overview, access paths |
 
 *For complete canonical metrics (investment, ROI, timeline), see Appendix I (Quick Reference Card).*
+
+---
+
+## References
+
+**Academic Research (Tier 1)**
+
+[1] Bayram, F., Ahmed, B., & Kassler, A. (2022). "From Concept Drift to Model Degradation: An Overview on Performance-Aware Drift Detectors." *Scientific Reports*, Nature. Study of 128 (model, dataset) pairs observed temporal model degradation in 91% of cases. https://www.nature.com/articles/s41598-022-15245-z (Accessed November 2025)
+
+[2] Sculley, D., Holt, G., Golovin, D., et al. (2015). "Hidden Technical Debt in Machine Learning Systems." *Advances in Neural Information Processing Systems (NeurIPS)*. Foundation paper on MLOps technical debt. https://papers.nips.cc/paper/2015/hash/86df7dcfd896fcaf2674f757a2463eba-Abstract.html (Accessed November 2025)
+
+[3] Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (2016). "Site Reliability Engineering: How Google Runs Production Systems." *O'Reilly Media*. Foundation for SLA/SLO/SLI framework. https://sre.google/sre-book/table-of-contents/ (Accessed November 2025)
+
+[4] Kamel Rahimi, A., et al. (2024). "Implementing AI in Hospitals to Achieve a Learning Health System: Systematic Review of Current Enablers and Barriers." *Journal of Medical Internet Research*, 26:e49655. Peer-reviewed systematic review of healthcare AI implementation challenges. https://www.jmir.org/2024/1/e49655 (Accessed November 2025)
+
+[5] Asai, A., Wu, Z., Wang, Y., et al. (2024). "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection." *International Conference on Learning Representations (ICLR)*. Self-reflective RAG for improved accuracy. https://arxiv.org/abs/2310.11511 (Accessed November 2025)
+
+**Government & Standards (Tier 2)**
+
+[6] National Institute of Standards and Technology. (2023). "NIST Cybersecurity Framework 2.0." Incident response and recovery guidance for critical infrastructure. https://www.nist.gov/cyberframework (Accessed November 2025)
+
+[7] National Institute of Standards and Technology. (2023). "AI Risk Management Framework (AI RMF 1.0)." NIST AI 100-1. Framework for AI system governance and monitoring. https://www.nist.gov/itl/ai-risk-management-framework (Accessed November 2025)
+
+[8] U.S. Department of Health & Human Services. (2023). "HIPAA Security Rule: Technical Safeguards." 45 CFR § 164.312 - Audit controls and access management requirements. https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html (Accessed November 2025)
+
+[9] ONC. (2024). "Health IT Certification Program." Interoperability standards for healthcare information technology. https://www.healthit.gov/topic/certification-ehrs/about-onc-health-it-certification-program (Accessed November 2025)
+
+**MLOps & Model Management (Tier 4)**
+
+[10] Semantic Versioning. (2024). "Semantic Versioning 2.0.0." Standard for version numbering in software development. https://semver.org/ (Accessed November 2025)
+
+[11] LangSmith. (2024). "LLM Observability and Tracing Platform." Prompt versioning, A/B testing, and cost tracking for LLM applications. https://docs.langchain.com/langsmith/observability (Accessed November 2025)
+
+[12] MLflow. (2024). "MLflow Model Registry." Open-source platform for ML lifecycle management. https://mlflow.org/docs/latest/model-registry.html (Accessed November 2025)
+
+**Monitoring & Observability (Tier 4)**
+
+[13] Datadog. (2024). "Application Performance Monitoring." End-to-end APM with LLM-specific integrations and anomaly detection. https://www.datadoghq.com/product/apm/ (Accessed November 2025)
+
+[14] Grafana Labs. (2024). "Grafana Dashboard Documentation." Open-source observability platform for metrics visualization. https://grafana.com/docs/grafana/latest/ (Accessed November 2025)
+
+[15] PagerDuty. (2024). "Incident Response Platform." On-call management and incident escalation automation. https://www.pagerduty.com/ (Accessed November 2025)
+
+[16] Evidently AI. (2024). "ML Monitoring and Observability Platform." Data drift detection and model quality monitoring. https://www.evidentlyai.com/ (Accessed November 2025)
+
+**Agent Orchestration (Tier 4)**
+
+[17] LangChain. (2024). "LangGraph Human-in-the-Loop Patterns." HITL workflows, feedback loops, and escalation patterns for agent systems. https://docs.langchain.com/oss/python/langgraph/interrupts (Accessed November 2025)
+
+[18] Anthropic. (2024). "Model Context Protocol (MCP)." Open protocol for connecting AI assistants to data sources and tools. https://modelcontextprotocol.io/ (Accessed November 2025)
 
 ---
 
