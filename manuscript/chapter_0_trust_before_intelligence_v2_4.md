@@ -21,17 +21,17 @@
 ```mermaid
 
 graph LR
-    subgraph BEFORE["❌ BEFORE: WEEK 0"]
+    subgraph BEFORE["BEFORE: WEEK 0"]
         direction TB
         B1["3 Failed Pilots<br/>$2M Spent<br/>0 Production Agents<br/>9-13s Response Time<br/>INPACT™: 28/100"]
     end
     
     subgraph TRANSFORM["90 DAYS"]
         direction TB
-        T1["➡️"]
+        T1["→"]
     end
     
-    subgraph AFTER["✅ AFTER: WEEK 12"]
+    subgraph AFTER["AFTER: WEEK 12"]
         direction TB
         A1["3 Production Agents<br/>$1.23M → 477% ROI<br/>50,000 Daily Queries<br/>1.6s Response Time<br/>INPACT™: 89/100"]
     end
