@@ -195,9 +195,9 @@ These criteria validate operational excellence readiness:
 |---|-----------|--------|--------|----------------|--------------|
 | 11 | ABAC + Audit Operational | G (Governance) | <10ms eval | Policy testing | ✅ 6.8ms |
 | 12 | Dashboards Active | O (Observability) | Real-time | Dashboard review | ✅ 200+ metrics |
-| 13 | SLA Achievable | A (Accessibility) | 99.5% uptime | Availability testing | ✅ 99.7% |
+| 13 | SLA Achievable | A (Availability) | 99.5% uptime | Availability testing | ✅ 99.7% |
 | 14 | Semantic Layer Mapped | L (Language) | Documented | Term coverage audit | ✅ 2,400 terms |
-| 15 | On-Call Rotation Staffed | S (Soundness) | 24/7 coverage | Schedule review | ✅ 3-person rotation |
+| 15 | On-Call Rotation Staffed | S (Solid) | 24/7 coverage | Schedule review | ✅ 3-person rotation |
 
 **Criterion 11: ABAC + Audit Operational** confirms governance doesn't block performance. Policy evaluation exceeding 10ms adds perceptible latency. Echo's 6.8ms evaluation maintained responsive user experience.
 
@@ -234,6 +234,19 @@ Production operations require ongoing attention across all three pillars. Rather
 - **Complete metrics reference:** Appendix E (Quick Reference Card) consolidates all canonical metrics.
 
 The sections below focus on what's unique to production operations: go-live planning, MLOps practices, incident response, and continuous improvement.
+
+---
+
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ 15 production readiness criteria organized by Architecture of Trust pillar  
+✅ Echo achieved 15/15 ✅ before going live — the threshold for healthcare  
+✅ Readiness references: INPACT™ (Ch 9), Layer ownership (Ch 10), GOALS™ (Ch 7)  
+⭐️ **Next:** Phased rollout strategy that reduces go-live risk
+
+**Reading Time Remaining:** ~25 minutes
+
+**Your Framework Quick Check:** How many of the 15 criteria does your organization currently meet?
 
 ---
 
@@ -604,6 +617,19 @@ Cost optimization isn't a one-time effort. Echo reviews cost metrics weekly, ide
 
 ---
 
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ MLOps essentials: Model versioning, A/B testing, prompt management  
+✅ Cost optimization: Caching (60% savings), routing, batching  
+✅ Echo reduced LLM costs from $0.12 to $0.04 per query ($1.44M annual savings)  
+⭐️ **Next:** SLAs, alerting, and incident response for production operations
+
+**Reading Time Remaining:** ~18 minutes
+
+**Your Framework Quick Check:** What's your target cost per query? Echo started at $0.12 and optimized to $0.04.
+
+---
+
 ## Part 3: Monitoring & Incident Response
 
 Production agents will fail. Databases go down. LLM APIs timeout. Policies misconfigure. The question isn't whether incidents occur—it's how quickly you detect, respond, and recover. This section establishes monitoring foundations and incident response processes that maintained Echo's 99.7% availability through their first month of production.
@@ -693,9 +719,9 @@ Effective alerting balances sensitivity with noise. Too few alerts miss problems
 |-----------|------------|------------|
 | G (Governance) | Unauthorized access detected | Policy violation rate > 5% |
 | O (Observability) | Blind spot in monitoring | Alert coverage < 90% |
-| A (Accessibility) | Availability < 99% | Availability < 99.5% |
+| A (Availability) | Availability < 99% | Availability < 99.5% |
 | L (Language) | Semantic layer down | Term resolution failure > 10% |
-| S (Soundness) | Data corruption detected | Quality score drop > 10% |
+| S (Solid) | Data corruption detected | Quality score drop > 10% |
 
 **Echo's Alert Results (Month 1)**
 
@@ -891,6 +917,19 @@ Post-mortems prevent repeat incidents. Echo conducts post-mortems within 48 hour
 
 ---
 
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Three-Pillar SLAs: INPACT™ metrics, Layer health, GOALS™ targets  
+✅ Alert strategy: P1 (critical, 15min response) through P4 (informational)  
+✅ Incident response: Detection → Triage → Mitigation → Resolution → Post-mortem  
+⭐️ **Next:** Weekly improvement cycles that took Echo from 86/100 to 89/100
+
+**Reading Time Remaining:** ~10 minutes
+
+**Your Framework Quick Check:** What's your P1 response time target? Echo committed to 15 minutes.
+
+---
+
 ## Part 4: Continuous Improvement
 
 The Architecture of Trust isn't a destination—it's a foundation for continuous improvement. Echo's INPACT™ score didn't stop at 86/100. Through systematic weekly improvement cycles, they reached 89/100 within five weeks of production launch. This section provides the processes that drive ongoing excellence.
@@ -948,7 +987,7 @@ graph LR
 | Day | Activity | INPACT™ Focus | Layer Focus | GOALS™ Focus |
 |-----|----------|---------------|-------------|--------------|
 | Monday | Review metrics | All 6 dimensions | Health checks | O (Observability) |
-| Tuesday | Analyze failures | N (Natural) | L3-L4 | S (Soundness) |
+| Tuesday | Analyze failures | N (Natural) | L3-L4 | S (Solid) |
 | Wednesday | Propose fixes | Dimension needing most improvement | Targeted layer | L (Language) |
 | Thursday | Implement changes | Validate fix | Deploy to staging | G (Governance) |
 | Friday | A/B test launch | Compare versions | Monitor | All |
@@ -1100,6 +1139,19 @@ Response:
 - Following week: Precision restored to 79%
 
 Early detection prevented user-visible degradation.
+
+---
+
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Weekly improvement cycle: Monday metrics → Friday deploy (1-2% weekly gains)  
+✅ Feedback loop automation: Override capture → Pattern analysis → Model update  
+✅ Drift detection: INPACT™, Architecture, GOALS™ baselines with warning thresholds  
+⭐️ **Next:** AIXcelerator platform for accelerated implementation
+
+**Reading Time Remaining:** ~5 minutes
+
+**Your Framework Quick Check:** What's your plan for catching performance drift before users notice?
 
 ---
 
@@ -1358,7 +1410,7 @@ Trust before intelligence. Architecture before agents. The three pillars are you
 | APM | Application Performance Monitoring |
 | BAA | Business Associate Agreement |
 | CDC | Change Data Capture |
-| GOALS™ | Governance, Observability, Accessibility, Language, Soundness |
+| GOALS™ | Governance, Observability, Availability, Lexicon, Solid |
 | HIPAA | Health Insurance Portability and Accountability Act |
 | HITL | Human-in-the-Loop |
 | INPACT™ | Instant, Natural, Permitted, Adaptive, Contextual, Transparent |

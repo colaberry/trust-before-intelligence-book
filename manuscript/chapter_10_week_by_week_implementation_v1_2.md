@@ -199,6 +199,19 @@ Phase 4 validates everything works together. Real users test real scenarios. Edg
 
 ---
 
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ 90-day transformation = 10 weeks building + 2 weeks validating  
+✅ Four phases map to seven architecture layers with clear budgets  
+✅ Echo invested $1.23M to move from 28/100 to 86/100 INPACT™  
+⭐️ **Next:** How Echo managed risks that threatened derailment
+
+**Reading Time Remaining:** ~35 minutes
+
+**Your Framework Quick Check:** Which phase addresses your lowest INPACT™ dimensions from Chapter 9?
+
+---
+
 ### 1.3 Risk Management Approach
 
 Echo's transformation wasn't friction-free. They encountered technical challenges, integration delays, and scope pressures. What kept them on track was disciplined risk management at every phase.
@@ -681,11 +694,16 @@ Sarah Chen approved Phase 2 kickoff: "Four weeks ago, we couldn't answer a simpl
 
 ---
 
-*Phase 1 complete. Part 3 covers Phase 2: Intelligence (Weeks 5-7).*
+**🔍 CHECKPOINT: What We've Covered So Far**
 
----
+✅ Phase 1 builds Layers 1-2 (Storage + Real-Time Fabric) for $470K  
+✅ INPACT™ improvement: 28→42/100 (+14 points in 4 weeks)  
+✅ Key deliverables: CDC operational, observability dashboard, semantic foundation  
+⭐️ **Next:** Phase 2 adds intelligence — semantic layer and RAG pipeline
 
-**END OF PART 2** (~3,000 words)
+**Reading Time Remaining:** ~25 minutes
+
+**Your Framework Quick Check:** What's your target I (Instant) dimension after Phase 1? Echo achieved <5s response time.
 
 ---
 
@@ -1077,11 +1095,16 @@ Marcus Williams summarized the Phase 2 achievement: "Three weeks ago, our system
 
 ---
 
-*Phase 2 complete. Part 4 covers Phase 3: Trust & Orchestration (Weeks 8-10).*
+**🔍 CHECKPOINT: What We've Covered So Far**
 
----
+✅ Phase 2 builds Layers 3-4 (Semantic + RAG) for $380K  
+✅ INPACT™ improvement: 42→67/100 (+25 points in 3 weeks)  
+✅ Key deliverables: Business glossary, vector DB, 85% NLU accuracy  
+⭐️ **Next:** Phase 3 adds trust — governance, observability, orchestration
 
-**END OF PART 3** (~3,000 words)
+**Reading Time Remaining:** ~18 minutes
+
+**Your Framework Quick Check:** Your agents can now understand questions. What's still missing for production? (Hint: P and T dimensions)
 
 ---
 
@@ -1462,11 +1485,16 @@ Dr. Chen, Echo's clinical liaison, summarized the Phase 3 achievement: "Ten week
 
 ---
 
-*Phase 3 complete. Part 5 covers Phase 4: Operations (Weeks 11-12) summary, with full operations detail in Chapter 12.*
+**🔍 CHECKPOINT: What We've Covered So Far**
 
----
+✅ Phase 3 builds Layers 5-7 (Governance + Observability + Orchestration) for $380K  
+✅ INPACT™ improvement: 67→86/100 (+19 points in 3 weeks)  
+✅ Key deliverables: ABAC policies, HITL workflows, multi-agent coordination  
+⭐️ **Next:** Phase 4 validates everything works in production
 
-**END OF PART 4** (~2,500 words)
+**Reading Time Remaining:** ~12 minutes
+
+**Your Framework Quick Check:** Echo's architecture is complete at Week 10. What happens in Weeks 11-12?
 
 ---
 
@@ -1592,7 +1620,16 @@ Phase 4 operations details appear in Chapter 12, including:
 
 ---
 
-**END OF PART 5** (~800 words)
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ All four phases deliver 28→86/100 INPACT™ transformation in 10 weeks  
+✅ Phase 4 validates with real users — UAT + production pilot  
+✅ $1.23M investment yields 477% ROI over 3 years  
+⭐️ **Next:** The tracking system that kept Echo on course
+
+**Reading Time Remaining:** ~8 minutes
+
+**Your Framework Quick Check:** What's your target INPACT™ score at each phase checkpoint?
 
 ---
 
@@ -1734,7 +1771,7 @@ The GOALS™ Health Dashboard tracks operational excellence (relevant from Phase
 |------|-------------|
 | Governance | ABAC coverage, HITL rate, policy compliance |
 | Observability | Trace coverage, MTTD, alert accuracy |
-| Accessibility | Response time, availability, throughput |
+| Availability | Response time, availability, throughput |
 | Lexicon | Entity resolution, query understanding, disambiguation rate |
 | Solid | Data accuracy, completeness, consistency, freshness |
 

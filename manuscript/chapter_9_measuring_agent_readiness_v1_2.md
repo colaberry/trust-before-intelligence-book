@@ -86,7 +86,7 @@ The Architecture of Trust integrates three frameworks into one coherent system. 
 | L6 | Observability & Feedback | T (traces), A (feedback), O (monitoring) |
 | L7 | Multi-Agent Orchestration | All dimensions coordinated |
 
-**GOALS™ ensures sustainable operation.** Five operational targets—Governance, Observability, Accessibility, Language, and Soundness—translate infrastructure capability into organizational outcomes. *For complete GOALS™ framework detail, see Chapter 7.*
+**GOALS™ ensures sustainable operation.** Five operational targets—Governance, Observability, Availability, Lexicon, and Solid—translate infrastructure capability into organizational outcomes. *For complete GOALS™ framework detail, see Chapter 7.*
 
 These three frameworks form a chain of dependency. INPACT™ requirements drive architecture decisions. Architecture capabilities enable operational excellence. Operational excellence delivers the trust that makes agent adoption successful.
 
@@ -148,6 +148,19 @@ By the end of this chapter, you will have:
 5. **Benchmark comparison**: How your journey compares to Echo Health Systems' 28→89 progression
 
 The assessment takes approximately 30 minutes. The clarity it provides saves months of misdirected effort.
+
+---
+
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ One assessment measures all three Architecture of Trust pillars (INPACT™ → 7-Layer → GOALS™)  
+✅ 36 questions, 30 minutes delivers complete agent readiness picture  
+✅ Your score determines where to focus your transformation investment  
+⭐️ **Next:** The scoring methodology that makes your number meaningful
+
+**Reading Time Remaining:** ~25 minutes
+
+**Your Framework Quick Check:** Can you name the six INPACT™ dimensions? (Hint: I-N-P-A-C-T)
 
 ---
 
@@ -345,9 +358,9 @@ You can have excellent infrastructure (INPACT™ 85+) and still struggle with op
 |-------------------|------------------|----------------|
 | **P - Permitted** | G - Governance | ABAC policies, HITL workflows, and compliance controls constitute your governance capability |
 | **T - Transparent** | O - Observability | Audit trails, trace infrastructure, and monitoring dashboards enable organizational visibility |
-| **I - Instant** | A - Accessibility | Response time and uptime directly determine whether users can access agent capabilities |
+| **I - Instant** | A - Availability | Response time and uptime directly determine whether users can access agent capabilities |
 | **N - Natural** | L - Language | Semantic accuracy and NLU quality define whether users and agents speak the same language |
-| **A + C + T** | S - Soundness | Learning, context, and transparency combine to ensure reliable, trustworthy output |
+| **A + C + T** | S - Solid | Learning, context, and transparency combine to ensure reliable, trustworthy output |
 
 **Important Clarification**
 
@@ -361,17 +374,22 @@ Use this mapping to anticipate operational challenges:
 
 - **P:5/6** → Your G (Governance) foundation is strong. Governance processes can focus on policy definition rather than infrastructure gaps.
 - **T:2/6** → Your O (Observability) will struggle. Without trace infrastructure, observability dashboards have nothing to display.
-- **I:3/6** → Your A (Accessibility) SLAs are at risk. Users will experience delays that undermine adoption.
+- **I:3/6** → Your A (Availability) SLAs are at risk. Users will experience delays that undermine adoption.
 
 This foresight prevents surprises. If you know your T dimension is weak, you won't be blindsided when the observability team reports they can't build meaningful dashboards.
 
 ---
 
-*Part 1 establishes the methodology. Part 2 provides the complete 36-question assessment tool.*
+**🔍 CHECKPOINT: What We've Covered So Far**
 
----
+✅ Scoring uses 1-6 scale per dimension, normalized to 0-100 total  
+✅ Each INPACT™ dimension maps to specific architecture layers  
+✅ Your INPACT™ score predicts your GOALS™ operational challenges  
+⭐️ **Next:** The 36 questions that determine your score
 
-**END OF PART 1** (~2,000 words)
+**Reading Time Remaining:** ~20 minutes
+
+**Your Framework Quick Check:** If your P (Permitted) dimension scores low, which GOALS™ dimension will struggle? (Answer: Governance)
 
 ---
 
@@ -983,7 +1001,16 @@ Accurate scores lead to accurate roadmaps. Accurate roadmaps lead to successful 
 
 ---
 
-**END OF PART 2** (~2,500 words)
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ 36 questions across six dimensions measure your complete agent readiness  
+✅ Each question uses a 1-6 scale with specific, measurable criteria  
+✅ Your raw score (6-36) converts to a 0-100 INPACT™ score  
+⭐️ **Next:** How Echo scored 28/100 and what they did about it
+
+**Reading Time Remaining:** ~10 minutes
+
+**Your Framework Quick Check:** What's your estimated score? Take 5 minutes to complete the worksheet above before continuing.
 
 ---
 
@@ -1150,7 +1177,16 @@ Consider extended timeline (16+ weeks), AIXcelerator acceleration, or phased app
 
 ---
 
-**END OF PART 3** (~1,200 words)
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Echo started at 28/100 — probably similar to where you are now  
+✅ Their 10-week transformation shows realistic improvement trajectory  
+✅ Your score relative to Echo's phases determines your starting point  
+⭐️ **Next:** What your specific score means and how to prioritize gaps
+
+**Reading Time Remaining:** ~5 minutes
+
+**Your Framework Quick Check:** Based on your lowest dimensions, which Echo phase matches your starting point?
 
 ---
 

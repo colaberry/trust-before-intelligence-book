@@ -176,9 +176,9 @@ The third pillar measures operational readiness. A technology might score perfec
 |------------------|---------------------------|------------------|
 | **G (Governance)** | Does it support policy enforcement, compliance? | HIPAA/SOC2 certification, BAA availability, audit features |
 | **O (Observability)** | Does it provide monitoring, tracing, dashboards? | Built-in metrics, logging quality, alerting integration |
-| **A (Accessibility)** | What's the uptime SLA? Support quality? | 99.9%+ SLA, responsive support, documentation quality |
+| **A (Availability)** | What's the uptime SLA? Support quality? | 99.9%+ SLA, responsive support, documentation quality |
 | **L (Language)** | Does it support semantic accuracy, terminology? | API quality, SDK maturity, integration breadth |
-| **S (Soundness)** | Is it reliable, consistent, high-quality? | Production track record, error handling, data integrity |
+| **S (Solid)** | Is it reliable, consistent, high-quality? | Production track record, error handling, data integrity |
 
 Score each dimension 1-6 using the same scale as INPACT™.
 
@@ -213,6 +213,19 @@ Use these bands to interpret combined scores:
 - **≥51/66 (77%+)**: Highly Recommended ✅ — Strong on both pillars, proceed with confidence
 - **45-50/66 (68-76%)**: Recommended with Caveats 🟡 — Acceptable but monitor specific gaps
 - **<45/66 (<68%)**: Not Recommended ❌ — Too many gaps, find alternatives
+
+---
+
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Your INPACT™ score from Chapter 9 determines which layers need attention  
+✅ Three-Pillar Vendor Test: INPACT™ (30 pts) + GOALS™ (30 pts) + Trust (6 pts) = 66 max  
+✅ Score ≥51/66 means proceed with confidence; <45/66 means find alternatives  
+⭐️ **Next:** When to build, buy, or partner for each component
+
+**Reading Time Remaining:** ~25 minutes
+
+**Your Framework Quick Check:** Which of your layers scored lowest in Chapter 9? That's where vendor selection matters most.
 
 ---
 
@@ -406,13 +419,19 @@ Tier 2 is recommended for healthcare organizations. Managed services reduce oper
 
 ---
 
-*Part 2 continues with Layer-by-Layer Technology Guide, providing specific vendor recommendations for each of the seven architecture layers.*
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Build vs Buy vs Partner: Buy 85-90%, Build 5-10% (differentiators only), Partner 0-5%  
+✅ Budget tiers: Starter ($150-250K), Growth ($400-600K), Enterprise ($800K-1.5M)  
+✅ Scoring quick reference gives you criteria without lengthy evaluation  
+⭐️ **Next:** Specific vendor recommendations for each of the seven layers
+
+**Reading Time Remaining:** ~20 minutes
+
+**Your Framework Quick Check:** What's your budget tier? That determines how many premium vendors you can include.
 
 ---
 
-© 2025 Colaberry Inc. All Rights Reserved.
-
-INPACT™ and GOALS™ are trademarks of Colaberry Inc.
 ## Part 2: Layer-by-Layer Technology Guide
 
 This section provides top vendor recommendations for each of the seven architecture layers. Every vendor includes INPACT™ and GOALS™ scores, healthcare applicability, and Echo's specific choice with rationale.
@@ -834,6 +853,19 @@ Layer 3 translates business language to data structures. Without a semantic laye
 
 ---
 
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Layer 1 (Storage): Pinecone/Weaviate for vectors, PostgreSQL for relational  
+✅ Layer 2 (Data Fabric): Debezium for CDC, Kafka/Confluent for streaming  
+✅ Layer 3 (Semantic): dbt for transformations, Alation/Collibra for governance  
+⭐️ **Next:** Layers 4-7 complete the intelligence and trust stack
+
+**Reading Time Remaining:** ~12 minutes
+
+**Your Framework Quick Check:** Which foundation layer (1-3) is your biggest gap? That's where to focus vendor selection.
+
+---
+
 ### 2.4 Layer 4: Intelligent Retrieval
 
 **Purpose:** LLMs, embeddings, retrieval, reranking, caching for agents
@@ -1180,13 +1212,21 @@ Layer 7 coordinates everything. Multi-agent orchestration ensures specialized ag
 
 ---
 
-*Part 3 continues with Vendor Evaluation Process—RFP templates, POC approach, and contract negotiation guidance.*
+**🔍 CHECKPOINT: What We've Covered So Far**
+
+✅ Layer 4 (Retrieval): OpenAI/Anthropic for LLMs, Cohere for reranking  
+✅ Layer 5 (Governance): OPA/Styra for ABAC, Privacera for enterprise  
+✅ Layer 6 (Observability): LangSmith for LLM, Datadog for infrastructure  
+✅ Layer 7 (Orchestration): LangChain/LangGraph for agents, Prefect for workflows  
+⭐️ **Next:** How to run vendor evaluations — RFPs, POCs, contracts
+
+**Reading Time Remaining:** ~6 minutes
+
+**Your Framework Quick Check:** Calculate your total stack cost using Echo's investments as reference. Does it fit your budget tier?
 
 ---
 
-© 2025 Colaberry Inc. All Rights Reserved.
-
-INPACT™ and GOALS™ are trademarks of Colaberry Inc.
+## Part 3: Vendor Evaluation ProcessINPACT™ and GOALS™ are trademarks of Colaberry Inc.
 ## Part 3: Vendor Evaluation Process
 
 Selecting vendors requires more than scoring spreadsheets. This section provides practical tools for evaluation: RFP templates structured around the three pillars, POC validation approaches, and contract negotiation guidance.
@@ -1224,9 +1264,9 @@ Structure your vendor requests around the Architecture of Trust. This ensures re
 |-----------|--------|---------------------|
 | G (Governance) | 6 | What compliance certifications do you hold? Describe policy enforcement capabilities. Is BAA available? |
 | O (Observability) | 6 | What monitoring dashboards exist? Describe alerting capabilities. How do you support distributed tracing? |
-| A (Accessibility) | 6 | What is your uptime SLA? Describe support tiers and response times. What is your documentation quality? |
+| A (Availability) | 6 | What is your uptime SLA? Describe support tiers and response times. What is your documentation quality? |
 | L (Language) | 6 | Describe API quality and SDK availability. How mature are your integrations? What languages/frameworks? |
-| S (Soundness) | 6 | What is your production track record? Describe error handling. How do you ensure data integrity? |
+| S (Solid) | 6 | What is your production track record? Describe error handling. How do you ensure data integrity? |
 
 **Echo's RFP Results**
 
@@ -1556,7 +1596,7 @@ Chapter 12 completes your journey with MLOps practices for versioning and testin
 | BAA | Business Associate Agreement |
 | CDC | Change Data Capture |
 | EHR | Electronic Health Record |
-| GOALS™ | Governance, Observability, Accessibility, Language, Soundness |
+| GOALS™ | Governance, Observability, Availability, Lexicon, Solid |
 | HIPAA | Health Insurance Portability and Accountability Act |
 | HITL | Human-in-the-Loop |
 | INPACT™ | Instant, Natural, Permitted, Adaptive, Contextual, Transparent |
