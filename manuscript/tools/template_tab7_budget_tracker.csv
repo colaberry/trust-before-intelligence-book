@@ -1,0 +1,36 @@
+Category,Line Item,Planned Budget,Week 1 Actual,Week 2 Actual,Week 3 Actual,Week 4 Actual,Week 5 Actual,Week 6 Actual,Week 7 Actual,Week 8 Actual,Week 9 Actual,Week 10 Actual,Week 11 Actual,Week 12 Actual,Total Actual,Variance,% Spent,Notes
+Phase 1: Foundation (Weeks 1-4),,,,,,,,,,,,,,,,,
+Technology,[Your Data Platform],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. Databricks/Snowflake/BigQuery]
+Technology,[Your CDC Tool],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. Debezium/Fivetran/Airbyte]
+Technology,[Your Streaming Platform],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. Kafka/Kinesis/Pub/Sub]
+Technology,[Your Cache Layer],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. Redis/Memcached]
+Services,[Implementation Consulting],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Your vendor]
+Services,[Integration & Testing],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Your vendor]
+Staff,[Data Engineers],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Staff,[Cloud/Platform Architect],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Phase 2: Intelligence (Weeks 5-7),,,,,,,,,,,,,,,,,
+Technology,[Your Vector Database],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. Pinecone/Weaviate/Milvus]
+Technology,[Your LLM Provider],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. OpenAI/Anthropic/Azure]
+Technology,[Your Embedding Model],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. OpenAI/Cohere/HuggingFace]
+Technology,[Your Semantic Layer],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. dbt/Cube/AtScale]
+Development,[Semantic Layer Build],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Internal or contractor]
+Development,[RAG Pipeline Implementation],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Internal or contractor]
+Staff,[ML Engineers],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Staff,[Domain SME],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Phase 3: Trust & Operations (Weeks 8-10),,,,,,,,,,,,,,,,,
+Technology,[Your LLM Observability],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. LangSmith/W&B/Arize]
+Technology,[Your Policy Engine],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. OPA/Cedar/Styra]
+Technology,[Your Audit/Logging],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Your selection]
+Technology,[Your HITL Platform],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[e.g. custom/Labelbox/Scale]
+Services,[Security/ABAC Development],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Your vendor]
+Services,[Compliance Audit Prep],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[If applicable]
+Staff,[Security Engineers],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Staff,[DevOps Engineers],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[hours × rate]
+Operations (Weeks 11-12),,,,,,,,,,,,,,,,,
+Operations,[Monthly Cloud/Platform Costs],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Ongoing]
+Operations,[Monthly SaaS/API Costs],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Ongoing]
+Other,,,,,,,,,,,,,,,,,
+Other,[Training & Certifications],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Optional]
+Other,[Travel & Meetings],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Optional]
+Other,[Contingency Reserve],$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Recommend 10-15%]
+TOTAL,All Categories,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,$0,0%,[Your total]

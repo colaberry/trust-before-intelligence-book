@@ -1,0 +1,7 @@
+INPACT™ Need,Definition,Baseline,Week 1,Week 2,Week 3,Week 4,Week 5,Week 6,Week 7,Week 8,Week 9,Week 10,Week 11,Week 12,Target,Status,Final Achievement
+I - Instant,Response time (p95 latency),[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
+N - Natural,NLU accuracy (intent + entity),[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
+P - Permitted,Authorization model & HITL,[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
+A - Adaptive,Learning from feedback,[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
+C - Contextual,Connected data sources,[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
+T - Transparent,Auditability & explainability,[Your baseline],[W1],[W2],[W3],[W4],[W5],[W6],[W7],[W8],[W9],[W10],[W11],[W12],[Your target],⏳ In Progress,[Final results]
