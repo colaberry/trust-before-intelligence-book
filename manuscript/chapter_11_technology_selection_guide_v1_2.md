@@ -8,41 +8,38 @@
 
 ```mermaid
 graph LR
-    subgraph BEFORE["<b>❌ VENDOR HYPE</b>"]
+    subgraph BEFORE["❌ VENDOR HYPE"]
         B1["<b>Feature-driven choices</b>"]
         B2["<b>Integration afterthought</b>"]
         B3["<b>Mismatched capabilities</b>"]
         B4["<b>Compliance gaps</b>"]
     end
     
-    subgraph TRANSFORM["<b>THREE-PILLAR TEST</b>"]
-        T1["<b>INPACT™ + 7-Layer</b><br/><b>+ GOALS™</b>"]
+    subgraph TRANSFORM["THREE-PILLAR TEST"]
+        T1["<b>INPACT™ + 7-Layer<br/>+ GOALS™</b>"]
     end
     
-    subgraph AFTER["<b>✅ VALIDATED STACK</b>"]
+    subgraph AFTER["✅ VALIDATED STACK"]
         A1["<b>Need-driven selection</b>"]
         A2["<b>Layer-by-layer fit</b>"]
         A3["<b>Unified architecture</b>"]
         A4["<b>Built-in compliance</b>"]
     end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
     BEFORE --> TRANSFORM --> AFTER
     
-    style BEFORE fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style AFTER fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style B1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style T1 fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
 ```
 
 > **Key Takeaway:** Every vendor must pass the three-pillar test. No exceptions.
@@ -347,7 +344,7 @@ Technology selection depends heavily on available budget. The three-pillar vendo
 | **Growth** | $400-600K | $30-50K | Production healthcare, <50K users | Enterprise SaaS + strategic OSS |
 | **Enterprise** | $800K-1.5M | $60-100K | Multi-region, >50K users | Best-in-class everything |
 
-*For detailed budget allocation by layer for each tier, see Appendix D.*
+*For detailed budget allocation by layer for each tier, see Appendix D (Budget Methodology).*
 
 **Tier 2: Growth (Echo's Tier)**
 
