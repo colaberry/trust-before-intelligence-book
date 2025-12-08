@@ -13,36 +13,32 @@
 **Diagram 0: Intelligence Layers — Why Layers 3-4 Enable Understanding**
 
 ```mermaid
-flowchart LR
-    subgraph WITHOUT["<b>❌ WITHOUT LAYERS 3-4</b>"]
-        W1["<b>'My doctor'</b><br/><b>Which doctor?</b>"]
-        W2["<b>'MI'</b><br/><b>Heart attack or valve?</b>"]
-        W3["<b>No business context</b><br/><b>Raw data only</b>"]
-        W4["<b>12% clarification rate</b><br/><b>Friction</b>"]
+
+graph LR
+    subgraph WITHOUT["WITHOUT LAYERS 3-4"]
+        direction TB
+        W1["'My doctor'<br/>Which doctor?<br/><br/>'MI'<br/>Heart attack or valve?<br/><br/>No business context<br/>Raw data only<br/><br/>12% clarification rate<br/>Friction"]
     end
-
-    subgraph WITH["<b>✅ WITH LAYERS 3-4</b>"]
-        L3["<b>Layer 3:</b><br/><b>Entity resolution 97%</b>"]
-        L4["<b>Layer 4:</b><br/><b>Context-aware RAG</b>"]
-        H["<b>Healthcare terminology</b><br/><b>mapped</b>"]
-        N["<b>4.8% clarification</b><br/><b>Natural</b>"]
+    
+    subgraph TRANSFORM["TRANSFORM"]
+        direction TB
+        T1["→"]
     end
+    
+    subgraph WITH["WITH LAYERS 3-4"]
+        direction TB
+        L1["Layer 3:<br/>Entity resolution 97%<br/><br/>Layer 4:<br/>Context-aware RAG<br/><br/>Healthcare terminology<br/>mapped<br/><br/>4.8% clarification<br/>Natural"]
+    end
+    
+    WITHOUT --> TRANSFORM --> WITH
+    
+    style WITHOUT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style WITH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style L1 fill:#b2dfdb,stroke:#00897b,color:#004d40
 
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-
-    WITHOUT -.->|"<b>Transform</b>"| WITH
-
-    style WITHOUT fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style WITH fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style H fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
 > **Key Takeaway:** Intelligence requires understanding. Layers 3-4 give agents semantic awareness.
