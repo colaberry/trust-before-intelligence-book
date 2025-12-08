@@ -24,25 +24,21 @@
 <!-- CHAPTER OPENING GRAPHIC -->
 
 ```mermaid
+
 graph LR
-    subgraph BEFORE["❌ WEEK 0"]
-        B1["INPACT™: 28/100"]
-        B2["GOALS™: 0/25"]
-        B3["Agents: 0"]
-        B4["Fix this in 90 days"]
+    subgraph BEFORE["WEEK 0"]
+        direction TB
+        B1["INPACT™: 28/100<br/><br/>GOALS™: 0/25<br/><br/>Agents: 0<br/><br/>Fix this in 90 days"]
     end
     
     subgraph PILLARS["THREE PILLARS"]
-        P1["INPACT™ — What agents need"]
-        P2["7-Layer — How to build it"]
-        P3["GOALS™ — How to measure"]
+        direction TB
+        P1["INPACT™<br/>What agents need<br/><br/>7-Layer<br/>How to build it<br/><br/>GOALS™<br/>How to measure"]
     end
     
-    subgraph AFTER["✅ WEEK 12"]
-        A1["INPACT™: 89/100"]
-        A2["GOALS™: 21/25"]
-        A3["Agents: 3 Live"]
-        A4["Something we can trust"]
+    subgraph AFTER["WEEK 12"]
+        direction TB
+        A1["INPACT™: 89/100<br/><br/>GOALS™: 21/25<br/><br/>Agents: 3 Live<br/><br/>Something we can trust"]
     end
     
     BEFORE --> PILLARS --> AFTER
@@ -51,16 +47,9 @@ graph LR
     style PILLARS fill:#00695c,stroke:#004d40,stroke-width:2px,color:#ffffff
     style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style P1 fill:#00796b,stroke:#004d40,color:#ffffff
-    style P2 fill:#00796b,stroke:#004d40,color:#ffffff
-    style P3 fill:#00796b,stroke:#004d40,color:#ffffff
     style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+
 ```
 
 > **Key Takeaway:** *"You've answered my question—and built something we can trust."* — Dr. Arun Raj, Board Chair
