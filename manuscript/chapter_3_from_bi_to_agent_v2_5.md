@@ -13,25 +13,21 @@
 <!-- CHAPTER OPENING GRAPHIC -->
 
 ```mermaid
+
 graph LR
-    subgraph BEFORE["❌ DAY 0"]
-        B1["INPACT™: 28/100"]
-        B2["No framework"]
-        B3["No roadmap"]
-        B4["Where do we start?"]
+    subgraph BEFORE["DAY 0"]
+        direction TB
+        B1["INPACT™: 28/100<br/><br/>No framework<br/><br/>No roadmap<br/><br/>Where do we start?"]
     end
     
-    subgraph PHASES["🟠 THREE PHASES"]
-        P1["Phase 1: Foundation - Wk 1-4"]
-        P2["Phase 2: Intelligence - Wk 5-7"]
-        P3["Phase 3: Trust Layers - Wk 8-10"]
+    subgraph PHASES["THREE PHASES"]
+        direction TB
+        P1["Phase 1: Foundation<br/>Weeks 1-4<br/><br/>Phase 2: Intelligence<br/>Weeks 5-7<br/><br/>Phase 3: Trust Layers<br/>Weeks 8-10"]
     end
     
-    subgraph AFTER["✅ DAY 90"]
-        A1["INPACT™: 86/100"]
-        A2["7 Layers Complete"]
-        A3["3 Agents Live"]
-        A4["Production Ready"]
+    subgraph AFTER["DAY 90"]
+        direction TB
+        A1["INPACT™: 86/100<br/><br/>7 Layers Complete<br/><br/>3 Agents Live<br/><br/>Production Ready"]
     end
     
     BEFORE --> PHASES --> AFTER
@@ -40,16 +36,9 @@ graph LR
     style PHASES fill:#fff3cd,stroke:#f57c00,stroke-width:2px,color:#e65100
     style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style P1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style P2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style P3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
     style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+
 ```
 
 > **Key Takeaway:** 90 days. Three phases. Systematic transformation.
