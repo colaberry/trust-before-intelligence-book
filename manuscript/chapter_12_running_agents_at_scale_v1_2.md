@@ -7,42 +7,32 @@
 <!-- CHAPTER OPENING GRAPHIC -->
 
 ```mermaid
+
 graph LR
-    subgraph BEFORE["<b>❌ WORKS ON MY MACHINE</b>"]
-        B1["<b>Ad-hoc monitoring</b>"]
-        B2["<b>Reactive firefighting</b>"]
-        B3["<b>Manual processes</b>"]
-        B4["<b>Performance drift</b>"]
+    subgraph BEFORE["WORKS ON MY MACHINE"]
+        direction TB
+        B1["Ad-hoc monitoring<br/><br/>Reactive firefighting<br/><br/>Manual processes<br/><br/>Performance drift"]
     end
     
-    subgraph TRANSFORM["<b>PRODUCTION READINESS</b>"]
-        T1["<b>15 Criteria</b><br/><b>+ GOALS™</b>"]
+    subgraph TRANSFORM["PRODUCTION READINESS"]
+        direction TB
+        T1["15 Criteria<br/>+ GOALS™"]
     end
     
-    subgraph AFTER["<b>✅ OPERATIONS EXCELLENCE</b>"]
-        A1["<b>Proactive observability</b>"]
-        A2["<b>Structured incidents</b>"]
-        A3["<b>MLOps automation</b>"]
-        A4["<b>Continuous improvement</b>"]
+    subgraph AFTER["OPERATIONS EXCELLENCE"]
+        direction TB
+        A1["Proactive observability<br/><br/>Structured incidents<br/><br/>MLOps automation<br/><br/>Continuous improvement"]
     end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
     BEFORE --> TRANSFORM --> AFTER
     
-    style BEFORE fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style AFTER fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style B1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style T1 fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+
 ```
 
 > **Key Takeaway:** Building is easy. Operating at scale requires systematic excellence.
