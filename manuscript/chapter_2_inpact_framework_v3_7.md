@@ -13,44 +13,33 @@
 **Diagram 0: The INPACT™ Framework — Six Infrastructure Needs for Agent Trust**
 
 ```mermaid
-flowchart LR
-    subgraph WITHOUT["<b>❌ WITHOUT INPACT™</b>"]
-        W1["<b>'Why is this so slow?'</b>"]
-        W2["<b>'It doesn't understand me'</b>"]
-        W3["<b>'Who authorized this?'</b>"]
-        W4["<b>'It keeps making mistakes'</b>"]
-        W5["<b>'It doesn't know context'</b>"]
-        W6["<b>'I don't trust it'</b>"]
+
+graph LR
+    subgraph WITHOUT["WITHOUT INPACT™"]
+        direction TB
+        W1["'Why is this so slow?'<br/><br/>'It doesn't understand me'<br/><br/>'Who authorized this?'<br/><br/>'It keeps making mistakes'<br/><br/>'It doesn't know context'<br/><br/>'I don't trust it'"]
     end
-
-    subgraph WITH["<b>✅ WITH INPACT™</b>"]
-        I["<b>I — Instant</b><br/><b>Under 2 seconds</b>"]
-        N["<b>N — Natural</b><br/><b>97% comprehension</b>"]
-        P["<b>P — Permitted</b><br/><b>Dynamic access</b>"]
-        A["<b>A — Adaptive</b><br/><b>Learns from feedback</b>"]
-        C["<b>C — Contextual</b><br/><b>Cross-system aware</b>"]
-        T["<b>T — Transparent</b><br/><b>Full audit trail</b>"]
+    
+    subgraph TRANSFORM["TRANSFORM"]
+        direction TB
+        T1["→"]
     end
+    
+    subgraph WITH["WITH INPACT™"]
+        direction TB
+        I1["I — Instant<br/>Under 2 seconds<br/><br/>N — Natural<br/>97% comprehension<br/><br/>P — Permitted<br/>Dynamic access<br/><br/>A — Adaptive<br/>Learns from feedback<br/><br/>C — Contextual<br/>Cross-system aware<br/><br/>T — Transparent<br/>Full audit trail"]
+    end
+    
+    WITHOUT --> TRANSFORM --> WITH
+    
+    style WITHOUT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style WITH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
+    style I1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    
 
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-
-    WITHOUT -.->|"<b>Transform</b>"| WITH
-
-    style WITHOUT fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W5 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W6 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style WITH fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style I fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style C fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style T fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
 > **Key Takeaway:** Six infrastructure needs. One framework. Trust.
