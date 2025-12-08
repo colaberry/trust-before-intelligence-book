@@ -22,43 +22,33 @@
 **Diagram 1: The Infrastructure Gap — Why BI-Era Systems Can't Support Agents**
 
 ```mermaid
-flowchart LR
-    subgraph BUILT["<b>❌ WHAT THEY BUILT</b>"]
-        B1["<b>Batch ETL</b><br/><b>Overnight updates</b>"]
-        B2["<b>Static Dashboards</b><br/><b>Human-mediated</b>"]
-        B3["<b>Role-Based Access</b><br/><b>Fixed permissions</b>"]
-        B4["<b>Manual Review</b><br/><b>No real-time audit</b>"]
+
+graph LR
+    subgraph BUILT["WHAT THEY BUILT"]
+        direction TB
+        B1["Batch ETL: Overnight updates<br/>Static Dashboards: Human-mediated<br/>Role-Based Access: Fixed permissions<br/>Manual Review: No real-time audit"]
     end
-
-    subgraph GAP["<b>THE GAP</b>"]
-        G["<b>Infrastructure ≠</b><br/><b>Agent Needs</b>"]
+    
+    subgraph GAP["THE GAP"]
+        direction TB
+        G1["Infrastructure ≠ Agent Needs<br/>→ 95% Failure"]
     end
-
-    subgraph NEED["<b>✅ WHAT AGENTS NEED</b>"]
-        N1["<b>Instant</b><br/><b>Under 2s response</b>"]
-        N2["<b>Natural</b><br/><b>Semantic understanding</b>"]
-        N3["<b>Permitted</b><br/><b>Dynamic authorization</b>"]
-        N4["<b>Transparent</b><br/><b>Complete audit trail</b>"]
+    
+    subgraph NEED["WHAT AGENTS NEED"]
+        direction TB
+        N1["Instant: Under 2s response<br/>Natural: Semantic understanding<br/>Permitted: Dynamic authorization<br/>Transparent: Complete audit trail"]
     end
+    
+    BUILT -->|"Trust Collapse"| GAP --> NEED
+    
+    style BUILT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style GAP fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style NEED fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
+    style G1 fill:#fff3e0,stroke:#ef6c00,color:#e65100
+    style N1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    
 
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-
-    BUILT -.->|"<b>Trust Collapse</b>"| GAP
-    GAP -.->|"<b>95% Failure</b>"| NEED
-
-    style BUILT fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style B4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style GAP fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#333333
-    style G fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#333333
-    style NEED fill:#f0fff0,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style N4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
 > **Key Takeaway:** The infrastructure gap IS the trust gap. BI-era systems cannot fulfill agent needs.
