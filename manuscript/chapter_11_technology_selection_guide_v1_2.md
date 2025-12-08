@@ -7,23 +7,21 @@
 <!-- CHAPTER OPENING GRAPHIC -->
 
 ```mermaid
-graph LR
-    subgraph BEFORE["❌ VENDOR HYPE"]
-        B1["<b>Feature-driven choices</b>"]
-        B2["<b>Integration afterthought</b>"]
-        B3["<b>Mismatched capabilities</b>"]
-        B4["<b>Compliance gaps</b>"]
+
+ graph LR
+    subgraph BEFORE["VENDOR HYPE"]
+        direction TB
+        B1["Feature-driven choices<br/><br/>Integration afterthought<br/><br/>Mismatched capabilities<br/><br/>Compliance gaps"]
     end
     
     subgraph TRANSFORM["THREE-PILLAR TEST"]
-        T1["<b>INPACT™ + 7-Layer<br/>+ GOALS™</b>"]
+        direction TB
+        T1["INPACT™ + 7-Layer<br/>+ GOALS™"]
     end
     
-    subgraph AFTER["✅ VALIDATED STACK"]
-        A1["<b>Need-driven selection</b>"]
-        A2["<b>Layer-by-layer fit</b>"]
-        A3["<b>Unified architecture</b>"]
-        A4["<b>Built-in compliance</b>"]
+    subgraph AFTER["VALIDATED STACK"]
+        direction TB
+        A1["Need-driven selection<br/><br/>Layer-by-layer fit<br/><br/>Unified architecture<br/><br/>Built-in compliance"]
     end
     
     BEFORE --> TRANSFORM --> AFTER
@@ -32,14 +30,9 @@ graph LR
     style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
     style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B2 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B3 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style B4 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style T1 fill:#f5f5f5,stroke:#666666,color:#333333
     style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A2 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A3 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style A4 fill:#b2dfdb,stroke:#00897b,color:#004d40
+
 ```
 
 > **Key Takeaway:** Every vendor must pass the three-pillar test. No exceptions.
