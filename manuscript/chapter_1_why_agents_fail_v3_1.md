@@ -26,17 +26,17 @@
 graph LR
     subgraph BUILT["WHAT THEY BUILT"]
         direction TB
-        B1["Batch ETL: Overnight updates<br/>Static Dashboards: Human-mediated<br/>Role-Based Access: Fixed permissions<br/>Manual Review: No real-time audit"]
+        B1["Batch ETL:<br/>Overnight updates<br/><br/>Static Dashboards:<br/>Human-mediated<br/><br/>Role-Based Access:<br/>Fixed permissions<br/><br/>Manual Review:<br/>No real-time audit"]
     end
     
     subgraph GAP["THE GAP"]
         direction TB
-        G1["Infrastructure ≠ Agent Needs<br/>→ 95% Failure"]
+        G1["Infrastructure ≠<br/>Agent Needs<br/><br/>→ 95% Failure"]
     end
     
     subgraph NEED["WHAT AGENTS NEED"]
         direction TB
-        N1["Instant: Under 2s response<br/>Natural: Semantic understanding<br/>Permitted: Dynamic authorization<br/>Transparent: Complete audit trail"]
+        N1["Instant:<br/>Under 2s response<br/><br/>Natural:<br/>Semantic understanding<br/><br/>Permitted:<br/>Dynamic authorization<br/><br/>Transparent:<br/>Complete audit trail"]
     end
     
     BUILT -->|"Trust Collapse"| GAP --> NEED
