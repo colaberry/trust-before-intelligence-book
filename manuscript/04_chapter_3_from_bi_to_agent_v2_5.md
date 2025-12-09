@@ -17,7 +17,7 @@
 graph LR
     subgraph BEFORE["DAY 0"]
         direction TB
-        B1["INPACT™: 28/100<br/><br/>No framework<br/><br/>No roadmap<br/><br/>Where do we start?"]
+        B1["INPACT™: 28/100<br/><br/>No framework<br/><br/>No roadmap<br/><br/><b>Where do we start?</b>"]
     end
     
     subgraph PHASES["THREE PHASES"]
@@ -27,7 +27,7 @@ graph LR
     
     subgraph AFTER["DAY 90"]
         direction TB
-        A1["INPACT™: 86/100<br/><br/>7 Layers Complete<br/><br/>3 Agents Live<br/><br/>Production Ready"]
+        A1["INPACT™: 86/100<br/><br/>7 Layers Complete<br/><br/>3 Agents Live<br/><br/><b>Production Ready</b>"]
     end
     
     BEFORE --> PHASES --> AFTER
