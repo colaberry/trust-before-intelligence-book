@@ -368,16 +368,16 @@ The transformation roadmap began there.
 
 ```mermaid
 graph TB
-    TITLE["<b>ECHO HEALTH'S INFRASTRUCTURE TRANSFORMATION</b>"]
+    TITLE["<b>ECHO HEALTH'S<br/>INFRASTRUCTURE TRANSFORMATION</b>"]
     
     TITLE --> BEFORE
     
-    subgraph BEFORE["<b>WEEK 0: NOT AGENT-READY (28/100)</b>"]
+    subgraph BEFORE["<b>WEEK 0:<br/> NOT AGENT-READY (28/100)</b>"]
         B_SCORE["<b>Overall Score: 28/100</b><br/><b>(10 out of 36 points)</b>"]
         
-        B_DIMS["<b>Dimension Breakdown:</b><br/><b>I=1/6 🔴 | N=2/6 🔴 | P=1/6 🔴</b><br/><b>A=2/6 🔴 | C=3/6 🟡 | T=1/6 🔴</b>"]
+        B_DIMS["<b>Dimension Breakdown:</b><br/><b>I=1/6 🔴 | N=2/6 🔴 </b><br/><b>P=1/6 🔴 | A=2/6 🔴</b><br/> C=3/6 🟡 | T=1/6 🔴</b>"]
         
-        B_STATUS["<b>Infrastructure Blocks Deployment</b><br/><b>• 5 critical gaps • Compliance risk</b><br/><b>• Cannot proceed to production</b>"]
+        B_STATUS["<b>Infrastructure Deployment</b><br/><b>• 5 critical gaps </b><br/><b>• Compliance risk</b><br/><b>• Cannot proceed to prod</b>"]
         
         B_SCORE --> B_DIMS
         B_DIMS --> B_STATUS
@@ -387,12 +387,12 @@ graph TB
     
     TRANSFORM --> AFTER
     
-    subgraph AFTER["<b>WEEK 10: PRODUCTION-READY (86/100)</b>"]
+    subgraph AFTER["<b>WEEK 10:<br/> PRODUCTION-READY (86/100)</b>"]
         A_SCORE["<b>Overall Score: 86/100</b><br/><b>(31 out of 36 points)</b>"]
         
-        A_DIMS["<b>Dimension Breakdown:</b><br/><b>I=5/6 ✅ | N=5/6 ✅ | P=5/6 ✅</b><br/><b>A=5/6 ✅ | C=6/6 ✅ | T=5/6 ✅</b>"]
+        A_DIMS["<b>Dimension Breakdown:</b><br/><b>I=5/6 ✅ | N=5/6 ✅ </b><br/><b> P=5/6 ✅ | A=5/6 ✅</b><br/><b>C=6/6 ✅ | T=5/6 ✅</b>"]
         
-A_STATUS["<b>Production-Ready Deployment</b><br/><b>• All dimensions ≥5/6 (strong)</b><br/><b>• ROI: 209% Year 1 | Payback: 10 weeks</b>"]
+A_STATUS["<b>Production-Ready</b><br/><b>• All dimensions ≥5/6 </b><br/><b>• ROI: 209% Year 1 </b><br/><b> Payback: 10 weeks</b>"]
         
         A_SCORE --> A_DIMS
         A_DIMS --> A_STATUS
