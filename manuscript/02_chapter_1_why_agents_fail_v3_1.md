@@ -19,7 +19,7 @@
 
 ---
 
-**Diagram 1: The Infrastructure Gap — Why Human-Era Systems Can't Support Agents**
+**Diagram 1: The Infrastructure Gap — Why Human-Era Systems Can't Support AI Agents**
 
 ```mermaid
 
@@ -31,7 +31,7 @@ graph LR
     
     subgraph GAP["THE GAP"]
         direction TB
-        G1["Human-Era<br/>Infrastructure ≠<br/>Agent Needs<br/><br/>→ 95% Failure"]
+        G1["Human-Era<br/>Infrastructure ≠<br/>AI Agent Needs<br/><br/>→ 95% Failure"]
     end
     
     subgraph NEED["WHAT AGENTS NEED"]
@@ -425,43 +425,42 @@ The enterprise challenge: attempting to run Software 3.0 agents on unaugmented S
 **Diagram 2: Software Evolution and INPACT™ Needs**
 
 ```mermaid
+
 graph LR
-    subgraph sw1["<b>SOFTWARE 1.0</b>"]
+    subgraph sw1["SOFTWARE 1.0"]
         direction TB
-        prog1["<b>Programming</b><br/><i>(1950s-2010s)</i><br/>Explicit instructions<br/>C++, Java, Python"]
-        infra1["<b>Infrastructure</b><br/>Data warehouses<br/>Batch ETL, BI dashboards<br/><b>❌ Cannot fulfill INPACT™</b>"]
+        prog1["Programming<br/>(1950s-2010s)<br/>Explicit instructions<br/>C++, Java, Python"]
+        infra1["Infrastructure<br/>Data warehouses<br/>Batch ETL, BI dashboards<br/><b>Cannot fulfill INPACT™"</b>]
         prog1 --> infra1
     end
-
-    subgraph sw2["<b>SOFTWARE 2.0</b>"]
+    subgraph sw2["SOFTWARE 2.0"]
         direction TB
-        prog2["<b>Programming</b><br/><i>(2010s-2023)</i><br/>Curate datasets<br/>Train ML models"]
-        infra2["<b>Infrastructure</b><br/>Added ML layers<br/>MLOps, registries<br/><b>⚠ Partial INPACT™</b>"]
+        prog2["Programming<br/>(2010s-2023)<br/>Curate datasets<br/>Train ML models"]
+        infra2["Infrastructure<br/>Added ML layers<br/>MLOps, registries<br/><b>Partial INPACT™"</b>]
         prog2 --> infra2
     end
-
-    subgraph sw3["<b>SOFTWARE 3.0</b>"]
+    subgraph sw3["SOFTWARE 3.0"]
         direction TB
-        prog3["<b>Programming</b><br/><i>(2023-Present)</i><br/>Natural language<br/>In-context learning"]
-        infra3["<b>NEW Infrastructure</b><br/>Vector DBs, real-time<br/>Semantic layers, ABAC<br/><b>✅ INPACT™-Ready</b>"]
+        prog3["Programming<br/>(2023-Present)<br/>Natural language<br/>In-context learning"]
+        infra3["NEW Infrastructure<br/>Vector DBs, real-time<br/>Semantic layers, ABAC<br/><b>INPACT™-Ready</b>"]
         prog3 --> infra3
     end
-
-    sw1 -.->|"<b>Added ML</b>"| sw2
-    sw2 -.->|"<b>PARADIGM SHIFT</b><br/>Requires INPACT™"| sw3
-
+    sw1 -.->|"Added ML"| sw2
+    sw2 -.->|"PARADIGM SHIFT<br/>Requires INPACT™"| sw3
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
     style sw1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
     style sw2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style sw3 fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
     style prog1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style infra1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
+    style infra1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style prog2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style infra2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style prog3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style infra3 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style Copyright fill:#ffffff,stroke:none,color:#666666
 
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style CR fill:none,stroke:none,color:#999999
 ```
 
 Karpathy's framework shows why Software 3.0 requires fundamentally new infrastructure. **Each paradigm demands different architectural foundations because the operational requirements shifted from human-mediated to agent-autonomous. INPACT™ defines those new requirements.**[9]
