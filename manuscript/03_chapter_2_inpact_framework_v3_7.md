@@ -295,11 +295,11 @@ INPACT™ assessment quantifies infrastructure readiness using a 1-6 scoring sys
 
 ```mermaid
 graph TB
-    TITLE["<b>INPACT™ ASSESSMENT METHODOLOGY</b>"]
+    TITLE["<b>INPACT™ ASSESSMENT<br/> METHODOLOGY</b>"]
     
     ASSESS["<b>STEP 1: ASSESS 6 DIMENSIONS</b><br/><b>I · N · P · A · C · T</b><br/><b>(Score each 1-6 points)</b>"]
     
-    CALC["<b>STEP 2: CALCULATE SCORE</b><br/><b>Sum: 6 dimensions × 6 = 36 max</b><br/><b>Convert: (score/36) × 100</b>"]
+    CALC["<b>STEP 2: CALCULATE SCORE</b><br/><b>Sum: 6 dims × 6 = 36 max</b><br/><b>Convert: (score/36) × 100</b>"]
     
     DECISION{"<b>STEP 3: EVALUATE</b><br/><b>Score ≥ 86/100?</b>"}
     
