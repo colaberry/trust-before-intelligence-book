@@ -142,21 +142,21 @@ graph TB
         
         subgraph HUMAN["<b>6 HUMAN NEEDS </b>"]
             direction TB
-            H1["<b>Certainty</b><br/>Predictability<br/>Safety"]
+            H1["<b>Significance</b><br/>Importance<br/>Validation"]
             H2["<b>Variety</b><br/>Challenge<br/>Novelty"]
-            H3["<b>Significance</b><br/>Importance<br/>Validation"]
-            H4["<b>Connection</b><br/>Belonging<br/>Relationships"]
-            H5["<b>Growth</b><br/>Progress<br/>Development"]
+            H3["<b>Certainty</b><br/>Predictability<br/>Safety"]
+            H4["<b>Growth</b><br/>Progress<br/>Development"]
+            H5["<b>Connection</b><br/>Belonging<br/>Relationships"]
             H6["<b>Contribution</b><br/>Purpose<br/>Meaning"]
         end
         
         subgraph AGENT["<b>6 AGENT NEEDS</b>"]
             direction TB
-            A1["<b>P - Permitted</b><br/>Authorization<br/>Security boundaries"]
+            A1["<b>I - Instant</b><br/>Real-time data<br/>Sub-2s response"]
             A2["<b>N - Natural</b><br/>Business language<br/>Understanding"]
-            A3["<b>I - Instant</b><br/>Real-time data<br/>Sub-2s response"]
-            A4["<b>C - Contextual</b><br/>Cross-system<br/>Integration"]
-            A5["<b>A - Adaptive</b><br/>Continuous learning<br/>Improvement"]
+            A3["<b>P - Permitted</b><br/>Authorization<br/>Security boundaries"]
+            A4["<b>A - Adaptive</b><br/>Continuous learning<br/>Improvement"]
+            A5["<b>C - Contextual</b><br/>Cross-system<br/>Integration"]
             A6["<b>T - Transparent</b><br/>Explainable value<br/>Delivery"]
         end
         
