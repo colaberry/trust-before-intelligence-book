@@ -8,6 +8,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 
 - **ABAC:** Attribute-Based Access Control — A dynamic authorization model that evaluates access based on attributes (user, resource, environment, action) rather than static role assignments. Enables context-aware permissions such as "access allowed during business hours from corporate network."
 
+- **AI:** Artificial Intelligence — The simulation of human intelligence processes by computer systems, including learning, reasoning, and self-correction.
+
 - **API:** Application Programming Interface — A set of protocols and tools that allow different software applications to communicate with each other.
 
 - **BI:** Business Intelligence — Technologies, practices, and strategies for collecting, integrating, analyzing, and presenting business data to support better decision-making.
@@ -15,6 +17,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **CDC:** Change Data Capture — A technique for identifying and capturing changes made to data in a database, enabling real-time data synchronization and eliminating batch processing delays.
 
 - **CDO:** Chief Data Officer — Executive responsible for enterprise data strategy, governance, and data-driven value creation.
+
+- **CEO:** Chief Executive Officer — The highest-ranking executive in an organization, responsible for overall strategic direction and operations.
 
 - **CFO:** Chief Financial Officer — Executive responsible for financial planning, risk management, and financial reporting.
 
