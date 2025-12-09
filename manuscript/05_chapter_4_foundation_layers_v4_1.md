@@ -782,33 +782,33 @@ Layer 2 provides sub-30 second data freshness through change data capture (CDC),
 **Diagram 6: Layer 2 Real-Time Data Fabric—CDC to Agents**
 
 ```mermaid
+
 graph LR
-    SOURCE["<b>Operational Systems</b><br/><b>EHR, Scheduling, Labs</b>"]
+    SOURCE["Operational Systems<br/>EHR, Scheduling, Labs"]
     
-    subgraph "<b>Layer 2: Real-Time Data</b>"
-        CDC["<b>CDC</b><br/><b>Debezium</b>"]
-        KAFKA["<b>Streaming</b><br/><b>Kafka</b>"]
-        PROCESS["<b>Processing</b><br/><b>Flink</b>"]
+    subgraph LAYER2["Layer 2: Real-Time Data"]
+        direction TB
+        CDC["CDC: Debezium"]
+        KAFKA["Streaming: Kafka"]
+        PROCESS["Processing: Flink"]
+        CDC --> KAFKA --> PROCESS
     end
     
-    STORAGE["<b>Layer 1 Storage</b>"]
-    AGENTS["<b>✅ Agents</b><br/><b>< 30s Fresh</b>"]
+    OUTCOME["Layer 1 Storage<br/>↓<br/>Agents < 30s Fresh"]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    SOURCE -->|<b>Changes</b>| CDC
-    CDC -->|<b>Events</b>| KAFKA
-    KAFKA -->|<b>Streams</b>| PROCESS
-    PROCESS -->|<b>Store</b>| STORAGE
-    STORAGE -.->|<b>Query</b>| AGENTS
+    SOURCE -->|"Changes"| LAYER2
+    LAYER2 -->|"Store"| OUTCOME
     
     style SOURCE fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style CDC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style KAFKA fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PROCESS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style STORAGE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style AGENTS fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style LAYER2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style CDC fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style KAFKA fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PROCESS fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style OUTCOME fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 Traditional BI refreshes overnight (2 AM ETL). Agents querying at 3 PM see data 13 hours stale. For clinical decision support, this creates patient safety risks—medication orders placed at 10 AM won't trigger drug interaction alerts until midnight.
