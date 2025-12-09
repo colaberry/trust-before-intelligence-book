@@ -1057,7 +1057,7 @@ graph LR
     ARROW["<b>→</b><br/><b>+14 pts</b>"]
     
     subgraph week4["<b>Week 4: Assessment</b>"]
-        W4["<b>TFoundation Complete</b><br/>TOTAL: 42/100</b><br/>I=4 | N=2 | P=1<br/>A=3 | C=4 | T=1"]
+        W4["<b>Foundation Complete</b><br/>TOTAL: 42/100</b><br/>I=4 | N=2 | P=1<br/>A=3 | C=4 | T=1"]
     end
     
     week0 --> ARROW --> week4
@@ -1145,8 +1145,8 @@ Medical director's reaction: "This is why we're building agents. Not to replace 
 
 ```mermaid
 graph TB
-    BEFORE["<b>❌ Week 0: 28/100</b>"]
-    AFTER["<b>✅ Week 4: 42/100 (+14)</b>"]
+    BEFORE["<b>Week 0: 28/100</b>"]
+    AFTER["<b>Week 4: 42/100 (+14)</b>"]
     
     subgraph "<b>Improved (+7 points)</b>"
         A1["<b>Instant: 3→5 (+2)</b><br/><b>Cache + real-time</b>"]
