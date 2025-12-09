@@ -319,11 +319,11 @@ graph TB
     
     subgraph PILLARS[" "]
         direction LR
-        INPACT["PILLAR 1: INPACT™<br/><br/>What Agents Need<br/><br/><b>I</b>nstant<br/><b>N</b>atural<br/><b>P</b>ermitted<br/><b>A</b>daptive<br/><b>C</b>ontextual<br/><b>T</b>ransparent"]
+        INPACT["PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/><b>I</b>nstant<br/><b>N</b>atural<br/><b>P</b>ermitted<br/><b>A</b>daptive<br/><b>C</b>ontextual<br/><b>T</b>ransparent"]
         
-        Layers["PILLAR 2: 7-LAYER<br/><br/>How to Build It<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
+        Layers["PILLAR 2: 7-LAYERS<br/><br/>How to Build Trust?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
         
-        GOALS["PILLAR 3: GOALS™<br/><br/>How to Measure<br/><br/><b>G</b>overnance<br/><b>O</b>bservability<br/><b>A</b>vailability<br/><b>L</b>exicon<br/><b>S</b>olid"]
+        GOALS["PILLAR 3: GOALS™<br/><br/>How to Measure Trust?<br/><br/><b>G</b>overnance<br/><b>O</b>bservability<br/><b>A</b>vailability<br/><b>L</b>exicon<br/><b>S</b>olid"]
     end
     
     Copyright["© 2025 Colaberry Inc."]
