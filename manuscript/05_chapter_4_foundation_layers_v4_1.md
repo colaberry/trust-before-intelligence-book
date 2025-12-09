@@ -659,44 +659,57 @@ Echo started with SQL Server only. Here's what failed:
 **Diagram 5: Echo's Storage Transformation—Single-Modal to Multi-Modal**
 
 ```mermaid
+
 graph LR
-    subgraph "<b>Week 0: Single-Modal</b>"
-        OLD["<b>SQL Server Only</b><br/><b>All queries, one DB</b>"]
-        P1["<b>Vector: 15-20s</b>"]
-        P2["<b>Graph: 8.2s</b>"]
-        P3["<b>Schema: Rigid</b>"]
-        P4["<b>ML: Spreadsheets</b>"]
+    subgraph BEFORE["Week 0: Single-Modal"]
+        OLD["SQL Server Only<br/>All queries, one DB"]
+        P1["Vector queries: NA<br/>No native support"]
+        P2["Graph queries: 8.2s<br/>Complex JOINs"]
+        P3["Schema: Rigid<br/>Change is slow"]
+        P4["ML: Spreadsheets<br/>No versioning"]
     end
     
-    TRANSFORM["<b>4 Weeks</b>"]
+    TRANSFORM["4 Weeks"]
     
-    subgraph "<b>Week 4: Multi-Modal</b>"
-        NEW["<b>8 Categories</b><br/><b>Right tool, right job</b>"]
-        S1["<b>Vector: 42ms</b>"]
-        S2["<b>Graph: 340ms</b>"]
-        S3["<b>Schema: Flexible</b>"]
-        S4["<b>ML: Registry</b>"]
+    subgraph AFTER["Week 4: Multi-Modal"]
+        NEW["8 Categories<br/>Right tool, right job"]
+        S1["Vector DB: 42ms<br/>Native embeddings"]
+        S2["Graph DB: 340ms<br/>Native traversal"]
+        S3["Schema: Flexible<br/>NoSQL + Lakehouse"]
+        S4["ML: Registry<br/>Full versioning"]
     end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    OLD --> P1 & P2 & P3 & P4
-    P1 & P2 & P3 & P4 --> TRANSFORM
+    Copyright["© 2025 Colaberry Inc."]
+
+    OLD --> P1
+    OLD --> P2
+    OLD --> P3
+    OLD --> P4
+    P1 --> TRANSFORM
+    P2 --> TRANSFORM
+    P3 --> TRANSFORM
+    P4 --> TRANSFORM
     TRANSFORM --> NEW
-    NEW --> S1 & S2 & S3 & S4
-    
+    NEW --> S1
+    NEW --> S2
+    NEW --> S3
+    NEW --> S4
+
+    style BEFORE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style OLD fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style P1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P2 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P3 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P4 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c
+    style P1 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
+    style P2 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
+    style P3 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
+    style P4 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
     style TRANSFORM fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style AFTER fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style NEW fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style S1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Vector search:** Impossible at scale. Storing 10M patient records with 1,536-dimensional embeddings in SQL Server would require 61.4GB just for vectors. Similarity search (cosine distance) across 10M rows takes 15-20 seconds—unacceptable for real-time agents needing <50ms semantic search. Pinecone solves this with specialized indexing (HNSW algorithm) delivering 42ms average query time.
