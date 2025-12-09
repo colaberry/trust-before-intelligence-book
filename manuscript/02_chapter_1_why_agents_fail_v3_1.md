@@ -584,11 +584,11 @@ This isn't about replacing data warehouses or abandoning BI dashboards. It's abo
 
 graph LR
     %% BI ERA (1990-2020) - Red Subgraph
-    subgraph BI["<b>Human ERA (1990-2020) <br/> Cannot Fulfill INPACT™</b>"]
+    subgraph BI["<b>Human ERA (1990-2020) <br/> Cannot Fulfill INPACT™</b><br/>"]
         direction TB
-        ETL["<b>Batch ETL</b><br/>8-24 hour lag<br/>❌ Fails Instant (I)"]
-        DW["<b>Data Warehouse</b><br/>SQL schemas<br/>❌ Fails Natural (N)"]
-        RBAC["<b>RBAC Only</b><br/>No context layer<br/>❌ Fails Permitted (P)"]
+        ETL["<b>Batch ETL</b><br/>8-24 hour lag<br/><b> Fails Instant (I)</b>"]
+        DW["<b>Data Warehouse</b><br/>SQL schemas<br/><b> Fails Natural (N)</b>"]
+        RBAC["<b>RBAC Only</b><br/>No context layer<br/><b> Fails Permitted (P)</b>"]
         
         ETL --> DW --> RBAC
     end
@@ -597,11 +597,11 @@ graph LR
     BI -.->|"<b>⚡ PARADIGM SHIFT</b><br/>Must fulfill INPACT™"| AGENT
     
     %% AGENT ERA (2023-) - Green Subgraph
-    subgraph AGENT["<b>AGENT ERA (2023-Present) <br/> Fulfills All INPACT™</b>"]
+    subgraph AGENT["<b>AGENT ERA (2023-Present) <br/> Fulfills All INPACT™</b><br/>"]
         direction TB
-        STREAM["<b>Real-Time Streaming</b><br/>Sub-5s freshness<br/>✅ Instant (I)"]
-        SEMANTIC["<b>Semantic Layer</b><br/>Business language<br/>✅ Natural (N)"]
-        ABAC["<b>RBAC + ABAC</b><br/>Context-aware<br/>✅ Permitted (P)"]
+        STREAM["<b>Real-Time Streaming</b><br/>Sub-5s freshness<br/><b> Instant (I)</b>"]
+        SEMANTIC["<b>Semantic Layer</b><br/>Business language<br/><b> Natural (N)</b>"]
+        ABAC["<b>RBAC + ABAC</b><br/>Context-aware<br/> Permitted (P)"]
         
         STREAM --> SEMANTIC --> ABAC
     end
