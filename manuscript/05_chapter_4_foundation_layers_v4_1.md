@@ -409,48 +409,52 @@ Layer 1 provides eleven distinct storage categories, each optimized for specific
 **Diagram 4: Layer 1 Multi-Modal Storage—11 Categories by Function**
 
 ```mermaid
+
 graph TB
-    TITLE["<b>Layer 1: Multi-Modal Storage</b><br/><b>8 Foundation + 3 Phase 2</b>"]
+    TITLE["LAYER 1:<br/>MULTI-MODAL<br/>STORAGE<br/>11 Categories"]
     
-    subgraph "<b>Row 1 (6 types)</b>"
-        S1["<b>1. RDBMS</b><br/><b>Transactions</b>"]
-        S2["<b>2. NoSQL</b><br/><b>Documents</b>"]
-        S3["<b>3. Vector DB</b><br/><b>Embeddings</b>"]
-        S4["<b>4. Graph DB</b><br/><b>Relationships</b>"]
-        S5["<b>5. Object Store</b><br/><b>Unstructured</b>"]
-        S6["<b>6. Lakehouse</b><br/><b>Analytics</b>"]
+    subgraph FOUNDATION["Foundation (8 Types)"]
+        direction TB
+        S1["1. RDBMS<br/>Transactions"]
+        S2["2. NoSQL<br/>Documents"]
+        S3["3. Vector DB<br/>Embeddings"]
+        S4["4. Graph DB<br/>Relationships"]
+        S5["5. Object Store<br/>Unstructured"]
+        S6["6. Lakehouse<br/>Analytics"]
+        S7["7. Model Registry<br/>ML models"]
+        S8["8. Feature Store<br/>ML features"]
     end
     
-    subgraph "<b>Row 2 (5 types)</b>"
-        S7["<b>7. Model Registry</b><br/><b>ML models</b>"]
-        S8["<b>8. Feature Store</b><br/><b>ML features</b>"]
-        S9["<b>9. Time-Series</b><br/><b>IoT/metrics</b>"]
-        S10["<b>10. Search Index</b><br/><b>Full-text</b>"]
-        S11["<b>11. Cache Layer</b><br/><b>Performance</b>"]
+    subgraph PHASE2["Phase 2 (3 Types)"]
+        direction TB
+        S9["9. Time-Series<br/>IoT/metrics"]
+        S10["10. Search Index<br/>Full-text"]
+        S11["11. Cache Layer<br/>Performance"]
     end
     
-    OUTPUT["<b>✅ Right Storage for Each Query</b>"]
+    OUTPUT["Right Storage<br/>for Each Query"]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    TITLE --> S1 & S2 & S3 & S4 & S5 & S6
-    S1 & S2 & S3 & S4 & S5 & S6 --> S7 & S8 & S9 & S10 & S11
-    S7 & S8 & S9 & S10 & S11 --> OUTPUT
+    TITLE --> FOUNDATION --> PHASE2 --> OUTPUT
     
     style TITLE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style S1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S6 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S7 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S8 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S9 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S10 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S11 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style FOUNDATION fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PHASE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S1 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S2 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S3 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S4 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S5 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S6 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S7 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S8 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S9 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S10 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style S11 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style OUTPUT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 Traditional BI infrastructure assumes one or two storage types handle everything—usually a relational database for operational data and a data warehouse for analytics. This works for reporting but fails for agents. Agents need semantic search across patient records, relationship traversal through provider networks, flexible schema for clinical notes, petabyte-scale training data, sub-second response times, ML artifact versioning, feature reuse across models, continuous time-series data from ICU monitors, and unified ML pipelines with ACID transactions.
