@@ -383,16 +383,16 @@ graph TB
         B_DIMS --> B_STATUS
     end
     
-    BEFORE --> TRANSFORM["<b>⬇️ 90-DAY<br/> TRANSFORMATION ROADMAP ⬇️</b><br/><b>Investment: $1.23M </b><br/><b> Timeline: 10 weeks</b><br/><b>Sequence: </b><br/><b>I → N+P → C → A+T</b>"]
+    BEFORE --> TRANSFORM["<b>90-DAY<br/>TRANSFORMATION ROADMAP</b><br/><b>Investment: $1.23M </b><br/><b> Timeline: 10 weeks</b><br/><b>Sequence: </b><br/><b>I → N+P → C → A+T</b>"]
     
     TRANSFORM --> AFTER
     
-    subgraph AFTER["<b>WEEK 10:<br/> SCORE = 86/100</b>"]
+    subgraph AFTER["<b>WEEK 10: SCORE = 86/100</b>"]
         A_SCORE["<b>Overall Score: 86/100</b><br/><b>(31 out of 36 points)</b>"]
         
         A_DIMS["<b>Dimension Breakdown:</b><br/><b>I=5/6 ✅ | N=5/6 ✅ </b><br/><b> P=5/6 ✅ | A=5/6 ✅</b><br/><b>C=6/6 ✅ | T=5/6 ✅</b>"]
         
-A_STATUS["<b>Production-Ready</b><br/><b>• All dimensions ≥5/6 </b><br/><b>• ROI: 209% Year 1 </b><br/><b> Payback: 10 weeks</b>"]
+A_STATUS["<b>Production-Ready</b><br/><b>• All dimensions ≥5/6 </b><br/><b>• ROI: 209% Year 1 </b><br/><b>• Payback: 10 weeks</b>"]
         
         A_SCORE --> A_DIMS
         A_DIMS --> A_STATUS
