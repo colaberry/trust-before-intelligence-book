@@ -784,9 +784,9 @@ Layer 2 provides sub-30 second data freshness through change data capture (CDC),
 ```mermaid
 
 graph LR
-    SOURCE["Operational Systems<br/>EHR, Scheduling, Labs"]
+    SOURCE["<b>Operational Systems</b><br/>EHR, Scheduling, Labs"]
     
-    subgraph LAYER2["Layer 2: Real-Time Data"]
+    subgraph LAYER2["<b>Layer 2: Real-Time Data</b>"]
         direction TB
         CDC["CDC: Debezium"]
         KAFKA["Streaming: Kafka"]
@@ -794,7 +794,7 @@ graph LR
         CDC --> KAFKA --> PROCESS
     end
     
-    OUTCOME["Layer 1 Storage<br/>↓<br/>Agents < 30s Fresh"]
+    OUTCOME["<b>Layer 1 Storage</b><br/>↓<br/>Agents < 30s ReFresh"]
     
     Copyright["© 2025 Colaberry Inc."]
     
