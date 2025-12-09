@@ -23,7 +23,7 @@
 graph LR
     subgraph BEFORE["BEFORE: WEEK 0"]
         direction TB
-        B1["3 Failed Pilots<br/>$2M Spent<br/>0 Production Agents<br/>9-13s Response Time<br/>INPACT™: 28/100"]
+        B1["3 Failed Pilots<br/>$2M Spent<br/>0 Production Agents<br/>9-13s Response Time<br/>INPACT™ Score: 28/100"]
     end
     
     subgraph TRANSFORM["90 DAYS"]
@@ -33,8 +33,10 @@ graph LR
     
     subgraph AFTER["AFTER: WEEK 12"]
         direction TB
-        A1["3 Production Agents<br/>$1.23M → 477% ROI<br/>50,000 Daily Queries<br/>1.6s Response Time<br/>INPACT™: 89/100"]
+        A1["3 Production Agents<br/>$1.23M → 477% ROI<br/>50,000 Daily Queries<br/>1.6s Response Time<br/>INPACT™ Score: 89/100"]
     end
+    
+    Copyright["© 2025 Colaberry Inc."]
     
     BEFORE --> TRANSFORM --> AFTER
     
@@ -44,6 +46,7 @@ graph LR
     style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style T1 fill:#f5f5f5,stroke:#666666,color:#333333
     style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style Copyright fill:#ffffff,stroke:none,color:#666666
     
 ```
 
@@ -310,30 +313,34 @@ This integration creates what we call "The Architecture of Trust" — not three 
 - **GOALS™ → INPACT™:** Measurement validates trust. Governance (G) confirms Permitted (P) fulfillment. Observability (O) validates Transparent (T) compliance.
 
 ```mermaid
+
 graph TB
-    Title["<b>THE ARCHITECTURE OF TRUST</b><br/><b>Three Integrated Pillars</b>"]
+    Title["THE ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
     
-    INPACT["<b>PILLAR 1: INPACT™</b><br/><b>What Agents Need</b><br/>Instant • Natural • Permitted<br/>Adaptive • Contextual • Transparent"]
+    subgraph PILLARS[" "]
+        direction LR
+        INPACT["PILLAR 1: INPACT™<br/><br/>What Agents Need<br/><br/>Instant<br/>Natural<br/>Permitted<br/>Adaptive<br/>Contextual<br/>Transparent"]
+        
+        Layers["PILLAR 2: 7-LAYER<br/><br/>How to Build It<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
+        
+        GOALS["PILLAR 3: GOALS™<br/><br/>How to Measure<br/><br/>Governance<br/>Observability<br/>Availability<br/>Lexicon<br/>Solid"]
+    end
     
-    Layers["<b>PILLAR 2: 7-LAYER ARCHITECTURE</b><br/><b>How to Build It</b><br/><b>Foundation:</b> Storage • Real-Time • Semantic • Intelligence • Governance • Observability • Orchestration"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    GOALS["<b>PILLAR 3: GOALS™</b><br/><b>How to Measure Success</b><br/>Governance • Observability<br/>Availability • Lexicon • Solid"]
+    Title --> PILLARS
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    Title --> INPACT
-    Title --> Layers
-    Title --> GOALS
-    
-    INPACT -->|<b>Agent needs fulfilled by</b>| Layers
-    Layers -->|<b>Infrastructure Enables</b>| GOALS
-    GOALS -->|<b>Drives Operational Efficiency</b>| INPACT
+    INPACT -.->|"Fulfilled by"| Layers
+    Layers -.->|"Enables"| GOALS
+    GOALS -.->|"Drives"| INPACT
     
     style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style PILLARS fill:none,stroke:none
     style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style Layers fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Figure 0.3: The Architecture of Trust Triad—Three Pillars Working Together**
