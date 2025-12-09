@@ -1,5 +1,22 @@
 # CHAPTER 1: Why 95% of Agent Pilots Fail
 
+**Book:** Trust Before Intelligence  
+**Subtitle:** Why 95% of AI Projects Fail—3 Frameworks, 90-Day Fix  
+**Author:** Ram Katamaraja, CEO of Colaberry Inc.  
+**Version:** 3.1 | November 27, 2025
+
+**Version History:**
+- **v3.1** (November 27, 2025): RBAC+ABAC hybrid framing update. Changed "static RBAC" to "RBAC only/alone" throughout. Updated tables, diagrams, and narrative to reflect that ABAC layers on RBAC foundation rather than replacing it. Aligns with NIST SP 800-162 hybrid model guidance.
+- **v3.0** (November 26, 2025): Added "The Commitment-Results Paradox" section with Bain & Company Q3 2025 executive survey data. New section inserted after trust collapse analysis, before infrastructure reality section. Key statistics: 74% rank AI as top-three priority (up from 60%), 80% of use cases met/exceeded expectations, only 23% can tie to revenue/cost impact, agentic workflows 2x more likely to exceed goals. Added reference [10]. No other content changes.
+- **v2.9** (November 17, 2025): Fixed Diagram 1 subgraph title visibility - added explicit text color to timeline and analysis subgraph styles (color:#b71c1c for timeline, color:#004d40 for analysis) so titles remain visible on both light and dark backgrounds.
+- **v2.8** (November 17, 2025): Fixed Diagram 1 emoji rendering - removed 📉 and ⚠ emojis from subgraph headers as they don't render consistently across all platforms. Headers now read "TRUST COLLAPSE (Feb-July 2025)" and "ROOT CAUSE ANALYSIS" in plain text.
+- **v2.7** (November 17, 2025): Fixed Diagram 5 header cutoff - moved "(6 months)" from header into TOTAL box content as "6-month pilots". Header now reads "ECHO'S $2M INVESTMENT" without parenthetical to prevent text cutoff.
+- **v2.6** (November 17, 2025): Fixed Diagram 5 rendering - shortened all labels to prevent text cutoff, removed emojis from subgraph headers (💰, ❌, 📊), compressed content ("$2,000,000" → "$2M", "adoption" → "adopt", "HIPAA violation" → "HIPAA", "Not agent-ready" → "Not ready"). Removed "direction TB" declarations and second-line headers. Result: More compact layout, all text fully visible.
+- **v2.5** (November 17, 2025): Fixed rendering issues in Diagrams 1 and 4. Diagram 1: Shortened labels (Feb vs February, Agent vs Agentic AI), removed subtitle from header, added source caption. Diagram 4: Converted two-line subgraph headers to single-line format, removed emojis from headers to prevent text cutoff. All diagrams now display fully without any text overlap or cutoff issues.
+- **v2.4** (November 17, 2025): Fixed Diagram 1 rendering issue - shortened month names and removed subtitle to prevent text overlap. Added caption with Deloitte source attribution. All other diagrams unchanged.
+- **v2.3** (November 17, 2025): Added 2 strategic diagrams for perfect part-to-diagram alignment. NEW Diagram 1 (Trust Collapse Timeline) visualizes Deloitte -64% trust data in Part 1. NEW Diagram 5 (Echo's Three Failing Pilots) creates visual scoreboard in Part 4. Fixed Diagram 4 (formerly Diagram 3) Codex compliance: corrected colors #ffcdd2 → #ffebee, added visible copyright, reduced box content to 3-line max, simplified structure. All 5 diagrams achieve ⭐⭐⭐⭐⭐ Colaberry Mermaid Diagram Design Codex v1.0 certification. Chapter maintains zero hallucinations, full TCC compliance, preserves all narrative integrity and audience focus (CDOs, CTOs, board-level decision makers).
+- **v2.2** (November 16, 2025): Previous stable version
+
 ---
 
 **Diagram 1: The Infrastructure Gap — Why Human-Era Systems Can't Support AI Agents**
@@ -987,33 +1004,4 @@ INPACT™ and GOALS™ are trademarks of Colaberry Inc.
 
 ---
 
-
-## Acronyms
-
-- **ABAC:** Attribute-Based Access Control
-- **API:** Application Programming Interface
-- **BI:** Business Intelligence
-- **CDC:** Change Data Capture
-- **CDO:** Chief Data Officer
-- **CFO:** Chief Financial Officer
-- **CMS:** Centers for Medicare & Medicaid Services
-- **CTO:** Chief Technology Officer
-- **DM2:** Diabetes Mellitus Type 2
-- **EHR:** Electronic Health Record
-- **ETL:** Extract, Transform, Load
-- **GenAI:** Generative Artificial Intelligence
-- **GPT:** Generative Pre-trained Transformer
-- **HIPAA:** Health Insurance Portability and Accountability Act
-- **ICD-10:** International Classification of Diseases, 10th Revision
-- **LLM:** Large Language Model
-- **ML:** Machine Learning
-- **MLOps:** Machine Learning Operations
-- **RAG:** Retrieval-Augmented Generation
-- **RBAC:** Role-Based Access Control
-- **ROI:** Return on Investment
-- **SQL:** Structured Query Language
-
----
-
-**© 2025 Colaberry Inc. All Rights Reserved.**  
-INPACT™ and GOALS™ are trademarks of Colaberry Inc.
+**END OF CHAPTER 1**
