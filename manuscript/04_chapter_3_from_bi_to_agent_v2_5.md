@@ -211,10 +211,10 @@ Capturing that learning requires feedback loops, validation mechanisms, and cont
 graph TB
     subgraph old["<b>BI-ERA:HUMAN ANALYSIS</b>"]
         direction LR
-        O1["<b>Batch ETL</b><br/><b>8-24 hour lag</b>"]
-        O2["<b>Data Warehouse</b><br/><b>OLAP cubes</b>"]
-        O3["<b>Dashboards</b><br/><b>Fixed queries</b>"]
-        O4["<b>Human Analysts</b><br/><b>Manual decisions</b>"]
+        O1["<b>Batch ETL</b><br/>8-24 hour lag"]
+        O2["<b>Data Warehouse</b><br/>OLAP cubes"]
+        O3["<b>Dashboards</b><br/>Fixed queries"]
+        O4["<b>Human Analysts</b><br/>Manual decisions"]
         
         O1 --> O2 --> O3 --> O4
     end
@@ -223,10 +223,10 @@ graph TB
     
     subgraph new["<b>AGENT-ERA:AUTONOMOUS     SYSTEMS</b>"]
         direction LR
-        N1["<b>Real-Time</b><br/><b>Sub-30s freshness</b>"]
-        N2["<b>Multi-Modal</b><br/><b>Vector + Graph + SQL</b>"]
-        N3["<b>Semantic + RAG</b><br/><b>Natural language</b>"]
-        N4["<b>Autonomous Agents</b><br/><b>Instant decisions</b>"]
+        N1["<b>Real-Time</b><br/>Sub-30s freshness"]
+        N2["<b>Multi-Modal</b><br/>Vector + Graph + SQL"]
+        N3["<b>Semantic + RAG</b><br/>Natural language"]
+        N4["<b>Autonomous Agents</b><br/>Instant decisions"]
         
         N1 --> N2 --> N3 --> N4
     end
@@ -512,13 +512,13 @@ Each infrastructure gap requires a specific architectural layer:
 graph LR
     subgraph gaps["<b>7 INFRASTRUCTURE GAPS</b>"]
         direction TB
-        G1["<b>Gap 1: Multi-Modal</b><br/><b>Storage</b><br/><b>Relational only</b><br/><b>No vectors/graphs</b>"]
-        G2["<b>Gap 2: Real-Time Data</b><br/><b>Overnight batch ETL</b><br/><b>8-24 hour staleness</b>"]
-        G3["<b>Gap 3: Semantic</b><br/><b>Understanding</b><br/><b>SQL schemas only</b><br/><b>No business language</b>"]
-        G4["<b>Gap 4: Intelligent</b><br/><b>Retrieval</b><br/><b>Keyword search only</b><br/><b>No context awareness</b>"]
-        G5["<b>Gap 5: Dynamic</b><br/><b>Permissions</b><br/><b>Static RBAC</b><br/><b>No context evaluation</b>"]
-        G6["<b>Gap 6: Reasoning</b><br/><b>Observability</b><br/><b>Query logs only</b><br/><b>No reasoning traces</b>"]
-        G7["<b>Gap 7: Multi-Agent</b><br/><b>Coordination</b><br/><b>Single-user systems</b><br/><b>No orchestration</b>"]
+        G1["<b>Gap 1: Multi-Modal</b><br/><b>Storage</b><br/>Relational only<br/>No vectors/graphs"]
+        G2["<b>Gap 2: Real-Time Data</b><br/><b>Overnight batch ETL</b><br/>8-24 hour staleness"]
+        G3["<b>Gap 3: Semantic</b><br/><b>Understanding</b><br/>SQL schemas only<br/>No business language"]
+        G4["<b>Gap 4: Intelligent</b><br/><b>Retrieval</b><br/>Keyword search only<br/>No context awareness"]
+        G5["<b>Gap 5: Dynamic</b><br/><b>Permissions</b><br/>Static RBAC<br/>No context evaluation"]
+        G6["<b>Gap 6: Reasoning</b><br/><b>Observability</b><br/>Query logs only<br/>No reasoning traces"]
+        G7["<b>Gap 7: Multi-Agent</b><br/><b>Coordination</b><br/>Single-user systems<br/>No orchestration"]
     end
     
     subgraph needs["<b>INPACT™ NEEDS</b>"]
@@ -533,13 +533,13 @@ graph LR
     
     subgraph layers["<b>7-LAYER ARCHITECTURE</b>"]
         direction TB
-        L1["<b>Layer 1</b><br/><b>Storage</b><br/><b>Multi-Modal Data</b>"]
-        L2["<b>Layer 2</b><br/><b>Real-Time</b><br/><b>CDC, Streaming</b>"]
-        L3["<b>Layer 3</b><br/><b>Semantic Layer</b><br/><b>Business Glossary</b>"]
-        L4["<b>Layer 4</b><br/><b>RAG + Retrieval</b><br/><b>Vector Search</b>"]
-        L5["<b>Layer 5</b><br/><b>Governance</b><br/><b>ABAC, Policies</b>"]
-        L6["<b>Layer 6</b><br/><b>Observability</b><br/><b>Distributed Tracing</b>"]
-        L7["<b>Layer 7</b><br/><b>Orchestration</b><br/><b>Multi-Agent Framework</b>"]
+        L1["<b>Layer 1</b><br/><b>Storage</b><br/>Multi-Modal Data"]
+        L2["<b>Layer 2</b><br/><b>Real-Time</b><br/>CDC, Streaming"]
+        L3["<b>Layer 3</b><br/><b>Semantic Layer</b><br/>Business Glossary"]
+        L4["<b>Layer 4</b><br/><b>Intelligence</b><br/>RAG + Retrieval<br/>Vector Search"]
+        L5["<b>Layer 5</b><br/><b>Governance</b><br/>ABAC, Policies"]
+        L6["<b>Layer 6</b><br/><b>Observability</b><br/>Distributed Tracing"]
+        L7["<b>Layer 7</b><br/><b>Orchestration</b><br/>Multi-Agent Framework"]
     end
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
