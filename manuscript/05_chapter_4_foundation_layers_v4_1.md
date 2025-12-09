@@ -415,28 +415,28 @@ graph TB
     
     subgraph FOUNDATION["Foundation (8 Types)"]
         direction TB
-        S1["1. RDBMS<br/>Transactions"]
-        S2["2. NoSQL<br/>Documents"]
-        S3["3. Vector DB<br/>Embeddings"]
-        S4["4. Graph DB<br/>Relationships"]
-        S5["5. Object Store<br/>Unstructured"]
-        S6["6. Lakehouse<br/>Analytics"]
-        S7["7. Model Registry<br/>ML models"]
-        S8["8. Feature Store<br/>ML features"]
+        S1["1. <b>RDBMS</b><br/>Transactions"]
+        S2["2. <b>NoSQL</b><br/>Documents"]
+        S3["3. <b>Vector DB</b><br/>Embeddings"]
+        S4["4. <b>Graph DB</b><br/>Relationships"]
+        S5["5. <b>Object Store</b><br/>Unstructured"]
+        S6["6. <b>Lakehouse</b><br/>Analytics"]
+        S7["7. <b>Model Registry</b><br/>ML models"]
+        S8["8. <b>Feature Store</b><br/>ML features"]
     end
     
     subgraph PHASE2["Phase 2 (3 Types)"]
         direction TB
-        S9["9. Time-Series<br/>IoT/metrics"]
-        S10["10. Search Index<br/>Full-text"]
-        S11["11. Cache Layer<br/>Performance"]
+        S9["9. <b>Time-Series</b><br/>IoT/metrics"]
+        S10["10. <b>Search Index</b><br/>Full-text"]
+        S11["11. <b>Cache Layer</b><br/>Performance"]
     end
     
     OUTPUT["Right Storage<br/>for Each Query"]
     
     Copyright["© 2025 Colaberry Inc."]
     
-    TITLE --> FOUNDATION --> PHASE2 --> OUTPUT
+    TITLE --> FOUNDATION --> PHASE2 <--> OUTPUT
     
     style TITLE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style FOUNDATION fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
