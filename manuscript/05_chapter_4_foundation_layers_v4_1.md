@@ -779,7 +779,7 @@ graph LR
 
 Layer 2 provides sub-30 second data freshness through change data capture (CDC), event streaming, and stream processing. Replaces overnight batch ETL with continuous real-time synchronization.
 
-**Diagram 6: Layer 2 Real-Time Data Fabric—CDC to Agents**
+**Diagram 6: Layer 2 Real-Time Data Fabric—Change Data Capture (CDC) to Agents**
 
 ```mermaid
 
@@ -893,13 +893,13 @@ workday.providers.credentials
 
 ```mermaid
 graph LR
-    subgraph "<b>⚡ Real-Time Inference Path</b>"
+    subgraph "<b>Real-Time Inference Path</b>"
         I1["<b>User Query</b>"]
         I2["<b>Real-Time CDC</b><br/><b>< 30s lag</b>"]
         I3["<b>Agent Response</b><br/><b>< 3s total</b>"]
     end
     
-    subgraph "<b>📊 Batch Training Path</b>"
+    subgraph "<b>Batch Training Path</b>"
         T1["<b>Historical Data</b>"]
         T2["<b>Overnight ETL</b><br/><b>OK for batch</b>"]
         T3["<b>Model Training</b><br/><b>Hours/days OK</b>"]
@@ -1051,13 +1051,13 @@ gantt
 ```mermaid
 graph LR
     subgraph week0["<b>Week 0: Assessment</b>"]
-        W0["<b>TOTAL: 28/100</b><br/>I=1 | N=2 | P=1<br/>A=2 | C=3 | T=1"]
+        W0["<b>No Foundation</b><br/>TOTAL: 28/100</b><br/>I=1 | N=2 | P=1<br/>A=2 | C=3 | T=1"]
     end
     
     ARROW["<b>→</b><br/><b>+14 pts</b>"]
     
-    subgraph week4["<b>Week 4: Foundation Complete</b>"]
-        W4["<b>TOTAL: 42/100</b><br/>I=4 | N=2 | P=1<br/>A=3 | C=4 | T=1"]
+    subgraph week4["<b>Week 4: Assessment</b>"]
+        W4["<b>TFoundation Complete</b><br/>TOTAL: 42/100</b><br/>I=4 | N=2 | P=1<br/>A=3 | C=4 | T=1"]
     end
     
     week0 --> ARROW --> week4
