@@ -19,19 +19,19 @@
 
 ---
 
-**Diagram 1: The Infrastructure Gap — Why BI-Era Systems Can't Support Agents**
+**Diagram 1: The Infrastructure Gap — Why Human-Era Systems Can't Support Agents**
 
 ```mermaid
 
 graph LR
-    subgraph BUILT["WHAT THEY BUILT"]
+    subgraph BUILT["WHAT THEY HAVE NOW"]
         direction TB
         B1["Batch ETL:<br/>Overnight updates<br/><br/>Static Dashboards:<br/>Human-mediated<br/><br/>Role-Based Access:<br/>Fixed permissions<br/><br/>Manual Review:<br/>No real-time audit"]
     end
     
     subgraph GAP["THE GAP"]
         direction TB
-        G1["Infrastructure ≠<br/>Agent Needs<br/><br/>→ 95% Failure"]
+        G1["Human-Era<br/>Infrastructure ≠<br/>Agent Needs<br/><br/>→ 95% Failure"]
     end
     
     subgraph NEED["WHAT AGENTS NEED"]
@@ -51,7 +51,7 @@ graph LR
 
 ```
 
-> **Key Takeaway:** The infrastructure gap IS the trust gap. BI-era systems cannot fulfill agent needs.
+> **Key Takeaway:** The infrastructure gap IS the trust gap. Human-era systems cannot fulfill AI Agent needs.
 
 ## The 9:47 AM Cancellation
 
