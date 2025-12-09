@@ -11,12 +11,12 @@ graph LR
         B1["INPACT™: 28/100<br/><br/>No framework<br/><br/>No roadmap<br/><br/><b>Where do we start?</b>"]
     end
     
-    subgraph PHASES["THREE PHASES"]
+    subgraph PHASES["7 LAYERS - 3 PHASES"]
         direction TB
         P1["Phase 1: Foundation<br/>Weeks 1-4<br/><br/>Phase 2: Intelligence<br/>Weeks 5-7<br/><br/>Phase 3: Trust Layers<br/>Weeks 8-10"]
     end
     
-    subgraph AFTER["DAY 90"]
+    subgraph AFTER["DAY 70"]
         direction TB
         A1["INPACT™: 86/100<br/><br/>7 Layers Complete<br/><br/>3 Agents Live<br/><br/><b>Production Ready</b>"]
     end
@@ -32,7 +32,7 @@ graph LR
 
 ```
 
-> **Key Takeaway:** 90 days. Three phases. Systematic transformation.
+> **Key Takeaway:** 70 days. Three phases. Systematic transformation.
 
 
 ## The Question Chapter 2 Left Unanswered
