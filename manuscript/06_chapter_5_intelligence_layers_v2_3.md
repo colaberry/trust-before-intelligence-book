@@ -73,7 +73,7 @@ graph TB
     subgraph INDICATOR[" "]
         direction LR
         Spacer1[" "]
-        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 3 Semantic <br/> Layer 4: Intelligence<br/> Built Here"]
+        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 3: Semantic <br/> Layer 4: Intelligence<br/> Built Here"]
         Spacer2[" "]
     end
     
@@ -259,16 +259,16 @@ Swapna nodded to Jamie Rodriguez, who displayed the Phase 2 architecture diagram
 
 ```mermaid
 graph TB
-    subgraph CURRENT["<b>❌ CURRENT STATE (Week 4)</b>"]
+    subgraph CURRENT["<b>CURRENT STATE (Week 4)</b>"]
         direction LR
-        C_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> C_SQL["<b>Direct SQL</b><br/><b>No semantic</b>"] --> C_RES["<b>847 Records</b><br/><b>Unfiltered</b>"] --> C_FAIL["<b>❌ 47%</b>"]
+        C_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> C_SQL["<b>Direct SQL</b><br/><b>No semantic</b>"] --> C_RES["<b>847 Records</b><br/><b>Unfiltered</b>"] --> C_FAIL["<b>47%</b>"]
     end
     
     CURRENT -->|<b>Intelligence Layers</b>| TARGET
     
-    subgraph TARGET["<b>✅ TARGET STATE (Week 7)</b>"]
+    subgraph TARGET["<b>TARGET STATE (Week 7)</b>"]
         direction LR
-        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>RAG+LLM</b>"] --> T_WIN["<b>✅ 95%+</b>"]
+        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>RAG+LLM</b>"] --> T_WIN["<b>95%+</b>"]
     end
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
@@ -346,14 +346,14 @@ flowchart TB
     
     subgraph RESOLVE_ROW["<b>Entity Resolution</b>"]
         direction LR
-        E1["<b>EHR</b>"] --> GOLD["<b>Golden ID</b>"]
-        E2["<b>Claims</b>"] --> GOLD
-        E3["<b>Lab</b>"] --> GOLD
+        E1["<b>EHR ID</b>"] --> GOLD["<b>Golden ID</b>"]
+        E2["<b>Claims ID</b>"] --> GOLD
+        E3["<b>Lab ID</b>"] --> GOLD
     end
     
     subgraph OUTPUT_ROW["<b>Output</b>"]
         direction LR
-        ONTO["<b>Clinical Ontology</b><br/><b>SNOMED/ICD/LOINC</b>"] --> RESULT["<b>✅ Unified Query</b>"]
+        ONTO["<b>Clinical Ontology</b><br/><b>SNOMED/ICD/LOINC</b>"] --> RESULT["<b>Unified Query</b>"]
     end
     
     NL --> PARSE_ROW
@@ -439,12 +439,12 @@ The difference is transformational. Enterprise AI implementations show that sema
 
 ```mermaid
 graph TB
-    subgraph KEYWORD["<b>❌ KEYWORD SEARCH (Before Layer 3)</b>"]
+    subgraph KEYWORD["<b>KEYWORD SEARCH<br/> (Before Layer 3)</b>"]
         direction LR
         K_Q["<b>Query: 'diabetes patients'</b>"] --> K_MATCH["<b>String Matching</b><br/><b>LIKE '%diabetes%'</b>"]
-        K_MATCH --> K_MISS1["<b>❌ Missed: 'DM Type 2'</b>"]
-        K_MATCH --> K_MISS2["<b>❌ Missed: 'glycemic control'</b>"]
-        K_MATCH --> K_MISS3["<b>❌ Missed: 'E11.9'</b>"]
+        K_MATCH --> K_MISS1["<b>Missed:<br/> DM Type 2</b>"]
+        K_MATCH --> K_MISS2["<b>Missed:<br/> glycemic control</b>"]
+        K_MATCH --> K_MISS3["<b>Missed:<br/> E11.9</b>"]
         K_MISS1 --> K_RESULT["<b>40-60% Recall</b><br/><b>Incomplete results</b>"]
         K_MISS2 --> K_RESULT
         K_MISS3 --> K_RESULT
@@ -452,13 +452,13 @@ graph TB
     
     KEYWORD -->|<b>Layer 3 Transforms</b>| SEMANTIC
     
-    subgraph SEMANTIC["<b>✅ SEMANTIC SEARCH (With Layer 3)</b>"]
+    subgraph SEMANTIC["<b>SEMANTIC SEARCH<br/>(With Layer 3)</b>"]
         direction LR
         S_Q["<b>Query: 'diabetes patients'</b>"] --> S_RESOLVE["<b>Semantic Resolution</b><br/><b>Concept expansion</b>"]
-        S_RESOLVE --> S_HIT1["<b>✅ Diabetes mellitus</b>"]
-        S_RESOLVE --> S_HIT2["<b>✅ DM Type 1, Type 2</b>"]
-        S_RESOLVE --> S_HIT3["<b>✅ E08-E13 codes</b>"]
-        S_RESOLVE --> S_HIT4["<b>✅ Glycemic disorders</b>"]
+        S_RESOLVE --> S_HIT1["<b>Diabetes mellitus</b>"]
+        S_RESOLVE --> S_HIT2["<b>DM Type 1, Type 2</b>"]
+        S_RESOLVE --> S_HIT3["<b>E08-E13 codes</b>"]
+        S_RESOLVE --> S_HIT4["<b>Glycemic disorders</b>"]
         S_HIT1 --> S_RESULT["<b>85%+ Recall</b><br/><b>Complete results</b>"]
         S_HIT2 --> S_RESULT
         S_HIT3 --> S_RESULT
