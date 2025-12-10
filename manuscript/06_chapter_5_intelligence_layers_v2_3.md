@@ -17,7 +17,7 @@
 graph LR
     subgraph WITHOUT["WITHOUT LAYERS 3-4"]
         direction TB
-        W1["'My doctor'<br/>Which doctor?<br/><br/>'MI'<br/>Heart attack or valve?<br/><br/>No business context<br/>Raw data only<br/><br/>12% clarification rate<br/>Friction"]
+        W1["'My doctor'<br/>Which doctor?<br/><br/>'MI'<br/>Heart attack or valve?<br/><br/>No business context<br/>Raw data only<br/><br/>40%-60% Query Accuracy<br/><br/><b>Frictional Conversions</b>"]
     end
     
     subgraph TRANSFORM["TRANSFORM"]
@@ -27,7 +27,7 @@ graph LR
     
     subgraph WITH["WITH LAYERS 3-4"]
         direction TB
-        L1["Layer 3:<br/>Entity resolution 97%<br/><br/>Layer 4:<br/>Context-aware RAG<br/><br/>Healthcare terminology<br/>mapped<br/><br/>4.8% clarification<br/>Natural"]
+        L1["Layer 3:<br/>Entity resolution 97%<br/><br/>Layer 4:<br/>Context-aware RAG<br/><br/>Healthcare terminology<br/>mapped<br/><br/>>85% Query Accuracy<br/><br/><b>Natural Conversions</b>"]
     end
     
     WITHOUT --> TRANSFORM --> WITH
