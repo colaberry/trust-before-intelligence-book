@@ -268,7 +268,7 @@ graph TB
     
     subgraph TARGET["<b>TARGET STATE (Week 7)</b>"]
         direction LR
-        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>RAG+LLM</b>"] --> T_WIN["<b>95%+</b>"]
+        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>Intelligence</b>"] --> T_WIN["<b>95%+</b>"]
     end
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
@@ -599,7 +599,7 @@ graph TB
         S6["<b>6. LLM</b>"] --> S7["<b>7. Cache</b>"]
     end
     
-    RESULT["<b>✅ Grounded Response</b>"]
+    RESULT["<b>Grounded Response</b>"]
     
     Q --> ROW1
     ROW1 --> ROW2
@@ -656,7 +656,7 @@ graph LR
     
     Q["<b>Embedded Query</b>"]
     
-    subgraph parallel["<b>Parallel Retrieval Strategies</b>"]
+    subgraph parallel["<b>Parallel Retrieval Strategy</b>"]
         VEC["<b>Vector Search</b><br/><b>Pinecone</b><br/><b>Semantic similarity</b>"]
         KEY["<b>Keyword Search</b><br/><b>Azure Search</b><br/><b>Exact matching</b>"]
         GRAPH["<b>Graph Traversal</b><br/><b>Neo4j</b><br/><b>Relationships</b>"]
