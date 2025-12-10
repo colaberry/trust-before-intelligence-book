@@ -17,7 +17,7 @@
 graph LR
     subgraph WITHOUT["WITHOUT LAYERS 5-6-7"]
         direction TB
-        W1["No dynamic access<br/>HIPAA risk<br/><br/>Black box AI<br/>No explainability<br/><br/>Single-agent only<br/>No coordination<br/><br/>'I don't trust it'<br/>Blocked"]
+        W1["No dynamic access<br/>HIPAA risk<br/><br/>Black box AI<br/>No explainability<br/><br/>Single-agent only<br/>No coordination<br/><br/><b>I don't trust it<br/>Blocked</b>"]
     end
     
     subgraph TRANSFORM["TRANSFORM"]
@@ -27,7 +27,7 @@ graph LR
     
     subgraph WITH["WITH LAYERS 5-6-7"]
         direction TB
-        L1["Layer 5:<br/>Governance + HITL<br/><br/>Layer 6:<br/>Full trace + audit<br/><br/>Layer 7:<br/>Multi-agent<br/>orchestration<br/><br/>'I can verify it'<br/>Trust earned"]
+        L1["Layer 5:<br/>Governance + HITL<br/><br/>Layer 6:<br/>Full trace + audit<br/><br/>Layer 7:<br/>Multi-agent<br/>orchestration<br/><br/><b>I can verify it<br/>Trust earned</b>"]
     end
     
     WITHOUT --> TRANSFORM --> WITH
@@ -62,26 +62,53 @@ These final three layers would complete the architecture.
 **Diagram 1: The Architecture of Trust—Completing Pillar 2**
 
 ```mermaid
+
+
+
 graph TB
-    subgraph "<b>THE ARCHITECTURE OF TRUST</b>"
-        P1["<b>PILLAR 1</b><br/><b>INPACT™</b><br/><b>What Agents Need</b><br/><b>✓ Complete</b>"]
-        P2["<b>PILLAR 2</b><br/><b>7-Layer Architecture</b><br/><b>What to Build</b><br/><b>⚡ Completing Now</b>"]
-        P3["<b>PILLAR 3</b><br/><b>GOALS™</b><br/><b>How to Operate</b><br/><b>⊹ Next</b>"]
+    Title["ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
+    
+    subgraph PILLARS[" "]
+        direction LR
+        INPACT["`PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/>**I**nstant<br/>**N**atural<br/>**P**ermitted<br/>**A**daptive<br/>**C**ontextual<br/>**T**ransparent`"]
+        
+        Layers["PILLAR 2: 7-LAYERS<br/>Infrastructure<br/><br/>How to Build TRUST?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
+        
+        GOALS["`PILLAR 3: GOALS™<br/><br/>How to Measure TRUST?<br/><br/>**G**overnance<br/>**O**bservability<br/>**A**vailability<br/>**L**exicon<br/>**S**olid`"]
     end
     
-    BUILD["<b>🔧 Chapter 6 Builds Here</b><br/><b>Layers 5-6-7</b><br/><b>Transparency + Orchestration</b>"]
+    subgraph INDICATOR[" "]
+        direction LR
+        Spacer1[" "]
+        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 5: Governance <br/> Layer 6: Observability<br/> Layer 7: Orchestration<br/> Built Here"]
+        Spacer2[" "]
+    end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    P1 -->|<b>Agent needs fulfilled by</b>| P2
-    P2 -->|<b>Infrastructure enables</b>| P3
-    P2 -.->|<b>You Are Here</b>| BUILD
+    Title --> PILLARS
+    PILLARS <--> INDICATOR
     
-    style P1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P2 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style P3 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style BUILD fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    INPACT -.->|"Needs Fulfilled by"| Layers
+    Layers -.->|"Enables Operations"| GOALS
+    GOALS -.->|"Drives Trust"| INPACT
+
+    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style PILLARS fill:none,stroke:none
+    style INDICATOR fill:none,stroke:none
+    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Layers fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
+    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Spacer1 fill:none,stroke:none,color:transparent
+    style YouAreHere fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style Spacer2 fill:none,stroke:none,color:transparent
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
+
+
+
+
+
 ```
 
 ### Architectural Context
@@ -295,38 +322,49 @@ This contextual evaluation requires four capabilities:
 **Diagram 3: Layer 5 Governance Architecture**
 
 ```mermaid
+
 graph TB
-    subgraph "<b>LAYER 5: GOVERNANCE</b>"
-        subgraph "<b>ROW 1: EVALUATION</b>"
-            Query["<b>Agent Query</b>"]
-            ABAC["<b>ABAC Evaluation</b>"]
-            OPA["<b>OPA Policy Engine</b>"]
-            Risk{{"<b>Risk?</b>"}}
+    subgraph LAYER5["LAYER 5: GOVERNANCE"]
+        direction TB
+        Query["Agent Query"]
+        
+        subgraph EVAL["EVALUATION"]
+            direction LR
+            ABAC["ABAC Evaluation"]
+            OPA["OPA Policy Engine"]
+            ABAC --> OPA
         end
         
-        subgraph "<b>ROW 2: DECISION & AUDIT</b>"
-            Auto["<b>✓ Auto-Approve</b><br/><b>Risk < 7</b>"]
-            HITL["<b>⚠ï¸ HITL</b><br/><b>Risk ≥ 7</b>"]
-            Human["<b>Human Review</b>"]
-            Audit["<b>📊 Audit Log</b>"]
+        Risk{{"Risk?"}}
+        
+        subgraph DECISION["DECISION & AUDIT"]
+            direction LR
+            Auto["Auto-Approve<br/>Risk < 7"]
+            HITL["HITL<br/>Risk >= 7"]
+            Human["Human Review"]
+            Audit["Audit Log"]
         end
     end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    Query --> ABAC --> OPA --> Risk
-    Risk -->|<b>Low</b>| Auto --> Audit
-    Risk -->|<b>High</b>| HITL --> Human --> Audit
+    Query --> EVAL --> Risk
+    Risk -->|"Low"| Auto --> Audit
+    Risk -->|"High"| HITL --> Human --> Audit
     
+    style LAYER5 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style ABAC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style OPA fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style EVAL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style ABAC fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style OPA fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Risk fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style DECISION fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style Auto fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style HITL fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style Human fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style HITL fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style Human fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Audit fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 ### Why Agents Need Governance
