@@ -56,24 +56,50 @@ Now we build intelligence. Where Chapter 4 delivered data availability and fresh
 **Diagram 1: The Architecture of Trust—Intelligence Layers Highlighted**
 
 ```mermaid
+
+
 graph TB
-    INPACT["<b>INPACT™ Framework</b><br/><b>6 Agent Needs</b>"]
-    ARCH["<b>7-Layer Architecture</b><br/><b>Intelligence Layers 3-4</b>"]
-    GOALS["<b>GOALS™ Framework</b><br/><b>5 Operational Pillars</b>"]
+    Title["ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
     
-    INTEL["<b>🧠 Chapter 5 Builds Here</b><br/><b>Semantic + RAG with LLM</b>"]
+    subgraph PILLARS[" "]
+        direction LR
+        INPACT["`PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/>**I**nstant<br/>**N**atural<br/>**P**ermitted<br/>**A**daptive<br/>**C**ontextual<br/>**T**ransparent`"]
+        
+        Layers["PILLAR 2: 7-LAYERS<br/>Infrastructure<br/><br/>How to Build TRUST?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
+        
+        GOALS["`PILLAR 3: GOALS™<br/><br/>How to Measure TRUST?<br/><br/>**G**overnance<br/>**O**bservability<br/>**A**vailability<br/>**L**exicon<br/>**S**olid`"]
+    end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    subgraph INDICATOR[" "]
+        direction LR
+        Spacer1[" "]
+        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 3-4 Semantic + Intelligence Build Here"]
+        Spacer2[" "]
+    end
     
-    INPACT -->|<b>Agent needs fulfilled by</b>| ARCH
-    ARCH -->|<b>Infrastructure enables</b>| GOALS
-    ARCH -.->|<b>You Are Here</b>| INTEL
+    Copyright["© 2025 Colaberry Inc."]
     
+    Title --> PILLARS
+    PILLARS <--> INDICATOR
+    
+    INPACT -.->|"Needs Fulfilled by"| Layers
+    Layers -.->|"Enables Operations"| GOALS
+    GOALS -.->|"Drives Trust"| INPACT
+
+    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style PILLARS fill:none,stroke:none
+    style INDICATOR fill:none,stroke:none
     style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style ARCH fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style Layers fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
     style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style INTEL fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style Spacer1 fill:none,stroke:none,color:transparent
+    style YouAreHere fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style Spacer2 fill:none,stroke:none,color:transparent
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
+
+
+
 ```
 
 ### Why Intelligence Matters

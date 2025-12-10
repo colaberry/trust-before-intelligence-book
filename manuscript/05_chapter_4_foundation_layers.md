@@ -67,7 +67,7 @@ graph TB
     subgraph INDICATOR[" "]
         direction LR
         Spacer1[" "]
-        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 1-2 Build Here"]
+        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 1-2 Storage + Real-time Build Here"]
         Spacer2[" "]
     end
     
