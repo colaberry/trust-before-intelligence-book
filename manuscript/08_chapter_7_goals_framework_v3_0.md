@@ -124,9 +124,9 @@ graph LR
         T1["→"]
     end
     
-    subgraph OPERATE["OPERATE CONTINUOUSLY"]
+    subgraph OPERATE["OPERATIONAL EXCELLENCE"]
         direction TB
-        O1["G — Governance: 5/5<br/><br/>O — Observability: 4/5<br/><br/>A — Availability: 4/5<br/><br/>L — Lexicon: 4/5<br/><br/>S — Solid: 4/5<br/><br/>Total: 21/25 = 84%<br/><b>I can measure Trust<br/>Agents are trustworthy!"]
+        O1["G — Governance: 5/5<br/><br/>O — Observability: 4/5<br/><br/>A — Availability: 4/5<br/><br/>L — Lexicon: 4/5<br/><br/>S — Solid: 4/5<br/><br/><b>GOALS Total: 21/25 = 84%<br/>I can measure Trust<br/>Agents are trustworthy!"]
     end
     
     BUILD --> TRANSFORM --> OPERATE
