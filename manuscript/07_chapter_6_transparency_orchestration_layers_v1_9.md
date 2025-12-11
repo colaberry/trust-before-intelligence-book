@@ -675,38 +675,53 @@ This opacity creates three operational challenges:
 **Diagram 7: Echo's Seven-Layer Service Map**
 
 ```mermaid
+
 graph TB
-    subgraph "<b>ECHO SERVICE MAP</b>"
-        subgraph "<b>ROW 1: ENTRY → TRUST</b>"
-            UI["<b>Portal (4.2s)</b>"]
-            L7["<b>L7: Orchestrate (180ms)</b>"]
-            L6["<b>L6: Observe (12ms)</b>"]
-            L5["<b>L5: Govern (8ms)</b>"]
-        end
+    subgraph ECHO["ECHO SERVICE MAP"]
+        direction TB
+        UI["Portal (4.2s)"]
+        L7["L7: Orchestrate (180ms)"]
         
-        subgraph "<b>ROW 2: INTELLIGENCE → DATA</b>"
-            L4["<b>L4: RAG+LLM (2.8s)</b>"]
-            L3["<b>L3: Semantic (340ms)</b>"]
-            L2["<b>L2: Stream (28ms)</b>"]
-            L1["<b>L1: Store (45ms)</b>"]
+        subgraph PARALLEL["PARALLEL PATHS"]
+            direction LR
+            subgraph TRUST["TRUST"]
+                direction TB
+                L6["L6: Observe<br/>12ms"]
+                L5["L5: Govern<br/>8ms"]
+            end
+            
+            subgraph INTEL["INTELLIGENCE → DATA"]
+                direction TB
+                L4["L4: RAG+LLM<br/>2.8s"]
+                L3["L3: Semantic<br/>340ms"]
+                L2["L2: Stream<br/>28ms"]
+                L1["L1: Store<br/>45ms"]
+                L4 --> L3 --> L2 --> L1
+            end
         end
     end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    UI --> L7 --> L6
+    UI --> L7
+    L7 --> L6
     L7 --> L5
-    L7 --> L4 --> L3 --> L2 --> L1
+    L7 --> L4
     
+    style ECHO fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PARALLEL fill:none,stroke:none
+    style TRUST fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style INTEL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style UI fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
     style L7 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L6 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L6 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L5 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **© 2025 Colaberry Inc.**
