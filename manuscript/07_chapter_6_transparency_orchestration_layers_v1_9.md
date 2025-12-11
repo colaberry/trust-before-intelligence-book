@@ -841,46 +841,44 @@ Orchestration solves the multi-domain problem through structured coordination:
 **Diagram 8: Layer 7 Orchestration Architecture**
 
 ```mermaid
+
 graph TB
-    subgraph "<b>LAYER 7: ORCHESTRATION</b>"
-        Query["<b>Multi-Domain Query</b><br/><b>Complex Care Request</b>"]
+    subgraph LAYER7["LAYER 7: ORCHESTRATION"]
+        direction TB
+        Query["Multi-Domain Query<br/>Complex Care Request"]
+        Supervisor["Supervisor Agent<br/>LangGraph Coordinator"]
+        Intent{{"Intent Classification"}}
         
-        Supervisor["<b>🤝 Supervisor Agent</b><br/><b>LangGraph Coordinator</b>"]
+        subgraph AGENTS["SPECIALIZED AGENTS"]
+            direction LR
+            Care["Care Coordination<br/>Scheduling, Follow-up"]
+            Clinical["Clinical Documentation<br/>Records, Medications"]
+            Revenue["Revenue Cycle<br/>Insurance, Auth"]
+        end
         
-        Intent{{"<b>Intent Classification</b>"}}
-        
-        Care["<b>👥 Care Coordination</b><br/><b>Scheduling, Follow-up</b>"]
-        Clinical["<b>🏥 Clinical Documentation</b><br/><b>Records, Medications</b>"]
-        Revenue["<b>🔐 Revenue Cycle</b><br/><b>Insurance, Auth</b>"]
-        
-        State["<b>🔍 Shared State</b><br/><b>Patient Context</b>"]
-        
-        Synthesis["<b>✨ Response Synthesis</b><br/><b>Unified Answer</b>"]
+        State["Shared State: Patient Context"]
+        Synthesis["Response Synthesis<br/>Unified Answer"]
     end
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Copyright["© 2025 Colaberry Inc."]
     
-    Query --> Supervisor
-    Supervisor --> Intent
-    Intent -->|<b>Care</b>| Care
-    Intent -->|<b>Clinical</b>| Clinical
-    Intent -->|<b>Revenue</b>| Revenue
-    Care <--> State
-    Clinical <--> State
-    Revenue <--> State
-    Care --> Synthesis
-    Clinical --> Synthesis
-    Revenue --> Synthesis
+    Query --> Supervisor --> Intent
+    Intent --> AGENTS
+    AGENTS <--> State
+    AGENTS --> Synthesis
     
+    style LAYER7 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
     style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
     style Supervisor fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Intent fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Care fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Clinical fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Revenue fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style State fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Intent fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style AGENTS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Care fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Clinical fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Revenue fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style State fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Synthesis fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 ### Why Agents Need Orchestration
