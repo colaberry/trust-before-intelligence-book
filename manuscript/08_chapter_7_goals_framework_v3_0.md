@@ -116,7 +116,7 @@
 graph LR
     subgraph BUILD["BUILD COMPLETE - WEEK 10"]
         direction TB
-        B1["Architecture: Done<br/><br/>INPACT™: 86/100<br/><br/>7 Layers: Complete<br/><br/>'How do you know<br/>it stays trustworthy?'"]
+        B1["Architecture: Done<br/><br/>INPACT™: 86/100<br/><br/>7 Layers: Complete<br/><br/><b>How do you know<br/>it stays trustworthy?</b>"]
     end
     
     subgraph TRANSFORM["TRANSFORM"]
@@ -126,7 +126,7 @@ graph LR
     
     subgraph OPERATE["OPERATE CONTINUOUSLY"]
         direction TB
-        O1["G — Governance: 5/5<br/><br/>O — Observability: 4/5<br/><br/>A — Availability: 4/5<br/><br/>L — Lexicon: 4/5<br/><br/>S — Solid: 4/5<br/><br/>Total: 21/25"]
+        O1["G — Governance: 5/5<br/><br/>O — Observability: 4/5<br/><br/>A — Availability: 4/5<br/><br/>L — Lexicon: 4/5<br/><br/>S — Solid: 4/5<br/><br/>Total: 21/25 = 84%<br/><b>I can measure Trust<br/>Agents are trustworthy!"]
     end
     
     BUILD --> TRANSFORM --> OPERATE
