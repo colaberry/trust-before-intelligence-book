@@ -673,13 +673,13 @@ graph TB
     ASSESS --> HONL
     ASSESS --> MANUAL
     
-    FULL -->|<b>Low risk</b>| EXECUTE["<b>✅ Auto-Execute</b>"]
+    FULL -->|<b>Low risk</b>| EXECUTE["<b>Auto-Execute</b>"]
     COND -->|<b>Medium risk</b>| CHECK{<b>Trigger?</b>}
     CHECK -->|<b>No</b>| EXECUTE
-    CHECK -->|<b>Yes</b>| APPROVE["<b>⏸ï¸¸ Human Approval</b>"]
+    CHECK -->|<b>Yes</b>| APPROVE["<b>Human Approval</b>"]
     HITL -->|<b>High risk</b>| APPROVE
-    HONL -->|<b>High stakes</b>| MONITOR["<b>👁️ Human Monitor</b>"]
-    MANUAL -->|<b>Critical</b>| INFORM["<b>⁹ï¸¸ Information Only</b>"]
+    HONL -->|<b>High stakes</b>| MONITOR["<b>Human Monitor</b>"]
+    MANUAL -->|<b>Critical</b>| INFORM["<b>Information Only</b>"]
     
     APPROVE -->|<b>Approved</b>| EXECUTE
     MONITOR --> EXECUTE
