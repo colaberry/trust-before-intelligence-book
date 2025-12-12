@@ -371,25 +371,25 @@ Sarah gathered her extended team in the large conference room. Marcus Williams, 
 graph TB
     subgraph JOURNEY["ECHO'S 90-DAY JOURNEY"]
         direction TB
-        subgraph PHASE1["Phase 1: Foundation (Weeks 1-4)"]
+        subgraph PHASE1["Foundation (Weeks 1-4)"]
             direction LR
             W1["Week 1-2<br/>Layer 1: Storage<br/>Multi-modal data"]
             W2["Week 3-4<br/>Layer 2: Data Fabric<br/>Real-time streaming"]
             W1 --> W2
         end
         
-        subgraph PHASE2["Phase 2: Intelligence (Weeks 5-7)"]
+        subgraph PHASE2["Intelligence (Weeks 5-7)"]
             direction LR
             W3["Week 5-6<br/>Layer 3: Semantic<br/>Business meaning"]
-            W4["Week 7<br/>Layer 4: Intelligence<br/>Orchestration"]
+            W4["Week 7<br/>Layer 4: Intelligence<br/>RAG + LLM"]
             W3 --> W4
         end
         
-        subgraph PHASE3["Phase 3: Trust (Weeks 8-10)"]
+        subgraph PHASE3["Trust (Weeks 8-10)"]
             direction LR
-            W5["Week 8<br/>L5: Governance"]
-            W6["Week 9<br/>L6: Observability"]
-            W7["Week 10<br/>L7: Orchestration"]
+            W5["Week 8<br/>Layer 5: Governance"]
+            W6["Week 9<br/>Layer 6: Observability"]
+            W7["Week 10<br/>Layer 7: Orchestration"]
             W5 --> W6 --> W7
         end
     end
