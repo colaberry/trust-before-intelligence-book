@@ -367,50 +367,53 @@ Sarah gathered her extended team in the large conference room. Marcus Williams, 
 **Diagram 2: Echo's 90-Day Journey—Architecture Complete**
 
 ```mermaid
-graph LR
-    subgraph PHASE1["<b>Phase 1: Foundation (Weeks 1-4)</b>"]
-        W1["<b>Week 1-2</b><br/><b>Layer 1: Storage</b><br/><b>Multi-modal data</b>"]
-        W2["<b>Week 3-4</b><br/><b>Layer 2: Data Fabric</b><br/><b>Real-time streaming</b>"]
+
+graph TB
+    subgraph JOURNEY["ECHO'S 90-DAY JOURNEY"]
+        direction TB
+        subgraph PHASE1["Phase 1: Foundation (Weeks 1-4)"]
+            direction LR
+            W1["Week 1-2<br/>Layer 1: Storage<br/>Multi-modal data"]
+            W2["Week 3-4<br/>Layer 2: Data Fabric<br/>Real-time streaming"]
+            W1 --> W2
+        end
+        
+        subgraph PHASE2["Phase 2: Intelligence (Weeks 5-7)"]
+            direction LR
+            W3["Week 5-6<br/>Layer 3: Semantic<br/>Business meaning"]
+            W4["Week 7<br/>Layer 4: Intelligence<br/>Orchestration"]
+            W3 --> W4
+        end
+        
+        subgraph PHASE3["Phase 3: Trust (Weeks 8-10)"]
+            direction LR
+            W5["Week 8<br/>L5: Governance"]
+            W6["Week 9<br/>L6: Observability"]
+            W7["Week 10<br/>L7: Orchestration"]
+            W5 --> W6 --> W7
+        end
     end
     
-    subgraph PHASE2["<b>Phase 2: Intelligence (Weeks 5-7)</b>"]
-        W3["<b>Week 5-6</b><br/><b>Layer 3: Semantic</b><br/><b>Business meaning</b>"]
-        W4["<b>Week 7</b><br/><b>Layer 4: Intelligence</b><br/><b>Orchestration</b>"]
-    end
+    COMPLETE["Architecture Complete<br/>INPACT™: 86/100 | $1.23M Invested"]
     
-    subgraph PHASE3["<b>Phase 3: Trust (Weeks 8-10)</b>"]
-        W5["<b>Week 8</b><br/><b>Layer 5: Governance</b><br/><b>Security & HITL</b>"]
-        W6["<b>Week 9</b><br/><b>Layer 6: Observability</b><br/><b>Monitoring</b>"]
-        W7["<b>Week 10</b><br/><b>Layer 7: Orchestration</b><br/><b>Integration</b>"]
-    end
+    Copyright["© 2025 Colaberry Inc."]
     
-    subgraph NOW["<b>Week 10 Status</b>"]
-        COMPLETE["<b>✅ Architecture Complete</b><br/><b>INPACT™: 86/100</b><br/><b>$1.23M Invested</b>"]
-    end
+    PHASE1 --> PHASE2 --> PHASE3 --> COMPLETE
     
-    W1 --> W2
-    W2 --> W3
-    W3 --> W4
-    W4 --> W5
-    W5 --> W6
-    W6 --> W7
-    W7 --> COMPLETE
-    
-    style PHASE1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style PHASE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style PHASE3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style NOW fill:#00695c,stroke:#004d40,stroke-width:3px
-    style W1 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W3 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W4 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W5 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W6 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W7 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
+    style JOURNEY fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PHASE1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PHASE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style PHASE3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W5 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W6 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W7 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style COMPLETE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 Nods around the room. Tired but satisfied faces.
