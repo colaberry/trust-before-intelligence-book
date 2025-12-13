@@ -15,7 +15,7 @@
 graph LR
     subgraph BEFORE["WITHOUT ASSESSMENT"]
         direction TB
-        B1["Where do we start?<br/><br/>Multiple consultants<br/><br/>Contradictory advice<br/><br/>Months of analysis"]
+        B1["Where do we start?<br/><br/>Multiple consultants<br/><br/>Contradictory advice<br/><br/><b>Months of analysis</b>"]
     end
     
     subgraph TRANSFORM["INPACT™"]
@@ -25,7 +25,7 @@ graph LR
     
     subgraph AFTER["WITH INPACT™ ASSESSMENT"]
         direction TB
-        A1["Clear 0-100 score<br/><br/>One unified framework<br/><br/>Dimension-by-dimension<br/>clarity<br/><br/>30-minute assessment"]
+        A1["Clear 0-100 score<br/><br/>One unified framework<br/><br/>Dimension-by-dimension<br/>clarity<br/><br/><b>30-minute assessment</b>"]
     end
     
     BEFORE --> TRANSFORM --> AFTER
