@@ -425,44 +425,46 @@ The 10x scale test began Tuesday at 6 AM—before the production workload ramped
 **Diagram 4: Multi-Level Cache Performance Under Load**
 
 ```mermaid
+
 graph TB
-    subgraph CACHE["<b>ECHO'S CACHING UNDER 10X LOAD</b>"]
-        QUERY["<b>20,000 Queries/Day</b><br/><b>(10x normal load)</b>"]
+    subgraph CACHE["ECHO'S CACHING UNDER 10X LOAD"]
+        direction TB
+        QUERY["20,000 Queries/Day<br/>(10x normal load)"]
         
-        L1["<b>Level 1: Semantic Cache</b><br/><b>Redis</b><br/><b>68% hit rate</b>"]
-        L2["<b>Level 2: Vector Cache</b><br/><b>Pinecone</b><br/><b>22% of remaining</b>"]
-        L3["<b>Level 3: Cold Path</b><br/><b>Direct query</b><br/><b>10% of queries</b>"]
+        L1["Level 1: Semantic Cache<br/>Redis | 68% hit rate"]
+        L2["Level 2: Vector Cache<br/>Pinecone | 22% of remaining"]
+        L3["Level 3: Cold Path<br/>Direct query | 10%"]
         
-        R1["<b>⚡ 280ms avg</b>"]
-        R2["<b>⚡ 850ms avg</b>"]
-        R3["<b>⚡ 2.1s avg</b>"]
+        R1["280ms avg"]
+        R2["850ms avg"]
+        R3["2.1s avg"]
         
-        RESULT["<b>Blended p95: 2.1s</b><br/><b>✅ Under 3s target</b>"]
-        
-        QUERY --> L1
-        L1 -->|<b>Hit 68%</b>| R1
-        L1 -->|<b>Miss 32%</b>| L2
-        L2 -->|<b>Hit 22%</b>| R2
-        L2 -->|<b>Miss 10%</b>| L3
-        L3 --> R3
-        
-        R1 --> RESULT
-        R2 --> RESULT
-        R3 --> RESULT
+        RESULT["Blended p95: 2.1s<br/>Under 3s target"]
     end
     
-    style CACHE fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style QUERY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style R1 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style R2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style R3 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    Copyright["© 2025 Colaberry Inc."]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    QUERY --> L1
+    L1 -->|"Hit 68%"| R1
+    L1 -->|"Miss 32%"| L2
+    L2 -->|"Hit 22%"| R2
+    L2 -->|"Miss 10%"| L3
+    L3 --> R3
+    R1 --> RESULT
+    R2 --> RESULT
+    R3 --> RESULT
+    
+    style CACHE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style QUERY fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style L1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style L3 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style R1 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:2px
+    style R2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style R3 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 The results validated the architecture. Under 10x load, response time p95 held at 2.1 seconds—within the 3-second target. Cache hit rate actually improved slightly under load as common query patterns became more likely.
@@ -500,41 +502,46 @@ Each category required different disambiguation strategies.
 **Diagram 5: Lexicon Disambiguation Flow**
 
 ```mermaid
-graph TD
-    subgraph DISAMBIGUATION["<b>LEXICON DISAMBIGUATION PROCESS</b>"]
-        Q["<b>User Query</b><br/><b>'When did I last see my doctor?'</b>"]
+
+graph TB
+    subgraph DISAMBIGUATION["LEXICON DISAMBIGUATION PROCESS"]
+        direction TB
+        Q["User Query<br/>'When did I last see my doctor?'"]
         
-        CONF["<b>Confidence Check</b><br/><b>Threshold: 0.90</b>"]
+        CONF["Confidence Check<br/>Threshold: 0.90"]
         
-        HIGH["<b>High Confidence ≥0.90</b><br/><b>Direct response</b>"]
-        LOW["<b>Low Confidence <0.90</b><br/><b>Disambiguation needed</b>"]
+        subgraph PATHS[" "]
+            direction LR
+            HIGH["High Confidence ≥0.90<br/>Direct response"]
+            LOW["Low Confidence <0.90<br/>Disambiguation needed"]
+        end
         
-        PROMPT["<b>Clarification Prompt</b><br/><b>'Do you mean your PCP</b><br/><b>Dr. Nguyen or your</b><br/><b>cardiologist Dr. Patel?'</b>"]
+        PROMPT["Clarification Prompt<br/>'Do you mean your PCP Dr. Nguyen<br/>or your cardiologist Dr. Patel?'"]
         
-        RESP["<b>User Confirms</b><br/><b>'Dr. Patel'</b>"]
+        RESP["User Confirms<br/>'Dr. Patel'"]
         
-        RESULT["<b>Accurate Response</b><br/><b>with correct context</b>"]
-        
-        Q --> CONF
-        CONF -->|<b>≥0.90</b>| HIGH
-        CONF -->|<b><0.90</b>| LOW
-        HIGH --> RESULT
-        LOW --> PROMPT
-        PROMPT --> RESP
-        RESP --> RESULT
+        RESULT["Accurate Response<br/>with correct context"]
     end
     
-    style DISAMBIGUATION fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style Q fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style CONF fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style HIGH fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style LOW fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style PROMPT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESP fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    Copyright["© 2025 Colaberry Inc."]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    Q --> CONF
+    CONF -->|"≥0.90"| HIGH
+    CONF -->|"<0.90"| LOW
+    HIGH --> RESULT
+    LOW --> PROMPT --> RESP --> RESULT
+    
+    style DISAMBIGUATION fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Q fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style CONF fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PATHS fill:none,stroke:none
+    style HIGH fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style LOW fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style PROMPT fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style RESP fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 The team implemented smart disambiguation. When the system's confidence in entity resolution dropped below 0.90, it would ask a clarifying question—but a *smart* question that presented the most likely options.
@@ -583,36 +590,43 @@ The root cause analysis took most of Monday. Swapna mapped the data flows:
 **Diagram 6: Quality Gates in Production**
 
 ```mermaid
-graph TD
-    subgraph QUALITY["<b>ECHO'S DATA QUALITY GATES</b>"]
-        SOURCE["<b>Data Sources</b><br/><b>EHR | Scheduling | Claims</b>"]
+
+graph TB
+    subgraph QUALITY["ECHO'S DATA QUALITY GATES"]
+        direction TB
+        SOURCE["Data Sources<br/>EHR | Scheduling | Claims"]
         
-        GATE1["<b>Gate 1: Schema Validation</b><br/><b>Required fields present?</b>"]
-        GATE2["<b>Gate 2: Cross-System Check</b><br/><b>Values consistent?</b>"]
-        GATE3["<b>Gate 3: Anomaly Detection</b><br/><b>Statistical outliers?</b>"]
+        GATE1["Gate 1: Schema Validation<br/>Required fields present?"]
+        GATE2["Gate 2: Cross-System Check<br/>Values consistent?"]
+        GATE3["Gate 3: Anomaly Detection<br/>Statistical outliers?"]
         
-        PASS["<b>✅ Quality Verified</b><br/><b>Data available to agents</b>"]
-        QUARANTINE["<b>⚠️¸ Quarantine</b><br/><b>Flag for review</b>"]
-        
-        SOURCE --> GATE1
-        GATE1 -->|<b>Pass</b>| GATE2
-        GATE1 -->|<b>Fail</b>| QUARANTINE
-        GATE2 -->|<b>Pass</b>| GATE3
-        GATE2 -->|<b>Fail</b>| QUARANTINE
-        GATE3 -->|<b>Pass</b>| PASS
-        GATE3 -->|<b>Flag</b>| QUARANTINE
+        subgraph OUTCOMES[" "]
+            direction LR
+            PASS["Quality Verified<br/>Data available"]
+            QUARANTINE["Quarantine<br/>Flag for review"]
+        end
     end
     
-    style QUALITY fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style SOURCE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GATE1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GATE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GATE3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PASS fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style QUARANTINE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
+    Copyright["© 2025 Colaberry Inc."]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    SOURCE --> GATE1
+    GATE1 -->|"Pass"| GATE2
+    GATE1 -->|"Fail"| QUARANTINE
+    GATE2 -->|"Pass"| GATE3
+    GATE2 -->|"Fail"| QUARANTINE
+    GATE3 -->|"Pass"| PASS
+    GATE3 -->|"Flag"| QUARANTINE
+    
+    style QUALITY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style SOURCE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style GATE1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style GATE2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style GATE3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style OUTCOMES fill:none,stroke:none
+    style PASS fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style QUARANTINE fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 The solution was real-time synchronization. When a provider assignment changed in the EHR—the source of truth—that change would propagate to scheduling within 30 seconds rather than waiting for the nightly batch.
@@ -796,7 +810,7 @@ Dr. Chen added the clinical perspective. "For clinical agents, we're also valida
 
 ```mermaid
 graph TB
-    subgraph AGENTS["<b>ECHO HEALTH: THREE PRODUCTION AGENTS</b>"]
+    subgraph AGENTS["<b>ECHO HEALTH: 3 AGENTS</b>"]
         subgraph CARE["<b>CARE COORDINATION</b>"]
             CA["<b>Agent 1</b><br/><b>Care Coordination</b>"]
             CA_DATA["<b>EHR | Scheduling</b><br/><b>Insurance | Pharmacy</b>"]
@@ -815,7 +829,7 @@ graph TB
             RC_USERS["<b>Billing Staff</b><br/><b>Finance | Admins</b>"]
         end
         
-        ORCH["<b>Layer 7: Orchestration</b><br/><b>Routes | Coordinates | Monitors</b>"]
+        ORCH["<b>Layer 7: Orchestration</b><br/><b>Routes | Coordinates <br/> Monitors</b>"]
         
         ORCH --> CA
         ORCH --> CD
@@ -958,12 +972,12 @@ Sarah stood at the front of the room. Behind her, the GOALS™ dashboard display
 
 She clicked to the first slide.
 
-**Diagram 8: Echo's GOALS™ Final Dashboard**
+**Diagram 8: Echo's GOALS™ Final Dashboard (Week 12)**
 
 ```mermaid
 graph TB
-    subgraph FINAL["<b>ECHO HEALTH GOALS™ FINAL STATUS - WEEK 12</b>"]
-        G["<b>G - GOVERNANCE</b><br/><b>5/5 ✅</b><br/><b>Healthcare Requirement Met</b>"]
+    subgraph FINAL["<b>GOALS™ FINAL STATUS</b>"]
+        G["<b>G - GOVERNANCE</b><br/><b>5/5 ✅</b><br/><b>Healthcare <br/>Requirement Met</b>"]
         O["<b>O - OBSERVABILITY</b><br/><b>4/5 ✅</b><br/><b>Full Transparency</b>"]
         A["<b>A - AVAILABILITY</b><br/><b>4/5 ✅</b><br/><b>10x Scale Proven</b>"]
         L["<b>L - LEXICON</b><br/><b>4/5 ✅</b><br/><b>97% Accuracy</b>"]
@@ -1020,11 +1034,11 @@ She paused.
 
 "We didn't just build infrastructure. We built the Architecture of Trust—and proved all three pillars sustain each other."
 
-**Diagram 9: Architecture of Trust Complete**
+**Diagram 9: Echo Health - Architecture of Trust Complete**
 
 ```mermaid
 graph TB
-    subgraph COMPLETE["<b>ECHO HEALTH: ARCHITECTURE OF TRUST COMPLETE</b>"]
+    subgraph COMPLETE["<b>ARCHITECTURE OF TRUST</b>"]
         subgraph P1["<b>PILLAR 1: INPACT™</b>"]
             I1["<b>89/100 ✅</b>"]
             I2["<b>I✓ N✓ P✓ A✓ C✓ T✓</b>"]
@@ -1069,32 +1083,41 @@ Dr. Raj leaned forward. "You've built something that measures itself. That prove
 **Diagram 10: Echo's 90-Day Journey**
 
 ```mermaid
-graph LR
-    subgraph JOURNEY["<b>ECHO HEALTH: 90-DAY TRANSFORMATION</b>"]
-        D0["<b>Day 0</b><br/><b>Assessment</b><br/><b>INPACT™ 28/100</b>"]
-        W4["<b>Weeks 1-4</b><br/><b>Foundation</b><br/><b>Layers 1-2</b>"]
-        W7["<b>Weeks 5-7</b><br/><b>Intelligence</b><br/><b>Layers 3-4</b>"]
-        W10["<b>Weeks 8-10</b><br/><b>Trust</b><br/><b>Layers 5-7</b>"]
-        W12["<b>Weeks 11-12</b><br/><b>Operations</b><br/><b>GOALS™</b>"]
-        FINAL["<b>Day 84</b><br/><b>Production</b><br/><b>3 Agents Live</b>"]
+
+graph TB
+    subgraph JOURNEY["ECHO HEALTH: 90-DAY TRANSFORMATION"]
+        direction TB
+        D0["Day 0: Assessment<br/>INPACT™ 28/100"]
         
-        D0 -->|<b>Pillar 1</b>| W4
-        W4 -->|<b>Pillar 2</b>| W7
-        W7 -->|<b>Pillar 2</b>| W10
-        W10 -->|<b>Pillar 3</b>| W12
-        W12 --> FINAL
+        subgraph BUILD["Pillar 2: Build Layers"]
+            direction LR
+            W4["Weeks 1-4<br/>Foundation<br/>Layers 1-2"]
+            W7["Weeks 5-7<br/>Intelligence<br/>Layers 3-4"]
+            W10["Weeks 8-10<br/>Trust<br/>Layers 5-7"]
+            W4 --> W7 --> W10
+        end
+        
+        W12["Weeks 11-12: Operations<br/>GOALS™"]
+        
+        FINAL["Day 84: Production<br/>3 Agents Live"]
     end
     
-    style JOURNEY fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style D0 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style W4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W7 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W10 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W12 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style FINAL fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    Copyright["© 2025 Colaberry Inc."]
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    D0 -->|"Pillar 1"| BUILD
+    BUILD -->|"Pillar 3"| W12
+    W12 --> FINAL
+    
+    style JOURNEY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style D0 fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style BUILD fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style W4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W7 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W10 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style W12 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
+    style FINAL fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 | Phase | Timeline | Pillar Focus | Achievement |
