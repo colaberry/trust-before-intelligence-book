@@ -1,8 +1,27 @@
 # Chapter 8: The Architecture of Trust in Action
 ## Echo's Operations (Weeks 11-12)
 
+**Book:** Trust Before Intelligence: Why 95% of Agent Projects Fail—and the Architecture Blueprint That Fixes Infrastructure in 90 Days  
+**Author:** Ram Katamaraja, CEO, Colaberry Inc.  
+**Chapter Length:** ~10,500 words (19 pages)  
+**Version:** 1.1 | November 30, 2025  
+**Status:** FIRST DRAFT
+
+**Chapter Role:**
+- Completes Pillar 3 (GOALS™ Framework) in production
+- Concludes Echo case study (90-day journey)
+- Demonstrates "Architecture of Trust" working
+- Three agents' first detailed operational appearance
+- Shows all three pillars validated together
+
+**v1.1 Changes:**
+- Added missing URLs to 5 references
+- Added acronym definitions on first use (HITL, ABAC, RAG, PCP, EHR)
+- Added Acronyms section at chapter end
+
 ---
 
+<!-- CHAPTER OPENING GRAPHIC -->
 
 ```mermaid
 
@@ -35,6 +54,7 @@ graph LR
 
 > **Key Takeaway:** *"You've answered my question—and built something we can trust."* — Dr. Arun Raj, Board Chair
 
+<!-- END CHAPTER OPENING GRAPHIC -->
 
 ## Part 1: Operations Begin
 
@@ -304,19 +324,19 @@ sequenceDiagram
     Note over U,T: Trace ID: abc-123-def | Every step logged with reasoning
     
     U->>O: "When is my next cardiology appointment?"
-    O->>T: ⚙️ Log: Query received, routing to Care Coord Agent
+    O->>T: ⚙️ Log: Query received, routing to Care Coord Agent
     O->>P: Check permissions for user
-    P->>T: ⚙️ Log: ABAC check passed (patient viewing own data)
+    P->>T: ⚙️ Log: ABAC check passed (patient viewing own data)
     P-->>O: ✅ Permitted
     O->>S: Resolve "cardiology appointment"
-    S->>T: ⚙️ Log: Entity resolved → Dr. Patel + appointment type
+    S->>T: ⚙️ Log: Entity resolved → Dr. Patel + appointment type
     S-->>O: Entities: provider_id=789, type=cardiology
     O->>R: Retrieve context for response
     R->>D: Query appointment data
-    D->>T: ⚙️ Log: Query 0.8s - appointment found
+    D->>T: ⚙️ Log: Query 0.8s - appointment found
     D-->>R: Appointment: Dec 5, 2:30 PM
     R-->>O: Context assembled with citations
-    O->>T: ⚙️ Log: Response generated with 3 citations
+    O->>T: ⚙️ Log: Response generated with 3 citations
     O-->>U: "Your next cardiology appointment with Dr. Patel is Thursday, December 5 at 2:30 PM at Main Campus."
     
     Note over U,T: Total: 1.6s | All steps traceable and explainable
@@ -1263,3 +1283,5 @@ Now it's your turn.
 **© 2025 Colaberry Inc. All Rights Reserved.**
 
 INPACT™ and GOALS™ are trademarks of Colaberry Inc.
+
+**END OF CHAPTER 8**

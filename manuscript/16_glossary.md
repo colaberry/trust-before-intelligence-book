@@ -16,6 +16,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 
 - **BI:** Business Intelligence — Technologies, practices, and strategies for collecting, integrating, analyzing, and presenting business data to support better decision-making.
 
+- **BID:** Twice Daily — Medical dosing abbreviation indicating medication should be taken twice per day (from Latin "bis in die").
+
 - **CDC:** Change Data Capture — A technique for identifying and capturing changes made to data in a database, enabling real-time data synchronization and eliminating batch processing delays.
 
 - **CDO:** Chief Data Officer — Executive responsible for enterprise data strategy, governance, and data-driven value creation.
@@ -27,6 +29,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **CMS:** Centers for Medicare & Medicaid Services — U.S. federal agency that administers Medicare, Medicaid, and the Children's Health Insurance Program.
 
 - **CNCF:** Cloud Native Computing Foundation — An open-source foundation that hosts critical cloud infrastructure projects including Kubernetes, OpenTelemetry, and Open Policy Agent.
+
+- **CPT:** Current Procedural Terminology — A standardized medical code set maintained by the American Medical Association used for billing and documentation of medical procedures and services.
 
 - **CTO:** Chief Technology Officer — Executive responsible for technology strategy, infrastructure, and technical operations.
 
@@ -47,6 +51,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **GPT:** Generative Pre-trained Transformer — A type of large language model architecture developed by OpenAI, trained on vast text datasets to generate human-like text.
 
 - **HBR:** Harvard Business Review — A management magazine published by Harvard Business Publishing.
+
+- **HbA1c:** Hemoglobin A1c — A blood test measuring average blood glucose levels over the past 2-3 months, commonly used to diagnose and monitor diabetes.
 
 - **HNSW:** Hierarchical Navigable Small World — A graph-based algorithm for approximate nearest neighbor search, commonly used in vector databases for efficient similarity search.
 
@@ -83,6 +89,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **NPI:** National Provider Identifier — A unique 10-digit identification number for healthcare providers in the United States, required by HIPAA.
 
 - **OPA:** Open Policy Agent — An open-source policy engine that enables unified, context-aware policy enforcement across the stack, commonly used for ABAC implementation.
+
+- **PCP:** Primary Care Physician — A healthcare provider who serves as the first point of contact for patients and coordinates their overall care.
 
 - **PHI:** Protected Health Information — Any individually identifiable health information held or transmitted by a covered entity, protected under HIPAA regulations.
 
