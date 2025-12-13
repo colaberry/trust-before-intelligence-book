@@ -10,6 +10,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 
 - **AI:** Artificial Intelligence — The simulation of human intelligence processes by computer systems, including learning, reasoning, and self-correction.
 
+- **APM:** Application Performance Monitoring — Tools and practices for monitoring software application performance, availability, and user experience in real-time.
+
 - **API:** Application Programming Interface — A set of protocols and tools that allow different software applications to communicate with each other.
 
 - **BI:** Business Intelligence — Technologies, practices, and strategies for collecting, integrating, analyzing, and presenting business data to support better decision-making.
@@ -31,6 +33,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **DM2:** Diabetes Mellitus Type 2 — A chronic metabolic condition characterized by insulin resistance; commonly referenced in clinical documentation.
 
 - **EHR:** Electronic Health Record — A digital version of a patient's medical history maintained by healthcare providers, including diagnoses, medications, treatment plans, and test results.
+
+- **EDR:** Endpoint Detection and Response — Security solutions that monitor endpoint devices for suspicious activity and provide tools to investigate and respond to threats.
 
 - **ETL:** Extract, Transform, Load — A data integration process that extracts data from source systems, transforms it into a consistent format, and loads it into a target system (typically a data warehouse).
 
@@ -66,6 +70,12 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 
 - **MRN:** Medical Record Number — A unique identifier assigned to a patient within a healthcare organization's system.
 
+- **MTBF:** Mean Time Between Failures — A reliability metric measuring the average time between system failures, used to assess system stability.
+
+- **MTTD:** Mean Time to Detection — A security and observability metric measuring the average time to detect an incident or anomaly.
+
+- **MTTR:** Mean Time to Recovery — An operational metric measuring the average time required to restore a system to normal operation after a failure.
+
 - **NDCG:** Normalized Discounted Cumulative Gain — A measure of ranking quality used to evaluate search and recommendation systems.
 
 - **NIST:** National Institute of Standards and Technology — U.S. federal agency that develops technology standards and guidelines, including cybersecurity frameworks and ABAC specifications (SP 800-162).
@@ -85,6 +95,12 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 - **RRF:** Reciprocal Rank Fusion — A method for combining multiple ranked lists into a single ranking, commonly used in hybrid search systems.
 
 - **SQL:** Structured Query Language — A programming language used for managing and querying relational databases.
+
+- **SLO:** Service Level Objective — A target metric for system reliability or performance (e.g., 99.9% uptime), used to define acceptable service quality.
+
+- **SOC:** Security Operations Center — A centralized team responsible for monitoring, detecting, and responding to security threats and incidents.
+
+- **SRE:** Site Reliability Engineering — A discipline that applies software engineering principles to infrastructure and operations, pioneered by Google to ensure system reliability.
 
 - **TTL:** Time To Live — A mechanism that limits the lifespan of data in a cache or network, after which the data expires and must be refreshed.
 
