@@ -346,27 +346,35 @@ Echo invested $470K and four weeks to transform their data foundation. The payof
 **Diagram: Foundation Layer Stack**
 
 ```mermaid
-graph TD
-    subgraph OBS["OBSERVABILITY (L6 Start)"]
-        O1["<b>Baseline Metrics</b><br/><b>Before Building</b>"]
+
+graph TB
+    subgraph FOUNDATION["FOUNDATION LAYERS"]
+        direction LR
+        subgraph OBS["L6: OBSERVABILITY"]
+            O1["Baseline Metrics<br/>Before Building"]
+        end
+        
+        subgraph FABRIC["L2: DATA FABRIC"]
+            direction LR
+            F1["Debezium<br/>CDC"]
+            F2["Kafka<br/>Streaming"]
+            F3["Event<br/>Hub"]
+        end
     end
     
-    subgraph FABRIC["DATA FABRIC (L2)"]
-        F1["<b>Debezium CDC</b>"]
-        F2["<b>Kafka Streaming</b>"]
-        F3["<b>Event Hub</b>"]
+    subgraph STORAGE["L1: MULTI-MODAL STORAGE"]
+        direction LR
+        S1["Databricks<br/>Lakehouse"]
+        S2["Redis<br/>Cache"]
+        S3["Vector<br/>Store"]
     end
     
-    subgraph STORAGE["MULTI-MODAL STORAGE (L1)"]
-        S1["<b>Databricks</b><br/><b>Lakehouse</b>"]
-        S2["<b>Redis Cache</b>"]
-        S3["<b>Vector Store</b>"]
-    end
+    Copyright["© 2025 Colaberry Inc."]
     
-    OBS --> FABRIC --> STORAGE
+    OBS --> FABRIC
+    FOUNDATION --> STORAGE
     
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
+    style FOUNDATION fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
     style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style FABRIC fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
     style STORAGE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
@@ -378,6 +386,7 @@ graph TD
     style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style S3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Layers Built:**
