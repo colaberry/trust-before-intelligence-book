@@ -215,42 +215,52 @@ Echo's transformation wasn't friction-free. They encountered technical challenge
 **Diagram: Risk Escalation Framework**
 
 ```mermaid
-graph TD
+
+graph LR
     subgraph STATUS["STATUS INDICATORS"]
-        GREEN["<b>🟢 On Track</b><br/><b>Continue</b>"]
-        YELLOW["<b>🟡 At Risk</b><br/><b>Assign Owner</b>"]
-        RED["<b>🔴 Blocked</b><br/><b>Escalate 24h</b>"]
+        direction TB
+        GREEN["On Track<br/>Continue"]
+        YELLOW["At Risk<br/>Assign Owner"]
+        RED["Blocked<br/>Escalate 24h"]
     end
     
-    subgraph RESPONSE["RESPONSE ACTIONS"]
-        R1["<b>Daily Check-ins</b>"]
-        R2["<b>Mitigation Plan</b>"]
-        R3["<b>Leadership Escalation</b>"]
+    subgraph ACTIONS["RESPONSE FLOW"]
+        direction TB
+        R1["Daily Check-ins"]
+        R2["Mitigation Plan"]
+        RESOLVED{{"Resolved?"}}
+        R1 --> RESOLVED
+        R2 --> RESOLVED
     end
     
-    GREEN --> CONTINUE["<b>Proceed<br/>to Next Week</b>"]
+    subgraph OUTCOMES[" "]
+        direction TB
+        CONTINUE["Proceed to Next Week"]
+        ESCALATE["Leadership Escalation"]
+    end
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    GREEN --> CONTINUE
     YELLOW --> R1
     YELLOW --> R2
-    RED --> R3
-    
-    R1 --> RESOLVED["<b>Resolved?</b>"]
-    R2 --> RESOLVED
-    RESOLVED -->|<b>Yes</b>| GREEN
-    RESOLVED -->|<b>No</b>| RED
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    RED --> ESCALATE
+    RESOLVED -->|"Yes"| CONTINUE
+    RESOLVED -->|"No"| ESCALATE
     
     style STATUS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style RESPONSE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style ACTIONS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style OUTCOMES fill:none,stroke:none
     style GREEN fill:#c8e6c9,stroke:#388e3c,color:#1b5e20
     style YELLOW fill:#fff9c4,stroke:#f9a825,color:#f57f17
     style RED fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style R1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style R2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style R3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style RESOLVED fill:#ffe0b2,stroke:#f57c00,color:#e65100
     style CONTINUE fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style RESOLVED fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style ESCALATE fill:#ffcdd2,stroke:#c62828,color:#b71c1c
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Phase Gate Checkpoints**
