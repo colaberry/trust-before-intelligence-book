@@ -1701,7 +1701,7 @@ The 90-Day Tracker System consists of seven interconnected sheets:
 ```mermaid
 
 graph RL
-    subgraph TRACKER["90-DAY TRACKER STRUCTURE"]
+    subgraph TRACKER["90-DAY TRACKER"]
         direction RL
         subgraph EXECUTIVE["EXECUTIVE VIEW"]
             T1["Tab 1: Weekly Progress"]

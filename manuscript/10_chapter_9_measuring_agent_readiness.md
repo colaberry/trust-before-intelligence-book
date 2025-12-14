@@ -63,6 +63,8 @@ The Architecture of Trust integrates three frameworks into one coherent system. 
 - **Contextual**: Unified knowledge synthesis across all enterprise systems
 - **Transparent**: Explainable decisions with traceable reasoning
 
+For complete INPACT™ framework details, see Chapter 2 and 3.
+
 **The 7-Layer Architecture delivers those needs.** Each layer addresses specific INPACT™ dimensions:
 
 | Layer | Name | Primary INPACT™ Dimensions |
@@ -74,6 +76,8 @@ The Architecture of Trust integrates three frameworks into one coherent system. 
 | L5 | Agent-Aware Governance | P (ABAC), T (audit), G (compliance) |
 | L6 | Observability & Feedback | T (traces), A (feedback), O (monitoring) |
 | L7 | Multi-Agent Orchestration | All dimensions coordinated |
+
+For complete 7 - Layers details, see Chapters 4,5 and 6.
 
 **GOALS™ ensures sustainable operation.** Five operational targets—Governance, Observability, Availability, Lexicon, and Solid—translate infrastructure capability into organizational outcomes. *For complete GOALS™ framework detail, see Chapter 7.*
 
@@ -267,9 +271,9 @@ graph LR
     
     subgraph LAYERS["7-LAYER ARCHITECTURE"]
         L1["<b>L1 Storage</b>"]
-        L2["<b>L2 Data Fabric</b>"]
+        L2["<b>L2 Real-time Fabric</b>"]
         L3["<b>L3 Semantic</b>"]
-        L4["<b>L4 Retrieval</b>"]
+        L4["<b>L4 Intelligence</b>"]
         L5["<b>L5 Governance</b>"]
         L6["<b>L6 Observability</b>"]
     end
@@ -388,7 +392,7 @@ This foresight prevents surprises. If you know your T dimension is weak, you won
 
 You have two paths to complete your INPACT™ assessment, both yielding identical insights.
 
-**Option 1: Online Assessment (Coming Q2 2026)**
+**Option 1: Online Assessment (Coming Q1 2026)**
 
 Colaberry is developing an automated assessment platform at [colaberry.ai/assessment](https://colaberry.ai/assessment). The online tool will provide:
 
@@ -1248,35 +1252,36 @@ Not all gaps are equal. Your lowest-scoring dimensions reveal where to focus fir
 **Diagram 6: Gap-to-Phase Prioritization Flow**
 
 ```mermaid
+
 graph TD
     subgraph ASSESS["FIND LOWEST DIMENSIONS"]
         A["<b>Your INPACT™<br/>Assessment</b>"]
     end
-    
-    subgraph FOUND["FOUNDATION FIRST"]
-        F1["<b>I (Instant)</b><br/><b>→ L1, L2</b>"]
-        F2["<b>C (Contextual)</b><br/><b>→ L1, L2, L3</b>"]
-    end
-    
-    subgraph INTEL["INTELLIGENCE SECOND"]
-        I1["<b>N (Natural)</b><br/><b>→ L3, L4</b>"]
-    end
-    
+
     subgraph TRUST["TRUST THIRD"]
         T1["<b>P (Permitted)</b><br/><b>→ L5</b>"]
         T2["<b>T (Transparent)</b><br/><b>→ L5, L6</b>"]
         T3["<b>A (Adaptive)</b><br/><b>→ L4, L6</b>"]
     end
-    
+
+    subgraph INTEL["INTELLIGENCE SECOND"]
+        I1["<b>N (Natural)</b><br/><b>→ L3, L4</b>"]
+    end
+
+    subgraph FOUND["FOUNDATION FIRST"]
+        F1["<b>I (Instant)</b><br/><b>→ L1, L2</b>"]
+        F2["<b>C (Contextual)</b><br/><b>→ L1, L2, L3</b>"]
+    end
+
     A --> F1
     A --> F2
     A --> I1
     A --> T1
     A --> T2
     A --> T3
-    
+
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
+
     style ASSESS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
     style FOUND fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
     style INTEL fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
@@ -1289,6 +1294,7 @@ graph TD
     style T2 fill:#b2dfdb,stroke:#00897b,color:#004d40
     style T3 fill:#b2dfdb,stroke:#00897b,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Gap Prioritization Matrix**
