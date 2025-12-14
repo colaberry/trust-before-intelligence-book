@@ -88,6 +88,8 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 
 - **NPI:** National Provider Identifier — A unique 10-digit identification number for healthcare providers in the United States, required by HIPAA.
 
+- **NLU:** Natural Language Understanding — A subfield of AI focused on enabling machines to comprehend and interpret human language in context.
+
 - **OPA:** Open Policy Agent — An open-source policy engine that enables unified, context-aware policy enforcement across the stack, commonly used for ABAC implementation.
 
 - **PCP:** Primary Care Physician — A healthcare provider who serves as the first point of contact for patients and coordinates their overall care.
