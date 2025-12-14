@@ -11,7 +11,7 @@
 graph LR
     subgraph BEFORE["AD-HOC PROJECTS"]
         direction TB
-        B1["No clear timeline<br/><br/>Unknown costs<br/><br/>Scope creep<br/><br/>Missed dependencies"]
+        B1["No clear timeline<br/><br/>Unknown costs<br/><br/>Scope creep<br/><br/><b>Missed dependencies</b>"]
     end
     
     subgraph TRANSFORM["90-DAY ROADMAP"]
@@ -19,9 +19,9 @@ graph LR
         T1["Structured Phases"]
     end
     
-    subgraph AFTER["SYSTEMATIC TRANSFORMATION"]
+    subgraph AFTER["TRANSFORM SYSTEMATICALLY"]
         direction TB
-        A1["Week-by-week plan<br/><br/>Defined costs<br/><br/>Clear checkpoints<br/><br/>Sequenced layers"]
+        A1["Week-by-week plan<br/><br/>Defined costs<br/><br/>Clear checkpoints<br/><br/><b>Operational Excellence</b>"]
     end
     
     BEFORE --> TRANSFORM --> AFTER
@@ -96,19 +96,19 @@ Echo's transformation followed four distinct phases, each building on the previo
 ```mermaid
 graph TD
     subgraph PHASE1["PHASE 1: FOUNDATION"]
-        P1["<b>Weeks 1-4</b><br/><b>L1 Storage + L2 Data Fabric</b><br/><b>$470K · 28→42 pts</b>"]
+        P1["<b>Weeks 1-4</b><br/><b>L1 Storage +<br/> L2 Data Fabric</b><br/><b>$470K · 28→42 pts</b>"]
     end
     
     subgraph PHASE2["PHASE 2: INTELLIGENCE"]
-        P2["<b>Weeks 5-7</b><br/><b>L3 Semantic + L4 Retrieval</b><br/><b>$380K · 42→67 pts</b>"]
+        P2["<b>Weeks 5-7</b><br/><b>L3 Semantic +<br/> L4 Retrieval</b><br/><b>$380K · 42→67 pts</b>"]
     end
     
     subgraph PHASE3["PHASE 3: TRUST"]
-        P3["<b>Weeks 8-10</b><br/><b>L5 Governance + L7 Orchestration</b><br/><b>$250K · 67→86 pts</b>"]
+        P3["<b>Weeks 8-10</b><br/><b>L5 Governance +<br/> L7 Orchestration</b><br/><b>$250K · 67→86 pts</b>"]
     end
     
     subgraph PHASE4["PHASE 4: OPERATIONS"]
-        P4["<b>Weeks 11-12</b><br/><b>L6 Observability + GOALS™</b><br/><b>$130K · 86→89 pts</b>"]
+        P4["<b>Weeks 11-12</b><br/><b>L6 Observability +<br/> GOALS™</b><br/><b>$130K · 86→89 pts</b>"]
     end
     
     P1 --> P2 --> P3 --> P4

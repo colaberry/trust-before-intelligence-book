@@ -1249,7 +1249,7 @@ Not all gaps are equal. Your lowest-scoring dimensions reveal where to focus fir
 
 ```mermaid
 graph TD
-    subgraph ASSESS["IDENTIFY LOWEST DIMENSIONS"]
+    subgraph ASSESS["FIND LOWEST DIMENSIONS"]
         A["<b>Your INPACT™<br/>Assessment</b>"]
     end
     
