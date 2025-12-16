@@ -444,27 +444,39 @@ For implementation timing, reference Chapter 10's week-by-week roadmap. For scor
 **Diagram: The 7-Layer Architecture Technology Stack**
 
 ```mermaid
-graph TD
-    subgraph TRUST["TRUST LAYERS"]
-        L7["<b>Layer 7: Orchestration</b><br/><b>LangChain · CrewAI · AutoGen</b>"]
-        L6["<b>Layer 6: Observability</b><br/><b>LangSmith · Datadog · Arize</b>"]
-        L5["<b>Layer 5: Governance</b><br/><b>Collibra · Alation · Privacera</b>"]
+
+graph TB
+    subgraph STACK["7-LAYER ARCHITECTURE"]
+        direction TB
+        subgraph ROW1[" "]
+            direction LR
+            subgraph TRUST["TRUST LAYERS"]
+                direction TB
+                L7["L7: Orchestration<br/>LangChain · CrewAI"]
+                L6["L6: Observability<br/>LangSmith · Datadog"]
+                L5["L5: Governance<br/>Collibra · Privacera"]
+            end
+            
+            subgraph INTEL["INTELLIGENCE"]
+                direction TB
+                L4["L4: Retrieval<br/>LlamaIndex · Vectara"]
+                L3["L3: Semantic<br/>dbt · Cube"]
+            end
+        end
+        
+        subgraph FOUND["FOUNDATION LAYERS"]
+            direction LR
+            L2["L2: Data Fabric<br/>Debezium · Kafka · Flink"]
+            L1["L1: Storage<br/>Pinecone · Weaviate · Neo4j"]
+        end
     end
     
-    subgraph INTEL["INTELLIGENCE LAYERS"]
-        L4["<b>Layer 4: Retrieval</b><br/><b>LlamaIndex · Haystack · Vectara</b>"]
-        L3["<b>Layer 3: Semantic</b><br/><b>dbt · Cube · AtScale</b>"]
-    end
+    Copyright["© 2025 Colaberry Inc."]
     
-    subgraph FOUND["FOUNDATION LAYERS"]
-        L2["<b>Layer 2: Data Fabric</b><br/><b>Debezium · Kafka · Flink</b>"]
-        L1["<b>Layer 1: Storage</b><br/><b>Pinecone · Weaviate · Neo4j</b>"]
-    end
+    ROW1 --> FOUND
     
-    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
+    style STACK fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style ROW1 fill:none,stroke:none
     style TRUST fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style INTEL fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
     style FOUND fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
@@ -476,6 +488,7 @@ graph TD
     style L2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style L1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 ---
@@ -1380,55 +1393,43 @@ This section provides the authoritative reference for Echo Health Systems' techn
 **Diagram: Echo's Complete Technology Stack**
 
 ```mermaid
-graph TD
-    subgraph L7["LAYER 7: ORCHESTRATION"]
-        L7a["<b>LangGraph</b>"]
-        L7b["<b>Prefect</b>"]
+
+graph LR
+    subgraph TRUST["TRUST"]
+        direction LR
+        L7["L7: Orchestration<br/>LangGraph · Prefect"]
+        L6["L6: Observability<br/>Datadog · Grafana"]
+        L5["L5: Governance<br/>OPA · HITL"]
     end
     
-    subgraph L6["LAYER 6: OBSERVABILITY"]
-        L6a["<b>Datadog</b>"]
-        L6b["<b>Grafana Cloud</b>"]
+    subgraph INTEL["INTELLIGENCE"]
+        direction LR
+        L4["L4: Retrieval<br/>LangChain · OpenAI"]
+        L3["L3: Semantic<br/>dbt · Alation"]
     end
     
-    subgraph L5["LAYER 5: GOVERNANCE"]
-        L5a["<b>OPA + Styra</b>"]
-        L5b["<b>Custom HITL</b>"]
+    subgraph FOUND["FOUNDATION"]
+        direction LR
+        L2["L2: Data Fabric<br/>Fivetran · Kinesis"]
+        L1["L1: Storage<br/>Snowflake · Pinecone · Neo4j"]
     end
     
-    subgraph L4["LAYER 4: RETRIEVAL"]
-        L4a["<b>LangChain</b>"]
-        L4b["<b>OpenAI</b>"]
-    end
+    Copyright["© 2025 Colaberry Inc."]
     
-    subgraph L3["LAYER 3: SEMANTIC"]
-        L3a["<b>dbt Cloud</b>"]
-        L3b["<b>Alation</b>"]
-    end
+    TRUST --> INTEL --> FOUND
     
-    subgraph L2["LAYER 2: DATA FABRIC"]
-        L2a["<b>Fivetran</b>"]
-        L2b["<b>AWS Kinesis</b>"]
-    end
-    
-    subgraph L1["LAYER 1: STORAGE"]
-        L1a["<b>Snowflake</b>"]
-        L1b["<b>Pinecone</b>"]
-        L1c["<b>Neo4j</b>"]
-    end
-    
-    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style L7 fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style L6 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L5 fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
-    style L4 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style L3 fill:#fff9c4,stroke:#f9a825,stroke-width:2px,color:#f57f17
-    style L2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style L1 fill:#e8f5e9,stroke:#388e3c,stroke-width:2px,color:#1b5e20
+    style TRUST fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    style INTEL fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style FOUND fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style L7 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
+    style L6 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style L5 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
+    style L4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
+    style L3 fill:#fff59d,stroke:#f9a825,color:#f57f17
+    style L2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style L1 fill:#c8e6c9,stroke:#388e3c,color:#1b5e20
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Complete Technology Stack**
