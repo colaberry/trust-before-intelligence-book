@@ -495,7 +495,7 @@ graph TB
         B1 --> C1["<b>BI Query<br/>8-13 seconds</b>"]
         C1 --> D1["<b>Stale Data<br/>8-24 hours old</b>"]
         
-        style D1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+        style D1 fill:#EB898B,color:#7A1F22,stroke:#7A1F22,stroke-width:3px
     end
     
     ERA1 -.->|<b>Evolution</b>| ERA2
@@ -565,7 +565,7 @@ graph TB
         B1 --> C1["<b>Cryptic Table<br/>FCT_PTNT_ENCT</b>"]
         C1 --> D1["<b>2–3 days<br/>40–60% accuracy</b>"]
         
-        style D1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+        style D1 fill:#EB898B,color:#7A1F22,stroke:#7A1F22,stroke-width:3px
     end
     
     ERA1 -.->|<b>Evolution</b>| ERA2
@@ -633,7 +633,7 @@ graph TB
         direction LR
         A1["<b>User = Scheduler</b><br/>Role Granted"]
         B1["<b>Access ALL</b><br/>Patient Records"]
-        D1["<b>HIPAA<br/>Violation</b>"]
+        D1["<b>HIPAA</b><br/>Violation"]
         
         A1 --> B1 --> D1
     end
@@ -642,10 +642,10 @@ graph TB
     
     subgraph ERA2["<b>RBAC + ABAC</b>"]
         direction LR
-        A2["<b>User + Context</b><br/>Per-Query Eval<"]
-        B2["<b>Policy<br/>Engine OPA"</br>]
-        C2["<b>Dynamic<br/>Masking"]
-        D2["<b>HIPAA<br/>Compliant</b>"]
+        A2["<b>User + Context</b><br/>Per-Query Evaluation"]
+        B2["<b>Policy Engine</b><br/>OPA"]
+        C2["<b>Dynamic</b><br/>Masking"]
+        D2["<b>HIPAA</b><br/>Compliant"]
         
         A2 --> B2 --> C2 --> D2
     end
@@ -654,7 +654,7 @@ graph TB
     style ERA1 fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
     style A1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
     style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style D1 fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style D1 fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#7A1F22
 
     style ERA2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
     style A2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
