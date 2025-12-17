@@ -28,10 +28,10 @@ graph LR
 
     style BEFORE fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
     style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style TRANSFORM fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style T1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style AFTER fill:#E6F3F6,stroke:#0FB67D,stroke-width:2px,color:#003322
-    style A1 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style TRANSFORM fill:#4478A6,stroke:#32738C,stroke-width:3px,color:#ffffff
+    style T1 fill:#4478A6,stroke:#32738C,stroke-width:3px,color:#ffffff
+    style AFTER fill:#E6F3F6,stroke:#0FB67D,stroke-width:2px,color:#00323D
+    style A1 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#ffffff
     style Copyright fill:#ffffff,stroke:none,color:#666666
     
 ```
