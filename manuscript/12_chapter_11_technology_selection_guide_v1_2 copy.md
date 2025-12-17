@@ -43,8 +43,6 @@
 
 *Every vendor in Echo's production stack passed the same test: Does it meet INPACT™ agent needs? Does it fit the 7-Layer Architecture? Does it enable GOALS™ operational excellence? This chapter gives you their exact selection criteria, vendor scorecards, and the rationale behind every choice. Your roadmap (Chapter 10) shows when to build. This chapter shows what to build with.*
 
-> **📚 Online Vendor Directory:** Technology evolves faster than books. For the latest vendor evaluations, new entrants, pricing updates, and community reviews, visit **trustbeforeintelligence.com/vendors** — updated quarterly with 50+ vendors across all seven layers.
-
 ---
 
 ## Part 1: Selection Framework
@@ -218,7 +216,9 @@ Use these bands to interpret combined scores:
 ✅ Score ≥51/66 means proceed with confidence; <45/66 means find alternatives  
 ⭐️ **Next:** When to build, buy, or partner for each component
 
+**Reading Time Remaining:** ~25 minutes
 
+**Your Framework Quick Check:** Which of your layers scored lowest in Chapter 9? That's where vendor selection matters most.
 
 ---
 
@@ -375,15 +375,14 @@ Echo operated at Growth tier: **$1.23M implementation, $52K/month operations**.
 
 **Echo's Phase Investment:**
 
-| Phase | Weeks | Layers | Budgeted | Actual |
-|-------|-------|--------|----------|--------|
-| Foundation | 1-4 | L1-L2 | $470K | $468K |
-| Intelligence | 5-7 | L3-L4 | $380K | $392K |
-| Trust | 8-10 | L5-L6-L7 | $380K | $82K |
-| Operations | 11-12 | Validation | — | $50K |
-| **Total** | **12** | **All 7** | **$1.23M** | **$992K** |
+| Phase | Weeks | Layers | Investment |
+|-------|-------|--------|------------|
+| Foundation | 1-4 | L1-L2, L6 start | $470K |
+| Intelligence | 5-7 | L3-L5 start | $380K |
+| Trust | 8-10 | L5-L7 | $380K |
+| **Total** | **10** | **All 7** | **$1.23M** |
 
-*Phase 3 achieved 78% savings through open-source OPA and existing Datadog license. Ongoing operations: $52K/month ($624K/year). See Chapter 10 for week-by-week breakdown.*
+*Ongoing operations: $52K/month ($624K/year). See Chapter 10 for week-by-week breakdown.*
 
 Tier 2 is recommended for healthcare organizations. Managed services reduce operational burden, enterprise support ensures help when needed, and HIPAA compliance comes built-in.
 
@@ -430,13 +429,15 @@ Tier 2 is recommended for healthcare organizations. Managed services reduce oper
 ✅ Scoring quick reference gives you criteria without lengthy evaluation  
 ⭐️ **Next:** Specific vendor recommendations for each of the seven layers
 
+**Reading Time Remaining:** ~20 minutes
+
+**Your Framework Quick Check:** What's your budget tier? That determines how many premium vendors you can include.
+
 ---
 
 ## Part 2: Layer-by-Layer Technology Guide
 
 This section provides top vendor recommendations for each of the seven architecture layers. Every vendor includes INPACT™ and GOALS™ scores, healthcare applicability, and Echo's specific choice with rationale.
-
-> **📚 Full vendor database:** Visit **trustbeforeintelligence.com/vendors** for 50+ vendors across all layers, including alternatives not covered in print.
 
 For implementation timing, reference Chapter 10's week-by-week roadmap. For scoring methodology details, reference Chapter 9, Part 1.2.
 
@@ -875,7 +876,9 @@ Layer 3 translates business language to data structures. Without a semantic laye
 ✅ Layer 3 (Semantic): dbt for transformations, Alation/Collibra for governance  
 ⭐️ **Next:** Layers 4-7 complete the intelligence and trust stack
 
+**Reading Time Remaining:** ~12 minutes
 
+**Your Framework Quick Check:** Which foundation layer (1-3) is your biggest gap? That's where to focus vendor selection.
 
 ---
 
@@ -1049,9 +1052,9 @@ Echo built custom HITL workflows integrated with their clinical systems rather t
 
 **INPACT™ Needs Addressed:** T (traces), A (feedback)
 
-**Implementation Timing:** Weeks 8-10 (Trust Phase) — See Chapter 10, Part 2.3
+**Implementation Timing:** Foundation in Weeks 1-4, Complete in Weeks 8-10 — See Chapter 10
 
-Layer 6 provides visibility into agent behavior. Without observability, you can't detect accuracy drift, cost overruns, or performance degradation. Echo built L6 in Phase 3 after foundation and intelligence layers were operational, leveraging their existing corporate Datadog license to achieve significant cost savings.
+Layer 6 provides visibility into agent behavior. Without observability, you can't detect accuracy drift, cost overruns, or performance degradation. Echo established observability baselines in Week 1 (before building anything) and expanded coverage throughout implementation—measuring before building.
 
 #### APM Platforms
 
@@ -1233,7 +1236,9 @@ Layer 7 coordinates everything. Multi-agent orchestration ensures specialized ag
 ✅ Layer 7 (Orchestration): LangChain/LangGraph for agents, Prefect for workflows  
 ⭐️ **Next:** How to run vendor evaluations — RFPs, POCs, contracts
 
+**Reading Time Remaining:** ~6 minutes
 
+**Your Framework Quick Check:** Calculate your total stack cost using Echo's investments as reference. Does it fit your budget tier?
 
 ---
 
@@ -1511,8 +1516,6 @@ Chapter 12 completes your journey with MLOps practices for versioning and testin
 | Part 4 | Echo's Stack | Complete technology reference |
 
 *For complete canonical metrics (investment, ROI, timeline), see Appendix E (Quick Reference Card).*
-
-> **📚 Stay Current:** Technology changes rapidly. Bookmark **trustbeforeintelligence.com/vendors** for quarterly updates, new vendor evaluations, and community reviews from certified practitioners.
 
 ---
 
