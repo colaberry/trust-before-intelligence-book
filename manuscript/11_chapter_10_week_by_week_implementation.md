@@ -120,7 +120,7 @@ Sarah scheduled dedicated sessions with each group at phase boundaries, not just
 
 ### 1.3 Four Phases Overview
 
-Echo's transformation followed four distinct phases, each building on the previous. The sequence matters—attempting Phase 3 governance work before Phase 1 foundations produces the failures that give AI agents their 95% failure reputation.
+Echo's transformation followed four distinct phases, each building on the previous. The sequence matters—attempting Phase 3 governance work before Phase 1 foundations produces the failures behind AI agents' 95% failure rate.[1]
 
 **Diagram 2: The 90-Day Four-Phase Roadmap**
 
@@ -174,43 +174,43 @@ graph LR
 ```mermaid
 
 graph TB
-    subgraph FOUNDATION["FOUNDATION LAYERS"]
-        direction LR
-        subgraph OBS["L6: OBSERVABILITY"]
-            O1["Baseline Metrics<br/>Before Building"]
+    subgraph PHASE1["PHASE 1: FOUNDATION (Weeks 1-4)"]
+        direction TB
+        
+        subgraph WEEK12["WEEKS 1-2"]
+            subgraph STORAGE["L1: MULTI-MODAL STORAGE"]
+                direction LR
+                S1["Databricks<br/>Lakehouse"]
+                S2["Redis<br/>Cache"]
+                S3["Vector<br/>Store"]
+            end
         end
         
-        subgraph FABRIC["L2: DATA FABRIC"]
-            direction LR
-            F1["Debezium<br/>CDC"]
-            F2["Kafka<br/>Streaming"]
-            F3["Event<br/>Hub"]
+        subgraph WEEK34["WEEKS 3-4"]
+            subgraph FABRIC["L2: DATA FABRIC"]
+                direction LR
+                F1["Debezium<br/>CDC"]
+                F2["Kafka<br/>Streaming"]
+                F3["Event<br/>Hub"]
+            end
         end
-    end
-    
-    subgraph STORAGE["L1: MULTI-MODAL STORAGE"]
-        direction LR
-        S1["Databricks<br/>Lakehouse"]
-        S2["Redis<br/>Cache"]
-        S3["Vector<br/>Store"]
     end
     
     Copyright["© 2025 Colaberry Inc."]
     
-    OBS --> FABRIC
-    FOUNDATION --> STORAGE
+    STORAGE --> FABRIC
     
-    style FOUNDATION fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style FABRIC fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style STORAGE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style O1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style F1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style F2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style F3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style S1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
+    style PHASE1 fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style WEEK12 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px,color:#0d47a1
+    style WEEK34 fill:#fff3e0,stroke:#f57c00,stroke-width:1px,color:#e65100
+    style STORAGE fill:#bbdefb,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style FABRIC fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style S1 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style S2 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style S3 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style F1 fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style F2 fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style F3 fill:#fff3e0,stroke:#f57c00,color:#e65100
     style Copyright fill:#ffffff,stroke:none,color:#666666
 
 ```
@@ -218,19 +218,26 @@ graph TB
 | Attribute | Detail |
 |-----------|--------|
 | **Weeks** | 1-4 |
-| **Layers** | L1 (Multi-Modal Storage) + L2 (Real-Time Data Fabric) + L6 (Observability baseline) |
+| **Layers** | L1 (Multi-Modal Storage) → L2 (Real-Time Data Fabric) |
 | **INPACT™ Target** | 28 → 42 (+14 points) |
 | **Budget** | $470K budgeted / $468K actual |
 | **Team** | 2 senior data engineers, 1 cloud architect, 1 DBA, 2 CDC specialists (consulting) |
-| **Primary Focus** | Data freshness (<30 seconds), query performance, observability baseline |
+| **Primary Focus** | Data freshness (<30 seconds), query performance |
 
 **What Gets Built**
 
-Phase 1 establishes the foundation everything else depends on:
+Phase 1 establishes the foundation everything else depends on. Echo built layer-by-layer to maintain momentum and clear dependencies:
 
-- **Multi-modal storage**: Databricks lakehouse for unified analytics, Redis cache for sub-millisecond access, vector store preparation for Phase 2
-- **Real-time CDC pipelines**: Debezium captures changes from Epic EHR, Kafka streams events, Event Hub provides Azure integration—achieving 28-second data freshness
-- **Observability baseline**: Grafana dashboards and basic monitoring deployed first, because you must measure before you can improve
+**Weeks 1-2: Layer 1 (Multi-Modal Storage)**
+- Databricks lakehouse for unified analytics
+- Redis cache for sub-millisecond access
+- Vector store preparation for Phase 2 semantic search
+
+**Weeks 3-4: Layer 2 (Real-Time Data Fabric)**
+- Debezium captures changes from Epic EHR
+- Kafka streams events in real-time
+- Event Hub provides Azure integration
+- Result: 28-second data freshness (down from 24-hour batch)
 
 **Echo's Experience**
 
@@ -249,7 +256,53 @@ Week 3 hit yellow status when EHR CDC integration took 2 extra days due to legac
 
 ### 2.2 Phase 2: Intelligence (Weeks 5-7)
 
-**Diagram 5: Echo's Five-Stage RAG Pipeline**
+**Diagram 5a: Intelligence Layer Stack**
+
+```mermaid
+
+graph TB
+    subgraph PHASE2["PHASE 2: INTELLIGENCE (Weeks 5-7)"]
+        direction TB
+        
+        subgraph WEEK5["WEEK 5"]
+            subgraph SEMANTIC["L3: SEMANTIC LAYER"]
+                direction LR
+                SE1["Business<br/>Glossary"]
+                SE2["Entity<br/>Resolution"]
+                SE3["dbt<br/>Models"]
+            end
+        end
+        
+        subgraph WEEK67["WEEKS 6-7"]
+            subgraph INTELLIGENCE["L4: INTELLIGENT RETRIEVAL"]
+                direction LR
+                I1["Pinecone<br/>Vector DB"]
+                I2["RAG<br/>Pipeline"]
+                I3["Semantic<br/>Cache"]
+            end
+        end
+    end
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    SEMANTIC --> INTELLIGENCE
+    
+    style PHASE2 fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style WEEK5 fill:#e3f2fd,stroke:#1976d2,stroke-width:1px,color:#0d47a1
+    style WEEK67 fill:#fff3e0,stroke:#f57c00,stroke-width:1px,color:#e65100
+    style SEMANTIC fill:#bbdefb,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style INTELLIGENCE fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style SE1 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style SE2 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style SE3 fill:#e3f2fd,stroke:#1976d2,color:#0d47a1
+    style I1 fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style I2 fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style I3 fill:#fff3e0,stroke:#f57c00,color:#e65100
+    style Copyright fill:#ffffff,stroke:none,color:#666666
+
+```
+
+**Diagram 5b: Five-Stage RAG Pipeline**
 
 ```mermaid
 graph LR
@@ -293,7 +346,7 @@ graph LR
 | Attribute | Detail |
 |-----------|--------|
 | **Weeks** | 5-7 |
-| **Layers** | L3 (Unified Semantic Layer) + L4 (Intelligent Retrieval) |
+| **Layers** | L3 (Semantic Layer) → L4 (Intelligent Retrieval) |
 | **INPACT™ Target** | 42 → 67 (+25 points) |
 | **Budget** | $380K budgeted / $392K actual |
 | **Team** | 2 ML engineers, 1 clinical SME, semantic layer specialists |
@@ -301,17 +354,17 @@ graph LR
 
 **What Gets Built**
 
-Phase 2 gives agents the ability to understand and reason:
+Phase 2 gives agents the ability to understand and reason. Echo built layer-by-layer:
 
-- **Business glossary**: 2,400 clinical terms mapped to data structures—"my doctor" resolves to the correct provider, "MI" disambiguates between myocardial infarction and mitral insufficiency based on context
-- **Entity resolution**: 97% accuracy linking patients, providers, and encounters across Epic, lab systems, and scheduling databases
-- **Five-stage RAG pipeline**: The intelligence core that transforms questions into accurate answers:
-  - *Stage 1 (Query Understanding)*: Parse intent and extract entities—is this scheduling, clinical, or billing?
-  - *Stage 2 (Retrieval)*: Generate embeddings, retrieve top 20 candidates from vector DB with metadata filters
-  - *Stage 3 (Reranking)*: Cross-encoder model reorders candidates by relevance to the specific query
-  - *Stage 4 (Augmentation)*: Construct prompt with retrieved context and citation markers
-  - *Stage 5 (Generation)*: LLM generates response with validated citations
-- **Semantic caching**: 85% cache hit rate for similar queries, reducing LLM costs from $14,500/month to $2,300/month ($12,200/month savings)
+**Week 5: Layer 3 (Semantic Layer)**
+- Business glossary with 2,400 clinical terms mapped to data structures
+- Entity resolution achieving 97% accuracy across Epic, lab systems, and scheduling
+- dbt models translating business concepts to technical queries
+
+**Weeks 6-7: Layer 4 (Intelligent Retrieval)**
+- Pinecone vector database with 12,847 indexed documents
+- Five-stage RAG pipeline (see Diagram 5b): Query Understanding → Retrieval → Reranking → Augmentation → Generation
+- Semantic caching with 85% hit rate ($12,200/month LLM cost savings)
 
 **Technology Stack**
 
@@ -411,7 +464,7 @@ Phase 3 makes agents trustworthy:
 
 Phase 3 achieved **$298K in savings** (78% under budget) through strategic decisions:
 - Open-source OPA instead of commercial Styra ($137K saved)
-- Reused existing Datadog infrastructure from Phase 1 ($33K saved)
+- Leveraged existing corporate Datadog license ($33K saved)
 - Retrofitted original pilot agents instead of rebuilding ($128K saved)
 
 The pilot agents that failed in Chapter 0 weren't broken—they lacked infrastructure. With Layers 1-6 operational, those same agents finally had the foundation they required.
@@ -503,7 +556,7 @@ Echo completed the full 12-week transformation with $238K preserved for continge
 
 Three strategic decisions drove Phase 3 from $380K budgeted to $82K actual:
 - **Open-source OPA**: $137K saved vs. commercial Styra
-- **Datadog reuse**: $33K saved by extending Phase 1 infrastructure
+- **Existing Datadog license**: $33K saved by leveraging corporate contract
 - **Agent retrofit**: $128K saved by updating pilot agents vs. rebuilding
 
 **Ongoing Operations**
@@ -658,9 +711,9 @@ Every phase ends with a formal go/no-go decision. These gates prevent the most c
 
 **Phase 1 Gate (End of Week 4)**
 - INPACT™ score ≥40 (±5% tolerance)
-- CDC operational for critical tables
-- Storage infrastructure provisioned and tested
-- Observability baseline collecting metrics
+- Layer 1 storage infrastructure provisioned and tested
+- Layer 2 CDC operational for critical tables (appointments, demographics, insurance)
+- Data freshness <30 seconds verified
 - Decision: Proceed to Phase 2 or extend Phase 1
 
 **Phase 2 Gate (End of Week 7)**
@@ -868,11 +921,11 @@ Deployment is not the finish line. Chapter 12 covers everything after go-live:
 
 **Your Monday Morning**
 
-Week 1 starts with assessment and observability baseline. By Friday, you should have:
+Week 1 starts with Layer 1 storage provisioning. By Friday, you should have:
 
 - Current-state documentation complete (all seven layers assessed)
 - Stakeholder alignment confirmed (steering committee formed)
-- Observability dashboards operational (measure before you build)
+- Storage infrastructure provisioning underway (Databricks, Redis)
 - Budget approved and resources allocated
 - Week 2 plan finalized with assigned owners
 
@@ -894,6 +947,14 @@ The infrastructure exists. The frameworks are proven. The tracker is ready.
 | **Part 6** | 90-Day Tracker | Seven tabs for implementation tracking |
 
 **Echo's Complete Journey:** 28/100 → 89/100 INPACT™ score across 12 weeks, transforming 9-13 second queries into 1.6-second responses with 87% NLU accuracy and <8% HITL override rate.
+
+---
+
+## References
+
+[1] Challapally, A., et al. (2025). "The GenAI Divide: Why 95% of Enterprise GenAI Projects Fail and How to Be in the 5%." MIT Sloan School of Management, New Architectures for Next-Generation Data Analytics (NANDA) Lab. Analysis of 300+ enterprise GenAI initiatives. https://mitsloan.mit.edu/ideas-made-to-matter/why-95-enterprise-genai-projects-fail
+
+*For technology selection references and vendor documentation, see Chapter 11.*
 
 ---
 
