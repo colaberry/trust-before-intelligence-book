@@ -19,7 +19,7 @@ graph LR
         T1["15 Criteria<br/>+ GOALS™"]
     end
     
-    subgraph AFTER["OPERATIONS EXCELLENCE"]
+    subgraph AFTER["OPERATIONAL EXCELLENCE"]
         direction TB
         A1["Proactive observability<br/><br/>Structured incidents<br/><br/>MLOps automation<br/><br/>Continuous improvement"]
     end
@@ -76,57 +76,37 @@ Production readiness isn't a feeling—it's a measurable state. Echo validated a
 **Diagram: The 15-Criteria Production Readiness Framework**
 
 ```mermaid
-graph TD
-    subgraph INPACT["PILLAR 1: INPACT™ READINESS"]
-        I1["<b>1. Score ≥ 80</b>"]
-        I2["<b>2. Response < 5s</b>"]
-        I3["<b>3. NLU ≥ 85%</b>"]
-        I4["<b>4. Escalation < 15%</b>"]
-        I5["<b>5. Audit 100%</b>"]
+
+graph LR
+    subgraph INPACT["PILLAR 1: INPACT™"]
+        I1["1. Score ≥ 80<br/>2. Response < 5s<br/>3. NLU ≥ 85%<br/>4. Escalation < 15%<br/>5. Audit 100%"]
     end
     
     subgraph ARCH["PILLAR 2: ARCHITECTURE"]
-        A1["<b>6. 7 Layers Live</b>"]
-        A2["<b>7. 3+ Agents</b>"]
-        A3["<b>8. Orchestration < 3s</b>"]
-        A4["<b>9. BAAs Signed</b>"]
-        A5["<b>10. Data Residency</b>"]
+        A1["6. 7 Layers Live<br/>7. 3+ Agents<br/>8. Orchestration < 3s<br/>9. BAAs Signed<br/>10. Data Residency"]
     end
     
     subgraph GOALS["PILLAR 3: GOALS™"]
-        G1["<b>11. GOALS Score ≥ 4.0</b>"]
-        G2["<b>12. SLAs Defined</b>"]
-        G3["<b>13. Runbooks Ready</b>"]
-        G4["<b>14. Rollback < 5min</b>"]
-        G5["<b>15. Team Trained</b>"]
+        G1["11. Score ≥ 4.0<br/>12. SLAs Defined<br/>13. Runbooks Ready<br/>14. Rollback < 5min<br/>15. Team Trained"]
     end
     
-    INPACT --> READY["<b>PRODUCTION<br/>READY</b>"]
+    READY["PRODUCTION<br/>READY"]
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    INPACT --> READY
     ARCH --> READY
     GOALS --> READY
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
     style INPACT fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
     style ARCH fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
     style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style READY fill:#c8e6c9,stroke:#388e3c,stroke-width:3px,color:#1b5e20
     style I1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style I2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style I3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style I4 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style I5 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
     style A1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style A2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style A3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style A4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style A5 fill:#ffe0b2,stroke:#f57c00,color:#e65100
     style G1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style G2 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style G3 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style G4 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style G5 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style READY fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style Copyright fill:#ffffff,stroke:none,color:#666666
+
 ```
 
 **Pillar 1: INPACT™ Readiness (5 Criteria)**
