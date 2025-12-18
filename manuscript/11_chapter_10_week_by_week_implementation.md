@@ -26,12 +26,12 @@ graph LR
     
     BEFORE --> TRANSFORM --> AFTER
     
-    style BEFORE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style B1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
-    style A1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style BEFORE fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style TRANSFORM fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style T1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style AFTER fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style A1 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
 
 ```
 
@@ -118,16 +118,16 @@ graph LR
     
     P1 --> P2 --> P3 --> P4
     
-    style JOURNEY fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style PHASE1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style PHASE2 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style PHASE3 fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
-    style PHASE4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style P2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style P3 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
-    style P4 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style JOURNEY fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE1 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE4 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style P1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style P2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style P3 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style P4 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
@@ -257,18 +257,18 @@ graph LR
     RESOLVED -->|"Yes"| CONTINUE
     RESOLVED -->|"No"| ESCALATE
     
-    style STATUS fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style ACTIONS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
+    style STATUS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style ACTIONS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
     style OUTCOMES fill:none,stroke:none
-    style GREEN fill:#c8e6c9,stroke:#388e3c,color:#1b5e20
-    style YELLOW fill:#fff9c4,stroke:#f9a825,color:#f57f17
-    style RED fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style R1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style R2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style RESOLVED fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style CONTINUE fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style ESCALATE fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style GREEN fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style YELLOW fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style RED fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style R1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style R2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style RESOLVED fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style CONTINUE fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style ESCALATE fill:#0D0D0D,stroke:#30838C,stroke-width:3px,color:#ffffff
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
@@ -356,6 +356,7 @@ Echo invested $470K and four weeks to transform their data foundation. The payof
 
 ```mermaid
 
+
 graph TB
     subgraph FOUNDATION["FOUNDATION LAYERS"]
         direction LR
@@ -383,18 +384,18 @@ graph TB
     OBS --> FABRIC
     FOUNDATION --> STORAGE
     
-    style FOUNDATION fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style FABRIC fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style STORAGE fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style O1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style F1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style F2 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style F3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style S1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style FOUNDATION fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style OBS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style FABRIC fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style STORAGE fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style O1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style F1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style F2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style F3 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style S1 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style S2 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style S3 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
@@ -884,17 +885,17 @@ graph LR
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style STAGE1 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style STAGE2 fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style STAGE3 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style STAGE4 fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style STAGE5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S1 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style S3 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style S4 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style S5 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style STAGE1 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style STAGE2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style STAGE3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style STAGE4 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style STAGE5 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style S1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style S2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style S3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style S4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style S5 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 **Day 1-3: RAG Architecture Implementation**
@@ -1181,21 +1182,21 @@ graph TB
     ORCH --> OBS
     ROW1 --> ROW2
     
-    style TRUST fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
+    style TRUST fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
     style ROW1 fill:none,stroke:none
     style ROW2 fill:none,stroke:none
-    style ORCH fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
-    style OBS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GOV fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#880e4f
-    style O1 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
-    style O2 fill:#e1bee7,stroke:#7b1fa2,color:#4a148c
-    style B1 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style B2 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style B3 fill:#b2dfdb,stroke:#00897b,color:#004d40
-    style G1 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
-    style G2 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
-    style G3 fill:#f8bbd9,stroke:#c2185b,color:#880e4f
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style ORCH fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style OBS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style GOV fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style O1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style O2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style B1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style B2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style B3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style G1 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style G2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style G3 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
@@ -1730,19 +1731,19 @@ graph RL
     PILLARS --> T1
     OPS --> T1
 
-    style TRACKER fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style EXECUTIVE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style TRACKER fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style EXECUTIVE fill:#E6F3F6,stroke:#32738C,stroke-width:2px
     style FEEDS fill:none,stroke:none
-    style PILLARS fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#0d47a1
-    style OPS fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style T1 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style T2 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style T3 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style T4 fill:#bbdefb,stroke:#1976d2,color:#0d47a1
-    style T5 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style T6 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style T7 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style PILLARS fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style OPS fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style T1 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style T2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style T3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style T4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style T5 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style T6 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style T7 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
