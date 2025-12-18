@@ -1,16 +1,8 @@
 # Chapter 0: Trust Before Intelligence
 
-**The Foundation Chapter**
-
-*"Fix this in 90 days or we're shelving AI."*
-
-Dr. Arun Raj didn't raise his voice. He didn't need to. The Echo Health board chair had spent fifteen years building businesses, and he'd learned that the quietest statements carry the most weight. Across the boardroom table, Sarah Cedao—Echo's CTO—understood exactly what those twelve words meant: her career was on a ninety-day countdown.
-
 **Key Takeaway:** Understanding the Architecture of Trust—three integrated pillars that separate the 5% who succeed from the 95% who fail
 
 ---
-
-**Figure 0.0: Echo Health Transformation—From Failed Pilots to Production Success**
 
 ```mermaid
 
@@ -44,21 +36,19 @@ graph LR
     
 ```
 
+> **Key Takeaway:** *"Fix this in 90 days or we're shelving AI."* — Dr. Arun Raj, Board Chair
+
 ## The Crisis: When $40 Billion Can't Buy Trust
 
 In July 2025, MIT's NANDA initiative released a sobering report. After analyzing over 300 enterprise AI initiatives, interviewing 52 executives, and surveying 153 leaders, the researchers uncovered a stark reality: **95% of enterprise generative AI pilots fail to deliver measurable business value.**[1]
 
-Not 60%. Not 75%. Ninety-five percent.[1]
+Despite $30-40 billion in investment, only 5% of organizations successfully translate AI pilots into production systems with real financial impact. The study revealed a "GenAI Divide"—a widening gap between companies achieving success and the vast majority stuck in failed experiments.
 
-Despite $30-40 billion in investment, only 5% of organizations translate AI pilots into production systems with real financial impact.
+Here's what's puzzling: AI agents are more accurate than ever. Models like Claude Sonnet 4 and GPT-4 achieve superhuman performance on many tasks. Yet pilots keep failing.
 
-The puzzling part? The technology works. Claude Sonnet 4 and GPT-4 achieve superhuman performance on benchmark after benchmark. Vendors deliver on their promises. The code runs. The models respond. Yet pilots fail anyway.
+**The answer lies in trust, not technology.**
 
-Something fundamental is missing—and it's not in the AI.
-
-**The answer lies in infrastructure, not intelligence.**
-
-Users abandon agents they can't understand—regardless of technical sophistication. July 2025 research confirms it: transparency and design are the mediators of trust.[2] A global study of 48,000 people across 47 countries reinforces this reality: only 46% are willing to trust AI systems, reflecting deep tension between AI's benefits and perceived risks.[6] When users can't see how agents make decisions, research shows distrust commonly spreads to both the AI and the company behind it.[3] Technical excellence means nothing without earned trust.
+Users abandon agents they can't understand—regardless of technical sophistication. July 2025 research confirms what practitioners already know: transparency and design are the mediators of trust.[2] A global study of 48,000 people across 47 countries reinforces this reality: only 46% are willing to trust AI systems, reflecting deep tension between AI's benefits and perceived risks.[6] When users can't see how agents make decisions, research shows distrust commonly spreads to both the AI and the company behind it.[3] Technical excellence means nothing without earned trust.
 
 The data paints an even grimmer picture. Between February and July 2025, Deloitte's TrustID® survey tracked a **64-percentage-point collapse** in trust for agentic AI systems.[4] The decline accelerated sharply in the later months—trust in agentic AI that can act independently (not just make recommendations) plummeted **89% between May and July alone**, as employees grew uneasy with technology taking over decisions that were once theirs to make. The research, published in Harvard Business Review, shows this represents a shift from cautious optimism to widespread distrust in just months.
 
@@ -70,15 +60,11 @@ McKinsey's State of AI 2025 report quantified this gap: **63% of organizations r
 
 The primary reasons for failure weren't what most expected. Not model quality. Not regulation. Not talent shortage. The core barriers were:
 
-- **Data foundation gaps (30%):** Batch ETL that refreshes overnight. Siloed systems that can't talk to each other. BI-era schema names that no semantic layer can parse.
-
-- **BI-era architecture (25%):** Bolting agents onto fifteen-year-old infrastructure instead of rebuilding for a different era.
-
-- **Demo-driven development (20%):** Flashy pilots that impress executives but collapse under production load.
-
-- **Build-from-scratch syndrome (15%):** Reinventing proven patterns instead of adopting frameworks that already work.
-
-- **Wrong mental model (10%):** Treating agents like smarter search bars instead of autonomous actors that need fundamentally different infrastructure.
+- **Poor data foundation (30% of failures):** Batch ETL, siloed systems, cryptic schemas
+- **AI as an add-on (25%):** Bolting agents onto BI-era infrastructure instead of rearchitecting
+- **Demo-focused development (20%):** Flashy pilots that can't survive production realities
+- **Internal custom builds (15%):** Reinventing proven patterns instead of adopting frameworks
+- **Misaligned expectations (10%):** Treating agents like enhanced search instead of autonomous actors
 
 MIT's recommendation was clear: *"Create a strong data foundation. Prioritize long-term strategy over hype."*[1]
 
@@ -86,31 +72,27 @@ MIT's recommendation was clear: *"Create a strong data foundation. Prioritize lo
 
 Before we can answer that, you need to meet someone who faced this crisis head-on.
 
-> **Your Turn:** Where does your infrastructure stand? The 15-minute INPACT™ assessment at **colaberry.ai/assessment** measures your readiness across six dimensions and generates a personalized gap analysis. Consider taking it now—your results will make the frameworks ahead immediately actionable.
+**→ Take the assessment first:** Before reading further, measure your own readiness at **colaberry.ai/assessment** or **aiXcelerator.ai/assess**. The 15-minute assessment will show you exactly where you stand across six critical dimensions. You'll receive a personalized report identifying your gaps and a prioritized action plan. Your results will make the frameworks in this chapter immediately actionable.
 
 ---
 
 ## Meet Echo Health Systems: The $2M Wake-Up Call
 
-Sarah Cedao stared at her screen. The INPACT™ assessment had finished processing.
+Sarah Cedao, Chief Technology Officer of Echo Health Systems in Boston, stared at the assessment results on her screen: **28 out of 100**.
 
-28 out of 100.
+Twenty-eight.
 
-She refreshed the page. Still 28.
-
-Echo Health wasn't some struggling regional hospital scraping by on legacy systems. Four hospitals. Two dozen clinics. Twelve thousand employees. They'd won awards for data excellence—twice. Sarah's team had spent fifteen years building what everyone called sophisticated infrastructure: pristine SQL Server warehouse, Azure data lake, Databricks for machine learning. Modern. Well-governed. Award-winning.
-
-And completely inadequate for what came next.
+Echo Health was a mid-sized regional health system with an impressive footprint: 4 hospitals, 23 outpatient clinics, 847 physicians, 12,000 employees, and 340,000 annual patient encounters. Over fifteen years, Sarah's team had built what they believed was a sophisticated data infrastructure—a pristine SQL Server data warehouse, Azure data lake, Databricks for ML workloads, and strong governance throughout. They had won awards for data excellence at each stage.
 
 Then came the request from Dr. Arun Raj, Echo's Board Chair. A former cardiologist who had served as CEO before transitioning to the board three years ago, Dr. Raj had a gift for cutting through technical complexity to operational reality. "Can we deploy an AI agent for patient scheduling by Q3?"
 
 Sarah's team spent the next six months and **$2 million** building three pilot agents. What they delivered was technically functional—the code ran, the agents responded, the infrastructure didn't crash. But functional isn't the same as usable, and usable isn't the same as trusted.
 
-1. **Care Coordination Agent**: Response times of nine to thirteen seconds—patients hung up waiting. Query understanding hovered at 40-60%, forcing constant rephrasing. No dynamic authorization meant HIPAA compliance failed: the agent couldn't distinguish between a nurse checking her patient's schedule during her shift versus at 3 AM from home.
+1. **Care Coordination Agent**: Response time 9-13 seconds (patients hung up waiting). Query understanding 40-60% (constant need for rephrasing). No dynamic authorization (HIPAA compliance failed when the agent couldn't distinguish between a nurse checking her patient's schedule during her shift versus at 3 AM from home).
 
-2. **Clinical Documentation Agent**: Could only access yesterday's data—overnight batch ETL completed at 2 AM, but emergency physicians needed this hour's context. Couldn't parse medical terminology consistently: "MI" sometimes meant myocardial infarction, sometimes mitral insufficiency, sometimes triggered errors. No audit trail meant they couldn't use it for any clinical decision requiring documentation.
+2. **Clinical Documentation Agent**: Could only access data from yesterday because overnight batch ETL jobs ran at 2 AM (emergency room physicians needed current visit context, not yesterday's notes). Couldn't understand medical terminology consistently—"MI" sometimes meant myocardial infarction, sometimes meant mitral insufficiency, sometimes triggered error messages. No audit trail for regulatory review meant they couldn't use it for any clinical decisions that required documentation.
 
-3. **Revenue Cycle Agent**: Siloed in billing, it could see claims but not clinical context. When claims were denied, it couldn't cross-reference diagnosis codes with visit notes to identify documentation gaps. Role-based access couldn't handle dynamic relationships—a billing specialist who transferred departments still had access to her old patients' financial data.
+3. **Revenue Cycle Agent**: Siloed in the billing system, it could see claims but not clinical context. When claims were denied, it couldn't cross-reference diagnosis codes with actual visit notes to identify documentation gaps. Role-based access alone prevented it from dynamically authorizing access based on current patient relationships—a billing specialist who transferred to a different department still had access to her old patients' financial data.
 
 **All three pilots failed.** Not in the dramatic way of systems crashing or data breaches—they failed in the slow, grinding way of tools nobody wants to use. Physicians stopped asking the clinical agent questions after the fifth rephrasing attempt. Patients hung up on the care coordination agent and called the human line instead. Billing specialists manually processed claims because the agent couldn't see what they needed.
 
@@ -120,19 +102,19 @@ Dr. Raj set a deadline: "Fix this in 90 days or we're shelving AI for another ye
 
 Sarah knew the problem wasn't talent—her team was excellent. It wasn't budget—$2 million proved they were willing to invest. It wasn't technology—the AI models themselves were sophisticated. The problem was architectural. Everything they'd built served human decision-makers beautifully, but agents weren't humans.
 
-That's when Marcus Williams, Echo's Chief Data Officer, discovered the assessment framework. The 28/100 score wasn't arbitrary—it measured six specific needs their infrastructure failed to deliver:
+That's when Marcus Williams, Echo's Chief Data Officer, discovered the INPACT™ assessment framework. The 28/100 score wasn't arbitrary—it measured six specific needs their infrastructure failed to deliver:
 
-**I - Instant (1/6):** Queries took nine to thirteen seconds. Overnight ETL meant stale data. No caching layer existed. Agent speed equals infrastructure speed—and Echo's infrastructure was built for humans reviewing yesterday's reports, not agents needing this second's context.
+**I - Instant (1/6):** Queries took 9-13 seconds because overnight ETL created data staleness and batch processing dominated. No caching layer existed. Agent speed equals infrastructure speed, and Echo's infrastructure was built for humans reviewing yesterday's data, not agents needing this second's context.
 
-**N - Natural (2/6):** Understanding rate of 40-60% stemmed from cryptic table names like `TBL_PT_ENC_DTL` and undocumented column relationships. No semantic layer translated "patient's last three visits" into the complex joins required across seven tables.
+**N - Natural (2/6):** Understanding rate of 40-60% stemmed from cryptic table names like `TBL_PT_ENC_DTL` and undocumented column relationships. No semantic layer existed to translate "patient's last three visits" into the complex joins required across seven tables.
 
-**P - Permitted (1/6):** Role-based access alone couldn't handle dynamic contexts. A nurse authorized to view Patient A's records during her shift shouldn't access them at 3 AM from home. HIPAA requires this contextual authorization, but Echo's fifteen-year-old permission system had no attribute-based access layer to evaluate context.
+**P - Permitted (1/6):** Role-based access control (RBAC) alone couldn't handle dynamic contexts. A nurse authorized to view Patient A's records during her shift shouldn't access them at 3 AM from home. HIPAA requires this contextual authorization, but Echo's fifteen-year-old permission system had no ABAC layer to evaluate context.
 
-**A - Adaptive (2/6):** No feedback loops existed. When agents got queries wrong, no mechanism learned from corrections. Model performance drifted over time with no detection or retraining workflows. Quarterly manual reviews were their only "improvement" process.
+**A - Adaptive (2/6):** No feedback loops existed. When agents got queries wrong, there was no mechanism to learn from corrections. Model performance drifted over time with no detection or retraining workflows. Quarterly manual reviews were their only "improvement" process.
 
-**C - Contextual (3/6):** EHR integration existed but systems remained siloed. Care coordination couldn't see clinical history. Documentation couldn't access billing status. Weekly batch jobs moved data between systems—agents needed real-time cross-domain integration.
+**C - Contextual (3/6):** EHR integration existed but systems remained siloed. The care coordination agent couldn't see clinical history. The documentation agent couldn't access billing status. Weekly batch jobs moved data between systems—agents needed real-time cross-domain integration.
 
-**T - Transparent (1/6):** Incomplete audit logs violated HIPAA Section 164.312(b). When agents made recommendations, clinicians couldn't see the reasoning. When errors occurred, no trace existed to diagnose root causes. Transparency was theoretical, not operational.
+**T - Transparent (1/6):** Incomplete audit logs violated HIPAA Section 164.312(b). When agents made recommendations, clinicians couldn't see the reasoning. When errors occurred, no trace existed to diagnose root causes. Transparency was theoretical, not technical.
 
 
 Sarah realized something profound: **Her infrastructure wasn't broken. It was brilliant—for the wrong era.**
@@ -181,47 +163,37 @@ graph LR
 
 ---
 
-## What Trust Means in This Book
-
-This isn't a book about whether society should trust AI. It's not about bias, ethics, or existential risk—important topics covered elsewhere.
-
-This book is about **operational trust**: the confidence that an AI agent will access the right data, understand the question, respect permissions, explain its reasoning, and perform consistently at scale. It's the trust a physician needs before accepting an agent's recommendation. The trust a CFO needs before letting an agent process claims. The trust that turns a pilot into production.
-
-More specifically, this book answers five questions:
-
-- **What is trust?** What do agents need to earn user confidence?
-- **How do you earn it?** By fulfilling those needs—not once, but every interaction
-- **How do you build it?** Through systematic architecture designed for agent-era requirements
-- **How do you measure it?** With operational targets that validate trust continuously
-- **How do you sustain it?** By monitoring, adapting, and reinforcing trust as systems scale
-
-Operational trust isn't earned through promises or policies. It's earned through architecture—systems designed from the ground up to deliver what agents need. That architecture is what 95% of organizations lack.
-
----
-
 ## The Architecture of Trust: Three Pillars for Agent-Ready Infrastructure
 
-Sarah didn't need another framework. She needed an **architecture**—a blueprint showing how proven patterns integrate to transform infrastructure from human-era to agent-era.
+Sarah didn't need another framework. She needed an **architecture**—a comprehensive blueprint showing how frameworks integrate to transform infrastructure from human-era to agent-era.
 
-The Architecture of Trust provides that blueprint through three integrated pillars:
+The Architecture of Trust provides that blueprint. Like a building requires structural pillars working in harmony, agent-ready infrastructure requires three integrated pillars:
 
-1. **INPACT™** — What agents need (trust requirements)
-2. **7-Layer Architecture** — How to build it (technical blueprint)
-3. **GOALS™** — How to measure success (operational targets)
+1. **INPACT™** - What agents need (trust requirements)
+2. **7-Layer Architecture** - How to build it (technical blueprint)
+3. **GOALS™** - How to measure success (operational targets)
 
-These pillars aren't implemented independently. They reinforce each other: INPACT™ defines needs that drive trust and architecture decisions. The 7-Layer Architecture delivers infrastructure that fulfills those needs. GOALS™ validates that both remain structurally sound as the system scales to continuously reinforce trust.
+These aren't separate frameworks you implement independently. They're three pillars of a unified architecture, each supporting and validating the others. INPACT™ defines the six agent needs that must be fulfilled to be trusted. The 7-Layer Architecture prescribes the technical infrastructure to fulfill those six agent needs. GOALS™ dives the operational efficiency metrics so that both pillars remain structurally sound in production.
 
 Let's explore each pillar of the architecture.
 
 ### Pillar 1: INPACT™ - What Agents Need
 
-The first pillar answers the fundamental question: What does infrastructure need to deliver for agents to earn user trust?
+The first pillar, INPACT™, answers the fundamental question: What does infrastructure need to deliver for agents to earn user trust?
 
-You just saw what happens when these needs go unmet. Echo's 28/100 score measured six specific gaps: responses too slow (Instant), queries misunderstood (Natural), permissions too rigid (Permitted), no learning from errors (Adaptive), systems siloed (Contextual), and decisions unexplainable (Transparent).
+Through analysis of 40+ enterprise implementations, we've identified six essential needs. When infrastructure fulfills all six, agents earn trust. When any need goes unmet, users abandon the agent—regardless of how sophisticated the AI model is.
 
-Six needs. All six must be fulfilled for agents to earn trust. When any single need goes unmet, users abandon the agent—regardless of how sophisticated the AI model is.
+**I - Instant:** Sub-second response times. Agents must respond at conversation speed, not batch-processing speed. Echo's 9-13 second responses killed adoption—patients hung up. The requirement isn't "fast enough"—it's "instant."
 
-Chapter 2 details each INPACT™ dimension and shows how to assess your own infrastructure against them.
+**N - Natural:** Understanding user intent in natural language. When Echo's agents understood only 40-60% of queries, users gave up after multiple rephrasings. Natural language understanding requires semantic layers that map business terminology to technical schemas.
+
+**P - Permitted:** Dynamic, context-aware authorization. Role-based access alone is insufficient for agent scenarios. Echo's HIPAA violations occurred because their system couldn't enforce "Nurse A can access Patient X's data during her shift, but not at 3 AM from home." Agents need attribute-based access control (ABAC) layered on RBAC to evaluate context in real-time.
+
+**A - Adaptive:** Continuous learning from feedback. Echo's quarterly reviews meant agents couldn't improve in real-time. When agents misunderstand queries or make errors, they must learn immediately—not wait months for manual retraining.
+
+**C - Contextual:** Integration across domains and time. Echo's agents were siloed—care coordination couldn't see clinical history, documentation couldn't access billing data. Agents need unified context spanning all relevant systems and incorporating historical patterns.
+
+**T - Transparent:** Complete audit trails and explainable decisions. Echo's incomplete logs violated HIPAA and prevented clinicians from trusting agent recommendations. Every agent action must be traceable, every decision explainable.
 
 ```mermaid
 graph TB
@@ -258,43 +230,56 @@ graph TB
 
 **Figure 0.2: INPACT™ Framework—Six Agent Needs Leading to Trust**
 
-**Scoring:** Each dimension scores 0-6, yielding a 0-36 raw score, then normalized to 0-100 total score. Below 50 means not ready for production agents. Echo's 28 told Sarah exactly where to focus.
+**Scoring:** Each dimension scores 0-6, yielding a 0-100 total score:
+- **70-100:** Agent-ready infrastructure
+- **50-69:** Significant gaps, pilot-ready only
+- **Below 50:** Not ready for production agents
 
-This is the first pillar of the Architecture of Trust—defining the requirements that drive all subsequent infrastructure decisions.
+Echo's 28/100 score meant their infrastructure wasn't close to agent-ready. But the score did something more valuable—it gave Sarah and Marcus a precise diagnosis of what needed fixing.
+
+INPACT™ isn't just a framework—it's the first pillar of the Architecture of Trust, defining the requirements that drive all subsequent infrastructure decisions.
 
 ### Pillar 2: 7-Layer Architecture - How to Build It
 
-The second pillar answers: What technical infrastructure delivers these needs?
+The second pillar, the 7-Layer Architecture, answers: What technical infrastructure delivers INPACT™ needs?
 
-Seven layers, each serving a distinct function:
+Think of these layers as the structural elements of a building. Each layer serves a distinct function, but they work together as an integrated system. Skip a layer, and the architecture collapses.
 
-1. **Data Storage Foundation** — Hybrid multi-modal storage (relational, vector, graph)
-2. **Real-Time Data Fabric** — Change data capture and streaming pipelines
-3. **Semantic Layer** — Business-friendly abstractions over technical schemas
-4. **Intelligence Layer** — RAG systems, LLM integration, context assembly
-5. **Governance Layer** — Attribute-based access control, human-in-the-loop workflows
-6. **Observability Layer** — Distributed tracing, cost tracking, audit logging
-7. **Agent Orchestration** — Multi-agent coordination, feedback loops, continuous learning
+**Layer 1 - Data Storage Foundation:** Hybrid storage for different data types—relational databases for transactional data, vector databases for embeddings, graph databases for relationships. Echo had strong relational storage but no vector or graph capabilities.
 
-Each layer maps to INPACT™ needs. Skip a layer, and the architecture collapses. Chapters 4-6 construct each layer in detail, showing exactly how Echo built theirs in 90 days.
+**Layer 2 - Real-Time Data Fabric:** Change data capture (CDC) and streaming pipelines to eliminate batch delays. This layer delivers the "Instant" need from INPACT™. Echo's overnight ETL jobs violated this layer—agents need real-time data, not yesterday's snapshots.
 
-This is the second pillar of the Architecture of Trust—the technical blueprint for fulfilling agent needs.
+**Layer 3 - Normalized Schema & Semantic Layer:** Business-friendly abstractions over technical schemas. This layer enables the "Natural" need—translating "patient's last three visits" into the SQL joins across seven tables. Echo's cryptic table names (`TBL_PT_ENC_DTL`) blocked natural language understanding.
+
+**Layer 4 - Intelligence Layer:** RAG (Retrieval-Augmented Generation) systems, LLM integration, and context assembly. This layer connects AI models to retrieved data, enabling accurate responses grounded in enterprise information. Echo had GPT-4 access but no RAG pipeline to prevent hallucinations.
+
+**Layer 5 - Governance Layer:** Attribute-based access control (ABAC) layered on existing role-based permissions, plus human-in-the-loop (HITL) workflows for high-risk decisions. This layer delivers the "Permitted" need from INPACT™. Echo's RBAC defined who could access what; ABAC adds when, where, and why—the contextual intelligence agents require.
+
+**Layer 6 - Observability Layer:** Distributed tracing, LLM cost tracking, and audit logging. This layer delivers the "Transparent" need from INPACT™—complete visibility into what agents accessed, why decisions were made, and how costs accumulate. Echo's incomplete audit logs violated HIPAA transparency requirements.
+
+**Layer 7 - Agent Orchestration:** Multi-agent coordination, feedback loops for continuous learning, and human-in-the-loop integration. This layer delivers the "Adaptive" need agents learn from corrections. Echo had no feedback mechanism at all.
+
+Each layer maps to INPACT™ needs. Layer 2 fulfills Instant. Layer 3 fulfills Natural. Layer 4 fulfills Contextual. Layer 5 fulfills Permitted. Layer 6 fulfills Transparent. Layer 7 fulfills Adaptive. The 7-Layer Architecture is the second pillar of the Architecture of Trust—the technical blueprint for fulfilling the needs defined by the first pillar.
 
 ### Pillar 3: GOALS™ - How to Measure Success
 
-The third pillar answers: How do you validate that the architecture remains structurally sound in production?
+The third pillar, GOALS™, answers: How do you validate that the architecture remains structurally sound in production?
 
 Infrastructure isn't built once and forgotten. It requires continuous validation across five operational dimensions:
 
-- **G - Governance:** Policy enforcement, compliance validation, accountability
-- **O - Observability:** Real-time monitoring, performance metrics, anomaly detection
-- **A - Availability:** Speed and freshness for real-time agent interactions
-- **L - Lexicon:** Semantic interoperability, shared ontologies, consistent terminology
-- **S - Solid:** Data quality validation, schema enforcement, consistency checks
+**G - Governance:** Policy enforcement, compliance validation, accountability mechanisms. In healthcare, this means HIPAA audit logs, consent management, and regulatory reporting. Echo's incomplete audit logs meant they couldn't prove HIPAA compliance—a showstopper for production deployment.
 
-GOALS™ isn't implemented once—it's measured continuously. Chapter 7 details each dimension and shows how Echo used them to validate their transformation.
+**O - Observability:** Real-time monitoring, performance metrics, anomaly detection. Echo couldn't diagnose why their agents were slow (9-13 seconds) because they had no latency monitoring across the stack. Observability makes infrastructure problems visible before users experience them.
 
-This is the third pillar of the Architecture of Trust—the operational framework ensuring the architecture remains sound as it scales.
+**A - Availability:** Speed and freshness for real-time agent interactions. Echo's agents took 9-13 seconds to respond because batch ETL created stale data. Availability ensures agents retrieve and present data fast enough for natural conversation—sub-2-second responses with sub-30-second data freshness.
+
+**L - Lexicon:** Semantic interoperability, shared ontologies, consistent terminology across domains. Echo's "MI" terminology problem (myocardial infarction vs. mitral insufficiency) stemmed from lack of standard medical ontologies. Lexicon standardization is foundational for semantic understanding.
+
+**S - Solid:** Data quality validation, schema enforcement, consistency checks. Echo's agents occasionally accessed outdated data because their CDC pipelines had gaps. Solid data foundations ensure agents reason from accurate, current information.
+
+GOALS™ isn't implemented once—it's measured continuously. Organizations typically start at maturity level 1-2 and progress toward level 6 over 6-18 months. The framework provides operational targets that validate both INPACT™ fulfillment (are users trusting the agents?) and 7-Layer implementation (is the infrastructure delivering what agents need?).
+
+GOALS™ is the third pillar of the Architecture of Trust—the operational framework ensuring the architecture remains sound as it scales.
 
 ---
 
@@ -359,7 +344,7 @@ This equation captures the book's thesis. Chapters 1-2 define INPACT™—what a
 From infrastructure chaos to agent-ready in 10 weeks. Not because they found a magic tool or hired consultants—because they followed an architecture that integrated proven frameworks into a coherent system.
 
 **The investment:** $1.23M (60% of their failed pilot cost)  
-**The return:** 209% Year 1 ROI (477% 3-year), 10-week payback from production deployment  
+**The return:** 209% Year 1 ROI (477% 3-year), 10-week payback from production deployment
 **The result:** Trust earned through architecture
 
 The remainder of this book builds this architecture, pillar by pillar:
