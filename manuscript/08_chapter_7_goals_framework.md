@@ -25,12 +25,13 @@ graph LR
     
     BUILD --> TRANSFORM --> OPERATE
     
-    style BUILD fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style OPERATE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style B1 fill:#ffe0b2,stroke:#f57c00,color:#e65100
-    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
-    style O1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+    style BUILD fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style TRANSFORM fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style OPERATE fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
+    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style T1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style O1 fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
+
 
 ```
 
@@ -142,12 +143,13 @@ graph TB
     Layers -.->|"Enables Operations"| GOALS
     GOALS -.->|"Drives Trust"| INPACT
     
-    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style Title fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
     style PILLARS fill:none,stroke:none
-    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Layers fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GOALS fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style Layers fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style GOALS fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
+
 
 ```
 
@@ -293,20 +295,20 @@ graph TB
     Copyright["© 2025 Colaberry Inc."]
     
     PHASE1 --> PHASE2 --> PHASE3 --> COMPLETE
-    
-    style JOURNEY fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style PHASE1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PHASE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PHASE3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W5 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W6 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W7 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style COMPLETE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+
+    style JOURNEY fill:#E6F3F6,stroke:#666666,stroke-width:2px,color:#000000
+    style PHASE1 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style PHASE2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style PHASE3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style W1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W5 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W6 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style W7 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style COMPLETE fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 
 ```
 
@@ -385,17 +387,17 @@ graph TB
     L --> TARGET
     S --> TARGET
     
-    style DASHBOARD fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style TITLE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style G fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style O fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style A fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#004d40
-    style S fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style TARGET fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style DASHBOARD fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
+    style TITLE fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style G fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style O fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style A fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style L fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style S fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style TARGET fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:none,color:#4d4d4d
 ```
 
 | GOAL | Current | Target | Gap | Priority |
@@ -486,25 +488,25 @@ graph LR
         A4 --> A5
     end
     
-    style TITLE1 fill:#ffcccc,stroke:#c62828,stroke-width:3px,color:#b71c1c
-    style R1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style R2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style R3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style R4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style R5 fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
+    style TITLE1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style R1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style R2 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style R3 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style R4 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style R5 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
     
-    style TITLE2 fill:#b3e0cc,stroke:#00897b,stroke-width:3px,color:#004d40
-    style A1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A5 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    
-    style OLD fill:#fff5f5,stroke:#c62828,stroke-width:2px
-    style NEW fill:#f0fff0,stroke:#00897b,stroke-width:2px
+    style TITLE2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style A1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style A2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style A3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style A4 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style A5 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
+
+    style OLD fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style NEW fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:none,color:#4d4d4d
 ```
 
 ### The Authentication Challenge
@@ -578,22 +580,22 @@ graph TB
     APPROVE -->|<b>Approved</b>| EXECUTE
     MONITOR --> EXECUTE
     
-    style REQUEST fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style ASSESS fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style SPECTRUM fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style FULL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style COND fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style HITL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style HONL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style MANUAL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style CHECK fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style EXECUTE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style APPROVE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style MONITOR fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style INFORM fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style REQUEST fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
+    style ASSESS fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style SPECTRUM fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style FULL fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style COND fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style HITL fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style HONL fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style MANUAL fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style CHECK fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style EXECUTE fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style APPROVE fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style MONITOR fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style INFORM fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:none,color:#4d4d4d
 ```
 
 **Echo Health's HITL Decision Matrix:**
@@ -883,19 +885,19 @@ graph TB
     FAIL --> FEEDBACK
     FEEDBACK -.->|<b>Improves</b>| AGENT
     
-    style AGENT fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style METRICS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style M1 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style M2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style M3 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style M4 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style VALIDATE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style PASS fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style FAIL fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style FEEDBACK fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style AGENT fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
+    style METRICS fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style M1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style M2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style M3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style M4 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style VALIDATE fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style PASS fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style FAIL fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style FEEDBACK fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:none,color:#4d4d4d
 ```
 
 ### Measuring Observability
@@ -1123,28 +1125,32 @@ graph TD
     
     L3 -->|<b>✅ Hit - 7%</b>| C3["<b>⚡ 1.2s</b><br/><b>$0.015/query</b>"]
     
-    L3 -->|<b>❌ Miss - 3%</b>| COLD["<b>Level 4: Cold Path</b><br/><b>Full orchestration</b><br/><b>2.8-4.2s</b><br/><b>$0.12/query</b>"]
+    L3 -->|<b>❌ Miss - 3%</b>| COLD["<b>Level 4: Cold Path</b><br/><b>Full orchestration</b><br/><b>2.8–4.2s</b><br/><b>$0.12/query</b>"]
     
     C1 --> R["<b>Response</b><br/><b>Sub-2-seconds</b>"]
     C2 --> R
     C3 --> R
-    COLD --> SLOW["<b>Response</b><br/><b>2.8-4.2s</b>"]
+    COLD --> SLOW["<b>Response</b><br/><b>2.8–4.2s</b>"]
     
     COLD -.->|<b>Cache warming</b>| L1
     
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style C1 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style C2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style C3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style COLD fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style R fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style SLOW fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style L4 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style L2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style L3 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    
+    style C1 fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style C2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style C3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    
+    style COLD fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style R fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style SLOW fill:#0D0D0D,stroke:#30838C,stroke-width:3px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 ---
@@ -1259,20 +1265,23 @@ graph TB
     P1 -.->|<b>Low confidence</b>| CLARIFY
     P3B -.->|<b>Quality fail</b>| CLARIFY
     
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style PHASE1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PHASE2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PHASE3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P1 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P3A fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P3B fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style CLARIFY fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style NL fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
+    style NL fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style L4 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    
+    style PHASE1 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style PHASE3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    
+    style P1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style P2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style P3A fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style P3B fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    
+    style RESULT fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style CLARIFY fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 ### The Multi-Agent Challenge
@@ -1542,25 +1551,30 @@ graph TB
     QUARANTINE --> FIX["<b>Root Cause</b><br/><b>Fix at source</b>"]
     FIX -.->|<b>Corrected</b>| CDC
     
-    style SOURCES fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style S1 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S3 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style CDC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style CHECKS fill:#e0f2f1,stroke:#00897b,stroke-width:2px
-    style Q1 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Q2 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Q3 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Q4 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Q5 fill:#ffffff,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GATE fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style STORAGE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style QUARANTINE fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style AGENTS fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style FIX fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
+    style SOURCES fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style S1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style S2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style S3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    
+    style CDC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    
+    style CHECKS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style Q1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style Q2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style Q3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style Q4 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style Q5 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    
+    style GATE fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    
+    style STORAGE fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style AGENTS fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    
+    style QUARANTINE fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style FIX fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 ### Echo's Data Quality Targets
@@ -1631,14 +1645,14 @@ graph TB
     S -.->|<b>Foundation: Enables all GOALS</b>| G
     O -.->|<b>Diagnostic: Detects issues in all GOALS</b>| L
     
-    style G fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style O fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style A fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style L fill:#e0f2f1,stroke:#00897b,stroke-width:3px,color:#004d40
-    style S fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style G fill:#327C8C,stroke:#30838C,stroke-width:3px,color:#ffffff
+    style O fill:#327C8C,stroke:#30838C,stroke-width:3px,color:#ffffff
+    style A fill:#327C8C,stroke:#30838C,stroke-width:3px,color:#ffffff
+    style L fill:#327C8C,stroke:#30838C,stroke-width:3px,color:#ffffff
+    style S fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 ### The Trust Flywheel
@@ -1664,14 +1678,14 @@ graph LR
         TRUST -->|<b>Usage patterns inform</b>| INPACT
     end
     
-    style FLYWHEEL fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style LAYERS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style TRUST fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style FLYWHEEL fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style LAYERS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style GOALS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style TRUST fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 "GOALS™ measurements reveal whether INPACT™ needs are truly being met," Marcus explained. "When Lexicon scores drop, it signals the Natural (N) need is degrading. When Availability drops, Instant (I) is at risk. This feedback drives architecture improvements—which layers need attention, what upgrades are needed."
@@ -1783,7 +1797,7 @@ graph TB
         CRITICAL["<b>1/5: 🔴 CRITICAL</b><br/><b>Major gaps</b><br/><b>Immediate intervention</b>"]
     end
     
-    THRESHOLD["<b>Healthcare Threshold: 21/25</b><br/><b>G=5, O/A/L/S ≥4</b>"]
+    THRESHOLD["<b>Healthcare Threshold:</b><br/> 21/25</b><br/><b>G=5, O/A/L/S ≥4</b>"]
     
     EXCELLENT --> THRESHOLD
     GOOD --> THRESHOLD
@@ -1791,16 +1805,18 @@ graph TB
     NEEDS -.->|<b>Below threshold</b>| THRESHOLD
     CRITICAL -.->|<b>Below threshold</b>| THRESHOLD
     
-    style SCORING fill:#f0fff0,stroke:#00897b,stroke-width:2px
-    style EXCELLENT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style GOOD fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style ADEQUATE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#004d40
-    style NEEDS fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style CRITICAL fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style THRESHOLD fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
+    style SCORING fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#000000
+    
+    style EXCELLENT fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style GOOD fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style ADEQUATE fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style NEEDS fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style CRITICAL fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    
+    style THRESHOLD fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000
 ```
 
 ### The Week 12 Target
