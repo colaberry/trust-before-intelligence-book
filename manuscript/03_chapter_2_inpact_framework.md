@@ -6,7 +6,7 @@
 
 *Monday morning, conference room 3B.*
 
-Sarah Cedao pulled up the assessment dashboard. Krish Yadav studied the numbers in silence.
+Sarah Cedao pulled up the assessment dashboard. Krish Yadav, CFO, studied the numbers in silence.
 
 **28/100.**
 
