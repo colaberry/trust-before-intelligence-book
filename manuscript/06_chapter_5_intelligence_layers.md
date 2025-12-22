@@ -109,26 +109,30 @@ Foundation without intelligence is like having a well-stocked library with no ca
 
 ```mermaid
 graph TB
-    L7["<b>Layer 7: Orchestration</b><br/><b>Multi-Agent Coordination</b>"]
-    L6["<b>Layer 6: Observability</b><br/><b>Tracing & Audit</b>"]
-    L5["<b>Layer 5: Governance</b><br/><b>Dynamic Access Control</b>"]
-    
-    subgraph "<b>🧠 INTELLIGENCE</b>"
-        L4["<b>Layer 4: Intelligence</b><br/><b>RAG + LLM Pipeline</b>"]
-        L3["<b>Layer 3: Semantic</b><br/><b>Business Context</b>"]
-    end
-    
-    L2["<b>Layer 2: Real-Time Data</b><br/><b>CDC & Streaming</b>"]
-    L1["<b>Layer 1: Multi-Modal Storage</b><br/><b>8 Foundation Categories</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    L7 --> L6 --> L5 --> L4 --> L3
-    L3 --> L2 --> L1
-    
+    %% Layers
+    L7["<b>Layer 7: Orchestration</b><br/>Multi-Agent Coordination"]
+    L6["<b>Layer 6: Observability</b><br/>Tracing & Audit"]
+    L5["<b>Layer 5: Governance</b><br/>Dynamic Access Control"]
+
+    %% Fake container node (INTELLIGENCE)
+    INTEL_BG["<b>🧠 INTELLIGENCE</b>"]
+
+    L4["<b>Layer 4: Intelligence</b><br/>RAG + LLM Pipeline"]
+    L3["<b>Layer 3: Semantic</b><br/>Business Context"]
+
+    L2["<b>Layer 2: Real-Time Data</b><br/>CDC & Streaming"]
+    L1["<b>Layer 1: Multi-Modal Storage</b><br/>8 Foundation Categories"]
+
+    Copyright["© 2025 Colaberry Inc."]
+
+    %% FlowÏÍ
+    L7 --> L6 --> L5 --> INTEL_BG
+    INTEL_BG --> L4 --> L3 --> L2 --> L1
+
     style L7 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     style L6 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     style L5 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style INTEL_BG fill:#E6F3F6,stroke:#0D0D0D,stroke-width:1px,color:#00323D,rx:10,ry:10
     style L4 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
     style L3 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
     style L2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
@@ -869,7 +873,7 @@ graph TB
     style PIPELINE fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
     style RESPONSE fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
     style CDC fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
-    style INVALIDATE fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22
+    style INVALIDATE fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
     style Copyright fill:none,stroke:none,color:#666666
 ```
 
