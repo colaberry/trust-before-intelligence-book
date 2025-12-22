@@ -221,7 +221,7 @@ graph TB
     style A fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D, rx:10,ry:10
     style C fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     style T fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D, rx:10,ry:10
-    style Trust fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:3px, rx:10,ry:10
+    style Trust fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px, rx:10,ry:10
     style Copyright fill:none,stroke:none,color:#666666
 ```
 

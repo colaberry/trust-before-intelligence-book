@@ -62,15 +62,25 @@ The dashboard was new—designed during Week 10 to give the operations team real
 
 ```mermaid
 graph LR
+    classDef baselineGraph fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10;
+    classDef developing fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10;
+    classDef proficient fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10;
+    classDef failure fill:#EB898B,stroke:#7A1F22,stroke-width:1px,color:#ffffff,rx:10,ry:10;
+    classDef meta fill:none,stroke:none,color:#666666,font-size:12px;
+
+
     subgraph BASELINE["<b>ECHO HEALTH GOALS™ BASELINE - WEEK 10</b>"]
-        G["<b>G - Governance</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
-        O["<b>O - Observability</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
-        A["<b>A - Availability</b><br/><b>4/5</b><br/><b>🟢 Proficient</b>"]
-        L["<b>L - Lexicon</b><br/><b>2/5</b><br/><b>🟡 Developing</b>"]
-        S["<b>S - Solid</b><br/><b>3/5</b><br/><b>🟡 Developing</b>"]
+        direction TB
+        G["<b>G - Governance</b><br/>3/5<br/>🟡 Developing"]
+        O["<b>O - Observability</b><br/>3/5<br/>🟡 Developing"]
+        A["<b>A - Availability</b><br/>4/5<br/>🟢 Proficient"]
+        L["<b>L - Lexicon</b><br/>2/5<br/>🟡 Developing"]
+        S["<b>S - Solid</b><br/>3/5<br/>🟡 Developing"]
         
-        TOTAL["<b>TOTAL: 15/25</b><br/><b>Target: 21/25</b><br/><b>Gap: 6 points</b>"]
+        TOTAL["<b>TOTAL: 15/25</b><br/>Target: 21/25<br/><b>Gap: 6 points</b>"]
     end
+    
+    Copyright["© 2025 Colaberry Inc."]
     
     G --> TOTAL
     O --> TOTAL
@@ -78,16 +88,12 @@ graph LR
     L --> TOTAL
     S --> TOTAL
     
-    style BASELINE fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#000000
-    style G fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style O fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style A fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style L fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style S fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style TOTAL fill:#EB898B,stroke:#7A1F22,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:none,stroke:none,color:#000000
+    class BASELINE baselineGraph
+    class G,O,L,S developing
+    class A proficient
+    class TOTAL failure
+    class Copyright meta
+    linkStyle default stroke:#32738C,stroke-width:1px;
 ```
 
 "Fifteen out of twenty-five," Marcus said. "We need twenty-one to deploy clinical AI in production. That's six points in two weeks."
