@@ -23,12 +23,12 @@ graph LR
     
     BEFORE --> PHASES --> AFTER
 
-    style BEFORE fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style PHASES fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style P1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style AFTER fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style A1 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style BEFORE fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10
+    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style PHASES fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style P1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style AFTER fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style A1 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
 
 ```
 
@@ -150,23 +150,23 @@ graph LR
 
 
     %% SOFTWARE 1.0 — Problems / Old Approach (CORAL)
-    style era1 fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style P1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style I1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style era1 fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10,rx:10,ry:10
+    style P1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style I1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
 
     %% SOFTWARE 2.0 — Intermediate / Transition (MUTED BLUE)
-    style era2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style P2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style I2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
+    style era2 fill:#E6F3F6,stroke:#32738C,stroke-width:1px
+    style P2 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style I2 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
 
     %% SOFTWARE 3.0 — Solution / Modern (TEAL)
-    style era3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style P3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style I3 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style era3 fill:#E6F3F6,stroke:#32738C,stroke-width:1px
+    style P3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style I3 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
 
     %% COPYRIGHT — Neutral
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 The challenge: running Software 3.0 agents on Software 1.0 infrastructure is like running cloud-native microservices on mainframe batch processing. The assumptions don't align.
@@ -229,25 +229,25 @@ graph TB
     Shift -.->|<b>To Enable</b>| new
 
     %% BI ERA — Problems / Failures (CORAL)
-    style old fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style O1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style O2 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style O3 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style O4 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style old fill:#FBEAEA,stroke:#EB898B,stroke-width:1px
+    style O1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style O2 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style O3 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style O4 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
 
     %% TRANSITION — Neutral / Informative (LIGHT CYAN)
-    style Shift fill:#7FD5E8,stroke:#32738C,stroke-width:3px,color:#00323D
+    style Shift fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D
 
     %% AGENT ERA — Solutions / Modern (TEAL)
-    style new fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style N1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style N2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style N3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style N4 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
+    style new fill:#E6F3F6,stroke:#32738C,stroke-width:1px
+    style N1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style N2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style N3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style N4 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
 
     %% COPYRIGHT — Neutral
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **Key differences:**
@@ -563,37 +563,37 @@ graph LR
 
 
     %% GAPS — Coral (Problems)
-    style gaps fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style G1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G2 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G3 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G4 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G5 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G6 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style G7 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style gaps fill:#FBEAEA,stroke:#EB898B,stroke-width:1px
+    style G1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G2 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G3 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G4 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G5 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G6 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style G7 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
 
     %% NEEDS — Light Cyan (Neutral Requirements)
-    style needs fill:#E6F6FA,stroke:#7FD5E8,stroke-width:2px
-    style N1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N4 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N5 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N6 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style needs fill:#E6F6FA,stroke:#7FD5E8,stroke-width:1px
+    style N1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N2 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N3 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N4 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N5 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N6 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
 
     %% LAYERS — Teal (Solutions)
-    style layers fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L5 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L6 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L7 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
+    style layers fill:#E6F3F6,stroke:#32738C,stroke-width:1px
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L5 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L6 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L7 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
 
     %% COPYRIGHT
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 

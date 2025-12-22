@@ -24,12 +24,12 @@ graph LR
     
     BUILT -->|"Trust Collapse"| GAP --> NEED
     
-    style BUILT fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style GAP fill:#0D0D0D,color:#ffffff,stroke:#30838C,stroke-width:3px
-    style G1 fill:#0D0D0D,color:#ffffff,stroke:#30838C,stroke-width:3px
-    style NEED fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style N1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style BUILT fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22, rx:10,ry:10
+    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style GAP fill:#e3dede,color:#7A1F22,stroke:#30838C,stroke-width:1px,rx:10,ry:10
+    style G1 fill:#999494 ,color:#ffffff,stroke:#30838C,stroke-width:1px,rx:10,ry:10
+    style NEED fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style N1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
 
 ```
@@ -158,18 +158,18 @@ graph TB
     
     timeline --> analysis
     
-    style timeline fill:#FBEAEA,stroke:#EB898B,stroke-width:3px,color:#7A1F22
-    style FEB fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style MAR fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style MAY fill:#EB898B,stroke:#7A1F22,stroke-width:2px,color:#ffffff
-    style JUL fill:#7A1F22,stroke:#EB898B,stroke-width:3px,color:#ffffff
+    style timeline fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style FEB fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style MAR fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style MAY fill:#EB898B,stroke:#7A1F22,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style JUL fill:#7A1F22,stroke:#EB898B,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
-    style analysis fill:#7FD5E8,stroke:#32738C,stroke-width:3px,color:#00323D
-    style CAUSE fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style RESULT fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style analysis fill:#d2f5fc,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style CAUSE fill:#d2f5fc,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style RESULT fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    style CR fill:none,stroke:none,color:#999999
+style Copyright fill:none,stroke:none,color:#4D4D4D
 ```
 
 *Source: Deloitte TrustID® Workforce AI Report Q3 2025. Trust levels tracked monthly Feb-July 2025, showing accelerated decline for agentic AI (autonomous decision-making) vs general GenAI (human-supervised generation).*
@@ -430,19 +430,22 @@ graph LR
     end
     sw1 -.->|"Added ML"| sw2
     sw2 -.->|"PARADIGM SHIFT<br/>Requires INPACT™"| sw3
-    
+
     Copyright["© 2025 Colaberry Inc."]
-    
-    style sw1 fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style prog1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style infra1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
-    style sw2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style prog2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style infra2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style sw3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style prog3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style infra3 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+
+    style sw1 fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style prog1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style infra1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
+
+    style sw2 fill:#E6F0FA,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style prog2 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style infra2 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+
+    style sw3 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style prog3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style infra3 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+
+    style Copyright fill:none,stroke:none,color:#666666,rx:10,ry:10
 
 ```
 
@@ -512,16 +515,16 @@ graph TB
     
     Copyright["© 2025 Colaberry Inc."]
     
-    style PROBLEM fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style current fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style attempting fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style gap fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
-    style result fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style PROBLEM fill:#FBEAEA,stroke:#7A1F22,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style current fill:#F6D1CE,stroke:#7A1F22,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style attempting fill:#F6D1CE,stroke:#7A1F22,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style gap fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
+    style result fill:#7A1F22,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
     
-    style SOLUTION fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style transform fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style delivers fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style SOLUTION fill:#E6F3F6,stroke:#00323D,stroke-width:1Px,color:#00323D,rx:10,ry:10
+    style transform fill:#327C8C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style delivers fill:#14D793,color:#003322,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666,rx:10,ry:10
 
 ```
 
@@ -590,16 +593,16 @@ graph LR
     end
     
     %% Styling - CORRECTED COLORS FROM APPROVED PALETTE
-    style BI fill:#FBEAEA,stroke:#EB898B,stroke-width:3px,color:#7A1F22
-    style AGENT fill:#E6F3F6,stroke:#32738C,stroke-width:3px,color:#000000
+    style BI fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style AGENT fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#000000,rx:10,ry:10
 
-    style ETL fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style DW fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style RBAC fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
+    style ETL fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style DW fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style RBAC fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
     
-    style STREAM fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style SEMANTIC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style ABAC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style STREAM fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style SEMANTIC fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style ABAC fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
     %% Copyright (MANDATORY)
     CR["<b>© 2025 Colaberry Inc.</b>"]
@@ -658,17 +661,17 @@ graph TB
     
     Copyright["© 2025 Colaberry Inc."]
     
-    style investment fill:#ffffff,stroke:#32738C,stroke-width:3px,color:#00323D
-    style TOTAL fill:#ffffff,stroke:#32738C,stroke-width:2px,color:#00323D
+    style investment fill:#ffffff,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style TOTAL fill:#ffffff,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     
-    style pilots fill:#FBEAEA,stroke:#EB898B,stroke-width:3px,color:#7A1F22
-    style P1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style P2 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style P3 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style pilots fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style P1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style P2 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style P3 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
     
-    style outcome fill:#FBEAEA,stroke:#EB898B,stroke-width:3px,color:#7A1F22
-    style SCORE fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style DECISION fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style outcome fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style SCORE fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style DECISION fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
     
     style Copyright fill:none,stroke:none,color:#666666
 

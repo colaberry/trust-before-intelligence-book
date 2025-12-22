@@ -25,12 +25,12 @@ graph LR
     
     WITHOUT --> TRANSFORM --> WITH
     
-    style WITHOUT fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style W1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style TRANSFORM fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style T1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style WITH fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style WITHOUT fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10
+    style W1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style TRANSFORM fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style T1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style WITH fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
 
 
 
@@ -81,16 +81,16 @@ graph TB
     Layers -.->|"Enables Operations"| GOALS
     GOALS -.->|"Drives Trust"| INPACT
 
-    style Title fill:#0D0D0D,color:#ffffff,stroke:#30838C,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Layers fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
-    style GOALS fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Title fill:#0D0D0D,color:#ffffff,stroke:#30838C,stroke-width:1px,rx:10,ry:10
+    style PILLARS fill:none,stroke:none,rx:10,ry:10
+    style INDICATOR fill:none,stroke:none,rx:10,ry:10
+    style INPACT fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Layers fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style GOALS fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Spacer1 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style YouAreHere fill:#14D793,stroke:#0FB67D,stroke-width:1px,color:#003322,rx:10,ry:10
+    style Spacer2 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 
 
@@ -126,14 +126,14 @@ graph TB
     L7 --> L6 --> L5 --> L4 --> L3
     L3 --> L2 --> L1
     
-    style L7 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L6 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L5 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L4 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
-    style L3 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
-    style L2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style L7 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L6 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L5 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L4 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 These intelligence layers directly address specific gaps from Chapter 3:
@@ -268,19 +268,19 @@ graph TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style CURRENT fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style C_Q fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style C_SQL fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style C_RES fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style C_FAIL fill:#EB898B,stroke:#7A1F22,stroke-width:3px,color:#ffffff
+    style CURRENT fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10
+    style C_Q fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style C_SQL fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style C_RES fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style C_FAIL fill:#EB898B,stroke:#7A1F22,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
-    style TARGET fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style T_Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style T_SEM fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style T_RAG fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style T_WIN fill:#14D793,stroke:#0FB67D,stroke-width:2px,color:#003322
+    style TARGET fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style T_Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style T_SEM fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style T_RAG fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style T_WIN fill:#14D793,stroke:#0FB67D,stroke-width:1px,color:#003322,rx:10,ry:10
     
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 "Three weeks," Swapna said. "Week 5: Layer 3—semantic infrastructure. Business glossary with 2,400 clinical terms, entity resolution across all provider and patient systems, clinical concept mapping to SNOMED, ICD-10, and LOINC.[3][4][5] Week 6: Layer 4 stages 1-5—vector database deployment with 10 million document embeddings, hybrid retrieval pipeline, reranking optimization, context assembly. Week 7: Layer 4 stages 6-7—LLM integration with multi-model routing, semantic caching activation. By Friday of Week 7, we'll have our first fully intelligent query."
@@ -360,23 +360,23 @@ flowchart TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style NL fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style NL fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     
-    style PARSE_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style PARSE fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style GLOSS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style PARSE_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style PARSE fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style GLOSS fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
-    style RESOLVE_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style E1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style E2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style E3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style GOLD fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
+    style RESOLVE_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style E1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style E2 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style E3 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style GOLD fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
     
-    style OUTPUT_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style ONTO fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
+    style OUTPUT_ROW fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style ONTO fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
     
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### Components of the Semantic Layer
@@ -472,24 +472,24 @@ graph TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style KEYWORD fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style K_Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style K_MATCH fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style K_MISS1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style K_MISS2 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style K_MISS3 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style K_RESULT fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
+    style KEYWORD fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10
+    style K_Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style K_MATCH fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style K_MISS1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style K_MISS2 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style K_MISS3 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style K_RESULT fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
     
-    style SEMANTIC fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style S_Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style S_RESOLVE fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S_HIT1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S_HIT2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S_HIT3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S_HIT4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S_RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
+    style SEMANTIC fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style S_Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style S_RESOLVE fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S_HIT1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S_HIT2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S_HIT3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S_HIT4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S_RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
     
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### Key Technologies
@@ -616,22 +616,22 @@ graph TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
+    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
     
-    style ROW1 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style ROW2 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style ROW3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
+    style ROW1 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style ROW2 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style ROW3 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
     
-    style S1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S5 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S6 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style S7 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style S1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S5 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S6 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style S7 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
     
-    style RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style RESULT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### Why Agents Need RAG
@@ -691,15 +691,15 @@ graph LR
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style TITLE fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style parallel fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style VEC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style KEY fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style GRAPH fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style MERGE fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style OUT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style TITLE fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style parallel fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style VEC fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style KEY fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style GRAPH fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style MERGE fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style OUT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **Vector Database Selection:**
@@ -799,15 +799,15 @@ graph TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style TITLE fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style CLASS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style routing fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style CLAUDE fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style GPT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style LLAMA fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style OUT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style TITLE fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Q fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style CLASS fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style routing fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10,rx:10,ry:10
+    style CLAUDE fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style GPT fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style LLAMA fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style OUT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **Routing Logic:**
@@ -863,14 +863,14 @@ graph TB
     INVALIDATE -.->|Clear| EXACT
     INVALIDATE -.->|Clear| SEMANTIC
     
-    style QUERY fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style EXACT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style SEMANTIC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style PIPELINE fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style RESPONSE fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style CDC fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style INVALIDATE fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style QUERY fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style EXACT fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style SEMANTIC fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style PIPELINE fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style RESPONSE fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style CDC fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style INVALIDATE fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **Level 1: Exact Match (Redis):** Character-for-character matches hit instantly. TTL (Time To Live)[18]: 1 hour. Hit rate: ~15%.
@@ -1201,10 +1201,10 @@ graph LR
     W4_TOTAL --> ARROW
     ARROW --> W7_TOTAL
     
-    style W4_TOTAL fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style ARROW fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style W7_TOTAL fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style W4_TOTAL fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style ARROW fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style W7_TOTAL fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666,rx:10,ry:10
 ```
 
 | Dimension | Week 4 | Week 7 | Change | Driver |
@@ -1249,19 +1249,19 @@ graph TB
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
-    style USER fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style L4 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style GLOSS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style ENTITY fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style ONTO fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style EMBED fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style HYBRID fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style RERANK fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style LLM fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style CACHE fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style RESPONSE fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style USER fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L3 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style L4 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style GLOSS fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style ENTITY fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style ONTO fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style EMBED fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style HYBRID fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style RERANK fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style LLM fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style CACHE fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style RESPONSE fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### Metrics Summary

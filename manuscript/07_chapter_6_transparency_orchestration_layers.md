@@ -25,12 +25,12 @@ graph LR
     
     WITHOUT --> TRANSFORM --> WITH
     
-    style WITHOUT fill:#FBEAEA,stroke:#EB898B,stroke-width:2px
-    style TRANSFORM fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style WITH fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style W1 fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style T1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
+    style WITHOUT fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,rx:10,ry:10
+    style TRANSFORM fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style WITH fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10,rx:10,ry:10
+    style W1 fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style T1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff
 
 ```
 
@@ -86,16 +86,16 @@ graph TB
     Layers -.->|"Enables Operations"| GOALS
     GOALS -.->|"Drives Trust"| INPACT
 
-    style Title fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Layers fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style GOALS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Title fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style PILLARS fill:none,stroke:none,rx:10,ry:10
+    style INDICATOR fill:none,stroke:none,rx:10,ry:10
+    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Layers fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style GOALS fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Spacer1 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style YouAreHere fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Spacer2 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 
 
@@ -146,14 +146,14 @@ graph TB
     
     L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
     
-    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L6 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L5 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L2 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L6 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L5 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L2 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### The Remaining Gaps
@@ -345,18 +345,18 @@ graph TB
     Risk -->|"Low"| Auto --> Audit
     Risk -->|"High"| HITL --> Human --> Audit
     
-    style LAYER5 fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style EVAL fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style ABAC fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style OPA fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Risk fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style DECISION fill:#E6F3F6,stroke:#32738C,stroke-width:2px
-    style Auto fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style HITL fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
-    style Human fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Audit fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style LAYER5 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style EVAL fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style ABAC fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style OPA fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Risk fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style DECISION fill:#E6F3F6,stroke:#32738C,stroke-width:1px,rx:10,ry:10
+    style Auto fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style HITL fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
+    style Human fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Audit fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 
@@ -433,13 +433,13 @@ graph TB
     A --> Policy
     C --> Policy
     
-    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style S fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style R fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style A fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style C fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Policy fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style S fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style R fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style A fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style C fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Policy fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### Echo's Gap Before Layer 5
@@ -511,20 +511,20 @@ graph LR
     
     Copyright["© 2025 Colaberry Inc."]
     
-    style HITL fill:#FBEAEA,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style SYNC fill:#F6D1CE,stroke:#EB898B,stroke-width:2px,color:#7A1F22
-    style ASYNC fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style S1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
-    style S2 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:3px
-    style S3 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style S4 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style A1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style A2 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style A3 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style P1 fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style P2 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style P3 fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style HITL fill:#FBEAEA,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style SYNC fill:#F6D1CE,stroke:#EB898B,stroke-width:1px,color:#7A1F22,rx:10,ry:10
+    style ASYNC fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style S1 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
+    style S2 fill:#EB898B,color:#ffffff,stroke:#7A1F22,stroke-width:1px,rx:10,ry:10
+    style S3 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style S4 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style A1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style A2 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style A3 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style P1 fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style P2 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style P3 fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 
@@ -635,19 +635,19 @@ graph TB
     LLM --> DD
     DD --> Metrics
     
-    style LAYER6 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style LAYERS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L5 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style COLLECTION fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style OTEL fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style LLM fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style DD fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Metrics fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style LAYER6 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style LAYERS fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L5 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style COLLECTION fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style OTEL fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style LLM fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style DD fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Metrics fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 
@@ -705,19 +705,19 @@ graph TB
     L7 --> L5
     L7 --> L4
     
-    style ECHO fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style PARALLEL fill:none,stroke:none
-    style TRUST fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style INTEL fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style UI fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L6 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L5 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style ECHO fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style PARALLEL fill:none,stroke:none,rx:10,ry:10
+    style TRUST fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style INTEL fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style UI fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L6 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L5 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 
@@ -864,17 +864,17 @@ graph TB
     AGENTS <--> State
     AGENTS --> Synthesis
     
-    style LAYER7 fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Supervisor fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Intent fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style AGENTS fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Care fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Clinical fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Revenue fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style State fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Synthesis fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style LAYER7 fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Supervisor fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Intent fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style AGENTS fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Care fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Clinical fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Revenue fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style State fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Synthesis fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 ```
 
@@ -1029,14 +1029,14 @@ graph TB
     Clinical --> Response
     Revenue --> Response
     
-    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Supervisor fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style Care fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Clinical fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Revenue fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style State fill:#E6F3F6,stroke:#32738C,stroke-width:2px,color:#00323D
-    style Response fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Query fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Supervisor fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style Care fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Clinical fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Revenue fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style State fill:#E6F3F6,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style Response fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 ### INPACT™ Contribution
@@ -1184,10 +1184,10 @@ graph LR
     
     W7 --> Arrow --> W10
     
-    style W7 fill:#4478A6,stroke:#32738C,stroke-width:2px,color:#ffffff
-    style Arrow fill:#7FD5E8,stroke:#32738C,stroke-width:2px,color:#00323D
-    style W10 fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style W7 fill:#4478A6,stroke:#32738C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Arrow fill:#7FD5E8,stroke:#32738C,stroke-width:1px,color:#00323D,rx:10,ry:10
+    style W10 fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **INPACT™ Dimension Changes:**
@@ -1267,15 +1267,15 @@ graph TB
     L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
     L1 -.->|<b>Enables</b>| INPACT
     
-    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L6 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L5 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style L4 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L3 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L2 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style L1 fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style INPACT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style L7 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L6 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L5 fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style L4 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L3 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L2 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style L1 fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style INPACT fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 ```
 
 **Diagram 14: The Architecture of Trust— Two Pillars Complete**
@@ -1313,16 +1313,16 @@ graph TB
     Layers -.->|"Enables Operations"| GOALS
     GOALS -.->|"Drives Trust"| INPACT
 
-    style Title fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Layers fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff
-    style GOALS fill:#327C8C,stroke:#30838C,stroke-width:2px,color:#ffffff
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:2px
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Title fill:#30838C,color:#ffffff,stroke:#0D0D0D,stroke-width:1px,rx:10,ry:10
+    style PILLARS fill:none,stroke:none,rx:10,ry:10
+    style INDICATOR fill:none,stroke:none,rx:10,ry:10
+    style INPACT fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Layers fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style GOALS fill:#327C8C,stroke:#30838C,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style Spacer1 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style YouAreHere fill:#14D793,color:#003322,stroke:#0FB67D,stroke-width:1px,rx:10,ry:10
+    style Spacer2 fill:none,stroke:none,color:transparent,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#666666
 
 
 ```
