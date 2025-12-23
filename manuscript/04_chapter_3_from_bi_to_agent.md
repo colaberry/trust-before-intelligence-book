@@ -672,7 +672,6 @@ Seven gaps require seven layers. The next four chapters show exactly how Sarah t
 
 ---
 
-
 ## Acronyms
 
 - **ABAC:** Attribute-Based Access Control
