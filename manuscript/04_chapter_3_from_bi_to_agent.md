@@ -178,7 +178,7 @@ graph LR
     style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
-The challenge: running Software 3.0 agents on Software 1.0 infrastructure is like running cloud-native microservices on mainframe batch processing. The assumptions don't align.
+As Figure 3.1 illustrates, running Software 3.0 agents on Software 1.0 infrastructure is like running cloud-native microservices on mainframe batch processing. The assumptions don't align.
 
 ### Where the Two Eras Collide
 
@@ -258,7 +258,7 @@ graph TB
     style Copyright fill:#ffffff,stroke:none,color:#666666
 ```
 
-**Key differences:**
+Figure 3.2 captures this paradigm shift. The key differences are stark:
 
 | Dimension | BI Systems | Agent Systems |
 |-----------|------------|---------------|
@@ -430,7 +430,7 @@ Sarah: "We gate investments with checkpoints:
 
 **Week 4:** Foundation layers functional. If not at 45-50/100, we reassess. 
 **Week 8:** Intelligence layers operational. Target 65-70/100. This is point of no return. 
-**Week 10:** First production agent. 85/100 minimum.
+**Week 10:** First production agent. 86/100 minimum.
 
 We don't commit $1.23M day one. We validate: $470K Phase 1, $380K Phase 2, $380K Phase 3."
 
@@ -558,7 +558,7 @@ graph LR
 
 ```
 
-**The mapping shows:**
+Figure 3.3 maps the complete transformation path:
 - **Left (Red):** Seven infrastructure gaps from BI-era systems
 - **Middle (Gray):** INPACT™ needs that each gap violates  
 - **Right (Teal):** Seven architectural layers that solve each gap
@@ -582,10 +582,10 @@ graph LR
 Build Layers 1-2: Multi-Modal Storage + Real-Time Data Fabric
 
 **Deliverables:**
-- Azure SQL with agent-optimized indexes
-- Debezium CDC capturing EHR changes within fifteen seconds
-- Kafka streaming operational
-- Pinecone vector database provisioned
+- [Azure SQL](https://azure.microsoft.com/en-us/products/azure-sql/) with agent-optimized indexes
+- [Debezium](https://debezium.io) CDC capturing EHR changes within fifteen seconds
+- [Kafka](https://kafka.apache.org) streaming operational
+- [Pinecone](https://www.pinecone.io) vector database provisioned
 
 **INPACT™ progression:** 28 -> 42/100
 - Instant (I): 1 -> 4 (real-time data, faster queries)
@@ -598,11 +598,11 @@ Build Layers 1-2: Multi-Modal Storage + Real-Time Data Fabric
 Build Layers 3-6: Semantic + Intelligence (RAG + LLM)
 
 **Deliverables:**
-- dbt semantic models (business-friendly views)
+- [dbt](https://www.getdbt.com) semantic models (business-friendly views)
 - RAG pipeline: embeddings -> retrieval -> reranking
-- Azure OpenAI integration (GPT-4)
-- OPA policy engine with ABAC rules
-- OpenTelemetry + Datadog observability
+- [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) integration (GPT-4)
+- [OPA](https://www.openpolicyagent.org) policy engine with ABAC rules
+- [OpenTelemetry](https://opentelemetry.io) + [Datadog](https://www.datadoghq.com) observability
 
 **INPACT™ progression:** 42 -> 67/100
 - Natural (N): 2 -> 5 (semantic layer working)
@@ -616,12 +616,12 @@ Build Layers 3-6: Semantic + Intelligence (RAG + LLM)
 Build Layers 5-6-7: Governance + Observability + Orchestration
 
 **Deliverables:**
-- LangGraph orchestration framework
+- [LangGraph](https://langchain-ai.github.io/langgraph/) orchestration framework
 - Multi-agent state management
 - Human-in-the-loop workflows
 - First production agent live
 
-**INPACT™ progression:** 67 -> 85/100
+**INPACT™ progression:** 67 -> 86/100
 - Adaptive (A): 2 -> 5 (feedback loops operational)
 - All dimensions optimized through final tuning
 
