@@ -23,9 +23,9 @@ graph LR
     TRANSFORM --> AFTER
     Copyright["© 2025 Colaberry Inc."]
 
-    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:0.5px,color:#7A1F22
-    style T1 fill:#4478A6,stroke:#32738C,stroke-width:0.5px,color:#ffffff
-    style A1 fill:#14D793,stroke:#0FB67D,stroke-width:0.5px,color:#003322
+    style B1 fill:#F6D1CE,stroke:#EB898B,stroke-width:0.5px,color:#7A1F22,rx:10,ry:10
+    style T1 fill:#4478A6,stroke:#32738C,stroke-width:0.5px,color:#ffffff,rx:10,ry:10
+    style A1 fill:#14D793,stroke:#0FB67D,stroke-width:0.5px,color:#003322,rx:10,ry:10
     style BEFORE fill:#FBEAEA,stroke:#EB898B,stroke-width:0.5px,color:#121212,rx:10,ry:10
     style TRANSFORM fill:#E6F3F6,stroke:#000000,stroke-width:0.5px,color:#121212,rx:10,ry:10
     style AFTER fill:#E6F3F6,stroke:#32738C,stroke-width:0.5px,color:#121212,rx:10,ry:10
