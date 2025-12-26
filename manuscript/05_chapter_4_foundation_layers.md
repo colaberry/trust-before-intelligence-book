@@ -392,7 +392,7 @@ The team was ready to build.
 
 ---
 
-**Progress Check:** Echo's baseline: 28/100 INPACT™ score, SQL Server only, 24-hour batch ETL. Sarah's team committed to Layers 1-2 first—$470K investment across Weeks 1-4 with parallel workstreams.
+**Progress Check:** Echo's baseline: 28/100 INPACT™ score, SQL Server only, 24-hour batch ETL. Sarah's team committed to Layers 1-2 first, $470K investment across Weeks 1-4 with parallel workstreams.
 
 ---
 
@@ -402,7 +402,7 @@ The team was ready to build.
 
 Layer 1 provides eleven distinct storage categories, each optimized for specific agent query patterns. Production AI deployments in 2024-2025 typically use 7-9 storage categories; Echo selected all 11 to meet healthcare's comprehensive requirements.
 
-**Figure 4.4: Layer 1 Multi-Modal Storage—11 Categories by Function**
+**Figure 4.4: Layer 1 Multi-Modal Storage - 11 Categories by Function**
 
 ```mermaid
 
@@ -413,19 +413,19 @@ graph TB
         direction TB
         S1["1. <b>RDBMS</b><br/>Transactions"]
         S2["2. <b>NoSQL</b><br/>Documents"]
-        S3["3. <b>Vector DB</b><br/>Embeddings"]
-        S4["4. <b>Graph DB</b><br/>Relationships"]
-        S5["5. <b>Object Store</b><br/>Unstructured"]
-        S6["6. <b>Lakehouse</b><br/>Analytics"]
-        S7["7. <b>Model Registry</b><br/>ML models"]
-        S8["8. <b>Feature Store</b><br/>ML features"]
+        S3["4. <b>Graph DB</b><br/>Relationships"]
+        S4["5. <b>Object Store</b><br/>Unstructured"]
+        S5["6. <b>Lakehouse</b><br/>Analytics"]
+        S6["7. <b>Model Registry</b><br/>ML models"]
+        S7["9. <b>Time-Series</b><br/>IoT/metrics"]
+        S8["11. <b>Cache Layer</b><br/>Performance"]    
     end
     
     subgraph PHASE2["Phase 2 (3 Types)"]
         direction TB
-        S9["9. <b>Time-Series</b><br/>IoT/metrics"]
+        S9["3. <b>Vector DB</b><br/>Embeddings"]
         S10["10. <b>Search Index</b><br/>Full-text"]
-        S11["11. <b>Cache Layer</b><br/>Performance"]
+        S11["8. <b>Feature Store</b><br/>ML features"]
     end
     
     OUTPUT["Right Storage<br/>for Each Query"]
@@ -453,7 +453,7 @@ graph TB
 
 ```
 
-Traditional BI infrastructure assumes one or two storage types handle everything—usually a relational database for operational data and a data warehouse for analytics. This works for reporting but fails for agents. Agents need semantic search across patient records, relationship traversal through provider networks, flexible schema for clinical notes, petabyte-scale training data, sub-second response times, ML artifact versioning, feature reuse across models, continuous time-series data from ICU monitors, and unified ML pipelines with ACID transactions.
+Traditional BI infrastructure assumes one or two storage types handle everything. Usually a relational database for operational data and a data warehouse for analytics. This works for reporting but fails for agents. Agents need semantic search across patient records, relationship traversal through provider networks, flexible schema for clinical notes, petabyte-scale training data, sub-second response times, ML artifact versioning, feature reuse across models, continuous time-series data from ICU monitors, and unified ML pipelines with ACID transactions.
 
 No single storage technology handles all these patterns efficiently. Multi-modal storage matches storage type to query pattern, optimizing performance, cost, and developer productivity.
 
@@ -463,7 +463,7 @@ No single storage technology handles all these patterns efficiently. Multi-modal
 
 **What:** SQL Server (existing), extended with Azure SQL Database Hyperscale (https://azure.microsoft.com/en-us/products/azure-sql/database/) tier for agent-specific workloads.
 
-**Why:** Transactional consistency, referential integrity, ACID guarantees. Critical for patient demographics, appointments, billing, insurance claims—data requiring strict consistency and complex joins.
+**Why:** Transactional consistency, referential integrity, ACID guarantees. Critical for patient demographics, appointments, billing, insurance claims requires strict data consistency and complex joins.
 
 **Echo's Implementation:**
 - Existing SQL Server: 2.4TB patient data, billing, scheduling (no changes)
@@ -494,7 +494,7 @@ No single storage technology handles all these patterns efficiently. Multi-modal
 
 ### Type 3: Vector Database (Phase 2)
 
-**The Gap:** Semantic search requires cosine similarity across high-dimensional embeddings. RDBMS cannot index vectors efficiently—similarity search across 10M patient records takes 15-20 seconds in SQL Server. Agents need <50ms semantic search.
+**The Gap:** Semantic search requires cosine similarity across high-dimensional embeddings. RDBMS cannot index vectors efficiently. Similarity search across 10M patient records takes 15-20 seconds in SQL Server. Agents need <50ms semantic search.
 
 **Foundation Requirement:** Layer 1 establishes the architectural pattern and data pipelines that vector databases will consume. Patient records, clinical notes, and guidelines must be accessible and properly structured before vectorization.
 
