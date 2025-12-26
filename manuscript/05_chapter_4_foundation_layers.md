@@ -633,49 +633,48 @@ No single storage technology handles all these patterns efficiently. Multi-modal
 **Phase 1 Categories (Foundation - This Chapter):**
 | Need | Required Categories | Skip If |
 |------|---------------------|---------|
-| Transactional workloads | RDBMS (1) | Never skip (always needed) |
+| Transactional workloads | RDBMS (1) | Never skip |
 | JSON documents >50GB | NoSQL (2) | Relational schema works |
-| Multi-hop relationships | Graph (4) | Simple foreign keys work |
-| ML models in production | Model Registry (5) | No ML deployment |
-| >5 ML models deployed | Feature Store (6) | ML not core capability |
-| Unstructured data >100GB | Object Storage (7) | All data structured |
-| IoT / monitoring streams | Time-Series (8) | No continuous metrics |
-| Warehouse + Lake both | Lakehouse (10) | Warehouse-only or Lake-only |
+| Multi-hop relationships | Graph DB (3) | Simple foreign keys work |
+| Unstructured data >100GB | Object Storage (4) | All data structured |
+| Warehouse + Lake both | Lakehouse (5) | Warehouse-only or Lake-only |
+| ML models in production | Model Registry (6) | No ML deployment |
+| IoT / monitoring streams | Time-Series (7) | No continuous metrics |
+| Query performance <100ms | Cache Layer (8) | Latency not critical |
 
 **Phase 2 Categories (Intelligence - Chapter 5):**
 | Need | Required Categories | Skip If |
 |------|---------------------|---------|
-| Semantic search / RAG | Vector Database (3) | Keyword search sufficient |
-| LLM response caching | Semantic Cache (11) | Low LLM usage |
+| Semantic search / RAG | Vector Database (9) | Keyword search sufficient |
+| Full-text search | Search Index (10) | Vector-only sufficient |
+| >5 ML models with shared features | Feature Store (11) | ML not core capability |
 
 ### Echo's Single-Modal Limitations (Week 0)
 
 Echo started with SQL Server only. Here's what failed:
 
-**Figure 4.5: Echo's Storage Transformation—Single-Modal to Multi-Modal**
-
+**Figure 4.5: Echo's Storage Transformation - Single-Modal to Multi-Modal**
 ```mermaid
-
 graph LR
-    subgraph BEFORE["Week 0: Single-Modal"]
-        OLD["SQL Server Only<br/>All queries, one DB"]
-        P1["Vector queries: NA<br/>No native support"]
-        P2["Graph queries: 8.2s<br/>Complex JOINs"]
-        P3["Schema: Rigid<br/>Change is slow"]
-        P4["ML: Spreadsheets<br/>No versioning"]
+    subgraph BEFORE["<b>Week 0: Single-Modal</b>"]
+        OLD["<b>SQL Server Only</b><br/><b>All queries, one DB</b>"]
+        P1["<b>Cache: None</b><br/><b>Every query hits DB</b>"]
+        P2["<b>Graph queries: 8.2s</b><br/><b>Complex JOINs</b>"]
+        P3["<b>Schema: Rigid</b><br/><b>Change is slow</b>"]
+        P4["<b>ML: Spreadsheets</b><br/><b>No versioning</b>"]
     end
     
-    TRANSFORM["4 Weeks"]
+    TRANSFORM["<b>4 Weeks</b>"]
     
-    subgraph AFTER["Week 4: Multi-Modal"]
-        NEW["8 Categories<br/>Right tool, right job"]
-        S1["Vector DB: 42ms<br/>Native embeddings"]
-        S2["Graph DB: 340ms<br/>Native traversal"]
-        S3["Schema: Flexible<br/>NoSQL + Lakehouse"]
-        S4["ML: Registry<br/>Full versioning"]
+    subgraph AFTER["<b>Week 4: Multi-Modal</b>"]
+        NEW["<b>8 Categories</b><br/><b>Right tool, right job</b>"]
+        S1["<b>Cache: &lt;10ms</b><br/><b>Redis MemoryDB</b>"]
+        S2["<b>Graph DB: 340ms</b><br/><b>Native traversal</b>"]
+        S3["<b>Schema: Flexible</b><br/><b>NoSQL + Lakehouse</b>"]
+        S4["<b>ML: Registry</b><br/><b>Full versioning</b>"]
     end
     
-    Copyright["© 2025 Colaberry Inc."]
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
 
     OLD --> P1
     OLD --> P2
@@ -691,34 +690,33 @@ graph LR
     NEW --> S3
     NEW --> S4
 
-    style BEFORE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style BEFORE fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style OLD fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    style P1 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P2 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P3 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
-    style P4 fill:#ffcdd2,stroke:#c62828,stroke-width:1px,color:#b71c1c
+    style P1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style P2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style P3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
+    style P4 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
     style TRANSFORM fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style AFTER fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
+    style AFTER fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
     style NEW fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
     style S1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style S2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style S3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style S4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
     style Copyright fill:#ffffff,stroke:none,color:#666666
-
 ```
 
-**Vector search:** Impossible at scale. Storing 10M patient records with 1,536-dimensional embeddings in SQL Server would require 61.4GB just for vectors. Similarity search (cosine distance) across 10M rows takes 15-20 seconds—unacceptable for real-time agents needing <50ms semantic search. Pinecone solves this with specialized indexing (HNSW algorithm) delivering 42ms average query time.
+**Cache layer:** Critical for performance. Every agent query hit the database directly—no caching tier. Repeated queries for the same patient, same provider, same schedule data hammered SQL Server unnecessarily. Peak load saw 12,000 identical queries per hour. Redis MemoryDB provides sub-10ms response for cached results, reducing database load by 60% and enabling the response times agents require.
 
-**Graph traversal:** Painful. "Find all providers within three reporting levels of Dr. Sarah Chen" requires recursive CTE in SQL Server. Echo's implementation took 8.2 seconds on average (p95: 12.4s). Neo4j's native graph traversal (Cypher query) completes same query in 340ms—24x faster. When agents need referral network analysis for care coordination, 8 seconds is prohibitive.
+**Graph traversal:** Painful. "Find all providers within three reporting levels of Dr. Sarah Chen" requires recursive CTE in SQL Server. Echo's implementation took 8.2 seconds on average (p95: 12.4s). Neo4j's native graph traversal (Cypher query) completes the same query in 340 milliseconds—over 20x faster, consistent with published benchmarks showing graph databases outperforming relational systems by 3x for simple queries up to 1,000x+ for deep traversals [1]. When agents need referral network analysis for care coordination, 8 seconds is prohibitive.
 
 **Flexible schema:** Awkward. Clinical notes vary by specialty—cardiology notes have "ejection fraction," radiology notes have "contrast administration," psychiatry notes have "mental status exam." Storing all in varchar(max) columns forces application-level schema management. MongoDB's flexible schema allows specialty-specific fields without schema migration for every new specialty.
 
 **Training data:** Fragmented. Medical imaging (420TB DICOM files), historical EHR exports (87TB), research datasets (34TB) scattered across file shares, NAS devices, and aging SAN systems. No centralized object storage. No lifecycle policies. No tiered storage (hot/cool/archive). Azure Blob Storage consolidates all with lifecycle management reducing costs 40%.
 
-**Model versioning:** Excel spreadsheets. 47 ML models in production tracked in Git commits and Excel files. When sepsis model performance degraded Week -3, took 6 hours to identify deployed version and roll back. No lineage. No artifact storage. No A/B testing capability. MLflow provides all three with 10-minute rollback time.
+**Model versioning:** Excel spreadsheets. 47 ML models in production tracked in Git commits and Excel files. When sepsis model performance degraded Week -3, it took 6 hours to identify the deployed version and roll back. No lineage. No artifact storage. No A/B testing capability. MLflow provides all three with 10-minute rollback time.
 
-**Feature reuse:** Definition drift. "30-day readmission risk" calculated differently in sepsis model (Python), discharge planning agent (SQL), utilization dashboard (DAX). Feature stores eliminate drift through centralized, reusable feature definitions.
+**Phase 2 preview:** Two critical capabilities—vector search for semantic queries and feature stores for ML consistency—require the foundation built here. Chapter 5 deploys Pinecone (42ms semantic search) and Tecton (unified feature definitions) on top of this multi-modal foundation.
 
 ### Layer 1 Summary
 
