@@ -46,21 +46,21 @@ graph LR
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     
     BEFORE --> SOLUTION --> AFTER
-    
-    %% 🔴 RED — FAILURE / OLD ERA
-    style BEFORE fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style B1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    
-    %% 🔵 BLUE — ACTIVE TRANSFORMATION
-    style SOLUTION fill:#edf4fa,stroke:#666666,stroke-width:2px,color:#333333,rx:20,ry:20
-    style S1 fill:#4478A6,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    
-    %% 🟢 TEAL — TRUSTED OUTCOME
-    style AFTER fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style A1 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    
+
+    %% 🔴 FAILURE / BI-ERA
+    style BEFORE fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style B1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    %% 🔵 TRANSFORMATION / CHANGE
+    style SOLUTION fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style S1 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+
+    %% 🟢 TRUSTED / INPACT™-FULFILLED
+    style AFTER fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style A1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+
     %% FOOTER
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#888888
 ```
 
 > **Key Takeaway:** Seven gaps. Seven layers. One transformation.
@@ -162,24 +162,24 @@ graph LR
     era2 -.->|<b>PARADIGM SHIFT<br/>Requires INPACT™</b>| era3
     
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    %% ⚪ SOFTWARE 1.0 — NEUTRAL (Human-era, BI assumptions)
-    style era1 fill:#ffffff,stroke:#666666,stroke-width:2px,rx:20,ry:20
-    style P1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000,rx:10,ry:10
-    style I1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000,rx:10,ry:10
-    
-    %% 🟠 SOFTWARE 2.0 — INTERMEDIATE (ML added, not agent-ready)
-    style era2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:20,ry:20
-    style P2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:10,ry:10
-    style I2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:10,ry:10
-    
-    %% 🟢 SOFTWARE 3.0 — TRUSTED OUTCOME (Agent-native)
-    style era3 fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style P3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40,rx:10,ry:10
-    style I3 fill:#30838C,stroke:#0D0D0D,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    
+
+    %% 🔴 SOFTWARE 1.0 — FAILURE / BI-ERA
+    style era1 fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style P1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style I1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    %% 🟠 SOFTWARE 2.0 — INTERMEDIATE / PRESSURE
+    style era2 fill:#fff9e6,stroke:#f2d3a7,stroke-width:1px,color:#e65100,rx:20,ry:20
+    style P2 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+    style I2 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+
+    %% 🟢 SOFTWARE 3.0 — TRUSTED / INPACT™-FULFILLED
+    style era3 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style P3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style I3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+
     %% FOOTER
-    style Copyright fill:none,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#888888
 ```
 
 As Figure 3.1 illustrates, running Software 3.0 agents on Software 1.0 infrastructure is like running cloud-native microservices on mainframe batch processing. The assumptions don't align.
@@ -242,27 +242,26 @@ graph TB
     
     old -.->|<b>Must Transform</b>| Shift
     Shift -.->|<b>To Enable</b>| new
+
+    %% 🔴 BI ERA — FAILURE / TRUST BREAKDOWN
+    style old fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style O1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style O2 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style O3 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style O4 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
     
+    %% 🔵 TRANSFORMATION — ACTIVE CHANGE
+    style Shift fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
     
-    %% 🔴 BI ERA — OLD / TRUST-BREAKING FOR AGENTS
-    style old fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style O1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style O2 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style O3 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style O4 fill:#990000,stroke:#b71c1c,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    
-    %% 🔵 TRANSFORMATION — PARADIGM SHIFT
-    style Shift fill:#edf4fa,stroke:#666666,stroke-width:2px,color:#333333,rx:20,ry:20
-    
-    %% 🟢 AGENT ERA — TRUSTED / AGENT-READY
-    style new fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style N1 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style N2 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style N3 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style N4 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    %% 🟢 AGENT ERA — TRUSTED / INPACT™-FULFILLED
+    style new fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style N1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N4 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
     
     %% FOOTER
-    style Copyright fill:none,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#888888
 ```
 
 Figure 3.2 captures this paradigm shift. The key differences are stark:
@@ -535,37 +534,37 @@ graph LR
     N5 -.->|"Solved by"| L4
     N6 -.->|"Solved by"| L6
     
-    %% 🔴 GAPS — PROBLEMS / BI ERA
-    style gaps fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style G1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G2 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G3 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G4 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G5 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G6 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style G7 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
+    %% 🔴 GAPS — FAILURE / BI ERA
+    style gaps fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style G1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G2 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G3 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G4 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G5 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G6 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style G7 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
     
-    %% ⚪ NEEDS — REQUIREMENTS (NEUTRAL)
-    style needs fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000,rx:20,ry:20
-    style N1 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style N2 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style N3 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style N4 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style N5 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style N6 fill:#ffffff,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
+    %% ⚪ NEEDS — NEUTRAL REQUIREMENTS
+    style needs fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style N1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N4 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N5 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style N6 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
     
-    %% 🟢 LAYERS — SOLUTIONS / AGENT-READY
-    style layers fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L5 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L6 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style L7 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
+    %% 🟢 LAYERS — TRUSTED / INPACT™-FULFILLING
+    style layers fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style L1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L4 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L5 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L6 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style L7 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
     
     %% FOOTER
-    style Copyright fill:none,stroke:none,color:#666666
+    style Copyright fill:none,stroke:none,color:#888888
 
 ```
 
