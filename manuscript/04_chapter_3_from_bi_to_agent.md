@@ -170,8 +170,8 @@ graph LR
 
     %% 🟠 SOFTWARE 2.0 — INTERMEDIATE / PRESSURE
     style era2 fill:#fff9e6,stroke:#f2d3a7,stroke-width:1px,color:#e65100,rx:20,ry:20
-    style P2 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
-    style I2 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+    style P2 fill:#ffefd1,stroke:none,color:#e65100,rx:10,ry:10
+    style I2 fill:#ffefd1,stroke:none,color:#e65100,rx:10,ry:10
 
     %% 🟢 SOFTWARE 3.0 — TRUSTED / INPACT™-FULFILLED
     style era3 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
