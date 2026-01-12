@@ -76,7 +76,7 @@ graph LR
     style BUILT fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
     style B1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
     style GAP fill:#fff9e6,stroke:#f2d3a7,stroke-width:1px,color:#e65100,rx:20,ry:20
-    style G1 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+    style G1 fill:#ffefd1,stroke:#ffefd1,stroke-width:1px,color:#e65100,rx:10,ry:10
     style NEED fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
     style N1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
 
