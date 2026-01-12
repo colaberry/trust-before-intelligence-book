@@ -73,12 +73,12 @@ graph LR
     
     BUILT -->|"Trust Collapse"| GAP --> NEED
     
-    style BUILT fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style B1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style GAP fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:20,ry:20
-    style G1 fill:#fff9e6,stroke:#f57c00,stroke-width:1px,color:#e65100,rx:10,ry:10
-    style NEED fill:#edf4fa,stroke:#4478A6,stroke-width:2px,color:#000000,rx:20,ry:20
-    style N1 fill:#4478A6,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    style BUILT fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style B1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style GAP fill:#fff9e6,stroke:#f2d3a7,stroke-width:1px,color:#e65100,rx:20,ry:20
+    style G1 fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+    style NEED fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style N1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
 
 ```
 
@@ -159,17 +159,19 @@ graph TB
     end
     
     timeline --> analysis
-    
-    style timeline fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style FEB fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:10,ry:10
-    style MAR fill:#ef9a9a,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:10,ry:10
-    style MAY fill:#e57373,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:10,ry:10
-    style JUL fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    
-    style analysis fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style CAUSE fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    style RESULT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:10,ry:10
-    
+
+    %% TIMELINE — FAILURE / BI-ERA
+    style timeline fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style FEB fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style MAR fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style MAY fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style JUL fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    %% ANALYSIS — FAILURE CONTEXT
+    style analysis fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style CAUSE fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style RESULT fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
     Copyright["<b>© 2025 Colaberry Inc.</b>"]
     style Copyright fill:none,stroke:none,color:#999999
 ```
@@ -428,16 +430,17 @@ graph LR
     
     Copyright["© 2025 Colaberry Inc."]
 
-    style sw1 fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style infra1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style prog1 fill:#f9f9f9,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style sw2 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:20,ry:20
-    style prog2 fill:#fff9e6,stroke:#f57c00,stroke-width:1px,color:#e65100,rx:10,ry:10
-    style infra2 fill:#fff9e6,stroke:#f57c00,stroke-width:1px,color:#e65100,rx:10,ry:10
-    style sw3 fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style prog3 fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style infra3 fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style Copyright fill:none,stroke:none,color:#666666
+    %% SOFTWARE 1.0 — FAILURE / BI-ERA
+    style sw1 fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style infra1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style prog1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style sw2 fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style prog2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style infra2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style sw3 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style prog3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style infra3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#888888
 
 ```
 
@@ -499,16 +502,17 @@ graph TB
     result -.->|"Requires Transformation"| transform
     
     Copyright["© 2025 Colaberry Inc."]
-    
-    style PROBLEM fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style current fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style attempting fill:#fff9e6,stroke:#f57c00,stroke-width:1px,color:#e65100,rx:10,ry:10
-    style gap fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    style result fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    style SOLUTION fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style transform fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style delivers fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
-    style Copyright fill:none,stroke:none,color:#666666
+
+    %% PROBLEM — FAILURE / BI-ERA
+    style PROBLEM fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style current fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style attempting fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style gap fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style result fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style SOLUTION fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style transform fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style delivers fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#888888
 
 ```
 
@@ -576,17 +580,19 @@ graph LR
         STREAM --> SEMANTIC --> ABAC
     end
     
-    style BI fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style ETL fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style DW fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style RBAC fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
+    %% HUMAN ERA — FAILURE / BI-ERA
+    style BI fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style ETL fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style DW fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style RBAC fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
     linkStyle 0 stroke:#4478A6,stroke-width:2px,color:#4478A6
-    style AGENT fill:#e6f3f6,stroke:#00897b,stroke-width:2px,color:#004d40,rx:20,ry:20
-    style STREAM fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style SEMANTIC fill:#e0f2f1,stroke:#00897b,stroke-width:1px,color:#004d40,rx:10,ry:10
-    style ABAC fill:#30838C,stroke:#0D0D0D,stroke-width:1px,color:#ffffff,rx:10,ry:10
+    %% AGENT ERA — TRUSTED / INPACT™-FULFILLED
+    style AGENT fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style STREAM fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style SEMANTIC fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style ABAC fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
     CR["<b>© 2025 Colaberry Inc.</b>"]
-    style CR fill:none,stroke:none,color:#666666
+    style CR fill:none,stroke:none,color:#888888
 ```
 
 **INPACT™ Need Fulfillment: BI Era vs Agent Era**
@@ -641,16 +647,16 @@ graph TB
     
     Copyright["© 2025 Colaberry Inc."]
     
-    style investment fill:#ffffff,stroke:#666666,stroke-width:2px,color:#000000,rx:20,ry:20
-    style TOTAL fill:#f9f9f9,stroke:#666666,stroke-width:1px,color:#000000,rx:10,ry:10
-    style pilots fill:#fff5f5,stroke:#c62828,stroke-width:2px,color:#b71c1c,rx:20,ry:20
-    style P1 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style P2 fill:#ffebee,stroke:#c62828,stroke-width:1px,color:#b71c1c,rx:10,ry:10
-    style P3 fill:#990000,stroke:#b71c1c,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    style outcome fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100,rx:20,ry:20
-    style SCORE fill:#fff9e6,stroke:#f57c00,stroke-width:1px,color:#e65100,rx:10,ry:10
-    style DECISION fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff,rx:10,ry:10
-    style Copyright fill:none,stroke:none,color:#666666
+    style investment fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style TOTAL fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style pilots fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style P1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P2 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P3 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style outcome fill:#fff9e6,stroke:#f2d3a7,stroke-width:1px,color:#e65100,rx:20,ry:20
+    style SCORE fill:#fff9e6,stroke:none,color:#e65100,rx:10,ry:10
+    style DECISION fill:#f57c00,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#888888
 
 ```
 
