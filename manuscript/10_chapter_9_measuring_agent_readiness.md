@@ -474,9 +474,3 @@ Turn the page to build your plan.
 **Your Priority Dimensions**: _______________, _______________
 
 **Your Chapter 10 Entry Point**: Phase ___
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

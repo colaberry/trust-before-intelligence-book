@@ -862,8 +862,6 @@ Without Layer 5 (Governance), the intelligent response creates a compliance viol
 
 ## CHAPTER 5 SUMMARY
 
-### Key Takeaways
-
 **Intelligence = Understanding + Reasoning:** Layer 3 translates business language to data structures. Layer 4 retrieves, assembles, and reasons over that data.
 
 **LLMs integrate within Layer 4:** The 7-Layer Architecture organizes by infrastructure concern. Layer 4's concern is intelligence, the complete pipeline from query understanding through LLM generation.
@@ -942,9 +940,3 @@ Without Layer 5 (Governance), the intelligent response creates a compliance viol
 [23] Yu, T., Zhang, R., Yang, K., et al. (2018). "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task." *Proceedings of EMNLP*, 3911-3921. https://arxiv.org/abs/1809.08887
 
 [24] Li, B., Luo, Y., Chai, C., Li, G., & Tang, N. (2024). "The Dawn of Natural Language to SQL: Are We Fully Ready?" *Proceedings of the VLDB Endowment*, 17(11). https://arxiv.org/abs/2406.01265
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

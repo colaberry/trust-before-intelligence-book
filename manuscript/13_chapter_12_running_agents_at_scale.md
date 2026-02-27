@@ -66,7 +66,7 @@ Let's begin with the question every organization faces at Week 10: are you actua
 
 Production readiness isn't a feeling. It's a measurable state. Validate against 15 specific criteria organized around the Architecture of Trust's three pillars. Each criterion has a clear target, measurement method, and evidence requirement.
 
-Throughout this chapter, reference benchmarks are drawn from Echo Health Systems, the pedagogical case study used in this book. Adjust these numbers based on your industry, use case, and risk tolerance. Part 6 consolidates Echo's complete results for easy reference.
+Throughout this chapter, reference benchmarks are drawn from Echo Health Systems. Adjust these numbers based on your industry, use case, and risk tolerance. Part 6 consolidates Echo's complete results for easy reference.
 
 **Pillar 1: INPACT Readiness (5 Criteria)**
 
@@ -955,7 +955,7 @@ Hands-on validation:
 
 ## Part 6: Echo Health Systems Results
 
-Echo Health Systems is a pedagogical case study used throughout this book to illustrate the Architecture of Trust in practice. While fictional, Echo's metrics reflect realistic outcomes based on Colaberry's production deployments.
+Echo's metrics reflect realistic outcomes based on Colaberry's production deployments.
 
 **How to Use These Benchmarks:**
 
@@ -1085,9 +1085,3 @@ Trust before intelligence. Architecture before agents. The three pillars are you
 - LangChain. (2024). "LangGraph Human-in-the-Loop Patterns." https://docs.langchain.com/oss/python/langgraph/interrupts
 
 - Anthropic. (2024). "Model Context Protocol (MCP)." https://modelcontextprotocol.io/
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

@@ -682,9 +682,3 @@ The frameworks are proven. The tracker is ready. Complete Day Zero at trustbefor
 [1] Challapally, A., et al. (2025). "The GenAI Divide: Why 95% of Enterprise GenAI Projects Fail and How to Be in the 5%." MIT Sloan School of Management, New Architectures for Next-Generation Data Analytics (NANDA) Lab. Analysis of 300+ enterprise GenAI initiatives. https://mitsloan.mit.edu/ideas-made-to-matter/why-95-enterprise-genai-projects-fail
 
 *For technology selection references and vendor documentation, see Chapter 11.*
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

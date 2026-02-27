@@ -397,16 +397,14 @@ Both layers are essential. Agents need discoverability (Karpathy) AND operationa
 **T - Transparent:** Reasoning chain observability enabling validation
 
 This isn't about replacing data warehouses or abandoning BI dashboards. It's about adding the semantic understanding, dynamic access, real-time retrieval, and observable reasoning layers that fulfill INPACT needs, while preserving the data quality, governance controls, and audit trails that enterprises demand.
-
+---
 **Software 3.0 agents require INPACT ready infrastructure. Attempting to avoid that transformation is why 95% fail.**
+
+---
+---
 
 **BI-Era vs. Agent-Era: INPACT Need Fulfillment**
 
-**Figure 1.4: Human Era vs INPACT Ready Agent Era**
-
-
-![Figure 1.4: Human Era vs INPACTReady Agent Era](figures/figure-1-4.png)
-**INPACT Need Fulfillment: BI Era vs Agent Era**
 
 | INPACT Need | BI Era Infrastructure | Agent Era Infrastructure | Failure When Unfulfilled |
 |--------------|----------------------|-------------------------|-------------------------|
@@ -416,6 +414,11 @@ This isn't about replacing data warehouses or abandoning BI dashboards. It's abo
 | **Adaptive (A)** | Quarterly reviews | Continuous feedback loops | No improvement, model drift |
 | **Contextual (C)** | Siloed databases | Unified multi-modal platform | Incomplete answers, low trust |
 | **Transparent (T)** | Basic query logs | Reasoning chain observability | Audit failures, legal exposure |
+
+**Figure 1.4: Human Era vs INPACT Ready Agent Era**
+
+
+![Figure 1.4: Human Era vs INPACTReady Agent Era](figures/figure-1-4.png)
 
 The gap between what BI-era infrastructure delivers and what Agent-era applications need **is precisely the INPACT fulfillment gap.** Incremental improvements keep organizations in the failing majority. **INPACT-focused transformation** moves them to the successful 5%.
 
@@ -593,69 +596,7 @@ Sarah knew what she had to tell the board: **We need to build INPACT-ready infra
 
 The $2 million in failed pilots? That was the cost of learning that **agents require infrastructure that fulfills INPACT needs.** The question now was whether Echo's board would invest in the transformation before competitors with higher INPACT scores captured the market.
 
----
-
-## PART 5: KEY TAKEAWAYS AND THE PATH FORWARD
-
-### Three Critical Insights
-
-**Insight 1: Trust Requires INPACT Need Fulfillment, Not Better AI Models**
-
-The 95% failure rate isn't about model quality, regulatory compliance, or talent gaps. It's about **infrastructure's failure to fulfill INPACT needs.** Deloitte's Q3 2025 data proves it: **agentic AI trust collapsed 64% in five months** because infrastructure couldn't deliver on the six needs agents require.
-
-Users abandon agents that don't respond instantly, understand naturally, access only permitted data, learn from feedback, synthesize complete context, and explain reasoning transparently. **No amount of model sophistication compensates for INPACT need failures.**
-
-Trust isn't something you require or declare. **Trust is earned when infrastructure consistently fulfills all six INPACT needs.** Miss even one dimension, and join the 95% who fail.
-
-**Insight 2: Technology Works - Infrastructure Isn't INPACT Ready**
-
-GPT-4 achieves 90th percentile on the Bar Exam. Claude Sonnet 4.5 demonstrates superhuman coding ability. Pinecone handles 50+ billion monthly queries. RAG implementations achieve 85%+ retrieval accuracy.
-
-**The models are production-ready. The infrastructure isn't INPACT-ready.**
-
-Attempting to run Software 3.0 agents on Software 1.0 infrastructure, batch ETL, cryptic schemas, RBAC without contextual layers, siloed systems, creates the INPACT gap that drives failure. Karpathy's paradigm shift is real: LLMs are fundamentally different computers that **require infrastructure fulfilling INPACT needs.**
-
-**Insight 3: Six INPACT Need Failures Map to Six Failure Patterns**
-
-Every failed pilot follows predictable patterns that map to INPACT dimensions:
-
-**Instant failures** (9-13 second responses) → No real-time data fabric  
-**Natural failures** (40-60% query precision) → No semantic layer  
-**Permitted failures** (HIPAA violations) → No dynamic authorization  
-**Adaptive failures** (no improvement) → No feedback loops  
-**Contextual failures** (partial answers) → No cross-system synthesis; agents missing 6 of 7 context types (user, task, environmental, business, tooling, history)  
-**Transparent failures** (black box reasoning) → No reasoning chain observability
-
-These aren't random problems requiring bespoke solutions. They're systematic INPACT need fulfillment gaps requiring architectural transformation. **The INPACT Framework diagnoses the needs. The 7-Layer Architecture delivers them.**
-
-### Where Does Your Infrastructure Stand?
-
-Echo scored 28/100. Most enterprises scoring between 25-45 are firmly in the "high risk" zone where agent deployments consistently fail.
-
-The assessment at **trustbeforeintelligence.ai/assessment** measures your readiness across all six dimensions in 15 minutes. Chapter 2 provides the detailed scoring rubrics.
-
-### Bridge to Chapter 2: INPACT Deep Dive
-
-Sarah Cedao left that board meeting with a directive and a deadline: 90 days to show measurable infrastructure improvement or Echo would cancel all AI initiatives.
-
-She spent the weekend researching frameworks, reading case studies, analyzing what separated the 5% who succeeded from the 95% who failed. By Monday morning, she had her answer: **INPACT, the framework that defines what agents need from infrastructure and how to systematically fulfill those needs.**
-
-Not generic "AI readiness." Not checklist compliance. **A systematic approach to fulfilling the six needs that earn user trust.**
-
-**Chapter 2 shows you the same INPACT Framework Sarah used to transform Echo from 28/100 to 86/100 in 10 weeks.**
-
-You'll learn:
-- How to assess your current state across all six INPACT dimensions
-- What infrastructure capabilities fulfill each need
-- How to prioritize investments for maximum impact
-- Why all six needs must be addressed (not just the easy ones)
-- How INPACT drives requirements for the 7-Layer Architecture
-
-If Sarah could do it under board pressure with a 90-day deadline and $2 million in failed pilots behind her, so can you.
-
-**The transformation starts with understanding INPACT needs. Chapter 2 builds that foundation.**
-
----
+<!-- pagebreak -->
 
 ## Chapter Summary
 
@@ -665,11 +606,8 @@ If Sarah could do it under board pressure with a 90-day deadline and $2 million 
 | **Part 2** | Sarah's Moment of Crisis | $2M in failed pilots, 90-day ultimatum, technology worked, infrastructure didn't |
 | **Part 3** | The Infrastructure Readiness Gap | Software 3.0 requires INPACT-ready infrastructure; BI-era systems cannot fulfill agent needs |
 | **Part 4** | Sarah's $2M Wake-Up Call | Three pilots failed across different INPACT dimensions; Echo scored 28/100 |
-| **Part 5** | Key Takeaways | Trust is earned through need fulfillment; the path forward requires architectural transformation |
 
----
 
----
 
 ## References
 
@@ -692,9 +630,3 @@ If Sarah could do it under board pressure with a 90-day deadline and $2 million 
 [9] Karpathy, Andrej. (2025). "Software Is Changing (Again)." Y Combinator AI Startup School Keynote, San Francisco, June 17, 2025. https://www.ycombinator.com/library/MW-andrej-karpathy-software-is-changing-again
 
 [10] Bain & Company. (November 2025). "Executive Survey: AI Moves from Pilots to Production." Key findings: 74% rate AI as top-three priority (vs. 60% in 2024), 80% of use cases met/exceeded expectations, only 23% tied to revenue/cost impact, agentic workflows 2x more likely to exceed goals. https://www.bain.com/insights/executive-survey-ai-moves-from-pilots-to-production/
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

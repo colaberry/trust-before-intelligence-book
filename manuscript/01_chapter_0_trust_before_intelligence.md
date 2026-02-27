@@ -266,9 +266,3 @@ Sarah Cedao needed an architecture. Chapter 1 shows you why infrastructure isn't
 [5] McKinsey & Company (November 2025). "The State of AI in 2025: Agents, Innovation, and Transformation." Global survey of 1,993 respondents across 105 countries. Key findings: 63% of organizations in experimentation/pilot phase (not yet scaled), 62% experimenting with AI agents, infrastructure and governance gaps limiting deployment success. https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
 
 [6] Gillespie, N., Lockey, S., Ward, T., Macdade, A., & Hassed, G. (2025). "Trust, Attitudes and Use of Artificial Intelligence: A Global Study 2025." The University of Melbourne and KPMG. Global survey of 48,000+ people across 47 countries. Key finding: Only 46% of people globally are willing to trust AI systems. https://kpmg.com/xx/en/our-insights/ai-and-technology/trust-attitudes-and-use-of-ai.html
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

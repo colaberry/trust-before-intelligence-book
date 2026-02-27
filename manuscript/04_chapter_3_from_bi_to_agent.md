@@ -403,8 +403,6 @@ Seven gaps require seven layers. The next three chapters show exactly how Sarah 
 
 **From infrastructure that blocked agents to architecture that enables them.**
 
----
-
 ## Chapter Summary
 
 | Part | Content | Key Takeaway |
@@ -414,7 +412,6 @@ Seven gaps require seven layers. The next three chapters show exactly how Sarah 
 | **Part 3** | Sarah's Decision | Transform beats retrofit: $1.23M, 90 days, 477% ROI |
 | **Part 4** | The Path Forward | Seven gaps map to seven layers across three phases |
 
----
 
 ## References
 
@@ -424,12 +421,3 @@ Seven gaps require seven layers. The next three chapters show exactly how Sarah 
 
 [3] Kimball, R., & Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling* (3rd ed.). Wiley. https://www.kimballgroup.com/data-warehouse-business-intelligence-resources/kimball-techniques/dimensional-modeling-techniques/
 
----
-
-**Pedagogical Disclaimer:** Echo Health Systems is a fictional teaching case developed to illustrate infrastructure transformation patterns. See Chapter 0 for complete disclosure.
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

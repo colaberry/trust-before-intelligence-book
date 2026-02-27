@@ -125,7 +125,7 @@ Sarah added the business perspective: "We can have all seven layers operational 
 ### The Cross-Pillar Connection
 
 Marcus expanded on the integration. "Each GOALS dimension validates specific INPACT needs by measuring specific 7-Layer components."
-
+<!-- pagebreak -->
 **Table: Cross-Pillar Mapping-How the Three Pillars Connect**
 
 | GOALS Dimension | Validates INPACT Need | Measures 7-Layer Component |
@@ -290,11 +290,9 @@ The difference matters. A policy that evaluates in 6ms today might degrade to 60
 
 Dr. Chen raised a concern. "Our physicians already complain about too many login screens. Will governance slow them down further?"
 
-"Done poorly, yes," Marcus acknowledged. "Done well, governance is invisible to authorized users while blocking unauthorized access in real-time."
+"Done poorly, yes," Marcus acknowledged. "Done well, governance is invisible to authorized users while blocking unauthorized access in real-time." 
 
-He displayed Echo's governance architecture.
-
-"Our ABAC policies evaluate in under 10 milliseconds, imperceptible to users. But they evaluate *five* attributes on every data request."
+He displayed Echo's governance architecture.  "Our ABAC policies evaluate in under 10 milliseconds, imperceptible to users. But they evaluate *five* attributes on every data request."
 
 **The Five W's of ABAC Authorization:**
 
@@ -302,6 +300,8 @@ He displayed Echo's governance architecture.
 
 
 ![Figure 7.5: RBAC vs ABAC Authorization Flow](figures/figure-7-5.png)
+
+
 
 Traditional RBAC asks one question: "What role does this user have?"
 
@@ -331,14 +331,15 @@ Traditional role-based access control can't handle this complexity. Giving the a
 
 ### Human-in-the-Loop: Balancing Autonomy and Oversight
 
-Governance isn't just about what agents *can* do. It's also about what they *should* do without human approval. Not all decisions warrant full automation.
-
-Human-in-the-loop (HITL) patterns enable agents to escalate high-stakes decisions to humans while maintaining autonomy for routine operations. This isn't a limitation. It's a strategic boundary that enables enterprise adoption. [3]
-
 **Figure 7.6: Human-in-the-Loop Autonomy Spectrum**
 
 
 ![Figure 7.6: Human-in-the-Loop Autonomy Spectrum](figures/figure-7-6.png)
+
+Governance isn't just about what agents *can* do. It's also about what they *should* do without human approval. Not all decisions warrant full automation.
+
+Human-in-the-loop (HITL) patterns enable agents to escalate high-stakes decisions to humans while maintaining autonomy for routine operations. This isn't a limitation. It's a strategic boundary that enables enterprise adoption. [3]
+
 
 **The Autonomy Spectrum:**
 
@@ -1168,63 +1169,6 @@ Visit **trustbeforeintelligence.ai/tools** for:
 
 ---
 
-## Self-Assessment Checklist
-
-Use this checklist to evaluate your organization's GOALS readiness. An interactive version is available at **trustbeforeintelligence.ai/goals-assessment**.
-
-### Governance Self-Assessment
-
-- [ ] ABAC policies deployed and evaluating in <10ms
-- [ ] 100% of data access logged with business context
-- [ ] HITL workflows defined for high-risk decisions
-- [ ] Model versioning implemented with tested rollback
-- [ ] AI-specific threat modeling completed (prompt injection, data poisoning)
-- [ ] Compliance mapping to HIPAA/EU AI Act documented
-
-### Observability Self-Assessment
-
-- [ ] All services instrumented with APM
-- [ ] Distributed tracing with global trace IDs across all layers
-- [ ] LLM cost tracking with per-query attribution
-- [ ] MTTD (Mean Time to Detection) measured and under 10 minutes
-- [ ] Model drift detection automated
-- [ ] Explainability enabled for high-risk decisions
-
-### Availability Self-Assessment
-
-- [ ] Response time p95 under 2 seconds
-- [ ] Data freshness p95 under 30 seconds for critical data
-- [ ] Cache hit rate above 60%
-- [ ] System uptime at 99.9%+
-- [ ] Load tested to 10x current capacity
-- [ ] Parallel retrieval implemented for multi-source queries
-
-### Lexicon Self-Assessment
-
-- [ ] Entity resolution accuracy above 95%
-- [ ] Business glossary covers 80%+ of domain terms
-- [ ] Disambiguation prompts for low-confidence queries (<90%)
-- [ ] Continuous learning from user corrections implemented
-- [ ] Cross-domain terminology alignment documented
-- [ ] Weekly human evaluation sampling (100 queries)
-
-### Solid Self-Assessment
-
-- [ ] Data accuracy above 95%
-- [ ] Critical field completeness above 98%
-- [ ] Cross-system consistency above 95%
-- [ ] Schema validation enforced at 100%
-- [ ] Quality gates at source, transformation, and pre-agent stages
-- [ ] Anomaly detection with ML-based flagging operational
-
-**Scoring Guide:** For each dimension, count checks completed:
-- 0-2 checks: Score 2/5
-- 3 checks: Score 3/5
-- 4-5 checks: Score 4/5
-- 6 checks: Score 5/5
-
----
-
 ## References
 
 [1] NIST (2014). "Guide to Attribute Based Access Control (ABAC) Definition and Considerations." NIST Special Publication 800-162. https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-162.pdf
@@ -1269,14 +1213,3 @@ Use this checklist to evaluate your organization's GOALS readiness. An interacti
 
 [21] Drift/Fullview (2025). "AI Chatbot Statistics and Trends 2025." Key finding: 59% of customers expect chatbot responses within 5 seconds; 68% value fast responses as a primary feature. Sobot (2025). "AI Customer Service Response Trends 2025." Key finding: 60% of customers abandon support requests if they wait too long. Gnani.ai (2025). "Voice AI Latency Research." Key finding: Each additional second of latency reduces customer satisfaction by 16% and increases abandonment rates by 23%. https://www.fullview.io/blog/ai-chatbot-statistics
 
-*Note: Echo Health Systems operational metrics represent calibrated benchmarks based on industry patterns. See pedagogical disclaimer in Chapter 0.*
-
----
-
-**Pedagogical Disclaimer:** Echo Health Systems is a fictional teaching case. Metrics are calibrated to industry benchmarks but do not represent actual organizational data. See Chapter 0 for complete pedagogical disclosure.
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

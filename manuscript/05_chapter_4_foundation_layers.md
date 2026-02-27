@@ -651,7 +651,6 @@ workday.providers.credentials
 
 
 ![Figure 4.8: Echo's Week 1-4 Foundation Build Timeline](figures/figure-4-8.png)
-*© 2025-2026 Colaberry Inc.*
 
 **Timeline Notes:**
 - **Week 1-2 (Layer 1):** Eight storage categories deployed in parallel by three teams. Databricks (8 days) is the critical path. All categories operational by end of Week 2.
@@ -662,7 +661,6 @@ workday.providers.credentials
 
 
 ![Figure 4.9: INPACT Transformation (28 → 42)](figures/figure-4-9.png)
-*© 2025-2026 Colaberry Inc.*
 
 **Foundation Impact on INPACT Dimensions:**
 - **Instant (I):** 1→4 (+3) Cache layer + real-time data fabric eliminate latency
@@ -849,9 +847,3 @@ The infrastructure built in Weeks 1-4 directly enables intelligence deployment:
 [3] Confluent (2024). "What Is Change Data Capture (CDC)?" https://www.confluent.io/learn/change-data-capture/
 
 [4] Debezium Project (2024). "Debezium Documentation." https://debezium.io/documentation/reference/stable/connectors/index.html
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

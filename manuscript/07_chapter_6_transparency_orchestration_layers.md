@@ -393,7 +393,6 @@ The most frustrating gap appeared during the Week 6 accuracy regression. Respons
 **Figure 6.8: Echo's Seven-Layer Service Map**
 
 ![Figure 6.8: Echo's Seven-Layer Service Map](figures/figure-6-8.png)
-**© 2025-2026 Colaberry Inc.**
 
 Echo deployed OpenTelemetry instrumentation across all seven layers during Week 9, with Datadog APM providing visualization and alerting.
 
@@ -680,7 +679,6 @@ Friday, 4:47 PM. The Maria Santos discharge query succeeded. Three agents. One r
 
 
 ![Figure 6.11: Echo's Week 8-10 Timeline](figures/figure-6-11.png)
-**© 2025-2026 Colaberry Inc.**
 
 
 **Figure 6.12: INPACT Score™ Transformation (Week 7: 67 → Week 10: 86)**
@@ -839,18 +837,6 @@ The remaining two weeks, Weeks 11-12, would validate these projections through o
 | **Part 7** | Echo's Week 8-10 Build | Three-week implementation achieving 86/100 INPACT |
 | **Part 8** | Architecture Complete | All 7 gaps closed, $942K invested, production ready |
 
-### Key Takeaways
-
-1. **Trust requires governance:** ABAC and HITL ensure agents operate within appropriate boundaries. The Warfarin scenario demonstrated this: AI drafts recommendations, humans approve high-risk decisions.
-
-2. **Trust requires transparency:** Distributed tracing transforms black boxes into glass boxes. When systems fail or costs spike, operators need to understand why.
-
-3. **Scale requires orchestration:** Multi-agent coordination supports complex workflows like discharge planning across scheduling, clinical and revenue that single agents cannot address.
-
-4. **The 7-Layer Architecture is complete:** Foundation (Layers 1-2), Intelligence (Layers 3-4), and Trust + Orchestration (Layers 5-6-7) together create production-ready infrastructure.
-
-5. **Architecture is a milestone, not a destination:** The 86/100 INPACT score represents capability. The GOALS Framework™ in Chapter 7 measures operational reality.
-
 <!-- pagebreak -->
 
 ### What Changed from Week 0 to Week 10
@@ -926,9 +912,3 @@ The complete transformation closed all seven gaps across three phases:
 [15] Jacovi, A., Marasović, A., Miller, T., & Goldberg, Y. (2021). "Formalizing Trust in Artificial Intelligence: Prerequisites, Causes and Goals of Human Trust in AI." *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 624-635. https://arxiv.org/abs/2010.07487
 
 [16] Gao, Y., Xiong, Y., Gao, X., et al. (2024). "Retrieval-Augmented Generation for Large Language Models: A Survey." *arXiv preprint arXiv:2312.10997*. https://arxiv.org/abs/2312.10997
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

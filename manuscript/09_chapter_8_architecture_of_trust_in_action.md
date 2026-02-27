@@ -611,9 +611,3 @@ Now it's your turn.
 [2] European Commission (2024). "AI Act: First Regulation on Artificial Intelligence." https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai
 
 [3] American Diabetes Association (2024). "Standards of Care in Diabetes." Diabetes Care. https://diabetesjournals.org/care/issue/47/Supplement_1
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
-
-*Acronyms and key terms are defined in the Glossary.*

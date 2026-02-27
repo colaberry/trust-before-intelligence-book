@@ -141,7 +141,3 @@ This glossary provides definitions for acronyms and key terms used throughout *T
 ## Key Terms
 
 *[Additional terms will be added as chapters are finalized]*
-
----
-
-**© 2025-2026 Colaberry Inc. All Rights Reserved.**
