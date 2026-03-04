@@ -44,7 +44,7 @@ Each question is scored on a six-point scale reflecting infrastructure capabilit
 
 ### Scoring Principles
 
-**Evidence Required:** Every score must cite specific evidence. "We think we're a 4" is not acceptable. "Our P95 latency is 2.3 seconds based on last month's dashboard" is acceptable.
+**Evidence Required:** Every score must cite specific evidence. "We think we're a 4" is not acceptable. Acceptable examples: "Our P95 latency is 2.3 seconds based on last month's dashboard" or "Customer complaints about slow responses dropped 40% after our last upgrade."
 
 **Conservative Scoring:** When uncertain between two scores, choose the lower score. Optimistic assessments create downstream surprises.
 
@@ -63,6 +63,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 **I-1: Response Time Capability**
 
 *How quickly can your data infrastructure return query results for typical agent workloads?*
+*(P95/P99 = the response time that 95%/99% of all requests complete within)*
 
 | Score | Criteria |
 |-------|----------|
@@ -86,7 +87,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 | Score | Criteria |
 |-------|----------|
 | 6 | Sub-5-second freshness (streaming) |
-| 5 | Sub-30-second freshness (real-time CDC) |
+| 5 | Sub-30-second freshness (real-time Change Data Capture) |
 | 4 | 1-8 hour freshness (frequent batch) |
 | 3 | 8-24 hour freshness (overnight batch) |
 | 2 | 24-72 hour freshness (daily batch) |
@@ -101,6 +102,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 **I-3: Caching Infrastructure**
 
 *Do you have semantic caching that serves repeated or similar queries without full recomputation?*
+*(Hit rate = percentage of queries served from cache instead of recomputed from scratch)*
 
 | Score | Criteria |
 |-------|----------|
@@ -120,6 +122,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 **I-4: Query Optimization**
 
 *Is your storage layer optimized for agent query patterns (not just analyst workloads)?*
+*(Analysts run a few complex reports per day; agents run thousands of quick lookups per hour)*
 
 | Score | Criteria |
 |-------|----------|
@@ -138,7 +141,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 
 **I-5: Real-Time Data Pipelines**
 
-*Do you have streaming or CDC pipelines that keep agent-accessible data current?*
+*Do you have streaming or Change Data Capture (CDC) pipelines that keep agent-accessible data current?*
 
 | Score | Criteria |
 |-------|----------|
@@ -147,7 +150,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 | 4 | CDC for some systems, others batch |
 | 3 | Limited streaming, mostly batch |
 | 2 | Batch-only with some micro-batch |
-| 1 | Overnight batch ETL only |
+| 1 | Overnight batch ETL (Extract, Transform, Load) only |
 
 **Evidence Sources:** CDC configuration, streaming pipeline metrics, data freshness dashboards
 
@@ -161,7 +164,7 @@ Measures infrastructure's ability to deliver sub-second responses that match con
 
 | Score | Criteria |
 |-------|----------|
-| 6 | Predictive alerting, auto-remediation |
+| 6 | Predictive alerting, auto-remediation (system detects and fixes issues automatically) |
 | 5 | Real-time monitoring with immediate alerts |
 | 4 | Near-real-time monitoring, manual response |
 | 3 | Periodic monitoring, delayed alerts |
@@ -183,6 +186,7 @@ Measures infrastructure's ability to understand business language without techni
 **N-1: Semantic Layer Existence**
 
 *Do you have a semantic layer that translates business terms to data structures?*
+*(e.g., when someone asks about "revenue," the system knows which database tables and calculations to use)*
 
 | Score | Criteria |
 |-------|----------|
@@ -207,7 +211,7 @@ Measures infrastructure's ability to understand business language without techni
 |-------|----------|
 | 6 | Over 90% accuracy with ambiguity handling |
 | 5 | 75-90% accuracy on complex queries |
-| 4 | 60-75% accuracy, single-table queries strong |
+| 4 | 60-75% accuracy, handles straightforward questions well |
 | 3 | 45-60% accuracy, simple queries only |
 | 2 | 30-45% accuracy, frequent misinterpretation |
 | 1 | Under 30% accuracy |
@@ -240,6 +244,7 @@ Measures infrastructure's ability to understand business language without techni
 **N-4: Entity Resolution**
 
 *Can your system resolve entities (customers, products, employees, accounts) across different naming conventions?*
+*(e.g., recognizing that "IBM," "International Business Machines," and "IBM Corp" all refer to the same company)*
 
 | Score | Criteria |
 |-------|----------|
@@ -258,7 +263,7 @@ Measures infrastructure's ability to understand business language without techni
 
 **N-5: Query Understanding**
 
-*Can agents handle multi-table joins, temporal logic, and complex business rules?*
+*Can agents handle complex business questions that require combining data from multiple sources, understanding time-based conditions (e.g., "last quarter"), and applying business rules?*
 
 | Score | Criteria |
 |-------|----------|
@@ -302,7 +307,7 @@ Measures infrastructure's ability to enforce dynamic authorization and access co
 
 **P-1: Authorization Model**
 
-*What authorization approach governs agent data access?*
+*What authorization approach governs agent data access? (RBAC = Role-Based Access Control; ABAC = Attribute-Based Access Control, which considers context like time, location, and purpose)*
 
 | Score | Criteria |
 |-------|----------|
@@ -326,7 +331,7 @@ Measures infrastructure's ability to enforce dynamic authorization and access co
 | Score | Criteria |
 |-------|----------|
 | 6 | ML-powered risk scoring, adaptive escalation |
-| 5 | HITL workflows operational, under 15% escalation rate |
+| 5 | HITL workflows operational, under 15% escalation rate (most decisions handled automatically) |
 | 4 | HITL defined for critical decisions |
 | 3 | Manual escalation process exists |
 | 2 | Ad-hoc escalation, no formal process |
@@ -345,7 +350,7 @@ Measures infrastructure's ability to enforce dynamic authorization and access co
 | Score | Criteria |
 |-------|----------|
 | 6 | Complete audit with ML-powered analysis |
-| 5 | 100% coverage, 7+ year retention, trace IDs |
+| 5 | 100% coverage, 7+ year retention, unique trace IDs linking related events |
 | 4 | Comprehensive logging, partial trace correlation |
 | 3 | User identity captured, limited context |
 | 2 | Basic database logs only |
@@ -383,7 +388,7 @@ Measures infrastructure's ability to enforce dynamic authorization and access co
 | Score | Criteria |
 |-------|----------|
 | 6 | Full context awareness with predictive access |
-| 5 | Rich context attributes (10+) in policy evaluation |
+| 5 | Rich context factors (10+, e.g., role, time, location, device, purpose) in policy evaluation |
 | 4 | Core context attributes (role, time, location) |
 | 3 | Limited context (role + department) |
 | 2 | Role-only, no context adaptation |
@@ -460,7 +465,7 @@ Measures infrastructure's ability to learn and improve from feedback and changin
 
 **A-3: Drift Detection**
 
-*Can you detect when model performance degrades due to data or concept drift?*
+*Can you detect when model performance degrades due to data or concept drift (i.e., when the real world changes but the model hasn't been updated)?*
 
 | Score | Criteria |
 |-------|----------|
@@ -509,7 +514,7 @@ Measures infrastructure's ability to learn and improve from feedback and changin
 | 2 | Manual process |
 | 1 | No automation |
 
-**Evidence Sources:** MLOps infrastructure, automation metrics, pipeline documentation
+**Evidence Sources:** MLOps (Machine Learning Operations) infrastructure, automation metrics, pipeline documentation
 
 **Echo Baseline (Week 0):** Score 1 - No ML automation infrastructure
 
@@ -546,7 +551,7 @@ Measures infrastructure's ability to synthesize knowledge across systems and dom
 
 | Score | Criteria |
 |-------|----------|
-| 6 | 10+ systems with automated discovery |
+| 6 | 10+ systems with automated discovery (new data sources detected and connected without manual setup) |
 | 5 | 7-10 systems integrated |
 | 4 | 4-6 systems integrated |
 | 3 | 2-3 systems integrated |
@@ -581,6 +586,7 @@ Measures infrastructure's ability to synthesize knowledge across systems and dom
 **C-3: Entity Resolution Cross-Domain**
 
 *Can you resolve the same entity (customer, employee, account) across different systems?*
+*Note: This measures cross-system identity matching (e.g., is "John Smith" in the CRM the same person as "J. Smith" in billing?), whereas N-4 measures naming and terminology resolution within a single system.*
 
 | Score | Criteria |
 |-------|----------|
@@ -600,6 +606,7 @@ Measures infrastructure's ability to synthesize knowledge across systems and dom
 **C-4: Context Synthesis Capability**
 
 *Can agents combine information from multiple systems to answer questions?*
+*Note: This measures the intelligence of how information is combined (relevance ranking, unified responses), whereas C-5 measures the technical ability to query across systems (performance, transparency).*
 
 | Score | Criteria |
 |-------|----------|
@@ -618,7 +625,7 @@ Measures infrastructure's ability to synthesize knowledge across systems and dom
 
 **C-5: Cross-System Querying**
 
-*Can a single agent query span multiple source systems transparently?*
+*Can a single agent query span multiple source systems seamlessly, without the user needing to know which system holds the data?*
 
 | Score | Criteria |
 |-------|----------|
@@ -641,16 +648,16 @@ Measures infrastructure's ability to synthesize knowledge across systems and dom
 
 | Score | Criteria |
 |-------|----------|
-| 6 | Over 95% question coverage |
-| 5 | 80-95% question coverage |
-| 4 | 60-80% question coverage |
-| 3 | 40-60% question coverage |
-| 2 | 20-40% question coverage |
-| 1 | Under 20% question coverage |
+| 6 | Over 95% user question coverage |
+| 5 | 80-95% user question coverage |
+| 4 | 60-80% user question coverage |
+| 3 | 40-60% user question coverage |
+| 2 | 20-40% user question coverage |
+| 1 | Under 20% user question coverage |
 
-**Evidence Sources:** Question coverage analysis, data availability assessment
+**Evidence Sources:** User question coverage analysis, data availability assessment
 
-**Echo Baseline (Week 0):** Score 3 - 40-60% question coverage
+**Echo Baseline (Week 0):** Score 3 - 40-60% user question coverage
 
 ---
 
@@ -663,11 +670,12 @@ Measures infrastructure's ability to explain decisions and provide audit trails.
 **T-1: Audit Trail Completeness**
 
 *How completely do you capture the reasoning chain from question to answer?*
+*Note: This measures reasoning traceability (how the agent arrived at its answer), distinct from P-3 which measures access auditing (who accessed what data and when).*
 
 | Score | Criteria |
 |-------|----------|
 | 6 | Complete trails with ML-powered analysis |
-| 5 | 100% coverage, end-to-end trace IDs, 7+ year retention |
+| 5 | 100% coverage, end-to-end trace IDs (unique identifiers linking each step of the agent's reasoning), 7+ year retention |
 | 4 | Comprehensive trails, partial correlation |
 | 3 | Basic audit trails, user identity captured |
 | 2 | Database query logs only |

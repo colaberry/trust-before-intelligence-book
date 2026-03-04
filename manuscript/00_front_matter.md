@@ -1,3 +1,9 @@
+## COVER
+
+![Book Cover](figures/BookCover_Option02.png)
+
+<!-- pagebreak -->
+
 ## TITLE PAGE
 
 # Trust Before Intelligence
@@ -6,8 +12,7 @@
 
 **Ram Dhan Yadav Katamaraja**
 
-CEO, Colaberry Inc.  
-Harvard Business School OPM 60
+CEO, Colaberry Inc.
 
 *Colaberry Press*
 
@@ -45,8 +50,6 @@ ISBN: 979-8-9948853-1-4 (ebook)
 
 First Edition: 2026
 
-Printed in the United States of America
-
 <!-- pagebreak -->
 
 ## DEDICATION
@@ -59,86 +62,82 @@ Printed in the United States of America
 
 *To my parents, my wife Swapna, and my kids, for their unwavering support in life.*
 
-*And to Claude, my tireless co-author and thinking partner.*
-
 <!-- pagebreak -->
 
 ## TABLE OF CONTENTS
 
 **PART I: THE TRUST IMPERATIVE**
 
-- **Chapter 0:** Trust Before Intelligence
-- **Chapter 1:** Why 95% of Agent Pilots Fail
-- **Chapter 2:** The INPACT Framework™
-- **Chapter 3:** From BI-Era to Agent-Era
+- **Chapter 0:** Trust Before Intelligence ..... 1
+- **Chapter 1:** Why 95% of Agent Pilots Fail ..... 9
+- **Chapter 2:** The INPACT Framework™ ..... 26
+- **Chapter 3:** From BI-Era to Agent-Era ..... 43
 
 **PART II: THE 95% SOLUTION**
 
-- **Chapter 4:** The 95% Solution – Part 1 (Foundation Layers)
-- **Chapter 5:** The 95% Solution – Part 2 (Intelligence Layers)
-- **Chapter 6:** The 95% Solution – Part 3 (Transparency & Orchestration Layers)
+- **Chapter 4:** The 95% Solution – Part 1 (Foundation Layers) ..... 53
+- **Chapter 5:** The 95% Solution – Part 2 (Intelligence Layers) ..... 74
+- **Chapter 6:** The 95% Solution – Part 3 (Transparency & Orchestration Layers) ..... 99
 
 **PART III: TRUST IN PRACTICE**
 
-- **Chapter 7:** The GOALS Framework™
-- **Chapter 8:** The Architecture of Trust in Action
-- **Chapter 9:** What's Your Score?
+- **Chapter 7:** The GOALS Framework™ ..... 124
+- **Chapter 8:** The Architecture of Trust in Action ..... 157
+- **Chapter 9:** What's Your Score? ..... 175
 
 **DIGITAL COMPANION**
 
-- **Chapter 10:** The AI Agent Readiness Playbook
-- **Chapter 11:** Build Your Tech Stack
-- **Chapter 12:** Running Agents at Scale
+- **Chapter 10:** The AI Agent Readiness Playbook ..... 186
+- **Chapter 11:** Build Your Tech Stack ..... 202
+- **Chapter 12:** Running Agents at Scale ..... 217
 
 **BACK MATTER**
 
-- INPACT Practitioner Reference
-- Glossary
+- INPACT Practitioner Reference ..... 240
+- Glossary ..... 249
 - Index
 - About the Author
 
 <!-- pagebreak -->
 
-## PREFACE
+## FOREWORD
 
-### Why This Book, Why Now
+*I didn't set out to write a book. I set out to answer a challenge our clients have been struggling with.*
 
-The question hit me during a quarterly business review in early 2025.
+Throughout 2025, I kept hearing the same refrain from clients: "Our data is not ready for AI." Then MIT research from the NANDA (Networked Agents and Decentralized AI) initiative published its findings: 95% of enterprise AI pilots fail to deliver measurable business value. In that moment, I realized that both statements were true. The clients who said they weren't ready were right, and they had plenty of company. Nearly everyone was failing. The infrastructure gap they sensed wasn't intuition; it was diagnosis.
 
-*"Our data isn't ready for AI."*
+The technology shift is happening at breathtaking speed, faster than anything I've seen in three decades of helping enterprises transform their digital and data capabilities. But regardless of how fast the shift moves, enterprises carry a responsibility that doesn't accelerate with it. They have obligations to their customers, their shareholders, and the regulatory frameworks they operate within. You can't haphazardly throw in new technology and expect it to work. The stakes are simply too high.
 
-I'd heard this objection hundreds of times. But that year, multiple research reports reframed everything. MIT's NANDA initiative found 95% of enterprise generative AI pilots fail to deliver measurable business value. Deloitte's TrustID survey tracked an 89% collapse in trust for agentic AI between May and July alone. McKinsey confirmed 63% of organizations remain stuck in experimentation or pilot phases, warning that "without reliable infrastructure and governance, early AI agent deployments are likely to hit performance and trust issues."
+And then there is the human dimension, which may be the hardest part of all. Change management in the age of AI is enormous, not just logistically, but emotionally. People are afraid. They are afraid of what AI will do to their jobs, their careers, and their world. Left unaddressed, fear makes people reject new technology, no matter how capable it is. I see it everywhere, in boardrooms and break rooms alike.
 
-But some organizations were succeeding. While most struggled, a small percentage were taking AI projects to production and generating real value. What were they doing differently?
+I believe we need to move toward winning the hearts and minds of the people who will live and work alongside these AI systems. That can only happen by providing technology, and the governance, culture, and operational systems around it, that people can genuinely trust.
 
-I had to find out.
+That's why the name of this book is *Trust Before Intelligence*. Trust, of course, is an enormous word, spanning ethics, safety, privacy, fairness, transparency, and reliability. This book focuses on one critical dimension: *operational trust*, the kind of trust an AI agent must earn through every interaction and every decision.
 
-As a practitioner who has spent two decades helping enterprises transform their data capabilities, I started investigating. The pattern that emerged was clear: successful organizations weren't rushing to deploy the latest models. They were building trust first. They were investing in infrastructure that made AI agents reliable, governable, and transparent before asking those agents to make consequential decisions.
+To make this practical rather than theoretical, this book offers two frameworks born from experience and expertise. The INPACT Framework™ provides a six-layer architecture for building trustworthy AI infrastructure. The GOALS Framework™ provides the operational metrics to measure and sustain that trust over time. Together, they represent a blueprint for addressing the challenges enterprises now face.
 
-*AI readiness is an infrastructure problem, not just a data problem.*
+This book is the practitioner's guide for building the infrastructure that makes AI agents trustworthy today.
 
-This book captures that pattern. It's not theory. It's the practical playbook for building the foundation that makes enterprise AI succeed.
+Writing it required a kind of partnership I hadn't expected. Claude, Anthropic's AI, served as a thinking partner throughout. Not generating the ideas, which came from decades of practice, but helping me pressure-test them, organize them, and express them with the precision that practitioners need. The irony of writing a book about AI trust with an AI collaborator is not lost on me. It's also proof of the thesis: when the infrastructure of collaboration is right, intelligence delivers extraordinary value.
 
-The full story begins in Chapter 0.
+My hope is that this book changes the conversation. Instead of asking "Is our data ready for AI?" I want teams to ask "Is our infrastructure ready to earn the trust that makes AI valuable?" This simple reframing, from readiness to trustworthiness, changes everything.
 
-**Ram Dhan Yadav Katamaraja**
-*Boston, Massachusetts*
-*February 2026*
+**Trust comes first. Intelligence follows.**
 
 <!-- pagebreak -->
 
 ## ACKNOWLEDGMENTS
 
-This book exists because of the generosity of many people who shared their time, expertise, and encouragement.
+This book exists because of the generosity of many people who shared their time, expertise, and encouragement. Writing about enterprise AI trust required drawing on a community far larger than any one person's experience, and I'm grateful to everyone who helped shape these ideas.
 
-**Thought Leaders and Influences.** Martin Fowler's writings on software architecture and enterprise patterns at ThoughtWorks have been a lasting influence on my thinking and career. The ideas in this book were also shaped by pioneers redefining what's possible with AI: Dario Amodei's work on AI safety, Andrej Karpathy's teachings on neural networks, Andrew Ng's democratization of machine learning, Peter Diamandis's vision of abundance, and Tony Robbins's principles on peak performance and organizational transformation. Dr. John J. Sviokla's insights on AI strategy and business transformation helped bridge the gap between technical possibility and enterprise reality.
+**The Colaberry Team.** This book reflects lessons learned building Colaberry alongside an exceptional team. John McBride, David Freni (who also designed the cover), David Lahme, Ali Muwwakkil, Karun Swaroop, Ramamohan Manamasa, Angie Mezo, Neha Sharma, Nate Taylor, Prasad Ankepalli, Mohammad Abdul Aleem, Sai Tejesh Kowtharapu, and many other Colaberry experts who are in the trenches, thank you for your dedication to our mission and for tolerating my book-related distractions.
 
-**Professional Community.** I'm grateful to colleagues across organizations who challenged my thinking and refined these frameworks. Luda Kopeikina and the Women Applying AI community provided valuable perspectives on responsible AI adoption. Ashish Bhatia at Audible, Vivek Mukhatyar at Pfizer, and Ashwin Mittal at C5I offered real-world feedback from the front lines of enterprise AI. Paul Bilodeau and Aditya Mohan Sharma at SkillsProject contributed insights on workforce transformation. Shailu Tipparaju at Magna Academy helped sharpen the educational approach.
+**Thought Leaders and Influences.** Martin Fowler's writings on software architecture and enterprise patterns at ThoughtWorks have been a lasting influence on my thinking and career. The ideas in this book were also shaped by pioneers redefining what's possible with AI: Dario Amodei's work on AI safety, Andrej Karpathy's Software 3.0 vision, Andrew Ng's democratization of machine learning, Peter Diamandis's vision of abundance, and Tony Robbins's principles on peak performance and organizational transformation. Dr. John J. Sviokla's insights on AI strategy and business transformation helped bridge the gap between technical possibility and enterprise reality.
 
-**Harvard OPM.** My classmates at Harvard Business School's Owner/President Management program pushed me to think bigger. Special thanks to Mike Said, Ricardo De La Fuente, Michael Chen, Mustapha Shaikh, and Volodymyr Berezhniy for their ongoing support and candid feedback.
+**Professional Community.** I'm grateful to colleagues across organizations who challenged my thinking and refined these frameworks. Paul Bilodeau and Aditya Mohan Sharma at SkillsProject contributed insights on AI adoption in workforce transformation. Suhit Anantula, author of *The Helix Moment*, offered valuable perspectives on navigating inflection points in technology and business. Vishal Kumar at The Work Company offered perspectives on the future of work and AI integration. The YPO Tech AI / ML Community provided a forum for testing ideas with fellow technology leaders. Rajkumar Kandukuri and Sudhakar MVK reviewed early drafts and provided invaluable suggestions that improved both clarity and practical applicability. Their willingness to read rough chapters and push back on unclear thinking made this a better book.
 
-**Beta Readers.** Rajkumar Kandukuri and Sudhakar MVK reviewed early drafts and provided invaluable suggestions that improved clarity and practical applicability.
+**Harvard OPM.** My classmates and Alumni at Harvard Business School's Owner/President Management program pushed me to think bigger about what this book could become. Special thanks to Shailu Tipparaju, Mike Said, Ricardo De La Fuente, Michael Chen, Mustapha Shaikh, Volodymyr Berezhniy, Mathew (Madhu) Mammen, Ashwin Mittal, Vad Yazvinski, Tim Gu, Benson Smith, Gustavo Ayala, Vic Bageria, and many other business leaders for their ongoing support and the kind of candid feedback that only true peers can give.
 
-**The Colaberry Team.** This book reflects lessons learned building Colaberry alongside an exceptional team. John McBride, David Freni (who also designed the cover), David Lahme, Ali Muwwakkil, Karun Swaroop, Ramamohan Manamasa, Angie Mezo, Neha Sharma, Nate Taylor, Prasad Ankepalli, Mohammad Abdul Aleem, and Sai Tejesh Kowtharapu - thank you for your dedication to our mission and for tolerating my book-related distractions.
+**A Note on AI Collaboration.** Claude, Anthropic's AI, served as a thinking partner throughout this book. This collaboration embodied the very thesis: when the right infrastructure of trust is in place, human-AI partnership produces results neither could achieve alone.
 
-To everyone who contributed to this work, named and unnamed: thank you.
+*To everyone who contributed to this work, named and unnamed: thank you. The trust we build together is what makes intelligence worthwhile.*
