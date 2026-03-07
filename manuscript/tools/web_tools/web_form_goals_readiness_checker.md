@@ -55,56 +55,56 @@
 
 | # | Question | Book Reference |
 |---|----------|----------------|
-| G1 | Are ABAC policies deployed and evaluating in <10ms? | Line 1741 |
-| G2 | Is 100% of data access logged with business context? | Line 1742 |
-| G3 | Are HITL workflows defined for high-risk decisions? | Line 1743 |
-| G4 | Is model versioning implemented with tested rollback? | Line 1744 |
-| G5 | Is AI-specific threat modeling completed (prompt injection, data poisoning)? | Line 1745 |
-| G6 | Is compliance mapping to HIPAA/EU AI Act documented? | Line 1746 |
+| G1 | Do your AI agents have context-aware access controls that consider factors like user role, time, and purpose when deciding what data the agent can access? (ABAC = Attribute-Based Access Control, evaluated in under 10ms) | Line 1741 |
+| G2 | Is every piece of data your AI agents access fully logged, including why it was accessed and by whom? | Line 1742 |
+| G3 | Are Human-in-the-Loop (HITL) workflows defined so that a human reviews high-risk agent decisions before they take effect? | Line 1743 |
+| G4 | Can you track which version of an AI model is running and quickly revert to a previous version if something goes wrong? | Line 1744 |
+| G5 | Have you assessed AI-specific security threats, such as attempts to manipulate agent behavior through malicious inputs or corrupted training data? | Line 1745 |
+| G6 | Is your compliance mapping documented for applicable regulations (e.g., HIPAA, EU AI Act, SOX, GDPR)? | Line 1746 |
 
 ### O - Observability (6 Questions)
 
 | # | Question | Book Reference |
 |---|----------|----------------|
-| O1 | Are all services instrumented with APM? | Line 1750 |
-| O2 | Is distributed tracing with global trace IDs across all layers? | Line 1751 |
-| O3 | Is LLM cost tracking with per-query attribution? | Line 1752 |
-| O4 | Is MTTD (Mean Time to Detection) measured and under 10 minutes? | Line 1753 |
-| O5 | Is model drift detection automated? | Line 1754 |
-| O6 | Is explainability enabled for high-risk decisions? | Line 1755 |
+| O1 | Can you monitor the performance and health of all services that support your AI agents in real time? (APM = Application Performance Monitoring) | Line 1750 |
+| O2 | Can you follow an agent's request end-to-end across all systems to see exactly what happened at each step? (using unique trace IDs that link all related events) | Line 1751 |
+| O3 | Can you track how much each AI query costs and attribute those costs to specific users, departments, or use cases? (LLM = Large Language Model) | Line 1752 |
+| O4 | When something goes wrong with your AI agents, how quickly is it detected? Is your Mean Time to Detection (MTTD) under 10 minutes? | Line 1753 |
+| O5 | Is drift detection automated, so you're alerted when AI model accuracy degrades because the real world has changed but the model hasn't been updated? | Line 1754 |
+| O6 | Can your AI agents explain their reasoning for high-risk decisions in terms that business users and regulators understand? | Line 1755 |
 
 ### A - Availability (6 Questions)
 
 | # | Question | Book Reference |
 |---|----------|----------------|
-| A1 | Is response time p95 under 2 seconds? | Line 1759 |
-| A2 | Is data freshness p95 under 30 seconds for critical data? | Line 1760 |
-| A3 | Is cache hit rate above 60%? | Line 1761 |
-| A4 | Is system uptime at 99.9%+? | Line 1762 |
-| A5 | Is load tested to 10x current capacity? | Line 1763 |
-| A6 | Is parallel retrieval implemented for multi-source queries? | Line 1764 |
+| A1 | Do 95% of AI agent responses complete in under 2 seconds? (p95 = the response time that 95% of requests complete within) | Line 1759 |
+| A2 | Is the data your agents use updated within 30 seconds of changes occurring in source systems, for at least 95% of critical data? | Line 1760 |
+| A3 | Are at least 60% of agent queries served from cache (previously computed results) rather than recomputed from scratch? | Line 1761 |
+| A4 | Is your AI agent infrastructure available 99.9%+ of the time (less than 9 hours of downtime per year)? | Line 1762 |
+| A5 | Has your system been tested to handle 10 times your current workload without performance degradation? | Line 1763 |
+| A6 | When an agent needs data from multiple systems, can it retrieve from all of them simultaneously (in parallel) rather than one at a time? | Line 1764 |
 
 ### L - Lexicon (6 Questions)
 
 | # | Question | Book Reference |
 |---|----------|----------------|
-| L1 | Is entity resolution accuracy above 95%? | Line 1768 |
-| L2 | Does business glossary cover 80%+ of domain terms? | Line 1769 |
-| L3 | Are disambiguation prompts for low-confidence queries (<90%)? | Line 1770 |
-| L4 | Is continuous learning from user corrections implemented? | Line 1771 |
-| L5 | Is cross-domain terminology alignment documented? | Line 1772 |
-| L6 | Is weekly human evaluation sampling (100 queries)? | Line 1773 |
+| L1 | Can your system correctly match the same entity (e.g., customer, product, employee) across different systems at least 95% of the time? | Line 1768 |
+| L2 | Does your business glossary cover 80%+ of the terms used in your domain, so agents understand your organization's language? | Line 1769 |
+| L3 | When the agent isn't confident it understood a question correctly (below 90% confidence), does it ask the user a clarifying question rather than guessing? | Line 1770 |
+| L4 | Does your system learn and improve when users correct agent mistakes? | Line 1771 |
+| L5 | Have you documented how the same concept is named differently across departments or systems? (e.g., "customer" in sales vs. "member" in support vs. "account holder" in billing) | Line 1772 |
+| L6 | Does a human review a sample of at least 100 agent responses each week to check for quality and accuracy? | Line 1773 |
 
 ### S - Solid (6 Questions)
 
 | # | Question | Book Reference |
 |---|----------|----------------|
-| S1 | Is data accuracy above 95%? | Line 1777 |
-| S2 | Is critical field completeness above 98%? | Line 1778 |
-| S3 | Is cross-system consistency above 95%? | Line 1779 |
-| S4 | Is schema validation enforced at 100%? | Line 1780 |
-| S5 | Are quality gates at source, transformation, and pre-agent stages? | Line 1781 |
-| S6 | Is anomaly detection with ML-based flagging operational? | Line 1782 |
+| S1 | Is the data your agents rely on accurate at least 95% of the time, based on regular validation? | Line 1777 |
+| S2 | Are at least 98% of critical data fields filled in (not blank or missing) across your key systems? | Line 1778 |
+| S3 | When the same data exists in multiple systems, does it match at least 95% of the time? | Line 1779 |
+| S4 | Is data structure validation enforced so that all incoming data is checked for correct format before being accepted? | Line 1780 |
+| S5 | Are data quality checks applied at three stages: when data enters the system, when it's processed, and before it reaches the AI agent? | Line 1781 |
+| S6 | Does your system automatically detect and flag unusual data patterns that could indicate errors or quality issues? | Line 1782 |
 
 ---
 
