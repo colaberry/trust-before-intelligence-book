@@ -1,0 +1,41 @@
+
+graph TB
+    subgraph PROBLEM["THE PROBLEM"]
+        direction TB
+        current["60% of Enterprises<br/>Software 1.0 Infrastructure<br/>Cannot fulfill INPACT"]
+        
+        attempting["Attempting to Deploy<br/>Software 3.0 Agents<br/>Require INPACT fulfillment"]
+        
+        gap["INPACT Gap<br/>No I, N, P, A, C, or T<br/>No middleware fix possible"]
+        
+        result["95% Failure Rate<br/>Trust collapse across<br/>all six dimensions"]
+        
+        current --> gap
+        attempting --> gap
+        gap --> result
+    end
+    
+    subgraph SOLUTION["THE SOLUTION"]
+        direction TB
+        transform["INPACT-Ready Architecture<br/>Infrastructure that fulfills<br/>all six needs systematically"]
+        
+        delivers["Delivers Results<br/>85+ INPACT score<br/>Production-ready reliability"]
+        
+        transform --> delivers
+    end
+    
+    result -.->|"Requires Transformation"| transform
+    
+    Copyright["© 2025 Colaberry Inc."]
+
+    %% PROBLEM — FAILURE / BI-ERA
+    style PROBLEM fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style current fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style attempting fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style gap fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style result fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style SOLUTION fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style transform fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style delivers fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#333333
+

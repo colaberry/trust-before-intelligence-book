@@ -1,0 +1,39 @@
+
+graph LR
+    START["Component<br/>Needed"]
+    
+    subgraph DECISIONS[" "]
+        direction TB
+        Q1{"Competitive<br/>differentiator?"}
+        Q2{"Proven vendor<br/>solutions exist?"}
+        Q3{"Team has<br/>expertise?"}
+    end
+    
+    subgraph OUTCOMES[" "]
+        direction TB
+        BUILD["BUILD<br/>Custom Dev<br/>5-10%"]
+        BUY["BUY<br/>SaaS/Cloud<br/>85-90%"]
+        PARTNER["PARTNER<br/>Consulting<br/>0-5%"]
+    end
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    START --> Q1
+    Q1 -->|"Yes"| BUILD
+    Q1 -->|"No"| Q2
+    Q2 -->|"Yes"| BUY
+    Q2 -->|"No"| Q3
+    Q3 -->|"Yes"| BUILD
+    Q3 -->|"No"| PARTNER
+    
+    style DECISIONS fill:none,stroke:none
+    style OUTCOMES fill:none,stroke:none
+    style START fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style Q1 fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style Q2 fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style Q3 fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style BUILD fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style BUY fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style PARTNER fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style Copyright fill:none,stroke:none,color:#333333
+

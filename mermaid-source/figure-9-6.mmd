@@ -1,0 +1,43 @@
+
+graph TD
+    subgraph ASSESS["FIND LOWEST DIMENSIONS"]
+        A["<b>Your INPACT<br/>Assessment</b>"]
+    end
+
+    subgraph TRUST["TRUST THIRD"]
+        T1["<b>P (Permitted)</b><br/><b>→ L5</b>"]
+        T2["<b>T (Transparent)</b><br/><b>→ L5, L6</b>"]
+        T3["<b>A (Adaptive)</b><br/><b>→ L4, L6</b>"]
+    end
+
+    subgraph INTEL["INTELLIGENCE SECOND"]
+        I1["<b>N (Natural)</b><br/><b>→ L3, L4</b>"]
+    end
+
+    subgraph FOUND["FOUNDATION FIRST"]
+        F1["<b>I (Instant)</b><br/><b>→ L1, L2</b>"]
+        F2["<b>C (Contextual)</b><br/><b>→ L1, L2, L3</b>"]
+    end
+
+    A --> F1
+    A --> F2
+    A --> I1
+    A --> T1
+    A --> T2
+    A --> T3
+
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+
+    style ASSESS fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style FOUND fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style INTEL fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style TRUST fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style A fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style F1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style F2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style I1 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style T1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T2 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#333333
+

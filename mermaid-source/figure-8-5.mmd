@@ -1,0 +1,39 @@
+
+graph TB
+  subgraph DISAMBIGUATION["<b>LEXICON DISAMBIGUATION</b>"]
+    direction TB
+    Q["User Query<br/>'When did I last see my doctor?'"]
+    
+    CONF["Confidence Check<br/>Threshold: 0.90"]
+    
+    subgraph PATHS[" "]
+      direction LR
+      HIGH["High Confidence ≥0.90<br/>Direct response"]
+      LOW["Low Confidence <0.90<br/>Disambiguation needed"]
+    end
+    
+    PROMPT["Clarification Prompt<br/>'Do you mean your PCP Dr. Nguyen<br/>or your cardiologist Dr. Patel?'"]
+    
+    RESP["User Confirms<br/>'Dr. Patel'"]
+    
+    RESULT["Accurate Response<br/>with correct context"]
+  end
+  
+  Copyright["© 2025 Colaberry Inc."]
+  
+  Q --> CONF
+  CONF -->|"≥0.90"| HIGH
+  CONF -->|"<0.90"| LOW
+  HIGH --> RESULT
+  LOW --> PROMPT --> RESP --> RESULT
+  
+  style DISAMBIGUATION fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+  style Q fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+  style CONF fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+  style PATHS fill:none,stroke:none
+  style HIGH fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style LOW fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+  style PROMPT fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+  style RESP fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+  style RESULT fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style Copyright fill:none,stroke:none,color:#333333

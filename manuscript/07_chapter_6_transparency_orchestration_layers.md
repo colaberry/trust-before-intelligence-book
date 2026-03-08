@@ -1,160 +1,81 @@
-# THE 95% SOLUTION - PART 3
+# Chapter 6: THE 95% SOLUTION - PART 3
 ## The Architecture of Trust: Transparency + Orchestration Layers
 
----
 
-**Diagram 1: Transparency + Orchestration Layers — Why Layers 5-6-7 Complete Trust**
+## The Warfarin Question
 
-```mermaid
+*Monday, 7:32 AM  Echo Health Systems, Clinical Informatics Office  
+Week 8, Day 1*
 
-graph LR
-    subgraph WITHOUT["WITHOUT LAYERS 5-6-7"]
-        direction TB
-        W1["No dynamic access<br/>HIPAA risk<br/><br/>Black box AI<br/>No explainability<br/><br/>Single-agent only<br/>No coordination<br/><br/><b>'I don't trust it'<br/>Blocked</b>"]
-    end
-    
-    subgraph TRANSFORM["TRANSFORM"]
-        direction TB
-        T1["→"]
-    end
-    
-    subgraph WITH["WITH LAYERS 5-6-7"]
-        direction TB
-        L1["Layer 5:<br/>Governance<br/> Security + HITL<br/><br/>Layer 6:<br/>Observability<br/>Full trace + audit<br/><br/>Layer 7:<br/>orchestration<br/>Multi-agent coordination<br/><br/><b>'I can verify it'<br/>Trust earned</b>"]
-    end
-    
-    WITHOUT --> TRANSFORM --> WITH
-    
-    style WITHOUT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style WITH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
-    style L1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+Sarah Cedao stared at the incident report from Friday afternoon. A near-miss that kept her up all weekend.
 
-```
+"What's the recommended Warfarin adjustment for a patient on concurrent aspirin therapy with an elevated INR?"
 
+The agent had responded in 1.4 seconds. Accurate retrieval. Correct clinical guidelines. Medically sound recommendation.
+
+For James Morrison, 67, with a history of GI bleeding. A patient for whom any anticoagulation adjustment required gastroenterology consultation.
+
+Dr. Chen had caught it. Barely. "The agent gave the right answer for the wrong situation," she'd written. "No one asked whether it should be answering at all."
+
+Sarah pulled up the access logs. The agent had retrieved Morrison's medication list, INR values, current prescriptions. All accurate. All properly sourced. But nothing had flagged this as a high-risk medication decision requiring human review.
+
+Marcus arrived with coffee. "Week 8. Governance week."
+
+"It can't wait," Sarah said, sliding the incident report across the table. "We built intelligence that doesn't know its own limits. A Warfarin recommendation without pharmacist review isn't AI assistance. It's malpractice waiting to happen."
+
+The intelligence layers worked. The foundation was solid. But an agent that couldn't distinguish routine queries from life-threatening decisions wasn't ready for production.
+
+Fast and accurate isn't enough. Ungoverned AI is dangerous AI.
+
+**This chapter builds Trust Layers 5, 6, and 7.**
+
+
+**Figure 6.1: Transparency + Orchestration Layers - Why Layers 5-6-7 Complete Trust**
+
+
+![Figure 6.1: Transparency + Orchestration Layers - Why Layers 5-6-7 Complete Trust](figures/figure-6-1.png)
 > **Key Takeaway:** Trust requires transparency. Layers 5-6-7 make AI verifiable.
 
-## PART 1: TRANSPARENCY + ORCHESTRATION ARCHITECTURE INTRODUCTION
+## PART 1: THE TRUST RISK
 
 Intelligence is operational. But intelligence alone isn't enough.
 
-In Week 7, Echo Health Systems achieved what months of prior effort had failed to deliver. LLMs understood clinical queries. RAG retrieved relevant medical records from 150,000 documents with 95.6% accuracy. The semantic layer resolved "Dr. Martinez's diabetic patients with poor glycemic control" into precise SQL queries across Epic, lab systems, and scheduling databases—all in 1.8 seconds.
 
-But Sarah Cedao, Echo's CTO, knew this wasn't the finish line. It was merely the foundation for what agents actually needed to operate in production.
+The Warfarin incident crystallized what Sarah had suspected - intelligence without governance is dangerous. Week 7's achievements: 95.6% RAG accuracy, 1.8-second semantic queries, 2,400 clinical terms resolved meant nothing if agents couldn't distinguish routine questions from life-threatening decisions.
 
-Intelligence without governance is risk. An agent that can access everything is an agent that will eventually access something it shouldn't. In healthcare, that "something" is protected health information, medication decisions, and financial authorizations—areas where errors carry regulatory penalties and patient harm.
+Three risks remained unaddressed:
 
-Intelligence without observability is invisible risk. When an agent makes a decision, operations teams need to understand why. When costs spike, finance needs to trace the cause. When accuracy drops, data scientists need visibility into model behavior. Without observability, organizations operate blind.
-
-Intelligence without orchestration is isolated capability. Real clinical workflows don't involve single questions with single answers. They involve care coordination across scheduling, clinical documentation, and revenue cycle—three domains that traditional systems treat as separate kingdoms. Agents that can't coordinate are agents that can't deliver complete care.
+- **Governance risk:** No dynamic authorization. No HITL for high-risk decisions.
+- **Observability risk:** No end-to-end tracing. No cost visibility. No explainability.
+- **Orchestration risk:** No multi-agent coordination. Complex queries required manual assembly.
 
 These final three layers would complete the architecture.
 
-**Diagram 2: The Architecture of Trust—Completing Pillar 2**
+**Figure 6.2: The Architecture of Trust - Completing Pillar 2**
 
-```mermaid
-
-
-
-graph TB
-    Title["ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
-    
-    subgraph PILLARS[" "]
-        direction LR
-        INPACT["`PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/>**I**nstant<br/>**N**atural<br/>**P**ermitted<br/>**A**daptive<br/>**C**ontextual<br/>**T**ransparent`"]
-        
-        Layers["PILLAR 2: 7-LAYERS<br/>Infrastructure<br/><br/>How to Build TRUST?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
-        
-        GOALS["`PILLAR 3: GOALS™<br/><br/>How to Measure TRUST?<br/><br/>**G**overnance<br/>**O**bservability<br/>**A**vailability<br/>**L**exicon<br/>**S**olid`"]
-    end
-    
-    subgraph INDICATOR[" "]
-        direction LR
-        Spacer1[" "]
-        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 5: Governance <br/> Layer 6: Observability<br/> Layer 7: Orchestration<br/> Built Here"]
-        Spacer2[" "]
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Title --> PILLARS
-    PILLARS <--> INDICATOR
-    
-    INPACT -.->|"Needs Fulfilled by"| Layers
-    Layers -.->|"Enables Operations"| GOALS
-    GOALS -.->|"Drives Trust"| INPACT
-
-    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Layers fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
-    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-
-
-
-
-
-```
-
+![Figure 6.2: The Architecture of Trust - Completing Pillar 2](figures/figure-6-2.png)
 ### Architectural Context
 
-Chapters 4-5 built the foundation and intelligence layers. Chapter 4 delivered data availability—eight storage categories and real-time pipelines with 28-second freshness. Chapter 5 delivered data understanding—semantic resolution of 2,400 clinical terms and a 7-stage RAG pipeline with 85% cache hit rates. Together, these four layers transformed Echo's data infrastructure from legacy BI to agent-capable.
+Chapters 4-5 built the foundation and intelligence layers. Chapter 4 delivered data availability: eight storage categories and real-time pipelines with less than 30 seconds freshness. Chapter 5 delivered data understanding: semantic resolution of 2,400 clinical terms and a 7-stage RAG pipeline with 85% cache hit rates. Together, these four layers transformed Echo's data infrastructure from legacy BI to agent-capable.
 
 Chapter 6 completes the architecture with three final layers:
 
-**Layer 5 (Governance):** Policy-based authorization controlling what agents can do. ABAC (Attribute-Based Access Control) evaluates every request against four dimensions—who is asking, what they're accessing, when they're accessing it, and where they're accessing it from. OPA (Open Policy Agent) enforces policies. HITL (Human-in-the-Loop) workflows escalate high-risk decisions to human experts.
+**Figure 6.3: 7-Layer Agent-Ready Architecture - Transparency + Orchestration Highlighted**
 
-**Layer 6 (Observability):** Complete visibility into what agents did. Distributed tracing with OpenTelemetry tracks every request across all seven layers. MLOps monitoring detects model drift. LLM cost tracking provides granular visibility into the $26,000 monthly API spend that would otherwise be a black box.
+![Figure 6.3: 7-Layer Agent-Ready Architecture - Transparency + Orchestration Highlighted](figures/figure-6-3.png)
 
-**Layer 7 (Orchestration):** Multi-agent coordination enabling how agents work together. LangGraph provides the framework for supervisor patterns, shared state management, and conditional routing. Three specialized agents—Care Coordination, Clinical Documentation, and Revenue Cycle—collaborate on complex queries that span multiple domains.
+**Layer 5 (Governance):** Policy-based authorization controlling what agents can do. ABAC (Attribute-Based Access Control) evaluates every request against four dimensions: who is asking, what they're accessing, when they're accessing it, and where they're accessing it from. OPA (Open Policy Agent) enforces policies. HITL (Human-in-the-Loop) workflows escalate high-risk decisions to human experts.
 
-**A Note on Agent Development:** The three specialized agents are not new developments. These are the same agents from Echo's original $2M pilot investment (Chapter 1), retrofitted to operate on the now-complete infrastructure. The pilots failed not because the agent logic was flawed, but because the underlying infrastructure couldn't fulfill INPACT™ needs: data arrived hours late, semantic understanding was inconsistent, governance was RBAC-only, and observability was nonexistent. With Layers 1-6 now operational, these agents finally have the foundation they require. The Layer 7 development cost covers orchestration integration—connecting the three existing agents through LangGraph's supervisor pattern, implementing shared state management, and enabling multi-agent coordination. The heavy lifting of agent logic, Epic integration, and clinical workflow mapping was already complete from the original pilots. What was missing was the infrastructure to make them trustworthy. This is the central lesson of Echo's transformation: **the agents were never the problem. The infrastructure was.**
+**Layer 6 (Observability):** Complete visibility into what agents did. Distributed tracing with OpenTelemetry tracks every request across all seven layers. MLOps monitoring detects model drift. LLM cost tracking gives granular visibility into the $26,000 monthly API spend that would otherwise be a black box.
+
+**Layer 7 (Orchestration):** Multi-agent coordination enabling how agents work together. LangGraph provides the framework for supervisor patterns, shared state management, and conditional routing. Three specialized agents (Care Coordination, Clinical Documentation, and Revenue Cycle) collaborate on complex queries that span multiple domains.
 
 Why cover three layers in one chapter? Because trust and orchestration are interdependent. Orchestration without governance means uncontrolled agents collaborating on decisions they shouldn't make. Orchestration without observability means invisible coordination failures. All three layers must be operational together for production deployment.
 
-The three-week build timeline—Week 8 Governance, Week 9 Observability, Week 10 Orchestration—is detailed in Part 2.
+The three-week build timeline (Week 8 Governance, Week 9 Observability, Week 10 Orchestration) is detailed in Part 2.
 
-**Diagram 3: 7-Layer Agent-Ready Architecture—Transparency + Orchestration Highlighted**
+**The agents were never the problem. The infrastructure was.**
 
-```mermaid
-graph TB
-    subgraph "<b>TRUST LAYERS (Ch 6)</b>"
-        L7["<b>Layer 7: Orchestration</b><br/><b>Multi-Agent Coordination</b>"]
-        L6["<b>Layer 6: Observability</b><br/><b>Tracing & Monitoring</b>"]
-        L5["<b>Layer 5: Governance</b><br/><b>ABAC + HITL</b>"]
-    end
-    
-    subgraph "<b>INTELLIGENCE (Ch 5)</b>"
-        L4["<b>Layer 4: Intelligence</b><br/><b>RAG + LLM</b>"]
-        L3["<b>Layer 3: Semantic</b><br/><b>Business Context</b>"]
-    end
-    
-    subgraph "<b>FOUNDATION (Ch 4)</b>"
-        L2["<b>Layer 2: Real-Time</b><br/><b>CDC & Streaming</b>"]
-        L1["<b>Layer 1: Storage</b><br/><b>Multi-Modal</b>"]
-    end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    
-    style L7 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L6 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L5 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style L1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
 ### The Remaining Gaps
 
@@ -172,57 +93,49 @@ Chapter 3 identified seven infrastructure gaps preventing agent deployment. Chap
 
 This chapter closes all remaining gaps. By Week 10, Echo's architecture will be complete.
 
-### INPACT™ Dimensions Enabled
+### INPACT Dimensions Enabled
 
-Each layer directly enables specific INPACT™ dimensions:
+Each layer directly drives specific INPACT dimensions:
 
-**Layer 5 enables Permitted (P):** Dynamic authorization that considers context—not just role-based yes/no decisions, but attribute-based evaluation of who, what, when, and where. A physician accessing their own patient's records during a scheduled appointment receives immediate authorization. The same physician accessing a celebrity patient's records from a home IP address at 2 AM triggers HITL review.
+**Layer 5 delivers Permitted (P):** Dynamic authorization that considers context, not just role-based yes/no decisions, but attribute-based evaluation of who, what, when, and where. A physician accessing their own patient's records during a scheduled appointment receives immediate authorization. The same physician accessing a celebrity patient's records from a home IP address at 2 AM triggers HITL review.
 
-**Layer 6 enables Transparent (T):** Complete visibility and explainability. Every response includes citation sources. Every decision includes an explanation trail. Every anomaly triggers alerts. Trust requires transparency—users trust what they can see and verify.
+**Layer 6 delivers Transparent (T):** Complete visibility and explainability. Every response includes citation sources. Every decision includes an explanation trail. Every anomaly triggers alerts. Trust requires transparency. Users trust what they can see and verify.
 
-**Layer 7 enables orchestration across all dimensions:** Multi-agent coordination makes Instant (I) practical for complex queries, Natural (N) seamless for multi-domain questions, and Contextual (C) coherent across agent handoffs.
+**Layer 7 powers orchestration across all dimensions:** Multi-agent coordination makes Instant (I) practical for complex queries, Natural (N) seamless for multi-domain questions, and Contextual (C) coherent across agent handoffs.
 
-These three layers will take Echo's INPACT™ score from 67/100 to 85/100—the production readiness threshold. (See Part 7 for complete dimension-by-dimension progression.)
+These three layers will take Echo's INPACT score from 67/100 to 86/100, the production readiness threshold. (See Part 7 for complete dimension-by-dimension progression.)
 
-The 85/100 threshold represents production readiness—the point at which agent infrastructure can reliably support clinical workflows with appropriate safeguards. This threshold aligns with NIST AI Risk Management Framework guidance on deploying AI systems in high-stakes environments.[1]
+The 86/100 threshold represents production readiness, the point at which agent infrastructure can reliably support clinical workflows with appropriate safeguards. This threshold aligns with NIST AI Risk Management Framework guidance on deploying AI systems in high-stakes environments.[1]
+
+**A Note on Agent Development:** These three agents are the same ones from Echo's failed $2M pilot (Chapter 1), now retrofitted to the complete infrastructure. The Layer 7 cost covers orchestration integration only. Agent logic was already built. 
 
 ---
 
-## PART 2: ECHO'S FINAL BUILD CHALLENGE
+## PART 2: THE FINAL SPRINT
 
-Monday, Week 8. 7:15 AM.
+Marcus studied the incident report, then set it down. "This is exactly what we've been warning about."
 
-Sarah Cedao stood at the whiteboard in her office, marker in hand, staring at three words she'd written in capital letters:
+Sarah walked to the whiteboard and wrote three words:
 
 **GOVERNANCE. OBSERVABILITY. ORCHESTRATION.**
 
-The morning light filtered through the blinds, casting long shadows across the conference table where her team was assembling. Seven weeks ago, this same room had hosted the crisis meeting that launched the transformation—$2M in failed AI initiatives, a board demanding answers, and a 90-day deadline that seemed impossible.
+"Get Jamie and Dr. Chen on a call. We're planning the final sprint."
 
-Now they were in the final stretch.
+Twenty minutes later, the team was assembled. Jamie Rodriguez, Director of IT, had joined in person, coffee in hand. Dr. Chen dialed in from the hospitalist office.
 
-Marcus Williams, Echo's CDO, sat across from her with his tablet open to the Week 7 metrics dashboard. The numbers were encouraging: 67/100 INPACT™, up from 28/100 at Week 0. But Marcus's expression suggested he wasn't ready to celebrate. Jamie Rodriguez, Director of IT, leaned against the doorframe with a coffee cup that had long since gone cold. Dr. Chen, their clinical liaison, had dialed in from the hospitalist office, her voice slightly tinny through the speakerphone. She'd experienced the infrastructure failures firsthand—her documentation agent's context blindness had become one of the canonical examples of what needed fixing.
+Sarah gestured at the whiteboard. "Three weeks. Three layers. One goal: architecture completion by Week 10."
 
-"We've built intelligence," Sarah began, capping the marker. "Now we make it trustworthy and coordinated."
+She turned to Dr. Chen first. "You caught the Warfarin issue. Walk everyone through what happened."
 
-The statement hung in the air for a moment. Everyone in the room understood what it meant. The intelligence layers worked—queries returned accurate answers, semantic understanding was reliable, the RAG pipeline performed well. But "working" in a pilot context and "trusted" in a production context were different standards. Production meant thousands of queries daily. Production meant clinical staff relying on agent outputs for patient care. Production meant regulatory scrutiny and compliance audits.
+Dr. Chen's voice came through the speakerphone. "Friday afternoon. An agent recommended a Warfarin dose adjustment for a patient on concurrent aspirin therapy. Medically sound recommendation for most patients. But this patient had a history of GI bleeding. Any anticoagulation change required gastroenterology consultation. The agent had no way to know that. No way to flag it. No way to escalate."
 
-Marcus spoke first. "Governance has to come before anything else. We can't deploy clinical agents without dynamic authorization. The compliance team has been clear—RBAC alone isn't sufficient for PHI access in agent contexts. HIPAA requires reasonable and appropriate access controls, and 'appropriate' means contextual in 2025."
+"And if you hadn't caught it?" Marcus asked.
 
-He pulled up a slide showing the current authorization model—a simple matrix of roles and data access permissions inherited from Epic. Physicians could access any patient record. Nurses could view but not modify orders. Administrators had department-scoped access.
+"The recommendation would have gone to the care team as a routine suggestion. Someone might have acted on it without checking the full history."
 
-"This worked when access meant a human navigating screens," Marcus continued. "It doesn't work when access means an agent processing thousands of records per minute. We need ABAC. We need HITL. We need audit trails that can explain every decision."
+The room was quiet.
 
-Jamie nodded. "And I need observability before I can support this in production. When something breaks at 3 AM—and something will break at 3 AM—I need to trace the failure across all seven layers. Right now, debugging means correlating timestamps across twelve different log files. Last week's accuracy regression took 18 hours to diagnose because we couldn't trace the retrieval path."
-
-He gestured at his phone. "I'm already on-call for the existing systems. Adding agent infrastructure without proper observability means I'm on-call for a black box. That's not sustainable."
-
-Dr. Chen's voice came through the speakerphone. "The clinical staff is asking when they can run multi-domain queries. Yesterday, Dr. Martinez asked about a patient's medication adherence, upcoming appointments, and insurance coverage in the same conversation. She had to ask three separate questions and manually piece together the answers. That's not AI-assisted care coordination—that's AI-assisted frustration."
-
-Sarah could hear the weariness in Dr. Chen's voice. As the bridge between IT and clinical operations, Dr. Chen absorbed complaints from both sides. The clinicians wanted more capability. The IT team wanted more stability. Both wanted faster progress.
-
-Sarah turned back to the whiteboard and drew three boxes connected by arrows.
-
-"Three weeks. Three layers. One goal: architecture completion by Week 10." She began filling in details beneath each box.
+"That's why governance comes first," Sarah said. She began writing beneath each word on the whiteboard.
 
 **Week 8: Layer 5 - Governance**
 - OPA policy engine deployment
@@ -231,8 +144,8 @@ Sarah turned back to the whiteboard and drew three boxes connected by arrows.
 - Target: Dynamic authorization operational
 
 **Week 9: Layer 6 - Observability**
-- Datadog APM integration
 - OpenTelemetry distributed tracing
+- Datadog APM integration
 - LLM cost tracking dashboard
 - Target: Complete operational visibility
 
@@ -242,61 +155,23 @@ Sarah turned back to the whiteboard and drew three boxes connected by arrows.
 - State management and routing
 - Target: Multi-agent queries working
 
-"The board presentation is Week 12," Sarah continued. "That gives us two weeks of operational validation after architecture completion. We need 85/100 INPACT™ for production readiness. We're at 67. Governance improves Permitted from 2 to 6, observability improves Transparent from 3 to 6—together driving us from 67 to 85. Orchestration ties it all together for production deployment."
+"By Week 10, we hit 86/100 INPACT," Sarah continued. "Governance gets Permitted from 2 to 6. Observability gets Transparent from 3 to 6. Orchestration ties it together for production."
 
-She paused, looking at each face in the room. "But the math only works if we execute. Questions?"
+Jamie nodded. "What about the Warfarin scenario specifically? That's the test case."
 
-Marcus pulled up the budget tracker. "Phase 3 allocation is $82,000. Governance is mostly open source—OPA is free, so we're looking at $15,000 for integration and testing. Observability is the big line item at $34,000—Datadog licensing plus OpenTelemetry instrumentation. Orchestration is another $33,000 for LangGraph implementation and the Redis state management we'll need."
+Sarah circled "HITL" on the whiteboard. "Any medication classified as high-interaction Warfarin, methotrexate, lithium automatically triggers human review. The agent drafts the recommendation. A clinician approves before it reaches the patient. The system knows its limits."
 
-"That leaves $298,000 buffer from the original $1.23M," Jamie added. "We're under budget. Which is good, because I'd rather have contingency than explain why we need more money."
+Dr. Chen's voice came through one final time. "When this works, Dr. Martinez can ask one question and get a complete care coordination answer, That's when clinical staff will believe AI actually helps them."
 
-Dr. Chen cut through the financial discussion. "What about the Warfarin scenario? Last week, an agent recommended a dosing schedule without flagging the interaction with the patient's aspirin prescription. If we're serious about governance, that's the test case. The clinical staff won't trust a system that makes medication recommendations without appropriate safeguards."
-
-The Warfarin scenario had become something of a touchstone for the team. It represented the exact kind of high-stakes, high-risk situation where agent mistakes could cause patient harm. Any governance system that couldn't handle Warfarin couldn't be trusted with clinical deployment.
-
-Sarah circled "HITL" on the whiteboard. "That's exactly what HITL solves. Any medication classified as high-interaction—Warfarin, methotrexate, lithium—triggers human review. The agent can draft the recommendation, but a clinician must approve before it reaches the patient. We're not replacing clinical judgment. We're augmenting it with AI assistance while keeping humans in control of high-risk decisions."
-
-"How fast?" Dr. Chen pressed.
-
-"The target is under 30 seconds for the escalation notification. The approval is asynchronous—could be immediate if the clinician is available, or queued for their next review window. But the key is the agent never presents unreviewed high-risk recommendations as final answers. The system knows its limits."
-
-Marcus made a note. "We should track HITL latency as a key metric. If escalations are too slow, clinicians will route around the system. They'll ask simpler questions to avoid triggering review, which defeats the purpose."
-
-"Agreed." Sarah stepped back from the whiteboard. "Any blockers I should know about?"
-
-Jamie set down her coffee cup. "Datadog contract is ready to sign. Been negotiating for two weeks—they know we're serious. OpenTelemetry instrumentation is already partially in place from Layer 4—we added basic tracing for RAG pipeline debugging. Extending it to all seven layers is incremental work, not greenfield."
-
-"LangGraph is the unknown," Marcus admitted. "We've prototyped with it, but production multi-agent coordination is new territory. The framework is solid, but our experience is limited. I'm allocating extra testing time in Week 10."
-
-Sarah nodded. "That's why orchestration comes last. By the time we get there, governance and observability will be proving themselves. We'll know our constraints. We'll know our failure modes. And we'll have two weeks of operational data to inform the orchestration design."
-
-She looked at each team member in turn. "Three weeks to complete what we started seven weeks ago. The foundation is solid. The intelligence works. Now we make it safe, visible, and coordinated."
-
-Dr. Chen's voice came through one final time. "Sarah, when this works—when Dr. Martinez can ask one question and get a complete care coordination answer—that's when the clinical staff will believe AI actually helps them. Everything before that is infrastructure. This is where it becomes care."
-
-The call ended. Sarah turned to Marcus and Jamie.
-
-"Let's build trust."
+Sarah turned to her team. "Let's build trust."
 
 ---
 
-## 📍 Checkpoint 1: The Challenge Defined
+## PART 3: LAYER 5 - THE GOVERNANCE ENGINE
 
-✅ Echo achieved 67/100 INPACT™ with working intelligence—but lacks governance, observability, and orchestration for production  
-✅ Three remaining gaps: Dynamic Permissions (Layer 5), Reasoning Observability (Layer 6), Multi-Agent Coordination (Layer 7)  
-✅ Build plan: Week 8 Governance, Week 9 Observability, Week 10 Orchestration. $82,000 budget. Board presentation Week 12.
+Layer 5 delivers policy-based authorization and audit infrastructure: the capability to control what agents can do by adding contextual evaluation to existing role-based permissions.
 
-**Key insight:** Agents that work correctly but can't be controlled, observed, or coordinated aren't enterprise-ready.
-
-**Reading Time Remaining:** ~40 minutes
-
----
-
-## PART 3: LAYER 5 - GOVERNANCE
-
-### What It Is
-
-Layer 5 provides policy-based authorization and audit infrastructure—the capability to control what agents can do by adding contextual evaluation to existing role-based permissions.
+This is the governance engine: the integrated system of policies, contextual evaluation, human escalation, and audit that makes agent operations trustworthy.
 
 Traditional role-based access control operates on identity: a physician role grants access to patient records. Agent-era access control preserves this foundation and adds contextual evaluation: that same physician role grants access to their assigned patients' records during clinical hours from approved locations for clinically justified purposes.
 
@@ -306,67 +181,23 @@ This contextual evaluation requires four capabilities:
 
 **Policy Engine:** A decision service that evaluates authorization requests against defined rules. OPA (Open Policy Agent) has emerged as the standard, with native Rego policy language enabling complex conditional logic.[2]
 
-**ABAC Framework:** Attribute-Based Access Control evaluates four dimensions—Subject (who), Resource (what), Action (how), and Context (when/where)—to produce dynamic authorization decisions.[3]
+**ABAC Framework:** Attribute-Based Access Control evaluates four dimensions (Subject, Resource, Action, and Context) to produce dynamic authorization decisions.[3]
 
 **HITL Workflows:** Human-in-the-Loop escalation paths for decisions that exceed policy thresholds. High-risk actions trigger human review rather than automatic approval or denial.
 
-**Audit Infrastructure:** Complete decision logging for compliance, debugging, and policy refinement. Every authorization decision—granted, denied, or escalated—is recorded with full context.
+**Audit Infrastructure:** Complete decision logging for compliance, debugging, and policy refinement. Every authorization decision (granted, denied, or escalated) is recorded with full context.
 
-**Diagram 4: Layer 5 Governance Architecture**
+**Figure 6.4: Layer 5 Governance Architecture**
 
-```mermaid
 
-graph TB
-    subgraph LAYER5["LAYER 5: GOVERNANCE"]
-        direction TB
-        Query["Agent Query"]
-        
-        subgraph EVAL["EVALUATION"]
-            direction LR
-            ABAC["ABAC Evaluation"]
-            OPA["OPA Policy Engine"]
-            ABAC --> OPA
-        end
-        
-        Risk{{"Risk?"}}
-        
-        subgraph DECISION["DECISION & AUDIT"]
-            direction LR
-            Auto["Auto-Approve<br/>Risk < 7"]
-            HITL["HITL<br/>Risk >= 7"]
-            Human["Human Review"]
-            Audit["Audit Log"]
-        end
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Query --> EVAL --> Risk
-    Risk -->|"Low"| Auto --> Audit
-    Risk -->|"High"| HITL --> Human --> Audit
-    
-    style LAYER5 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style EVAL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style ABAC fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style OPA fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Risk fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style DECISION fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Auto fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style HITL fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style Human fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Audit fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-```
-
+![Figure 6.4: Layer 5 Governance Architecture](figures/figure-6-4.png)
 ### Why Agents Need Governance
 
-Agents operate differently than human users. A human physician accessing EHR records makes deliberate choices—navigating to specific patients, reviewing specific documents, for specific reasons. The implicit governance of user interfaces constrains access patterns. Agents eliminate these constraints. An agent with data access can iterate through thousands of records in seconds, aggregate information across patients, and correlate data in ways that human navigation never enabled.
+Agents operate differently than human users. A human physician accessing EHR records makes deliberate choices, navigating to specific patients, reviewing specific documents, for specific reasons. The implicit governance of user interfaces constrains access patterns. Agents eliminate these constraints. An agent with data access can iterate through thousands of records in seconds, aggregate information across patients, and correlate data in ways that human navigation never enabled.
 
 This capability expansion requires governance expansion. Consider the scenario: a clinical agent asked to "summarize medication trends across diabetic patients" could legitimately access thousands of patient records. Without governance, how does the system distinguish this legitimate analytical query from a data exfiltration attempt? Both look identical at the data layer.
 
-ABAC provides the answer. The legitimate query comes from a credentialed analyst, during business hours, from an approved workstation, requesting aggregate statistics without individual identifiers. The exfiltration attempt comes from a compromised credential, at 2 AM, from an unknown IP, requesting raw patient records. Same data access pattern—different authorization decision.
+ABAC solves this. The legitimate query comes from a credentialed analyst, during business hours, from an approved workstation, requesting aggregate statistics without individual identifiers. The exfiltration attempt comes from a compromised credential, at 2 AM, from an unknown IP, requesting raw patient records. Same data access pattern. Different authorization decision.
 
 HITL adds the second line of defense. Some decisions require human judgment regardless of policy evaluation. Medication interactions with potentially life-threatening consequences shouldn't be auto-approved even when the requesting credential is valid. The governance layer recognizes risk thresholds and escalates appropriately. Research on human-AI collaboration demonstrates that appropriate task allocation between humans and AI systems improves both safety and performance.[4]
 
@@ -390,6 +221,12 @@ allow {
 }
 ```
 
+**Figure 6.5: ABAC Four-Factor Authorization Model**
+
+
+![Figure 6.5: ABAC Four-Factor Authorization Model](figures/figure-6-5.png)
+### Echo's Gap Before Layer 5
+
 **ABAC Implementation:** NIST SP 800-162 defines the standard.[3] The four-factor model extends role-based permissions with contextual evaluation:
 
 - **Subject:** Role, department, credentials, license validity, patient assignments
@@ -397,7 +234,7 @@ allow {
 - **Action:** Read, write, delete, export, aggregate
 - **Context:** Time, location, device type, network origin
 
-NIST guidance recognizes that RBAC and ABAC are complementary—organizations implement hybrid architectures that preserve role-based foundations while adding contextual evaluation.
+NIST guidance recognizes that RBAC and ABAC are complementary, and organizations implement hybrid architectures that preserve role-based foundations while adding contextual evaluation.
 
 **HITL Workflow Patterns:**
 
@@ -407,51 +244,15 @@ NIST guidance recognizes that RBAC and ABAC are complementary—organizations im
 
 Pattern selection depends on reversibility, urgency, and risk magnitude.
 
-**Diagram 5: ABAC Four-Factor Authorization Model**
 
-```mermaid
-graph TB
-    Query["<b>Agent Request</b><br/><b>Access Needed</b>"]
-    
-    subgraph "<b>ABAC EVALUATION</b>"
-        S["<b>💤 SUBJECT</b><br/><b>Who is asking?</b><br/><b>Role, Dept, Credentials</b>"]
-        R["<b>📝 RESOURCE</b><br/><b>What data?</b><br/><b>Classification, Sensitivity</b>"]
-        A["<b>⚡ ACTION</b><br/><b>What operation?</b><br/><b>Read, Write, Export</b>"]
-        C["<b>📍 CONTEXT</b><br/><b>When/Where?</b><br/><b>Time, Location, Device</b>"]
-    end
-    
-    Policy["<b>🤝 Policy Decision</b><br/><b>Risk Score 0-10</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    Query --> S
-    Query --> R
-    Query --> A
-    Query --> C
-    S --> Policy
-    R --> Policy
-    A --> Policy
-    C --> Policy
-    
-    style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style S fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style R fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style C fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Policy fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
-
-### Echo's Gap Before Layer 5
-
-Echo's pre-transformation authorization relied on Epic's native RBAC—a solid foundation that defined role-based permissions: physicians access patient records, nurses view orders, administrators have department scope. This RBAC baseline remains in place. What was missing was the contextual layer to evaluate when, where, and why.
+Echo's pre-transformation authorization relied on Epic's native RBAC, a solid foundation that defined role-based permissions: physicians access patient records, nurses view orders, administrators have department scope. This RBAC baseline remains in place. What was missing was the contextual layer to evaluate when, where, and why.
 
 **Scenario: The After-Hours Access**
-A physician accessed a celebrity patient's records at 2 AM from a home IP address. The access was legitimate—the physician was on-call and the patient had called with symptoms. But the system couldn't distinguish this legitimate emergency access from a privacy breach. RBAC correctly authorized the physician's access. What was missing: contextual evaluation asking "why is this physician accessing this patient at this time from this location?"
+A physician accessed a celebrity patient's records at 2 AM from a home IP address. The access was legitimate. The physician was on-call and the patient had called with symptoms. But the system couldn't distinguish this legitimate emergency access from a privacy breach. RBAC correctly authorized the physician's access. What was missing: contextual evaluation asking "why is this physician accessing this patient at this time from this location?"
 
-The most concerning gap appeared with medication queries. Echo's agent could retrieve drug interaction information and suggest dosing adjustments. But the underlying authorization made no distinction between querying acetaminophen interactions and Warfarin interactions. Both received identical treatment—immediate response with no escalation.
+The most concerning gap appeared with medication queries. Echo's agent could retrieve drug interaction information and suggest dosing adjustments. But the underlying authorization made no distinction between querying acetaminophen interactions and Warfarin interactions. Both received identical treatment: immediate response with no escalation.
 
-"We can't have an agent providing Warfarin dosing suggestions without pharmacist review," Dr. Chen stated in the Week 6 review. "That's not AI assistance—that's AI malpractice waiting to happen."
+"We can't have an agent providing Warfarin dosing suggestions without pharmacist review," Dr. Chen stated in the Week 6 review. "That's not AI assistance. It's AI malpractice waiting to happen."
 
 HIPAA's "minimum necessary" principle requires limiting PHI access to what's needed for the specific purpose. An RBAC-only model doesn't satisfy this in an agent context where access is automated and high-volume. FDA guidance emphasizes human oversight for clinical decision support systems.[5]
 
@@ -484,50 +285,11 @@ Echo deployed Layer 5 across Week 8-9 with the following architecture:
 7. Bulk data exports
 8. Access from unrecognized devices
 
-**Cost:** $15,000 total
-- OPA: $0 (open source)
-- Policy development: $8,000 (40 hours consulting)
-- Integration testing: $5,000
-- HITL workflow tooling: $2,000
 
-**Diagram 6: HITL Escalation Patterns**
+**Figure 6.6: HITL Escalation Patterns**
 
-```mermaid
 
-graph LR
-    subgraph HITL["HITL ESCALATION PATTERNS"]
-        direction LR
-        subgraph SYNC["SYNC (Blocking)"]
-            direction LR
-            S1["High-Risk<br/>Request"] --> S2["BLOCKED"] --> S3["Human<br/>Review"] --> S4["Execute"]
-        end
-        
-        subgraph ASYNC["ASYNC & POST-HOC"]
-            direction LR
-            A1["Time-Sensitive"] --> A2["Provisional"] --> A3["Review Later"]
-            P1["Low-Risk"] --> P2["Execute"] --> P3["Audit Log"]
-        end
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    style HITL fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style SYNC fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style ASYNC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S1 fill:#ffcdd2,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style S2 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style S3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S4 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style A1 fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style A2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style A3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style P1 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style P2 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style P3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-```
-
+![Figure 6.6: HITL Escalation Patterns](figures/figure-6-6.png)
 ### The Warfarin Moment
 
 Thursday, Week 9. 2:34 PM.
@@ -537,23 +299,23 @@ The first true HITL escalation arrived during afternoon rounds. Dr. Martinez que
 The agent recognized the query intent, retrieved the relevant medication records, identified the drug interaction, and prepared a response. But before returning that response, the governance layer intervened.
 
 **HITL Trigger:** Warfarin-class medication + drug interaction detected  
-**Risk Score:** 8.3/10  
+**Risk Score:** 8/10  
 **Escalation:** Synchronous HITL - Pharmacist review required
 
 Dr. Chen received the escalation notification on her workstation. The agent's draft response appeared alongside the source data: current Warfarin dose (5mg daily), aspirin prescription (81mg daily), recent INR values (trending high at 3.2), and the interaction flag.
 
-The agent had correctly identified the interaction. It had even drafted an appropriate recommendation—consider INR monitoring frequency increase and potential Warfarin dose adjustment. But the governance layer ensured a human pharmacist reviewed this recommendation before it reached the care team.
+The agent had correctly identified the interaction. It had even drafted an appropriate recommendation: consider INR monitoring frequency increase and potential Warfarin dose adjustment. But the governance layer ensured a human pharmacist reviewed this recommendation before it reached the care team.
 
 Dr. Chen approved the recommendation with one modification: adding a specific INR target range. The entire escalation took 47 seconds from trigger to approval.
 
-"That's exactly what we needed," she told Sarah later. "The agent did the work—gathering data, identifying the interaction, drafting the recommendation. But a human made the final call on a high-risk medication. That's trustworthy AI."
+"That's exactly what we needed," she told Sarah later. "The agent did the work: gathering data, identifying the interaction, drafting the recommendation. But a human made the final call on a high-risk medication. That's trustworthy AI."
 
-### INPACT™ Contribution
+### INPACT Contribution
 
-Layer 5 directly enables **Permitted (P)**: from 2/6 to 6/6.
+Layer 5 directly delivers **Permitted (P)**: from 2/6 to 6/6.
 
 The four-point improvement reflects the addition of contextual ABAC on top of RBAC:
-- **Points 1-2:** Contextual evaluation considers time, location, device, and purpose—not just identity
+- **Points 1-2:** Contextual evaluation considers time, location, device, and purpose, not just identity
 - **Points 3-4:** HITL workflows provide safe escalation paths for decisions exceeding policy confidence
 
 Combined, these capabilities enable agents to operate in clinical contexts where RBAC alone would either over-permit (allowing risky access) or under-permit (blocking legitimate use). Contextual governance finds the appropriate middle ground.
@@ -569,29 +331,18 @@ Combined, these capabilities enable agents to operate in clinical contexts where
 
 ---
 
-## 📍 Checkpoint 2: Governance Complete
+## PART 4: LAYER 6 - INSIDE THE BLACK BOX
 
-✅ **Layer 5:** ABAC adds contextual evaluation to RBAC. OPA enforces 247 policies with sub-millisecond latency.  
-✅ **HITL:** Warfarin scenario demonstrated—agent drafted recommendation, governance triggered escalation, Dr. Chen approved in 47 seconds.  
-✅ **INPACT™:** Permitted (P) improves from 2/6 to 6/6 (+4 points).
+Layer 6 delivers complete visibility into agent operations: the capability to understand what agents did, why they did it, and how much it cost.
 
-**Key insight:** Governance enables agents to operate safely. HITL keeps humans in control of decisions that matter.
-
-**Reading Time Remaining:** ~30 minutes
-
----
-
-## PART 4: LAYER 6 - OBSERVABILITY
-
-### What It Is
-
-Layer 6 provides complete visibility into agent operations—the capability to understand what agents did, why they did it, and how much it cost.
+This layer takes you inside the black box.
 
 Observability differs from monitoring in scope and intent. Monitoring checks whether systems are running. Observability explains why systems behave as they do. For AI agents, this distinction is critical. A monitoring alert tells you the agent returned an error. Observability tells you which layer failed, what input triggered the failure, which model was involved, how long each stage took, and what the cost implications are.
 
 This comprehensive visibility requires four capabilities:
 
-**Distributed Tracing:** Request tracking across all seven layers, enabling end-to-end visibility for any agent interaction. OpenTelemetry provides the standard instrumentation framework, building on foundational work in distributed systems tracing.[6][7]
+**Distributed Tracing:** Request tracking across all seven layers, enabling end-to-end visibility for any agent interaction. Modern distributed tracing builds on foundational work in large-scale systems monitoring.[7]
+
 
 **MLOps Monitoring:** Model performance tracking including accuracy degradation, drift detection, and quality metrics. When underlying data distributions shift, MLOps monitoring detects the change before it impacts outputs. Research on machine learning operations emphasizes continuous monitoring as essential for production AI systems.[8]
 
@@ -599,166 +350,58 @@ This comprehensive visibility requires four capabilities:
 
 **Centralized Logging:** Aggregated logs with structured data enabling correlation across services. Debugging distributed systems without centralized logging means correlating timestamps across dozens of separate log files.
 
-**Diagram 7: Layer 6 Observability Architecture**
+**Figure 6.7: Layer 6 Observability Architecture**
 
-```mermaid
 
-graph TB
-    subgraph LAYER6["LAYER 6: OBSERVABILITY"]
-        direction TB
-        Query["Agent Query<br/>Trace ID Generated"]
-        
-        subgraph LAYERS["INSTRUMENTED LAYERS"]
-            direction LR
-            L1["L1: Storage"]
-            L3["L3: Semantic"]
-            L4["L4: RAG+LLM"]
-            L5["L5: Governance"]
-        end
-        
-        subgraph COLLECTION["COLLECTION"]
-            direction LR
-            OTEL["OpenTelemetry<br/>Distributed Tracing"]
-            LLM["LLM Cost Tracker<br/>$0.06/query avg"]
-        end
-        
-        DD["Datadog APM<br/>Dashboards & Alerts"]
-        Metrics["Metrics<br/>Latency, Quality, Cost"]
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Query --> LAYERS
-    LAYERS --> OTEL
-    L4 --> LLM
-    OTEL --> DD
-    LLM --> DD
-    DD --> Metrics
-    
-    style LAYER6 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style LAYERS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L5 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style COLLECTION fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style OTEL fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style LLM fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style DD fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Metrics fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-```
-
+![Figure 6.7: Layer 6 Observability Architecture](figures/figure-6-7.png)
 ### Why Agents Need Observability
 
 Agents are black boxes by default. A user submits a query. An answer returns. What happened in between? Which documents were retrieved? Which model generated the response? How confident was the system? How much did it cost? Without observability, these questions have no answers.
 
 This opacity creates three operational challenges:
 
-**Debugging Challenge:** When an agent returns an incorrect response, troubleshooting requires understanding the full processing chain. Did the semantic layer misinterpret the query? Did RAG retrieve irrelevant documents? Did the LLM hallucinate despite having correct context? Each failure mode has different remediation—and without observability, identifying the failure mode requires guesswork.
+**Debugging Challenge:** When an agent returns an incorrect response, troubleshooting requires understanding the full processing chain. Did the semantic layer misinterpret the query? Did RAG retrieve irrelevant documents? Did the LLM hallucinate despite having correct context? Each failure mode has different remediation, and lacking observability, identifying the failure mode requires guesswork.
 
-**Cost Management Challenge:** LLM API calls carry meaningful cost. Claude Sonnet 4 pricing at $3 per million input tokens and $15 per million output tokens seems economical until query volume scales.[9] A healthcare system processing 10,000 daily agent queries with average 2,000 input tokens and 500 output tokens generates monthly LLM costs exceeding $2,000 for a single model—and most RAG pipelines involve multiple model calls per query. Without granular cost visibility, organizations cannot optimize spend.
+**Cost Management Challenge:** LLM API calls carry meaningful cost. Claude Sonnet 4 pricing at $3 per million input tokens and $15 per million output tokens seems economical until query volume scales.[9] A healthcare system processing 10,000 daily agent queries with average 2,000 input tokens and 500 output tokens generates monthly LLM costs exceeding $2,000 for a single model. Most RAG pipelines involve multiple model calls per query. Lacking granular cost visibility, organizations cannot optimize spend.
 
 **Quality Assurance Challenge:** LLM outputs vary. The same query can produce slightly different responses. Context retrieval quality affects output quality. Model drift occurs over time as underlying APIs evolve. Without quality metrics, organizations cannot detect degradation until users complain.
 
 ### Technologies and Approaches
 
-**OpenTelemetry** provides vendor-neutral distributed tracing.[6] Core concepts: **Spans** (individual work units), **Traces** (collections of spans across a request—a single clinical query generates 15-25 spans), and **Context Propagation** (automatic trace ID forwarding across service boundaries).
+**OpenTelemetry** provides vendor-neutral distributed tracing.[6] Core concepts: **Spans** (individual work units), **Traces** (collections of spans across a request; a single clinical query generates 15-25 spans), and **Context Propagation** (automatic trace ID forwarding across service boundaries).
 
 **Datadog APM** provides visualization with native OpenTelemetry support.[10] Key capabilities: LLM token tracking for cost attribution, anomaly detection that alerts before users complain, and service maps showing latency distribution.
 
-**Diagram 8: Echo's Seven-Layer Service Map**
-
-```mermaid
-
-graph TB
-    subgraph ECHO["ECHO SERVICE MAP"]
-        direction TB
-        UI["Portal (4.2s)"]
-        L7["L7: Orchestrate (180ms)"]
-        
-        subgraph PARALLEL["PARALLEL PATHS"]
-            direction LR
-            subgraph TRUST["TRUST"]
-                direction TB
-                L6["L6: Observe<br/>12ms"]
-                L5["L5: Govern<br/>8ms"]
-            end
-            
-            subgraph INTEL["INTELLIGENCE → DATA"]
-                direction TB
-                L4["L4: RAG+LLM<br/>2.8s"]
-                L3["L3: Semantic<br/>340ms"]
-                L2["L2: Stream<br/>28ms"]
-                L1["L1: Store<br/>45ms"]
-                L4 --> L3 --> L2 --> L1
-            end
-        end
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    UI --> L7
-    L7 --> L6
-    L7 --> L5
-    L7 --> L4
-    
-    style ECHO fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style PARALLEL fill:none,stroke:none
-    style TRUST fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style INTEL fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style UI fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style L7 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L6 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L5 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L4 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-```
-
-**© 2025 Colaberry Inc.**
-
-The service map reveals latency distribution: Layer 4 (RAG + LLM) dominates at 2.8 seconds P95, representing 67% of total request time. This visibility enabled Echo to focus optimization on LLM generation rather than infrastructure layers.
-
 **LLM-Specific Observability Patterns:**
-- **Token Tracking:** Cost allocation by query type (Echo found 73% of latency came from LLM generation, not retrieval)
-- **Prompt Versioning:** Git-managed templates with version hashes in traces—when Echo updated its clinical reasoning prompt, observability showed accuracy improved from 94.2% to 95.6%
-- **Cache Analytics:** 34% of queries were near-duplicates suitable for caching
+- **Token Tracking:** Cost allocation by query type and model
+- **Prompt Versioning:** Git-managed templates with version hashes in traces
+- **Cache Analytics:** Identifying near-duplicate queries suitable for caching
 
 ### Echo's Gap Before Layer 6
 
 Echo's pre-transformation monitoring consisted of CloudWatch logs and basic uptime checks. When issues emerged, debugging followed a painful pattern: user reports problem → operations identifies timestamp → engineers search logs across multiple services → correlation requires manual timestamp matching → root cause takes hours or days.
 
-CFO Krish Yadav raised this concern: "We're spending $26,000 monthly on LLM APIs. I can see the total. I can't see the breakdown. That's not a cost center—that's a mystery."
+CFO Krish Yadav raised this concern: "We're spending $26,000 monthly on LLM APIs. I can see the total. I can't see the breakdown. That's not a cost center. It's a mystery."
 
-The most frustrating gap appeared during the Week 6 accuracy regression. Response quality dropped from 95% to 87% over three days. The cause: a Pinecone index corruption that degraded retrieval quality. But identifying this root cause took 18 hours of investigation.
-
-The debugging process illustrated the gap:
-
-**Hour 1-4:** Confirmed accuracy degradation. Users were correct—responses were worse. But which component was failing?
-
-**Hour 5-8:** Reviewed LLM prompts and responses. Generation quality appeared normal. The LLM wasn't hallucinating.
-
-**Hour 9-12:** Reviewed semantic parsing. Query understanding was accurate. The system knew what users wanted.
-
-**Hour 13-16:** Reviewed document retrieval. This is where the problem emerged. Retrieved documents were consistently low-relevance. But why?
-
-**Hour 17-18:** Pinecone index investigation. Discovered index corruption during a routine maintenance operation.
-
-With proper tracing, this diagnosis would have taken minutes. The trace would show: query correct → semantic parsing correct → vector search returned low-relevance results → problem identified.
+The most frustrating gap appeared during the Week 6 accuracy regression. Response quality dropped from 95% to 87% over three days. The cause: a Pinecone index corruption that degraded retrieval quality. But identifying this root cause took 18 hours of investigation. With proper tracing, this diagnosis would have taken minutes.
 
 "We were flying blind," Jamie Rodriguez recalled. "We knew something was wrong because users complained. But finding the actual problem meant reading thousands of log lines and hoping to spot a pattern."
 
 ### Echo's Implementation
 
-Echo deployed Layer 6 across Week 9 with the following architecture:
 
-**OpenTelemetry Instrumentation:** Added to all seven layers with consistent trace context propagation. Every request receives a unique trace ID that flows through the entire processing chain.[6]
+**Figure 6.8: Echo's Seven-Layer Service Map**
+
+![Figure 6.8: Echo's Seven-Layer Service Map](figures/figure-6-8.png)
+
+Echo deployed OpenTelemetry instrumentation across all seven layers during Week 9, with Datadog APM providing visualization and alerting.
+
+The service map reveals latency distribution: Layer 4 (RAG + LLM) dominates at 2.8 seconds P95, representing 67% of total request time. This visibility enabled Echo to focus optimization on LLM generation rather than infrastructure layers.
+
+**Implementation Results:**
+- **Token Tracking:** 73% of latency came from LLM generation, not retrieval
+- **Prompt Versioning:** Accuracy improved from 94.2% to 95.6% after clinical reasoning prompt update
+- **Cache Analytics:** 34% of queries identified as near-duplicates suitable for caching
 
 **Datadog Integration:** APM agents deployed alongside application services, with custom dashboards for:
 - Query latency by layer (P50, P95, P99)
@@ -767,26 +410,16 @@ Echo deployed Layer 6 across Week 9 with the following architecture:
 - HITL escalation volume and resolution time
 - Error rates by category
 
-**LLM Cost Tracking:** Custom middleware capturing token usage per request:
-- Input tokens (query + context)
-- Output tokens (response)
-- Model selection (Claude, GPT-4, Llama)
-- Cache status (hit/miss)
-
 **Alert Configuration:**
 - Latency: P95 > 3s triggers warning, P95 > 5s triggers page
 - Cost: Daily spend > 120% of baseline triggers review
 - Quality: Accuracy drop > 5% triggers investigation
 - Errors: Error rate > 2% triggers immediate response
 
-**Cost:** $34,000 annual
-- Datadog licensing: $24,000/year
-- OpenTelemetry instrumentation: $6,000 (development)
-- Custom dashboards: $4,000 (development)
 
 ### Visibility Achieved
 
-With Layer 6 operational, Echo gained unprecedented visibility into agent operations. Complete request traces now show timing for every layer—when latency spikes occur, engineers immediately identify whether the bottleneck is semantic parsing, governance checks, vector search, or LLM generation.
+With Layer 6 operational, Echo gained unprecedented visibility into agent operations. Complete request traces now show timing for every layer when latency spikes occur, engineers immediately identify whether the bottleneck is semantic parsing, governance checks, vector search, or LLM generation.
 
 **Cost Visibility Example:**
 Monthly LLM spend of $26,000 now decomposed:
@@ -797,14 +430,14 @@ Monthly LLM spend of $26,000 now decomposed:
 
 This visibility revealed optimization opportunity: 34% of clinical reasoning queries were cache-eligible but cache-missing due to minor prompt variations. Normalizing prompts increased cache hit rate from 85% to 91%, saving $3,100 monthly.
 
-### INPACT™ Contribution
+### INPACT Contribution
 
-Layer 6 directly enables **Transparent (T)**: from 3/6 to 6/6.
+Layer 6 directly delivers **Transparent (T)**: from 3/6 to 6/6.
 
 The three-point improvement reflects the shift from opaque operations to complete visibility:
-- **Point 1:** Request tracing provides explainability—users and operators can understand what happened and why
-- **Point 2:** Quality monitoring provides confidence—the organization knows system accuracy in real-time
-- **Point 3:** Cost attribution provides accountability—every dollar of LLM spend traces to specific use cases
+- **Point 1:** Request tracing provides explainability so that users and operators can understand what happened and why
+- **Point 2:** Quality monitoring provides confidence so that the organization knows system accuracy in real-time
+- **Point 3:** Cost attribution provides accountability so that every dollar of LLM spend traces to specific use cases
 
 Combined, these capabilities transform agents from black boxes into transparent systems where every decision has an explanation and every trend has visibility.
 
@@ -819,78 +452,40 @@ Combined, these capabilities transform agents from black boxes into transparent 
 
 ---
 
-## PART 5: LAYER 7 - ORCHESTRATION
+## PART 5: LAYER 7 - THE ORCHESTRATOR
 
-### What It Is
+Layer 7 delivers multi-agent coordination: the capability for specialized agents to work together on complex queries that span multiple domains.
 
-Layer 7 provides multi-agent coordination—the capability for specialized agents to work together on complex queries that span multiple domains.
+Layer 7 is the orchestrator. It turns multiple agents into one coherent answer.
 
-Single-agent architectures work well for focused queries: "What is this patient's latest A1C?" routes to the clinical agent, retrieves the lab result, and returns an answer. But healthcare workflows rarely involve single domains. A discharge planning query—"prepare this patient for discharge"—requires care coordination (scheduling follow-up appointments), clinical documentation (summarizing the stay and medications), and revenue cycle (verifying insurance coverage and authorizations). Three domains, three specialized knowledge bases, one coherent answer needed.
+
+**Figure 6.9: Layer 7 Orchestration Architecture**
+
+
+![Figure 6.9: Layer 7 Orchestration Architecture](figures/figure-6-9.png)
+### Why Agents Need Orchestration
+
+Single-agent architectures work well for focused queries: "What is this patient's latest A1C?" routes to the clinical agent, retrieves the lab result, and returns an answer. But healthcare workflows rarely involve single domains. A discharge planning query: "prepare this patient for discharge" requires care coordination (scheduling follow-up appointments), clinical documentation (summarizing the stay and medications), and revenue cycle (verifying insurance coverage and authorizations). Three domains, three specialized knowledge bases, one coherent answer needed.
+
+The alternative to orchestration is decomposition, forcing users to break complex queries into simple components, submit them separately, and manually integrate the results. This approach has three problems:
+
+**Cognitive Load:** Users must understand system boundaries to phrase queries correctly. Asking "prepare this patient for discharge" when the system only handles clinical questions forces the user to rephrase: "What medications is this patient on? What follow-up appointments are scheduled? Is insurance coverage verified?" The AI should handle decomposition, not the human.
+
+**Context Loss:** Sequential queries lose context. When a user asks about medications, then asks about appointments, the second query doesn't know the first query's results unless the user manually includes them. Orchestration maintains a shared state across agent boundaries.
+
+**Latency Multiplication:** Sequential queries multiply latency. If each domain query takes 2 seconds, three sequential queries take 6 seconds minimum. Orchestration allows parallel execution, so that the same three queries complete in 2-3 seconds total.
+
+### Technologies and Approaches
 
 Orchestration solves the multi-domain problem through structured coordination:
 
-**Supervisor Pattern:** A coordinating agent classifies query intent, routes to specialized agents, and synthesizes responses. The supervisor doesn't answer directly—it manages agents that do. This pattern reflects decades of research in multi-agent systems coordination.[11]
+**Supervisor Pattern:** A coordinating agent classifies query intent, routes to specialized agents, and synthesizes responses. The supervisor doesn't answer directly, it manages agents that do. This pattern reflects decades of research in multi-agent systems coordination.[11]
 
 **Shared State:** All agents access common context about the current interaction, ensuring consistency across agent boundaries. When the clinical agent retrieves medication information, the revenue agent sees that context without re-querying.
 
 **Conditional Routing:** Query characteristics determine which agents activate. Simple queries route to single agents. Complex queries activate multiple agents in parallel or sequence.
 
-**Diagram 9: Layer 7 Orchestration Architecture**
-
-```mermaid
-
-graph TB
-    subgraph LAYER7["LAYER 7: ORCHESTRATION"]
-        direction TB
-        Query["Multi-Domain Query<br/>Complex Care Request"]
-        Supervisor["Supervisor Agent<br/>LangGraph Coordinator"]
-        Intent{{"Intent Classification"}}
-        
-        subgraph AGENTS["SPECIALIZED AGENTS"]
-            direction LR
-            Care["Care Coordination<br/>Scheduling, Follow-up"]
-            Clinical["Clinical Documentation<br/>Records, Medications"]
-            Revenue["Revenue Cycle<br/>Insurance, Auth"]
-        end
-        
-        State["Shared State: Patient Context"]
-        Synthesis["Response Synthesis<br/>Unified Answer"]
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Query --> Supervisor --> Intent
-    Intent --> AGENTS
-    AGENTS <--> State
-    AGENTS --> Synthesis
-    
-    style LAYER7 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style Supervisor fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Intent fill:#ffe0b2,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style AGENTS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Care fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Clinical fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Revenue fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style State fill:#b2dfdb,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Synthesis fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-```
-
-### Why Agents Need Orchestration
-
-The alternative to orchestration is decomposition—forcing users to break complex queries into simple components, submit them separately, and manually integrate the results. This approach has three problems:
-
-**Cognitive Load:** Users must understand system boundaries to phrase queries correctly. Asking "prepare this patient for discharge" when the system only handles clinical questions forces the user to rephrase: "What medications is this patient on? What follow-up appointments are scheduled? Is insurance coverage verified?" The AI should handle decomposition, not the human.
-
-**Context Loss:** Sequential queries lose context. When a user asks about medications, then asks about appointments, the second query doesn't know the first query's results unless the user manually includes them. Orchestration maintains shared state across agent boundaries.
-
-**Latency Multiplication:** Sequential queries multiply latency. If each domain query takes 2 seconds, three sequential queries take 6 seconds minimum. Orchestration enables parallel execution—the same three queries complete in 2-3 seconds total.
-
-### Technologies and Approaches
-
-**LangGraph** models agent workflows as graphs—nodes are agents, edges are transitions.[12] This builds on research showing structured workflows outperform unstructured approaches.[13]
+**LangGraph** models agent workflows as graphs. Nodes are agents, edges are transitions.[12] This builds on research showing structured workflows outperform unstructured approaches.[13]
 
 ```python
 # Simplified LangGraph workflow definition
@@ -907,7 +502,7 @@ workflow.add_conditional_edges("supervisor", route_to_agents,
 
 **Coordination Patterns:**
 
-1. **Supervisor Pattern:** Central coordinator routes to specialists and synthesizes responses. Echo uses this—classifying intent into care, clinical, revenue, or multi-domain categories.
+1. **Supervisor Pattern:** Central coordinator routes to specialists and synthesizes responses. Echo uses this to classify intent into care, clinical, revenue, or multi-domain categories.
 
 2. **Sequential Pattern:** Agents process in order, each enriching shared state. Example: prior authorization workflow where clinical gathers diagnosis, revenue checks coverage, authorization submits to payer.
 
@@ -915,18 +510,18 @@ workflow.add_conditional_edges("supervisor", route_to_agents,
 
 **State Management:** Redis with 15-minute TTL provides shared context across agents.[14] State includes query context, intermediate results, session history, and coordination metadata. (TTL configurable per use case.)
 
-**Error Handling:** 10-second agent timeouts, partial failure responses with clear indication, graceful degradation when agents unavailable.
+**Error Handling:** 10-second agent timeouts, partial failure responses with clear indication, graceful degradation when agents are unavailable.
 
 ### Echo's Gap Before Layer 7
 
 Echo's pilot supported only single-agent queries. Complex requests failed:
 
-**User:** "Prepare discharge—summary, follow-up appointments, and insurance verification."  
+**User:** "Prepare discharge summary, follow-up appointments, and insurance verification."  
 **System:** "I can help with clinical documentation. For scheduling and insurance, please contact the respective departments."
 
 The clinical agent did its job correctly, but the system couldn't orchestrate across domains.
 
-Dr. Chen's Week 7 feedback captured the frustration: "Every complex question becomes three simple questions I have to ask separately. That's not assistance—that's a to-do list generator. I spend more time managing the AI than I would spend doing the work manually."
+Dr. Chen's Week 7 feedback captured the frustration: "Every complex question becomes three simple questions I have to ask separately. That's not assistance. It's a to-do list generator. I spend more time managing the AI than I would spend doing the work manually."
 
 Pilot usage data confirmed: high engagement for simple lookups but declining engagement for complex workflows. Users tried multi-domain queries once, received fragmented responses, and stopped asking.
 
@@ -946,20 +541,13 @@ Echo deployed Layer 7 across Week 10 with the following architecture:
 
 **Supervisor Design:** Intent classification determines routing:
 - Single-domain queries → direct routing to relevant agent
-- Multi-domain queries → parallel execution with synthesis
+- Multi-domain queries → parallel or sequential execution with synthesis
 - Ambiguous queries → clarification request
 
-**State Management:** Redis-backed shared state with 15-minute TTL for session context.[14]
-
-**Governance Integration:** All agent operations pass through Layer 5 ABAC evaluation. The orchestration layer doesn't bypass governance—it coordinates governance-approved operations.
+**Governance Integration:** All agent operations pass through Layer 5 ABAC evaluation. The orchestration layer doesn't bypass governance. It coordinates with governance-approved operations.
 
 **Observability Integration:** All agent operations generate OpenTelemetry traces. The orchestration layer provides visibility into coordination patterns, not opacity.
 
-**Cost:** $33,000 total
-- LangGraph: $0 (open source)
-- Redis state management: $6,000/year
-- Agent orchestration integration: $18,000 (retrofitting three existing agents for multi-agent coordination)
-- Integration testing: $9,000
 
 ### The Multi-Agent Moment
 
@@ -969,12 +557,17 @@ Sarah watched the terminal as Jamie Rodriguez submitted the test query:
 
 **Query:** "Patient Maria Santos, MRN 78234156, is being discharged today following hip replacement surgery. Schedule post-discharge follow-up, medication review, and verify insurance coverage."
 
-The orchestration layer activated. Intent classification identified three domains: Care (follow-up scheduling), Clinical (medication review), Revenue (insurance verification). The supervisor routed to all three agents in parallel.
+The orchestration layer activated. Intent classification identified three domains: Care (follow-up scheduling), Clinical (medication review), Revenue (insurance verification). The supervisor delegated the request to all three agents in parallel.
 
 **Care Coordination Agent (2.1s):**
 - Scheduled follow-up: Orthopedics, Dr. Kim, next Tuesday 10:00 AM
 - Scheduled physical therapy evaluation: Thursday 2:00 PM
 - Confirmed patient transportation preferences
+
+**Figure 6.10: Multi-Agent Query Flow - Maria Santos Discharge**
+
+
+![Figure 6.10: Multi-Agent Query Flow - Maria Santos Discharge](figures/figure-6-10.png)
 
 **Clinical Documentation Agent (1.8s):**
 - Medication summary: 3 active prescriptions post-surgery
@@ -990,66 +583,27 @@ The orchestration layer activated. Intent classification identified three domain
 
 The supervisor synthesized the responses into a coherent discharge preparation summary. One query, three agents, one coordinated answer.
 
-The Datadog trace showed the complete flow—intent classification and routing (~400ms), parallel agent execution (2.3s slowest path), state synchronization and synthesis (~1.5s). Every layer visible. Every agent auditable. Every decision traceable.
+The Datadog trace showed the complete flow, intent classification and routing (~400ms), parallel agent execution (2.3s slowest path), state synchronization and synthesis (~1.5s). Every layer visible. Every agent auditable. Every decision traceable.
 
-Marcus checked the governance log. All three agents had passed ABAC evaluation. No HITL escalations triggered—the medication review found no Warfarin-class drugs. Clean execution.
+Marcus checked the governance log. All three agents had passed ABAC evaluation. No HITL escalations triggered. Medication review found no Warfarin-class drugs. Clean execution.
 
 "This is what we built for," Sarah said quietly. "Three agents, one response, complete care coordination."
 
 The room was silent for a moment. Then Jamie grinned. "**The Architecture of Trust** is operational. Now we need to prove it would stay that way."
 
-**Diagram 10: Multi-Agent Query Flow—Maria Santos Discharge**
 
-```mermaid
-graph TB
-    Query["<b>📍 Discharge Query</b><br/><b>Schedule, Review, Verify</b>"]
-    
-    Supervisor["<b>🤝 Supervisor</b><br/><b>Routes to 3 Agents</b>"]
-    
-    subgraph "<b>PARALLEL EXECUTION (2.3s)</b>"
-        Care["<b>👥 Care Agent</b><br/><b>Follow-up: Tue 10 AM</b><br/><b>PT Eval: Thu 2 PM</b>"]
-        Clinical["<b>🏥 Clinical Agent</b><br/><b>3 Medications</b><br/><b>No Interactions</b>"]
-        Revenue["<b>🔐 Revenue Agent</b><br/><b>UHC PPO Verified</b><br/><b>$45 Copay</b>"]
-    end
-    
-    State["<b>🔍 Shared State</b><br/><b>Patient: Maria Santos</b><br/><b>MRN: 78234156</b>"]
-    
-    Response["<b>✨ Unified Response</b><br/><b>Complete Discharge Prep</b><br/><b>4.2 Seconds Total</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    Query --> Supervisor
-    Supervisor --> Care
-    Supervisor --> Clinical
-    Supervisor --> Revenue
-    Care <--> State
-    Clinical <--> State
-    Revenue <--> State
-    Care --> Response
-    Clinical --> Response
-    Revenue --> Response
-    
-    style Query fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style Supervisor fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Care fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Clinical fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Revenue fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style State fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Response fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
-### INPACT™ Contribution
+### INPACT Contribution
 
-Layer 7 doesn't directly add points to the INPACT™ score—the 85/100 is achieved through Layers 5-6 improvements to Permitted and Transparent. But orchestration enables INPACT™ dimensions at scale:
+Layer 7 doesn't directly add points to the INPACT score. The 86/100 score is achieved through Layers 5-6 improvements to Permitted and Transparent. But orchestration enables INPACT dimensions at scale:
 
-**Instant (I):** Multi-agent workflows complete in seconds through parallel execution. Without orchestration, the same tasks would require sequential human navigation across systems—minutes instead of seconds.
+**Instant (I):** Multi-agent workflows complete in seconds through parallel execution. Without orchestration, the same tasks would require sequential human navigation across systems in minutes instead of seconds.
 
 **Natural (N):** Users ask complex questions naturally. "Prepare for discharge" doesn't require understanding system boundaries. Orchestration handles decomposition invisibly.
 
 **Contextual (C):** Shared state ensures all agents operate with full patient context. The revenue agent knows what medications the clinical agent found. Context doesn't get lost crossing agent boundaries.
 
-Orchestration readiness is what makes 85/100 "production-ready." The score reflects capability. Orchestration reflects scalability.
+Orchestration readiness is what makes 86/100 "production-ready." The score reflects capability. Orchestration reflects scalability.
 
 **Operational Metrics:**
 
@@ -1059,19 +613,6 @@ Orchestration readiness is what makes 85/100 "production-ready." The score refle
 | Multi-Agent Latency | <5s | >10s |
 | State Consistency | 100% | <99% |
 | Agent Timeout Rate | <2% | >5% |
-
----
-
-## 📍 Checkpoint 3: All Three Layers Complete
-
-✅ **Layer 6:** OpenTelemetry + Datadog APM. Cost tracking decomposed $26,000/month by model and query type.  
-✅ **Layer 7:** LangGraph supervisor with three agents. 4.2-second multi-domain queries via parallel execution.  
-✅ **Investment:** Layer 6 $34,000 + Layer 7 $33,000 = Phase 3 total $82,000.  
-✅ **INPACT™:** Transparent (T) 3/6 → 6/6 (+3 points). Total: 67/100 → 85/100 (+18 points).
-
-**Key insight:** Governance, observability, and orchestration are interdependent. All three must work together.
-
-**Reading Time Remaining:** ~15 minutes
 
 ---
 
@@ -1089,9 +630,9 @@ Trust is the outcome. Transparency is the mechanism.[15]
 
 **Citations:** Every factual claim includes its source. When Echo's agent reports "Patient's A1C was 7.2%," the response includes: Epic Labs, MRN reference, timestamp. Users can verify. Agents can't hallucinate what they must cite.[16]
 
-**Explainability:** HITL escalations include reasoning: "Risk score 8.3/10. Trigger: Warfarin + drug interaction. Policy requires pharmacist review." Users see reasoning they can evaluate.
+**Explainability:** HITL escalations include reasoning: "Risk score 8/10. Trigger: Warfarin + drug interaction. Policy requires pharmacist review." Users see reasoning they can evaluate.
 
-**HITL as Trust Feature:** Systems that know when to ask for help earn trust. HITL isn't a failure mode—it communicates: "This system knows its limits."
+**HITL as Trust Feature:** Systems that know when to ask for help earn trust. HITL isn't a failure mode. It communicates: "This system knows its limits."
 
 **Echo's Response Format:**
 > **Query:** Maria Santos's medication list?  
@@ -1105,7 +646,7 @@ Trust is the outcome. Transparency is the mechanism.[15]
 
 ### Week 8: Governance Foundation
 
-Marcus Williams led policy development, working with compliance to translate regulatory requirements into OPA rules. 247 policies emerged from sessions that felt like contract negotiations—clinical operations wanted flexibility, compliance wanted constraints.
+Marcus Williams led policy development, working with compliance to translate regulatory requirements into OPA rules. 247 policies emerged from sessions that felt like contract negotiations. Clinical operations wanted flexibility. Compliance wanted constraints.
 
 Thursday brought the first policy conflict: a scheduling rule required department-head approval for cross-department appointments, but care coordination needed to schedule cardiology follow-ups without manual approval. Resolution: explicit "care coordination workflow" exception with enhanced audit logging.
 
@@ -1113,11 +654,11 @@ By Friday, 193 of 247 policies were deployed. The remaining 54 covered edge case
 
 ### Week 9: Observability Operational
 
-The observability build proceeded faster than planned—Echo's Layer 4 already had basic OpenTelemetry tracing. Extending to all seven layers required consistent patterns, not greenfield development. By Wednesday, trace completeness exceeded 98%.
+The observability build proceeded faster than planned. Echo's Layer 4 already had basic OpenTelemetry tracing. Extending to all seven layers required consistent patterns, not greenfield development. By Wednesday, trace completeness exceeded 98%.
 
-Thursday afternoon brought the first HITL escalation in production—the Warfarin scenario. The trace told the complete story:
+Thursday afternoon brought the first HITL escalation in production - the Warfarin scenario. The trace told the complete story:
 - T+0ms: Query received
-- T+23ms: Governance evaluation (risk score: 8.3, trigger: Warfarin-class medication)
+- T+23ms: Governance evaluation (risk score: 8, trigger: Warfarin-class medication)
 - T+24ms: HITL escalation initiated
 - T+47,234ms: Human approval received (Dr. Chen)
 - T+47,456ms: Response delivered
@@ -1128,79 +669,33 @@ Thursday afternoon brought the first HITL escalation in production—the Warfari
 
 The three agents had been in design since Week 8. Week 10 was production integration: connecting agents to LangGraph, implementing shared state, testing coordination patterns.
 
-Tuesday brought integration failures—Epic rate limits, payer disambiguation issues. Normal problems with normal fixes.
+Tuesday brought integration failures. Epic rate limits and payer disambiguation issues. Normal problems with normal fixes.
 
 Wednesday-Thursday: 47 test scenarios across single-domain, dual-domain, triple-domain, error handling, and HITL integration. All passed by Thursday evening.
 
 Friday, 4:47 PM. The Maria Santos discharge query succeeded. Three agents. One response. Architecture complete.
 
-**Diagram 11: Echo's Week 8-10 Timeline**
+**Figure 6.11: Echo's Week 8-10 Timeline**
 
-```mermaid
-gantt
-    title Echo's Transparency + Orchestration Build (Weeks 8-10)
-    dateFormat  YYYY-MM-DD
-    
-    section Layer 5
-    OPA Policy Engine Deployment       :l5a, 2024-11-18, 3d
-    ABAC Policy Design (247 rules)     :l5b, 2024-11-18, 5d
-    HITL Workflow Implementation       :l5c, 2024-11-21, 4d
-    Governance Testing                 :l5d, 2024-11-25, 2d
-    
-    section Layer 6
-    OpenTelemetry Instrumentation      :l6a, 2024-11-25, 3d
-    Datadog APM Integration            :l6b, 2024-11-26, 3d
-    LLM Cost Tracking Dashboard        :l6c, 2024-11-27, 2d
-    Warfarin HITL Success              :milestone, m1, 2024-11-28, 0d
-    
-    section Layer 7
-    LangGraph Framework Setup          :l7a, 2024-12-02, 2d
-    Care Coordination Agent            :l7b, 2024-12-02, 4d
-    Clinical Documentation Agent       :l7c, 2024-12-03, 3d
-    Revenue Cycle Agent                :l7d, 2024-12-03, 3d
-    Multi-Agent Integration Testing    :l7e, 2024-12-05, 2d
-    Architecture Complete              :milestone, m2, 2024-12-06, 0d
-```
 
-**© 2025 Colaberry Inc.**
+![Figure 6.11: Echo's Week 8-10 Timeline](figures/figure-6-11.png)
 
-### INPACT™ Score: Week 7 → Week 10
 
-**Diagram 12: INPACT™ Transformation (67 → 85)**
+**Figure 6.12: INPACT Score™ Transformation (Week 7: 67 → Week 10: 86)**
 
-```mermaid
-graph LR
-    subgraph "<b>Week 7</b>"
-        W7["<b>TOTAL: 67/100</b>"]
-    end
-    
-    Arrow["<b>→</b><br/><b>+18 pts</b>"]
-    
-    subgraph "<b>Week 10</b>"
-        W10["<b>TOTAL: 85/100</b>"]
-    end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    W7 --> Arrow --> W10
-    
-    style W7 fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Arrow fill:#ffffff,stroke:none,color:#004d40
-    style W10 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
-**INPACT™ Dimension Changes:**
+![Figure 6.12: INPACT Transformation (67 → 86)](figures/figure-6-12.png)
+**INPACT Dimension Changes:**
 
 | Dimension | Week 7 | Week 10 | Change | Enabling Layer |
 |-----------|--------|---------|--------|----------------|
-| **I** (Instant) | 5/6 | 5/6 | — | — |
-| **N** (Natural) | 5/6 | 5/6 | — | — |
+| **I** (Instant) | 5/6 | 5/6 | NA | NA |
+| **N** (Natural) | 5/6 | 5/6 | NA | NA |
 | **P** (Permitted) | 2/6 | 6/6 | **+4** | Layer 5: Governance |
-| **A** (Adaptive) | 5/6 | 5/6 | — | — |
-| **C** (Contextual) | 5/6 | 5/6 | — | — |
+| **A** (Adaptive) | 5/6 | 5/6 | NA | NA |
+| **C** (Contextual) | 5/6 | 5/6 | NA | NA |
 | **T** (Transparent) | 3/6 | 6/6 | **+3** | Layer 6: Observability |
-| **Total** | **67/100** | **85/100** | **+18** | + Orchestration Readiness |
+| **Total** | **67/100** | **86/100** | **+19** | + Orchestration Readiness |
 
 ### The Metrics That Matter
 
@@ -1208,128 +703,105 @@ graph LR
 
 | Metric | Target | Achieved |
 |--------|--------|----------|
-| INPACT™ Score | 85/100 | 85/100 |
+| INPACT Score | 86/100 | 86/100 |
 | Policy Coverage | 95% | 98% (242/247 policies) |
-| Trace Completeness | 99% | 99.2% |
-| Orchestration Success | 95% | 96.3% |
+| Trace Completeness | 99% | 99% |
+| Orchestration Success | 95% | 96% |
 | HITL Resolution Time | <2 min | 47s average |
 | Multi-Agent Latency | <5s | 4.2s average |
 
-**Investment Summary:**
+<!-- pagebreak -->
 
-| Component | Budget | Actual |
-|-----------|--------|--------|
-| Layer 5: Governance | $15,000 | $15,000 |
-| Layer 6: Observability | $34,000 | $34,000 |
-| Layer 7: Orchestration | $33,000 | $33,000 |
-| **Phase 3 Total** | **$82,000** | **$82,000** |
+### Investment Summary: Phase 3
 
-**Cumulative Investment:** $942,000 of $1.23M budget (77% utilized). Phase 4 validation (~$50K) and $238K buffer remaining for contingency.
+**Phase 3 Investment ($380K budget / $82K actual):**
 
+| Component | Technology | Services | Total |
+|-----------|------------|----------|-------|
+| Layer 5 (Governance) | $0 | $15K | $15K |
+| Layer 6 (Observability) | $24K | $10K | $34K |
+| Layer 7 (Orchestration) | $6K | $27K | $33K |
+| **Phase 3 Total** | **$30K** | **$52K** | **$82K** |
+
+**Layer 5 Detail ($15K):**
+- OPA Policy Engine: $0 (open source)
+- Policy development: $8,000 (40 hours consulting)
+- Integration testing: $5,000
+- HITL workflow tooling: $2,000
+
+**Layer 6 Detail ($34K):**
+- Datadog licensing: $24,000/year
+- OpenTelemetry instrumentation: $6,000 (development)
+- Custom dashboards: $4,000 (development)
+
+**Layer 7 Detail ($33K):**
+- LangGraph: $0 (open source)
+- Redis state management: $6,000/year
+- Agent orchestration integration: $18,000 (retrofitting existing agents)
+- Integration testing: $9,000
+
+**Phase 3 Operational Costs:**
+- Monthly: $2,500 (Datadog: $2,000 + Redis: $500)
+- Annual: $30,000
+
+**Cumulative Investment:**
+
+| Phase | Weeks | Budgeted | Actual | Chapter |
+|-------|-------|----------|--------|---------|
+| Phase 1: Foundation | 1-4 | $470K | $468K | Chapter 4 ✓ |
+| Phase 2: Intelligence | 5-7 | $380K | $392K | Chapter 5 ✓ |
+| Phase 3: Trust + Orchestration | 8-10 | $380K | $82K | **This Chapter** ✓ |
+| **Total through Week 10** | | **$1,230K** | **$942K** | **23% under budget** |
+
+**Remaining:** Phase 4 validation (~$50K) and $238K buffer for contingency.
+
+*Use the Stack Builder at trustbeforeintelligence.ai/tools for investment planning and ROI estimation.*
 ---
+<!-- pagebreak -->
 
-## 📍 Checkpoint 4: Echo's Build Complete
+## PART 8: THE FINISH LINE
 
-✅ **Week 8-10 Metrics:** 85/100 INPACT™. 98% policy coverage. 99.2% trace completeness. 96.3% orchestration success. 47-second HITL resolution.
+### The Budget Surprise
 
-**Key insight:** Governance and observability deployed before orchestration—when multi-agent coordination began, the team could see failures and enforce policies from day one.
+Friday, Week 10. 4:30 PM.
 
----
+Krish Yadav, Echo's CFO, pulled up the Phase 3 actuals on his laptop. He'd allocated $380,000 for the trust and orchestration layers, the same budget methodology that had proven accurate for Phases 1 and 2. What he saw made him scroll back to double-check.
 
-## PART 8: ARCHITECTURE COMPLETE
+$82,000.
+
+"Sarah, walk me through this," he said, turning his screen toward her. "We budgeted $380K. We spent $82K. That's not a rounding error. That's 78% under budget."
+
+Sarah smiled. "Three factors. First, OPA is open source. We budgeted $137K for a commercial policy engine we didn't need. Second, we already had Datadog licensing from the infrastructure team.$33K we didn't have to spend. Third, the agents themselves. Remember the $2M in failed pilots?"
+
+Krish nodded. The failed pilots had been a recurring topic in board meetings.
+
+"Those agents still work. The logic is sound, the Epic integrations are built, the clinical workflows are mapped. What failed was the infrastructure underneath them. We didn't rebuild the agents. We retrofitted them onto infrastructure that finally fulfills their needs. That saved $128K in development costs."
+
+Krish studied the numbers. "So the original pilots weren't a wasted investment."
+
+"They were premature investments. The agents were ready. The infrastructure wasn't. Now it is."
 
 ### The Seven-Layer Achievement
 
+
+**Figure 6.13: Complete 7-Layer Agent-Ready Architecture**
+
+
+![Figure 6.13: Complete 7-Layer Agent-Ready Architecture](figures/figure-6-13.png)
+
+<!-- pagebreak -->
+
 Week 10, Friday, 5:15 PM.
 
-Sarah Cedao stood at the whiteboard one final time. The three words from Week 8 Monday remained: GOVERNANCE. OBSERVABILITY. ORCHESTRATION. Each now had a checkmark beside it.
+Sarah Cedao stood at the whiteboard one final time. The three words from Week 8 Monday remained: **GOVERNANCE. OBSERVABILITY. ORCHESTRATION.** Each now had a checkmark beside it.
 
-Seventy days. Seven layers. From 28/100 to 85/100.
+Seventy days. Seven layers. From 28/100 to 86/100.
 
-**Diagram 13: Complete 7-Layer Agent-Ready Architecture**
-
-```mermaid
-graph TB
-    subgraph "<b>COMPLETE ARCHITECTURE - WEEK 10</b>"
-        L7["<b>Layer 7: Orchestration</b><br/><b>✓ LangGraph Multi-Agent</b>"]
-        L6["<b>Layer 6: Observability</b><br/><b>✓ OpenTelemetry + Datadog</b>"]
-        L5["<b>Layer 5: Governance</b><br/><b>✓ OPA + ABAC + HITL</b>"]
-        L4["<b>Layer 4: Intelligence</b><br/><b>✓ RAG + LLM Pipeline</b>"]
-        L3["<b>Layer 3: Semantic</b><br/><b>✓ 2,400 Clinical Terms</b>"]
-        L2["<b>Layer 2: Real-Time</b><br/><b>✓ 28-Second Freshness</b>"]
-        L1["<b>Layer 1: Storage</b><br/><b>✓ 8 Storage Categories</b>"]
-    end
-    
-    INPACT["<b>INPACT™: 85/100</b><br/><b>Production Ready</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    L7 --> L6 --> L5 --> L4 --> L3 --> L2 --> L1
-    L1 -.->|<b>Enables</b>| INPACT
-    
-    style L7 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L6 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L5 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style INPACT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
-
-**Diagram 14: The Architecture of Trust— Two Pillars Complete**
-
-```mermaid
-
-
-
-
-graph TB
-    Title["ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
-    
-    subgraph PILLARS[" "]
-        direction LR
-        INPACT["`PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/>**I**nstant<br/>**N**atural<br/>**P**ermitted<br/>**A**daptive<br/>**C**ontextual<br/>**T**ransparent`"]
-        
-        Layers["PILLAR 2: 7-LAYERS<br/>Infrastructure<br/><br/>How to Build TRUST?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
-        
-        GOALS["`PILLAR 3: GOALS™<br/><br/>How to Measure TRUST?<br/><br/>**G**overnance<br/>**O**bservability<br/>**A**vailability<br/>**L**exicon<br/>**S**olid`"]
-    end
-    
-    subgraph INDICATOR[" "]
-        direction LR
-        Spacer1[" "]
-        YouAreHere["<b>YOU ARE HERE</b><br/>Production Ready<br/>85/100 INPACT™<br/>$942K Investment<br/>70 Days <br/> 7-Layers Built Here"]
-        Spacer2[" "]
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Title --> PILLARS
-    PILLARS <--> INDICATOR
-    
-    INPACT -.->|"Needs Fulfilled by"| Layers
-    Layers -.->|"Enables Operations"| GOALS
-    GOALS -.->|"Drives Trust"| INPACT
-
-    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Layers fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
-    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-
-
-```
+**The Architecture of Trust - Two Pillars Complete**
 
 ### What Echo Achieved
 
-The journey started with a simple question: Why do 95% of agent projects fail? The answer was trust—the infrastructure gap between what agents could theoretically do and what organizations could safely let them do.
+The journey started with a simple question: Why do 95% of agent projects fail? The answer was TRUST. The infrastructure gap between what agents could theoretically do and what organizations could safely let them do.
 
 Echo closed that gap. Layer by layer, week by week, capability by capability. The complete transformation metrics are detailed in the Chapter Summary.
 
@@ -1348,86 +820,43 @@ Krish Yadav, Echo's CFO, reviewed the numbers Friday evening:
 
 "We spent $298,000 less than projected," Krish noted. "And the architecture is production-ready two weeks ahead of the board presentation. That never happens."
 
-The remaining two weeks—Weeks 11-12—would validate these projections through operational deployment and measurement. Chapter 8 will document that validation. But the infrastructure prerequisite was complete.
-
-### Bridge to Operational Excellence
-
-Architecture alone isn't success. The 85/100 score reflects capability—what the infrastructure can do. Operations determine reality—what it actually does when clinical staff rely on it daily.
-
-The next phase would test every assumption: Would HITL workflows scale? Would clinicians engage with review or route around it? Would multi-agent coordination remain reliable under load? Would clinical staff trust the system for complex queries?
-
-**Chapter 7 introduces GOALS™—the framework for operational excellence:**
-- **G**overnance: Policy effectiveness and HITL optimization
-- **O**bservability: Monitoring maturity and incident response
-- **A**vailability: Speed, freshness, and performance at scale
-- **L**exicon: Query understanding and semantic accuracy
-- **S**olid: System reliability and data integrity
-
-The architecture is complete. Now it must perform.
+The remaining two weeks, Weeks 11-12, would validate these projections through operational deployment and measurement. Chapter 8 will document that validation. But the infrastructure prerequisite was complete.
 
 ---
 
 ## CHAPTER SUMMARY
 
-### Key Takeaways
+| Part | Content | Key Takeaway |
+|------|---------|--------------|
+| **Part 1** | The Trust Risk | Intelligence without governance, observability, or orchestration is risk |
+| **Part 2** | The Final Sprint | Week 8-10 planning: $82K budget, three layers, 67→86 target |
+| **Part 3** | Layer 5 - Governance | ABAC + HITL for dynamic, context-aware authorization |
+| **Part 4** | The Warfarin Scenario | AI drafts recommendations, humans approve high-risk decisions |
+| **Part 5** | Layer 6 - Observability | Distributed tracing, MLOps monitoring, LLM cost tracking |
+| **Part 6** | Layer 7 - Orchestration | Multi-agent coordination via LangGraph supervisor pattern |
+| **Part 7** | Echo's Week 8-10 Build | Three-week implementation achieving 86/100 INPACT |
+| **Part 8** | Architecture Complete | All 7 gaps closed, $942K invested, production ready |
 
-1. **Trust requires governance:** Intelligence without authorization controls is risk. ABAC and HITL ensure agents operate within appropriate boundaries. Dynamic authorization evaluates context—who, what, when, where—not just identity. High-risk decisions escalate to human experts. The Warfarin scenario demonstrated this principle in practice: AI assistance with human oversight for critical decisions.
-
-2. **Trust requires transparency:** Intelligence without observability is invisible risk. Distributed tracing and cost visibility transform black boxes into glass boxes. When systems fail, operators need to understand why. When costs spike, finance needs to trace the cause. When accuracy drops, data scientists need visibility into model behavior. OpenTelemetry and Datadog provide this visibility at Echo.
-
-3. **Scale requires orchestration:** Intelligence without coordination is isolated capability. Multi-agent architectures enable complex workflows that single agents cannot address. The discharge coordination scenario—scheduling, clinical documentation, and insurance verification in a single query—requires orchestration. LangGraph's supervisor pattern enables this coordination while maintaining governance and observability integration.
-
-4. **The 7-Layer Architecture is complete:** Layers 1-2 (Foundation) provide data availability and freshness. Layers 3-4 (Intelligence) provide understanding and reasoning. Layers 5-6-7 (Transparency + Orchestration) provide safety, visibility, and coordination. Together, they create production-ready agent infrastructure.
-
-5. **Architecture completion is a milestone, not a destination:** The 85/100 INPACT™ score represents capability. Operations will determine reality. The GOALS™ framework in Chapter 7 provides the methodology for operational excellence—measuring and maintaining the trust that architecture enables.
+<!-- pagebreak -->
 
 ### What Changed from Week 0 to Week 10
 
-The transformation journey covered ten weeks and closed seven infrastructure gaps:
+The complete transformation closed all seven gaps across three phases:
 
-**Foundation Phase (Weeks 1-4):**
-- Gap 1 (Multi-Modal Storage): From fragmented data silos to unified eight-category storage
-- Gap 2 (Real-Time Data): From batch processing with day-old data to 28-second freshness
-- Investment: $470,000 budgeted / $468,000 actual
-- INPACT™: 28 → 42 (+14 points)
+| Phase | Weeks | Layers | INPACT | Investment |
+|-------|-------|--------|---------|------------|
+| Foundation (Ch 4) | 1-4 | 1-2 | 28→42 | $468K |
+| Intelligence (Ch 5) | 5-7 | 3-4 | 42→67 | $392K |
+| Trust + Orchestration (Ch 6) | 8-10 | 5-7 | 67→86 | $82K |
+| **Total** | **10 weeks** | **7 layers** | **28→86** | **$942K** |
 
-**Intelligence Phase (Weeks 5-7):**
-- Gap 3 (Semantic Understanding): From schema-dependent queries to natural language with 2,400 clinical terms
-- Gap 4 (Intelligent Retrieval): From keyword search to 7-stage RAG pipeline with 85% cache hit rate
-- Investment: $380,000 budgeted / $392,000 actual
-- INPACT™: 42 → 67 (+25 points)
-
-**Transparency + Orchestration Phase (Weeks 8-10):**
-- Gap 5 (Dynamic Permissions): From RBAC only to RBAC + contextual ABAC with 247 policies
-- Gap 6 (Reasoning Observability): From log archaeology to distributed tracing with cost visibility
-- Gap 7 (Multi-Agent Coordination): From single-agent queries to three-agent orchestration
-- Investment: $82,000
-- INPACT™: 67 → 85 (+18 points)
-
-**Total Transformation (Through Week 10):**
-- Investment: $942,000 actual of $1.23M budget (77% utilized)
-- Timeline: 70 days (10 weeks)
-- INPACT™: 28 → 85 (+57 points)
-- Gaps: 7 → 0 (all resolved)
-- Phase 4 validation (Weeks 11-12): ~$50K pending
-
-**All Seven Gaps Closed:**
-
-| Gap | Infrastructure Need | Layer | Closed |
-|-----|---------------------|-------|--------|
-| 1 | Multi-Modal Storage | Layer 1 | Week 4 |
-| 2 | Real-Time Data | Layer 2 | Week 4 |
-| 3 | Semantic Understanding | Layer 3 | Week 7 |
-| 4 | Intelligent Retrieval | Layer 4 | Week 7 |
-| 5 | Dynamic Permissions | Layer 5 | Week 9 |
-| 6 | Reasoning Observability | Layer 6 | Week 9 |
-| 7 | Multi-Agent Coordination | Layer 7 | Week 10 |
+(See Chapters 4-5 for detailed phase breakdowns. Phase 4 validation in Weeks 11-12: ~$50K pending. Gap resolution details in Part 1.)
 
 ### Echo Week 10 Status
 
 | Metric | Week 0 | Week 10 | Improvement |
 |--------|--------|---------|-------------|
-| **INPACT™ Score** | 28/100 | 85/100 | +57 points |
+| **INPACT Score** | 28/100 | 86/100 | +58 points |
 | **Total Investment** | $0 | $942,000 | 23% under budget |
 | **Architecture Layers** | 0/7 | 7/7 | Complete |
 | **Gaps Remaining** | 7 | 0 | All resolved |
@@ -1442,29 +871,11 @@ The transformation journey covered ten weeks and closed seven infrastructure gap
 
 ### What's Next
 
-**Chapter 7:** GOALS™ Framework
+**Chapter 7:** GOALS Framework
 - Operational excellence methodology
 - Five measurement dimensions
 - Echo Weeks 11-12: Validation and optimization
 - Board presentation preparation
-
----
-
-## ACRONYMS
-
-- **ABAC:** Attribute-Based Access Control
-- **APM:** Application Performance Monitoring
-- **CDC:** Change Data Capture
-- **DVT:** Deep Vein Thrombosis
-- **HITL:** Human-in-the-Loop
-- **INR:** International Normalized Ratio
-- **LLM:** Large Language Model
-- **MRN:** Medical Record Number
-- **OPA:** Open Policy Agent
-- **PHI:** Protected Health Information
-- **RAG:** Retrieval-Augmented Generation
-- **RBAC:** Role-Based Access Control
-- **TTL:** Time To Live
 
 ---
 
@@ -1498,39 +909,6 @@ The transformation journey covered ten weeks and closed seven infrastructure gap
 
 [14] Redis. (2024). "Redis Documentation." https://redis.io/docs/latest/integrate/redis-data-integration/data-pipelines/transform-examples/redis-expiration-example/
 
-[15] Jacovi, A., MarasoviÄ‡, A., Miller, T., & Goldberg, Y. (2021). "Formalizing Trust in Artificial Intelligence: Prerequisites, Causes and Goals of Human Trust in AI." *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 624-635. https://arxiv.org/abs/2010.07487
+[15] Jacovi, A., Marasović, A., Miller, T., & Goldberg, Y. (2021). "Formalizing Trust in Artificial Intelligence: Prerequisites, Causes and Goals of Human Trust in AI." *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 624-635. https://arxiv.org/abs/2010.07487
 
 [16] Gao, Y., Xiong, Y., Gao, X., et al. (2024). "Retrieval-Augmented Generation for Large Language Models: A Survey." *arXiv preprint arXiv:2312.10997*. https://arxiv.org/abs/2312.10997
-
-[17] U.S. Department of Health and Human Services. (2024). "HIPAA Security Rule." https://www.hhs.gov/hipaa/for-professionals/security/index.html
-
-[18] Office of the National Coordinator for Health IT. (2024). "Interoperability Standards Advisory." https://www.healthit.gov/isa/
-
----
-
-**© 2025 Colaberry Inc. All Rights Reserved.**
-
-## Acronyms
-
-- **ABAC:** Attribute-Based Access Control
-- **API:** Application Programming Interface
-- **CDC:** Change Data Capture
-- **CNCF:** Cloud Native Computing Foundation
-- **EHR:** Electronic Health Record
-- **FDA:** Food and Drug Administration
-- **FHIR:** Fast Healthcare Interoperability Resources
-- **HIPAA:** Health Insurance Portability and Accountability Act
-- **HITL:** Human-in-the-Loop
-- **LLM:** Large Language Model
-- **NIST:** National Institute of Standards and Technology
-- **OPA:** Open Policy Agent
-- **PHI:** Protected Health Information
-- **RAG:** Retrieval-Augmented Generation
-- **RBAC:** Role-Based Access Control
-- **SQL:** Structured Query Language
-- **TTL:** Time To Live
-
----
-
-**© 2025 Colaberry Inc. All Rights Reserved.**  
-INPACT™ and GOALS™ are trademarks of Colaberry Inc.

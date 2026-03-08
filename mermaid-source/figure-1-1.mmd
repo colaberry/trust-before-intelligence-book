@@ -1,0 +1,39 @@
+graph TB
+    subgraph timeline["<b>TRUST COLLAPSE (Feb-July 2025)</b>"]
+        direction LR
+        
+        FEB["<b>Feb 2025</b><br/>Agent: 78%<br/>GenAI: 82%"]
+        
+        MAR["<b>Mar 2025</b><br/>Agent: 65%<br/>GenAI: 75%"]
+        
+        MAY["<b>May 2025</b><br/>Agent: 48%<br/>GenAI: 68%"]
+        
+        JUL["<b>Jul 2025</b><br/>Agent: 14%<br/>GenAI: 51%"]
+        
+        FEB --> MAR --> MAY --> JUL
+    end
+    
+    subgraph analysis["<b>ROOT CAUSE ANALYSIS</b>"]
+        direction TB
+        
+        CAUSE["<b>Infrastructure Failure</b><br/>INPACT needs<br/>systematically unfulfilled"]
+        
+        RESULT["<b>User Response</b><br/>64% trust collapse<br/>Agent abandonment"]
+        
+        CAUSE --> RESULT
+    end
+    
+    timeline --> analysis
+
+    style timeline fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style FEB fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style MAR fill:#ffd9db,stroke:none,color:#b71c1c,rx:10,ry:10
+    style MAY fill:#f7bfc2,stroke:none,color:#b71c1c,rx:10,ry:10
+    style JUL fill:#eb898b,stroke:none,color:#0D0D0D,rx:10,ry:10
+
+    style analysis fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style CAUSE fill:#edf4fa,stroke:none,color:#004d40,rx:10,ry:10
+    style RESULT fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    style Copyright fill:none,stroke:none,color:#333333

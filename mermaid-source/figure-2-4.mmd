@@ -1,0 +1,35 @@
+graph TB
+    TITLE["<b>INPACT ASSESSMENT<br/> METHODOLOGY</b>"]
+    
+    ASSESS["<b>STEP 1: ASSESS<br/> 6 DIMENSIONS</b><br/><b>I · N · P · A · C · T</b><br/><b>(Score each 1-6 points)</br>Max points: 36</b>"]
+    
+    CALC["<b>STEP 2: CALCULATE SCORE:</b><br/><b>Add 6 dimensions points</b><br/><b>Convert: (score/36) × 100</b>"]
+    
+    DECISION{"<b>STEP 3: EVALUATE</b><br/><b>Score ≥ 86/100?</b>"}
+    
+    READY["<b>✅ AGENT-READY</b><br/><b>Production approved</b><br/><b>Sustainable adoption</b>"]
+    
+    GAPS["<b>⚠️ GAPS FOUND</b><br/><b>Roadmap needed</b><br/><b>High risk</b>"]
+    
+    COPYRIGHT["<b>© 2025 Colaberry Inc.</b>"]
+    
+    TITLE --> ASSESS --> CALC --> DECISION
+    DECISION -->|<b>YES</b>| READY
+    DECISION -->|<b>NO</b>| GAPS
+
+    %% ⚪ CONTEXT / FRAMING
+    style TITLE fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style ASSESS fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style CALC fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+
+    %% 🟠 DECISION / PRESSURE POINT
+    style DECISION fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+
+    %% 🟢 TRUSTED / INPACT-FULFILLED
+    style READY fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+
+    %% 🔴 FAILURE / RISK
+    style GAPS fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+
+    %% FOOTER
+    style COPYRIGHT fill:none,stroke:none,color:#333333

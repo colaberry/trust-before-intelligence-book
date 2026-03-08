@@ -1,0 +1,53 @@
+graph TB
+    TITLE["<b>ECHO HEALTH'S<br/>INFRASTRUCTURE<br/>TRANSFORMATION</b>"]
+    
+    TITLE --> BEFORE
+    
+    subgraph BEFORE["<b>WEEK 0: SCORE =28/100</b>"]
+        B_SCORE["<b>Overall Score: 28/100</b><br/><b>(10 out of 36 points)</b>"]
+        
+        B_DIMS["<b>Dimension Breakdown:</b><br/><b>I=1/6 🔴 | N=2/6 🔴 </b><br/><b>P=1/6 🔴 | A=2/6 🔴</b><br/> C=3/6 🟡 | T=1/6 🔴</b>"]
+        
+        B_STATUS["<b>Not Production Ready</b><br/><b>• 5 critical gaps </b><br/><b>• Compliance risk</b><br/><b>• Cannot proceed to prod</b>"]
+        
+        B_SCORE --> B_DIMS
+        B_DIMS --> B_STATUS
+    end
+    
+    BEFORE --> TRANSFORM["<b>90-DAY TRANSFORMATION<br/>ROADMAP</b><br/><b>Investment: $1.23M </b><br/><b> Timeline: 10 weeks</b><br/><b>Sequence: </b><br/><b>I → N+P → C → A+T</b>"]
+    
+    TRANSFORM --> AFTER
+    
+    subgraph AFTER["<b>WEEK 10: SCORE = 86/100</b>"]
+        A_SCORE["<b>Overall Score: 86/100</b><br/><b>(31 out of 36 points)</b>"]
+        
+        A_DIMS["<b>Dimension Breakdown:</b><br/><b>I=5/6 ✅ | N=5/6 ✅ </b><br/><b> P=5/6 ✅ | A=5/6 ✅</b><br/><b>C=6/6 ✅ | T=5/6 ✅</b>"]
+        
+A_STATUS["<b>Production-Ready</b><br/><b>• All dimensions ≥5/6 </b><br/><b>• ROI: 209% Year 1 </b><br/><b>• Payback: 10 weeks</b>"]
+        
+        A_SCORE --> A_DIMS
+        A_DIMS --> A_STATUS
+    end
+    
+    COPYRIGHT["<b>© 2025 Colaberry Inc.</b>"]
+
+    %% ⚪ CONTEXT / FRAMING
+    style TITLE fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+
+    %% 🔴 BEFORE — FAILURE / BI-ERA
+    style BEFORE fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style B_SCORE fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style B_DIMS fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style B_STATUS fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    %% 🔵 TRANSFORMATION / CHANGE
+    style TRANSFORM fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+
+    %% 🟢 AFTER — TRUSTED / INPACT-FULFILLED
+    style AFTER fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style A_SCORE fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style A_DIMS fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style A_STATUS fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+
+    %% FOOTER
+    style COPYRIGHT fill:none,stroke:none,color:#333333

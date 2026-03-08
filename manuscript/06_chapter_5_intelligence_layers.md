@@ -1,142 +1,64 @@
-# THE 95% SOLUTION - PART 2
+# Chapter 5: THE 95% SOLUTION - PART 2
 ## The Architecture of Trust: Intelligence Layers
 
 ---
 
-**Diagram 1: Intelligence Layers — Why Layers 3-4 Enable Understanding**
+## The Wrong Dr. Martinez
 
-```mermaid
+*Monday, 8:15 AM  
+Echo Health Systems, Executive Conference Room  
+Week 5, Day 1*
 
-graph LR
-    subgraph WITHOUT["WITHOUT LAYERS 3-4"]
-        direction TB
-        W1["'My doctor'<br/>Which doctor?<br/><br/>'MI'<br/>Heart attack or valve?<br/><br/>No business context<br/>Raw data only<br/><br/>40%-60% Query Accuracy<br/><br/><b>Frictional Conversions</b>"]
-    end
-    
-    subgraph TRANSFORM["TRANSFORM"]
-        direction TB
-        T1["→"]
-    end
-    
-    subgraph WITH["WITH LAYERS 3-4"]
-        direction TB
-        L1["Layer 3:<br/>Entity resolution 97%<br/><br/>Layer 4:<br/>Context-aware RAG<br/><br/>Healthcare terminology<br/>mapped<br/><br/>>85% Query Accuracy<br/><br/><b>Natural Conversions</b>"]
-    end
-    
-    WITHOUT --> TRANSFORM --> WITH
-    
-    style WITHOUT fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style TRANSFORM fill:#f5f5f5,stroke:#666666,stroke-width:2px,color:#333333
-    style WITH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style W1 fill:#ffcdd2,stroke:#c62828,color:#b71c1c
-    style T1 fill:#f5f5f5,stroke:#666666,color:#333333
-    style L1 fill:#b2dfdb,stroke:#00897b,color:#004d40
+"Show me Dr. Martinez's patients with pending lab results."
 
-```
+The scheduling agent responded in 2.8 seconds. Fast. Marcus smiled. Four weeks of foundation work paying off.
 
-> **Key Takeaway:** Intelligence requires understanding. Layers 3-4 give agents semantic awareness.
+Then Dr. Torres leaned forward. "Wait. Those are dermatology patients."
 
-## PART 1: INTELLIGENCE ARCHITECTURE INTRODUCTION
+Marcus checked the query. The agent had returned results for Dr. Carlos Martinez, Dermatology. The team wanted Dr. Sarah Martinez, Cardiology, whose cardiac patients had pending lab results that actually mattered.
 
-Four chapters prepared us for this moment.
+"It picked the wrong doctor," Sarah said quietly.
 
-Chapter 0 introduced the Architecture of Trust—three pillars working together to transform infrastructure into agent-ready systems. Chapter 1 diagnosed why 95% of agent projects fail: the trust gap between executive expectations and infrastructure reality. Chapter 2 defined what agents need through INPACT™—six dimensions separating trusted agents from failures. Chapter 3 revealed why traditional BI infrastructure cannot deliver those needs, exposing seven specific gaps. Chapter 4 built the foundation—Layers 1-2 delivering multi-modal storage and real-time data fabric.
+"Forty-seven percent accuracy," Marcus admitted. "We're fast. But we're returning confident wrong answers. That's worse than returning nothing."
 
-Now we build intelligence. Where Chapter 4 delivered data availability and freshness, Chapter 5 delivers data understanding and reasoning. Foundation layers ensure agents access current data quickly. Intelligence layers ensure agents understand what that data means and reason about it naturally.
+The foundation was solid. The data was fresh. But the agent couldn't tell the difference between two doctors with the same last name or understand that "pending labs" for cardiac patients meant something urgent.
+
+Fast isn't enough. Confident wrong is dangerous.
+
+The demo exposed the gap: infrastructure could deliver data fast, but couldn't make it meaningful. This chapter closes that gap.
 
 **This chapter builds intelligence: Layers 3 and 4.**
 
-**Diagram 2: The Architecture of Trust—Intelligence Layers Highlighted**
+---
 
-```mermaid
-
-
-graph TB
-    Title["ARCHITECTURE OF TRUST<br/>Three Integrated Pillars"]
-    
-    subgraph PILLARS[" "]
-        direction LR
-        INPACT["`PILLAR 1: INPACT™<br/><br/>What Agents Need?<br/><br/>**I**nstant<br/>**N**atural<br/>**P**ermitted<br/>**A**daptive<br/>**C**ontextual<br/>**T**ransparent`"]
-        
-        Layers["PILLAR 2: 7-LAYERS<br/>Infrastructure<br/><br/>How to Build TRUST?<br/><br/>Storage<br/>Real-Time<br/>Semantic<br/>Intelligence<br/>Governance<br/>Observability<br/>Orchestration"]
-        
-        GOALS["`PILLAR 3: GOALS™<br/><br/>How to Measure TRUST?<br/><br/>**G**overnance<br/>**O**bservability<br/>**A**vailability<br/>**L**exicon<br/>**S**olid`"]
-    end
-    
-    subgraph INDICATOR[" "]
-        direction LR
-        Spacer1[" "]
-        YouAreHere["<b>YOU ARE HERE</b><br/>Layers 3: Semantic <br/> Layer 4: Intelligence<br/> Built Here"]
-        Spacer2[" "]
-    end
-    
-    Copyright["© 2025 Colaberry Inc."]
-    
-    Title --> PILLARS
-    PILLARS <--> INDICATOR
-    
-    INPACT -.->|"Needs Fulfilled by"| Layers
-    Layers -.->|"Enables Operations"| GOALS
-    GOALS -.->|"Drives Trust"| INPACT
-
-    style Title fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style PILLARS fill:none,stroke:none
-    style INDICATOR fill:none,stroke:none
-    style INPACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Layers fill:#f57c00,stroke:#e65100,stroke-width:3px,color:#ffffff
-    style GOALS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Spacer1 fill:none,stroke:none,color:transparent
-    style YouAreHere fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style Spacer2 fill:none,stroke:none,color:transparent
-    style Copyright fill:#ffffff,stroke:none,color:#666666
+**Figure 5.1: Intelligence Layers - Why Layers 3-4 Enable Understanding**
 
 
+![Figure 5.1: Intelligence Layers - Why Layers 3-4 Enable Understanding](figures/figure-5-1.png)
+> **Key Takeaway:** Intelligence requires understanding. Layers 3-4 give agents semantic awareness.
+
+## PART 1: THE INTELLIGENCE GAP
 
 
-```
+**Figure 5.2: The Architecture of Trust - Intelligence Layers Highlighted**
 
+
+![Figure 5.2: The Architecture of Trust - Intelligence Layers Highlighted](figures/figure-5-2.png)
 ### Why Intelligence Matters
 
-Foundation without intelligence is like having a well-stocked library with no catalog and no librarian. Chapter 4 built the library—eight storage categories, real-time pipelines delivering 28-second freshness. But data availability alone doesn't create agent capability. Intelligence transforms accessible data into understanding and reasoning.
+Foundation without intelligence is like having a well-stocked library with no catalog and no librarian. Data availability alone doesn't create agent capability. Intelligence transforms accessible data into understanding and reasoning.
 
-**Layer 3 (Semantic Layer):** Business language understanding. When a clinician asks about "high-risk diabetic patients," semantic infrastructure translates this to diagnosis codes (E11.*), lab thresholds (HbA1c > 7.0), and scheduling logic—without requiring database schemas or SQL queries.
+**Layer 3 (Semantic Layer):** Business language understanding. When a clinician asks about "high-risk diabetic patients," semantic infrastructure translates this to diagnosis codes (E11.*), lab thresholds (HbA1c > 7.0), and scheduling logic, without requiring database schemas or SQL queries.
 
-**Layer 4 (Intelligence):** Complete reasoning pipeline encompassing query understanding, embedding generation, hybrid retrieval, reranking, context assembly, LLM generation, and semantic caching. RAG and LLMs are tightly coupled components of the same layer—effective retrieval-augmented generation requires both.[8][9]
+**Layer 4 (Intelligence):** Complete reasoning pipeline encompassing query understanding, embedding generation, hybrid retrieval, reranking, context assembly, LLM generation, and semantic caching. RAG and LLMs are tightly coupled components of the same layer. Effective retrieval-augmented generation requires both.[8][9]
 
-**Diagram 3: 7-Layer Agent-Ready Architecture—Intelligence Highlighted**
+**Figure 5.3: 7-Layer Agent-Ready Architecture - Intelligence Highlighted**
 
-```mermaid
-graph TB
-    L7["<b>Layer 7: Orchestration</b><br/><b>Multi-Agent Coordination</b>"]
-    L6["<b>Layer 6: Observability</b><br/><b>Tracing & Audit</b>"]
-    L5["<b>Layer 5: Governance</b><br/><b>Dynamic Access Control</b>"]
-    
-    subgraph "<b>🧠 INTELLIGENCE</b>"
-        L4["<b>Layer 4: Intelligence</b><br/><b>RAG + LLM Pipeline</b>"]
-        L3["<b>Layer 3: Semantic</b><br/><b>Business Context</b>"]
-    end
-    
-    L2["<b>Layer 2: Real-Time Data</b><br/><b>CDC & Streaming</b>"]
-    L1["<b>Layer 1: Multi-Modal Storage</b><br/><b>8 Foundation Categories</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    L7 --> L6 --> L5 --> L4 --> L3
-    L3 --> L2 --> L1
-    
-    style L7 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style L6 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style L5 fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style L4 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L3 fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style L2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style L1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.3: 7-Layer Agent-Ready Architecture - Intelligence Highlighted](figures/figure-5-3.png)
 These intelligence layers directly address specific gaps from Chapter 3:
 
-### The Seven Infrastructure Gaps (Intelligence Focus)
+### The Seven Gaps: Intelligence Focus
 
 Chapter 3 identified seven infrastructure gaps preventing agent deployment. Chapter 4 addressed Gaps 1-2 (storage and real-time). Chapter 5 addresses **Gaps 3-4**.
 
@@ -156,11 +78,11 @@ Chapter 3 identified seven infrastructure gaps preventing agent deployment. Chap
 
 Sarah's team would close these gaps in three weeks.
 
-### INPACT™ Dimension Focus: Natural (N)
+### INPACT Dimension Focus: Natural (N)
 
-Chapter 5 primarily addresses the **Natural (N)** dimension of INPACT™—the need for agents to understand and respond in natural language. This dimension had the largest gap at Echo Health Systems after foundation completion.
+Chapter 5 primarily addresses the **Natural (N)** dimension of INPACT, the need for agents to understand and respond in natural language. This dimension had the largest gap at Echo Health Systems after foundation completion.
 
-At Week 4 (end of Chapter 4), Echo's INPACT™ score was 42/100:
+At Week 4 (end of Chapter 4), Echo's INPACT score was 42/100:
 
 | Dimension | Score | Status |
 |-----------|-------|--------|
@@ -181,29 +103,15 @@ The Natural dimension scored 2/6 because Echo's infrastructure could not:
 
 ---
 
-## PART 2: ECHO'S INTELLIGENCE CHALLENGE
+## PART 2: THE KICKOFF
 
-Monday morning, Week 5. Sarah Cedao convened the intelligence kickoff in Echo's conference room overlooking Boston Harbor. The November sun cast long shadows across the whiteboard, still covered with Phase 1 architecture diagrams.
-
-"Foundation is live," Sarah announced. "Eight storage categories operational. Real-time streaming at 28-second freshness. INPACT™ score: 42/100. We hit our Phase 1 targets."
-
-The Phase 2 team assembled: Marcus Williams (CDO), Swapna Ram (Lead Data Engineer), Jamie Rodriguez (Director of IT), Krish Yadav (CFO, via video), and Dr. Angela Torres (Chief Medical Officer, joining for her first infrastructure meeting after the Phase 1 clinical validation results).
-
-Marcus displayed the agent pilot results. "Scheduling agent pilot—launched in the final days of Phase 1 to stress-test the foundation—live with 5 internal users. Query response: 2.8 seconds, down from 9-13 seconds. Storage works. Real-time works." He paused. "But accuracy is 47%."
-
-For a scheduling agent clinicians would depend on, that failure rate was unacceptable.
-
-Marcus demonstrated: "Show me Dr. Martinez's available appointments next week." The agent responded in 2.8 seconds:
-
-> *"I found 847 records matching 'Martinez' across 3 systems. Unable to determine which Dr. Martinez you mean. Please specify: provider_id, physician_npi, or schedule_id."*
-
-"Users won't provide NPI numbers," Dr. Torres said. "They'll say 'Dr. Martinez in Cardiology' or 'the heart doctor on the fourth floor.' The agent needs context understanding."
+As the demo continued in the Monday morning session convened by Sarah Cedao, Dr. Torres said "Users won't provide NPI numbers. They'll say 'Dr. Martinez in Cardiology' or 'the heart doctor on the fourth floor.' The agent needs context understanding."
 
 The National Provider Identifier (NPI) is a 10-digit HIPAA-mandated identifier for healthcare providers, maintained by CMS through the National Plan and Provider Enumeration System.[7] While essential for cross-system interoperability, clinical users rarely know these technical identifiers.
 
 "That's the problem," Marcus continued. "We have the data and speed. But the agent doesn't understand what users are asking. It can't translate 'Dr. Martinez' to the specific provider across systems or understand that 'high-risk diabetic patients' means diagnosis codes E11.*, HbA1c > 7.0, and scheduling criteria. It's literal, not intelligent."
 
-Swapna displayed the architecture slide. "The issue is structural. Layers 1-2 deliver data availability—we store and stream any data type with sub-30-second freshness. But we have no semantic layer to translate business language to data language, and no intelligence layer to retrieve relevant context and reason about it."
+Swapna displayed the architecture slide. "The issue is structural. Layers 1-2 deliver data availability. We store and stream any data type with sub-30-second freshness. But we have no semantic layer to translate business language to data language, and no intelligence layer to retrieve relevant context and reason about it."
 
 She traced the failure mode:
 
@@ -216,6 +124,8 @@ Natural Language → Direct SQL Generation (GPT-4)
      →  
 SELECT * FROM providers WHERE name LIKE '%Martinez%'
      →
+```
+```
 Hits 3 systems independently:
   - EHR: 312 records with provider_id containing 'Martinez'
   - Credentialing: 245 records with physician_name containing 'Martinez'
@@ -232,9 +142,9 @@ Response: "Which Dr. Martinez do you mean? Please provide provider_id."
 
 Krish Yadav's face on screen showed careful attention. "What's the cost of intelligence? We have $380,000 allocated for Phase 2. Sufficient?"
 
-"Tight but workable," Swapna replied. "Largest costs are LLM APIs and vector database. We've architected for efficiency—semantic caching will reduce LLM costs by 80-85% once operational."
+"Tight but workable," Sarah replied. "The Largest costs are LLM APIs and vector databases. We've architected for efficiency. Semantic caching will reduce LLM costs by 80-85% once operational."
 
-Sarah walked to the whiteboard. "The business problem: We promised the board agent-ready infrastructure by Week 10. INPACT™ score of 86/100 or higher. We're at 42. The gap is 43 points."
+Sarah walked to the whiteboard. "The business problem: We promised the board agent-ready infrastructure by Week 10. INPACT score of 86/100 or higher. We're at 42. The gap is 43 points."
 
 She drew a simple progression:
 
@@ -248,147 +158,66 @@ Week 10: 86/100 (Governance + Orchestration) → +18 points
 
 Swapna nodded to Jamie Rodriguez, who displayed the Phase 2 architecture diagram:
 
-**Diagram 4: Echo's Intelligence Challenge—Current State vs. Target State**
+**Figure 5.4: Echo's Intelligence Challenge - Current State vs. Target State**
 
-```mermaid
-graph TB
-    subgraph CURRENT["<b>CURRENT STATE (Week 4)</b>"]
-        direction LR
-        C_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> C_SQL["<b>Direct SQL</b><br/><b>No semantic</b>"] --> C_RES["<b>847 Records</b><br/><b>Unfiltered</b>"] --> C_FAIL["<b>47%</b>"]
-    end
-    
-    CURRENT -->|<b>Intelligence Layers</b>| TARGET
-    
-    subgraph TARGET["<b>TARGET STATE (Week 7)</b>"]
-        direction LR
-        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>Intelligence</b>"] --> T_WIN["<b>95%+</b>"]
-    end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style C_Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style C_SQL fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style C_RES fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style C_FAIL fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    
-    style T_Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style T_SEM fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style T_RAG fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style T_WIN fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
-"Three weeks," Swapna said. "Week 5: Layer 3—semantic infrastructure. Business glossary with 2,400 clinical terms, entity resolution across all provider and patient systems, clinical concept mapping to SNOMED, ICD-10, and LOINC.[3][4][5] Week 6: Layer 4 stages 1-5—vector database deployment with 10 million document embeddings, hybrid retrieval pipeline, reranking optimization, context assembly. Week 7: Layer 4 stages 6-7—LLM integration with multi-model routing, semantic caching activation. By Friday of Week 7, we'll have our first fully intelligent query."
+![Figure 5.4: Echo's Intelligence Challenge - Current State vs. Target State](figures/figure-5-4.png)
+"Three weeks," Swapna said. "Week 5: Layer 3 semantic infrastructure. Business glossary with 2,400 clinical terms, entity resolution across all provider and patient systems, clinical concept mapping to SNOMED, ICD-10, and LOINC.[3][4][5]. 
+Week 6: Layer 4 stages 1-5 vector database deployment with 10 million document embeddings, hybrid retrieval pipeline, reranking optimization, context assembly. 
+Week 7: Layer 4 stages 6-7 LLM integration with multi-model routing, semantic caching activation. By Friday of Week 7, we'll have our first fully intelligent query."
 
 Marcus raised the key question: "How do we get from 47% accuracy to 85%+?"
 
-"The semantic layer is the bridge," Swapna answered. "Right now, 'Dr. Martinez' hits three different ID systems and returns confusion. With entity resolution, 'Dr. Martinez' resolves to a single golden ID—provider_npi=1234567890—that connects all three systems. The agent knows exactly who we're talking about before it even queries."
+"The semantic layer is the bridge," Swapna answered. "Right now, 'Dr. Martinez' hits three different ID systems and returns confusion. With entity resolution, 'Dr. Martinez' resolves to a single golden ID,provider_npi=1234567890, that connects all three systems. The agent knows exactly who we're talking about before it even queries."
 
 "And the RAG pipeline?" Sarah asked.
 
-"RAG grounds the LLM in our actual data.[8] Instead of generating responses from training data—which leads to hallucinations—the agent retrieves specific records from our systems, assembles them as context, and generates responses based on what it actually found. The 847 Martinez records become the 3 most relevant records about Dr. Sarah Martinez's schedule, with citations pointing to source systems."
+"RAG grounds the LLM in our actual data.[8] Instead of generating responses from training data which leads to hallucinations, the agent retrieves specific records from our systems, assembles them as context, and generates responses based on what it actually found. The 847 Martinez records become the 3 most relevant records about Dr. Sarah Martinez's schedule, with citations pointing to source systems."
 
 Dr. Torres leaned forward. "What about clinical safety? We can't have the agent hallucinating medication dosages or missing allergies."
 
-"Healthcare-specific guardrails are built into the prompt architecture," Swapna explained. "The LLM is instructed to cite every clinical claim from retrieved sources. If it cannot find supporting documentation, it must say so rather than fabricate. And for high-risk queries—medication orders, diagnostic interpretations—we route to human review through Layer 5 governance workflows. But governance is Chapter 6. First, we build intelligence."
+"Healthcare-specific guardrails are built into the prompt architecture," Swapna explained. "The LLM is instructed to cite every clinical claim from retrieved sources. If it cannot find supporting documentation, it must say so rather than fabricate. And for high-risk queries, medication orders, diagnostic interpretations,we route to human review through Layer 5 governance workflows. But governance is Chapter 6. First, we build intelligence."
 
 Sarah stood. "Phase 2 approved. Let's make the data intelligent."
 
 ---
 
-## 📍 Checkpoint: The Intelligence Challenge
+## PART 3: LAYER 3 - THE TRANSLATOR
 
-**What we've covered so far:**
+Sarah's directive "make the data intelligent" began with Layer 3. Before agents could reason, they needed to understand.
 
-✅ **Architecture Context:** Foundation layers complete (INPACT™ 42/100), but scheduling agent fails 53% of queries—data availability ≥ understanding.
+### Translating Human Language to Agent Queries
 
-✅ **The Business Problem:** Agents receive queries like "Dr. Martinez's appointments" and return 847 unfiltered records across three systems. Without semantic understanding, agents cannot resolve "Dr. Martinez" to a single provider identity. Without intelligent retrieval, agents cannot find and assemble relevant context.
+Layer 3 is the business understanding layer, a machine-readable representation of your organization's concepts, terminology, and relationships that agents can navigate without knowing database schemas, table names, or join logic.
 
-✅ **The Gap Analysis:** Seven infrastructure gaps prevent agent deployment. Phase 2 addresses Gap 3 (Semantic Understanding) and Gap 4 (Intelligent Retrieval) through Layers 3-4. This 25-point INPACT™ improvement (42→67) represents the steepest climb in Echo's 10-week journey.
+The semantic layer translates human language to data structures.[1] When a care coordinator asks "Show me patients needing diabetes follow-up," it resolves this to: diagnosis codes E11.*, HbA1c lab results > 7.0, last appointment > 90 days, excluding deceased patients automatically, without the coordinator writing SQL or knowing which tables contain which fields.
 
-✅ **The Technical Solution:** Layer 3 provides business language understanding (glossary, entity resolution, ontology mapping). Layer 4 provides complete intelligence pipeline (RAG + LLM with seven-stage workflow). Combined investment: $380,000 over three weeks (Week 5-7).
+**Figure 5.5: Layer 3 -Semantic Layer Architecture**
 
-**Key insight so far:** The transition from "data available" to "agents intelligent" requires two complementary capabilities—understanding what users ask (semantic) and reasoning over what's available (intelligence). Without both, agents remain confused despite having access to fresh data.
 
-**Coming next:** Deep technical dive into Layer 3 (Semantic Layer)—the foundation that enables natural language understanding.
-
-**Reading Time Remaining:** ~35 minutes
-
----
-
-## PART 3: LAYER 3—SEMANTIC LAYER
-
-Sarah's directive—"make the data intelligent"—began with Layer 3. Before agents could reason, they needed to understand.
-
-### What It Is
-
-Layer 3 is the business understanding layer—a machine-readable representation of your organization's concepts, terminology, and relationships that agents can navigate without knowing database schemas, table names, or join logic.
-
-Think of the semantic layer as a universal translator between human language and data structures.[1] When a care coordinator asks "Show me patients needing diabetes follow-up," the semantic layer translates this to: diagnosis codes E11.*, HbA1c lab results > 7.0, last appointment > 90 days, excluding deceased patients—automatically, without the coordinator writing SQL or knowing which tables contain which fields.
-
-**Diagram 5: Layer 3—Semantic Layer Architecture**
-
-```mermaid
-flowchart TB
-    NL["<b>Natural Language</b><br/>'High-risk diabetic patients'"]
-    
-    subgraph PARSE_ROW["<b>Parse & Enrich</b>"]
-        direction LR
-        PARSE["<b>Semantic Parser</b>"] --> GLOSS["<b>Business Glossary</b><br/><b>2,400 terms</b>"]
-    end
-    
-    subgraph RESOLVE_ROW["<b>Entity Resolution</b>"]
-        direction LR
-        E1["<b>EHR ID</b>"] --> GOLD["<b>Golden ID</b>"]
-        E2["<b>Claims ID</b>"] --> GOLD
-        E3["<b>Lab ID</b>"] --> GOLD
-    end
-    
-    subgraph OUTPUT_ROW["<b>Output</b>"]
-        direction LR
-        ONTO["<b>Clinical Ontology</b><br/><b>SNOMED/ICD/LOINC</b>"] --> RESULT["<b>Unified Query</b>"]
-    end
-    
-    NL --> PARSE_ROW
-    PARSE_ROW --> RESOLVE_ROW
-    RESOLVE_ROW --> OUTPUT_ROW
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style NL fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style PARSE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GLOSS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style E1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style E2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style E3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GOLD fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style ONTO fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
-
+![Figure 5.5: Layer 3 -Semantic Layer Architecture](figures/figure-5-5.png)
 ### Components of the Semantic Layer
 
-**Business Glossary:** The authoritative dictionary of organizational terminology. Every metric, dimension, and concept has a formal definition, calculation logic, data sources, owners, and lineage. "Active patient" means "patient with encounter in past 12 months, excluding deceased"—not open to interpretation.
+**Business Glossary:** The authoritative dictionary of organizational terminology. Every metric, dimension, and concept has a formal definition, calculation logic, data sources, owners, and lineage. "Active patient" means "patient with an encounter in the past 12 months, excluding deceased", not open to interpretation.
 
-**Entity Resolution:** The capability to recognize that the same real-world entity appears under different identifiers across systems. Patient MRN (Medical Record Number) 12345 in Epic equals member_id CUST-890 in claims equals specimen_id LAB-456 in the lab system. Entity resolution creates "golden IDs" that unify these disparate identifiers.
+**Entity Resolution:** The capability to recognize that the same real-world entity appears under different identifiers across systems.[22] Patient MRN (Medical Record Number) 12345 in Epic equals member_id CUST-890 in claims equals specimen_id LAB-456 in the lab system. Entity resolution creates "golden IDs" that unify these disparate identifiers.
 
 **Clinical Ontologies:** Healthcare-specific terminologies that enable precise concept mapping:
-- [SNOMED CT](https://www.snomed.org) (Systematized Nomenclature of Medicine—Clinical Terms): 350,000+ clinical concepts with formal relationships[3]
+- [SNOMED CT](https://www.snomed.org) (Systematized Nomenclature of Medicine Clinical Terms): 350,000+ clinical concepts with formal relationships[3]
 - [ICD-10](https://icd.who.int/browse10/2019/en) (International Classification of Diseases, 10th Revision): WHO standard diagnosis and procedure codes for billing and clinical tracking, with over 14,000 unique codes used in 117+ countries[4]
 - [LOINC](https://loinc.org) (Logical Observation Identifiers Names and Codes): 25,000+ laboratory and clinical observation codes maintained by the Regenstrief Institute[5]
 
-**Knowledge Graphs:** Relationship networks that encode how concepts connect. "Dr. Martinez" is_a "Cardiologist" who works_at "Echo Cardiac Center" and treats patients with "Heart Failure"—enabling the agent to traverse relationships, not just match keywords.
+**Knowledge Graphs:** Relationship networks that encode how concepts connect.[21] "Dr. Martinez" is_a "Cardiologist" who works_at "Echo Cardiac Center" and treats patients with "Heart Failure" enabling the agent to traverse relationships, not just match keywords.
 
-### Healthcare Ontology Deep Dive
+### Healthcare Ontology
 
 Healthcare presents unique semantic challenges. A single clinical concept can have dozens of representations across systems, coding standards, and clinical contexts.
 
-**SNOMED CT (Systematized Nomenclature of Medicine—Clinical Terms):**
+**SNOMED CT (Systematized Nomenclature of Medicine Clinical Terms):**
 
 [SNOMED CT](https://www.snomed.org) provides the most comprehensive clinical terminology with over 350,000 concepts organized in formal hierarchies.[3] When an agent encounters "heart attack," SNOMED CT provides the preferred term (Myocardial infarction), concept ID (22298006), hierarchical parents (Ischemic heart disease → Heart disease → Cardiovascular disease), and related concepts (Troponin elevation, chest pain, coronary artery disease).
 
-This hierarchy enables semantic reasoning. An agent searching for "cardiovascular patients" can traverse the hierarchy to include myocardial infarction, heart failure, arrhythmias, and hypertension—without explicit enumeration of each condition.
+This hierarchy enables semantic reasoning. An agent searching for "cardiovascular patients" can traverse the hierarchy to include myocardial infarction, heart failure, arrhythmias, and hypertension without explicit enumeration of each condition.
 
 **ICD-10 (International Classification of Diseases):**
 
@@ -398,7 +227,7 @@ ICD-10's specificity matters for agent accuracy. "Diabetes" alone matches E08-E1
 
 **LOINC (Logical Observation Identifiers Names and Codes):**
 
-[LOINC](https://loinc.org) standardizes laboratory and clinical observations—essential for agents interpreting diagnostic results.[5] Consider HbA1c (glycated hemoglobin): LOINC Code 4548-4 specifies Hemoglobin A1c/Hemoglobin.total in Blood on a Quantitative scale.
+[LOINC](https://loinc.org) standardizes laboratory and clinical observations essential for agents interpreting diagnostic results.[5] Consider HbA1c (glycated hemoglobin): LOINC Code 4548-4 specifies Hemoglobin A1c/Hemoglobin.total in Blood on a Quantitative scale.
 
 Without LOINC mapping, "HbA1c" in one lab system might be stored as "GLYCOHEMOGLOBIN" in another, "A1C" in a third, and "HEMOGLOBIN A1C" in a fourth. The semantic layer unifies these representations so agents can consistently interpret lab results regardless of source system terminology.
 
@@ -422,62 +251,21 @@ Echo implemented tiered confidence handling: greater than 0.95 confidence trigge
 
 Agents speak natural language. Databases speak schemas. The semantic layer bridges this gap.
 
-Consider what happens without semantic understanding. A clinician asks: "Which of my diabetic patients haven't been seen in 90 days?" Without Layer 3, the agent attempts direct SQL generation, guesses column names, fails to find "diagnosis" (it's `dx_code` in claims, `problem_list` in EHR), and returns "I couldn't find diabetes information."
+Without semantic understanding, a clinician asks: "Which of my diabetic patients haven't been seen in 90 days?" The agent attempts direct SQL generation, guesses column names, fails to find "diagnosis" (it's `dx_code` in claims, `problem_list` in EHR), and returns "I couldn't find diabetes information."
 
-With Layer 3, the semantic parser extracts intent, condition, filter, and scope. The business glossary resolves "diabetes" → ICD-10 codes E08-E13[4], "my patients" → provider_npi=current_user[7]. Entity resolution links dx_code (claims) + problem_list (EHR) + lab_flag (lab). The agent executes precise query and returns: "You have 23 diabetic patients without appointments in 90+ days. Here are the top 5 by risk score..."
+With Layer 3, the semantic parser extracts intent, condition, filter, and scope. The business glossary resolves "diabetes" → ICD-10 codes E08-E13[4], "my patients" → provider_npi=current_user[7]. Entity resolution links dx_code (claims) + problem_list (EHR) + lab_flag (lab). The agent executes a precise query and returns: "You have 23 diabetic patients without appointments in 90+ days. Here are the top 5 by risk score..."
 
-The difference is transformational. Enterprise AI implementations show that semantic layer adoption improves query accuracy from 40-60% baseline to 75-85%+ in complex domains like healthcare.
 
-**Diagram 6: Before/After—Keyword Search vs. Semantic Search**
+**Figure 5.6: Before/After - Keyword Search vs. Semantic Search**
 
-```mermaid
-graph TB
-    subgraph KEYWORD["<b>KEYWORD SEARCH<br/> (Before Layer 3)</b>"]
-        direction LR
-        K_Q["<b>Query: 'diabetes patients'</b>"] --> K_MATCH["<b>String Matching</b><br/><b>LIKE '%diabetes%'</b>"]
-        K_MATCH --> K_MISS1["<b>Missed:<br/> DM Type 2</b>"]
-        K_MATCH --> K_MISS2["<b>Missed:<br/> glycemic control</b>"]
-        K_MATCH --> K_MISS3["<b>Missed:<br/> E11.9</b>"]
-        K_MISS1 --> K_RESULT["<b>40-60% Recall</b><br/><b>Incomplete results</b>"]
-        K_MISS2 --> K_RESULT
-        K_MISS3 --> K_RESULT
-    end
-    
-    KEYWORD -->|<b>Layer 3 Transforms</b>| SEMANTIC
-    
-    subgraph SEMANTIC["<b>SEMANTIC SEARCH<br/>(With Layer 3)</b>"]
-        direction LR
-        S_Q["<b>Query: 'diabetes patients'</b>"] --> S_RESOLVE["<b>Semantic Resolution</b><br/><b>Concept expansion</b>"]
-        S_RESOLVE --> S_HIT1["<b>Diabetes mellitus</b>"]
-        S_RESOLVE --> S_HIT2["<b>DM Type 1, Type 2</b>"]
-        S_RESOLVE --> S_HIT3["<b>E08-E13 codes</b>"]
-        S_RESOLVE --> S_HIT4["<b>Glycemic disorders</b>"]
-        S_HIT1 --> S_RESULT["<b>85%+ Recall</b><br/><b>Complete results</b>"]
-        S_HIT2 --> S_RESULT
-        S_HIT3 --> S_RESULT
-        S_HIT4 --> S_RESULT
-    end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style K_Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style K_MATCH fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style K_MISS1 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style K_MISS2 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style K_MISS3 fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style K_RESULT fill:#990000,color:#ffffff,stroke:#b71c1c,stroke-width:3px
-    
-    style S_Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style S_RESOLVE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S_HIT1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S_HIT2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S_HIT3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S_HIT4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S_RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
+
+![Figure 5.6: Before/After - Keyword Search vs. Semantic Search](figures/figure-5-6.png)
+
+The difference is transformational. Research benchmarks show that direct natural language-to-SQL conversion achieves only 40-55% accuracy on complex cross-domain queries; adding semantic layer context, business glossaries, entity resolution, and schema understanding improves accuracy to 75-90%.[23][24]
 
 ### Key Technologies
+
+Echo evaluated tools across five categories, prioritizing healthcare compliance, existing team expertise, and integration with their Databricks lakehouse. The following options represent the market landscape:
 
 **Semantic Modeling Platforms:**
 - [dbt Semantic Layer](https://docs.getdbt.com/docs/build/semantic-models) - Metrics definitions integrated with transformation[1]
@@ -506,11 +294,13 @@ graph TB
 - [Senzing](https://senzing.com) - Real-time entity resolution API
 - [Tamr](https://www.tamr.com) - Enterprise data mastering
 
+Echo's selections dbt, Senzing, and Alation are detailed in the implementation section below.
+
 ### Echo's Gap
 
-Echo's data infrastructure had 487 tables with cryptic names like `FCT_PTNT_ENCT` and `DIM_PRVDR_SPCLT`. Documentation existed in SharePoint—18 months out of date. The data lake had even less structure: files named `epic_extract_20240315.parquet` with no catalog entry.
+Echo's data infrastructure had about 500 tables with cryptic names like `FCT_PTNT_ENCT` and `DIM_PRVDR_SPCLT`. Documentation  in SharePoint is 18 months out of date. The data lake had even less structure: files named `epic_extract_20240315.parquet` with no catalog entry.
 
-No system connected natural language concepts to these technical artifacts. Every agent query required custom translation logic. There was no entity resolution—"Dr. Martinez" in one system was not linked to the same provider in another. No metric versioning—when definitions changed, agents broke silently. No ontology mapping—clinical concepts existed as free text, not structured codes.
+No system connected natural language concepts to these technical artifacts. Every agent query required custom translation logic. There is no entity resolution. "Dr. Martinez" in one system was not linked to the same provider in another. No metric versioning: when definitions changed, agents broke silently. No ontology mapping, clinical concepts existed as free text, not structured codes.
 
 The result: 47% accuracy on natural language queries. More than half of user requests resulted in errors, empty results, or confused responses.
 
@@ -529,23 +319,17 @@ For data cataloging, Echo implemented [Alation](https://www.alation.com) to prov
 | Component | Specification | Status |
 |-----------|--------------|--------|
 | **Business Glossary** | 2,400 clinical terms defined | Complete |
-| **Entity Resolution** | 847 provider entities unified | Complete |
+| **Entity Resolution** | 850 provider entities unified | Complete |
 | **Golden IDs** | patient_master_id, provider_npi, facility_id | Complete |
 | **Ontology Mapping** | SNOMED[3], ICD-10[4], LOINC[5] crosswalks | Complete |
 | **dbt Semantic Models** | 156 metrics, 89 dimensions | Complete |
 
-**Investment (Layer 3):**
-- Alation Data Catalog: $28,000 (annual license, 10 users)
-- Senzing Entity Resolution: $12,000 (annual license)
-- dbt Cloud Semantic Layer: $5,000 (incremental to existing)
-- Professional Services: $45,000 (glossary population, ontology mapping)
-- **Layer 3 Total: $90,000**
 
-### INPACT™ Contribution
+### INPACT Contribution
 
-**Layer 3 primarily fulfills Natural (N):** Enabling business language understanding—"diabetes follow-up patients" translates to precise queries without SQL knowledge.
+**Layer 3 primarily fulfills Natural (N):** Enabling business language understanding, "diabetes follow-up patients" translates to precise queries without SQL knowledge.
 
-> **📓 For complete technology evaluation criteria and implementation details, see Appendix DA-4, Section H.3: Technology Selection Methodology.**
+> **📓 For technology evaluation criteria, use the Vendor Advisor at trustbeforeintelligence.ai/tools.**
 
 ### Operational Metrics
 
@@ -559,77 +343,39 @@ For data cataloging, Echo implemented [Alation](https://www.alation.com) to prov
 
 ---
 
-**Layer 3 Complete:** Semantic understanding operational—2,400 terms, 94%+ entity resolution, full ontology integration. Investment: $90K. INPACT™ Natural (N): 2/6 → 4/6. Now Layer 4 adds reasoning.
+By Friday of Week 5, semantic queries that had returned 847 confused results now returned 3 precise matches. Over 2,400 business terms mapped, entity resolution above 90%.
+
+Sarah's team had taught the infrastructure to understand. Layer 4 would teach it to reason.
 
 ---
 
-## PART 4: LAYER 4—INTELLIGENCE (RAG + LLM)
+## PART 4: LAYER 4 - INTELLIGENCE
 
-### What It Is
+### Teaching Agents to Respond Intelligently
 
-Layer 4 is the complete intelligence pipeline—the system that transforms user queries into grounded, accurate responses through retrieval-augmented generation with large language model integration.[8] This is not a single technology but an orchestrated workflow encompassing seven stages: query understanding, embedding generation, hybrid retrieval, reranking, context assembly, LLM generation, and semantic caching.
+Layer 4 is the complete intelligence pipeline system that transforms user queries into grounded, accurate responses through retrieval-augmented generation with large language model integration.[8] This is not a single technology but an orchestrated workflow encompassing seven stages: query understanding, embedding generation, hybrid retrieval, reranking, context assembly, LLM generation, and semantic caching.
 
-**Critical Architectural Note:** LLMs are part of Layer 4, not a separate layer. The 7-Layer Architecture represents infrastructure concerns, not technology lists. Layer 4's concern is "HOW agents understand and respond"—which requires the complete pipeline from query to response. Separating RAG from LLMs would be like separating a car's engine from its transmission—theoretically possible but architecturally incoherent.
+**Critical Architectural Note:** LLMs are part of Layer 4, not a separate layer. The 7-Layer Architecture represents infrastructure concerns, not technology lists. Layer 4's concern is "HOW agents understand and respond", which requires the complete pipeline from query to response. Separating RAG from LLMs would be like separating a car's engine from its transmission, theoretically possible but architecturally incoherent.
 
-**Diagram 7: Layer 4—Complete Intelligence Pipeline**
+**Figure 5.7: Layer 4 - Complete Intelligence Pipeline**
 
-```mermaid
-graph TB
-    Q["<b>User Query</b><br/>'High-risk diabetic patients'"]
-    
-    subgraph ROW1["<b>Retrieval</b>"]
-        direction LR
-        S1["<b>1. Query</b>"] --> S2["<b>2. Embed</b>"] --> S3["<b>3. Retrieve</b>"]
-    end
-    
-    subgraph ROW2["<b>Processing</b>"]
-        direction LR
-        S4["<b>4. Rerank</b>"] --> S5["<b>5. Context</b>"]
-    end
-    
-    subgraph ROW3["<b>Generation</b>"]
-        direction LR
-        S6["<b>6. LLM</b>"] --> S7["<b>7. Cache</b>"]
-    end
-    
-    RESULT["<b>Grounded Response</b>"]
-    
-    Q --> ROW1
-    ROW1 --> ROW2
-    ROW2 --> ROW3
-    ROW3 --> RESULT
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style S1 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S2 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S3 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S4 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S5 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S6 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style S7 fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESULT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.7: Layer 4 - Complete Intelligence Pipeline](figures/figure-5-7.png)
 ### Why Agents Need RAG
 
-Without RAG, language models rely solely on their training data—knowledge frozen at their cutoff date, containing no information about your specific organization, patients, or operations. The result is confident hallucination: responses that sound authoritative but are factually wrong.
+Without RAG, language models rely solely on their training data knowledge frozen at their cutoff date, containing no information about your specific organization, patients, or operations. The result is confident hallucination: responses that sound authoritative but are factually wrong.
 
-RAG solves this by grounding LLM responses in retrieved context.[8][9] Instead of asking "What are the risk factors for this patient?" and hoping the LLM remembers general medical knowledge, RAG retrieves the specific patient's records—lab results, diagnoses, medications, encounters—and provides them as context. The LLM generates responses based on actual data, with citations pointing to source documents.
+RAG solves this by grounding LLM responses in retrieved context.[8][9] Instead of asking "What are the risk factors for this patient?" and hoping the LLM remembers general medical knowledge, RAG retrieves the specific patient's records, lab results, diagnoses, medications, encounters and provides them as context. The LLM generates responses based on actual data, with citations pointing to source documents.
 
 Anthropic's production RAG guidance explains that well-implemented retrieval architectures significantly reduce hallucination rates by grounding language model responses in retrieved factual information, with retrieval latency targets of 200ms or less for real-time conversational applications.[2]
 
 ### Stage 1: Query Understanding
 
-Query understanding extracts intent, entities, and constraints from natural language—enabling "Show me Dr. Martinez's high-risk patients" to become executable logic. Components include intent classification (search/command/question), entity extraction (patients, providers, conditions), constraint identification (filters, ranges), and query reformulation for optimal retrieval.
-
-> **📓 For complete stage-by-stage specifications and model configurations, see Appendix DA-4, Section H.2: RAG Pipeline Detailed Specifications.**
+Query understanding extracts intent, entities, and constraints from natural language enabling "Show me Dr. Martinez's high-risk patients" to become executable logic. Components include intent classification (search/command/question), entity extraction (patients, providers, conditions), constraint identification (filters, ranges), and query reformulation for optimal retrieval.
 
 ### Stage 2: Embedding Generation
 
-Embedding models transform text into high-dimensional vectors where similar concepts cluster together—enabling "diabetes management" to match "glycemic control" without shared keywords.[15] Echo chose text-embedding-3-large (3,072 dimensions) for production accuracy, text-embedding-3-small for batch cost optimization.
+Embedding models transform text into high-dimensional vectors where similar concepts cluster together enabling "diabetes management" to match "glycemic control" without shared keywords.[15] Echo chose text-embedding-3-large (3,072 dimensions) for production accuracy, text-embedding-3-small for batch cost optimization.
 
 | Model | Provider | Dimensions | Best For | Cost |
 |-------|----------|------------|----------|------|
@@ -641,49 +387,13 @@ Embedding models transform text into high-dimensional vectors where similar conc
 
 Single-strategy retrieval misses relevant results. Vector search excels at semantic similarity but struggles with exact matches. Keyword search handles precise terms but misses synonyms. Graph traversal captures relationships but requires structured data. Hybrid retrieval combines all three strategies in parallel, merging results for comprehensive coverage.
 
-**Diagram 8: Hybrid Retrieval Architecture**
+**Figure 5.8: Hybrid Retrieval Architecture**
 
-```mermaid
-graph LR
-    TITLE["<b>Stage 3: Hybrid Retrieval</b>"]
-    
-    Q["<b>Embedded Query</b>"]
-    
-    subgraph parallel["<b>Parallel Retrieval Strategy</b>"]
-        VEC["<b>Vector Search</b><br/><b>Pinecone</b><br/><b>Semantic similarity</b>"]
-        KEY["<b>Keyword Search</b><br/><b>Azure Search</b><br/><b>Exact matching</b>"]
-        GRAPH["<b>Graph Traversal</b><br/><b>Neo4j</b><br/><b>Relationships</b>"]
-    end
-    
-    MERGE["<b>Result Fusion</b><br/><b>RRF algorithm</b>"]
-    
-    OUT["<b>Candidate Set</b><br/><b>Top 50 results</b>"]
-    
-    TITLE -.-> Q
-    Q --> VEC
-    Q --> KEY
-    Q --> GRAPH
-    VEC --> MERGE
-    KEY --> MERGE
-    GRAPH --> MERGE
-    MERGE --> OUT
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style TITLE fill:#00897b,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style parallel fill:#fafafa,stroke:#00897b,stroke-width:2px,color:#000000
-    style VEC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style KEY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GRAPH fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style MERGE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style OUT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.8: Hybrid Retrieval Architecture](figures/figure-5-8.png)
 **Vector Database Selection:**
 
-Echo deployed [Pinecone](https://www.pinecone.io) for vector storage because: managed service reduces operational overhead, serverless scaling handles variable query loads, HIPAA BAA available for healthcare compliance, and 42ms p50 query latency meets real-time requirements.[13] Configuration: 10M embeddings, 3,072 dimensions, 15.4GB storage, HNSW index[10], p50=42ms latency.
+Echo deployed [Pinecone](https://www.pinecone.io) for vector storage because: managed service reduces operational overhead, serverless scaling handles variable query loads, HIPAA BAA available for healthcare compliance, and 42ms average query latency (p50, meaning 50% of requests are faster) meets real-time requirements.[13] Configuration: 10M embeddings, 3,072 dimensions, 15.4GB storage, HNSW index[10].
 
 The HNSW (Hierarchical Navigable Small World) algorithm, introduced by Malkov and Yashunin in 2018, provides efficient approximate nearest neighbor search with logarithmic query time complexity through a multi-layer graph structure.[10]
 
@@ -691,19 +401,15 @@ Healthcare documents require semantic-aware chunking. Echo split progress notes 
 
 Echo integrated [Azure Cognitive Search](https://azure.microsoft.com/en-us/products/ai-services/cognitive-search) for keyword search running parallel with Pinecone. Reciprocal Rank Fusion (RRF) combines rankings from multiple strategies, giving documents appearing in multiple results higher scores.[11] The RRF algorithm, introduced by Cormack, Clarke, and Buettcher in 2009, uses the formula 1/(k+rank) where k=60 is the empirically optimal constant, enabling effective rank aggregation without hyperparameter tuning.[11]
 
-> **📓 For complete hybrid retrieval specifications including RRF formulas and optimization procedures, see Appendix DA-4, Section H.2.**
-
 ### Stage 4: Reranking
 
-Initial retrieval returns candidates based on surface similarity. Reranking applies sophisticated relevance scoring to identify truly relevant results.[14] Vector search might return 50 documents about "diabetes"; reranking determines which 5 are actually relevant to "this patient's diabetes management plan"—considering recency, patient context, and clinical importance.
+Initial retrieval returns candidates based on surface similarity. Reranking applies sophisticated relevance scoring to identify truly relevant results.[14] Vector search might return 50 documents about "diabetes"; reranking determines which 5 are actually relevant to "this patient's diabetes management plan" considering recency, patient context, and clinical importance.
 
 Echo implemented [Cohere Rerank](https://docs.cohere.com/docs/rerank-overview) with custom scoring: 40% clinical relevance, 30% temporal recency, 20% patient specificity, 10% source authority.[14] Post-reranking selects top 5-10 results for context assembly.
 
 ### Stage 5: Context Assembly
 
 Retrieved and reranked results must be assembled into coherent context within the LLM's token window while maximizing information density. Challenges include token limits (GPT-4 Turbo: 128K, Claude 3: 200K), relevance ordering (most important first), citation tracking (each chunk links to source), and deduplication (consolidate overlapping content).
-
-> **📓 For complete context assembly specifications and token optimization strategies, see Appendix DA-4, Section H.2.**
 
 ### Universal Context Architecture: Seven-Stream Synthesis
 
@@ -721,23 +427,21 @@ Echo's intelligence pipeline doesn't just retrieve documents; it orchestrates re
 
 #### Architectural Implementation
 
-Echo deployed seven Pinecone namespaces—one per context type—with specialized retrieval strategies for each dimension.[13] Each namespace uses optimized chunking: business context chunks are larger (1,500 tokens) because policies need full context; data context chunks are smaller (600 tokens) because clinical notes need precision.
+Echo deployed seven Pinecone namespaces, one per context type, with specialized retrieval strategies for each dimension.[13] Each namespace uses optimized chunking: business context chunks are larger (1,500 tokens) because policies need full context; data context chunks are smaller (600 tokens) because clinical notes need precision.
 
-Echo's synthesis engine orchestrates retrieval within <400ms: Query Analysis (50ms), Parallel Retrieval across seven namespaces (180ms), Relevance Scoring (40ms), Deduplication (30ms), Priority Assembly (60ms), Token Optimization (40ms). Echo's median: 312ms.
+Echo's synthesis engine orchestrates retrieval within <400ms through parallel retrieval across seven namespaces, relevance scoring, deduplication, and token optimization. Echo's median: 312ms.
 
-**INPACT™ Impact:** Universal context enables Natural (N) through business language translation, Contextual (C) through complete situational awareness, and Adaptive (A) through automatic response adjustment.
-
-> **📓 For complete namespace configurations and synthesis pipeline specifications, see Appendix DA-4, Section H.1.**
+**INPACT Impact:** Universal context enables Natural (N) through business language translation, Contextual (C) through complete situational awareness, and Adaptive (A) through automatic response adjustment.
 
 ### Confidence Handling and Hallucination Prevention
 
 Healthcare demands explicit uncertainty handling. Echo implemented three-tier confidence: High (>0.85): provide answer with citations; Medium (0.70-0.85): surface with caveats; Low (<0.70): decline to answer, request clarification.
 
-Detection monitors for unsupported claims, confidence inflation, temporal inconsistency, and entity confusion—triggering automated review, response suppression in high-risk scenarios, and feedback to retrieval pipeline.
+Detection monitors for unsupported claims, confidence inflation, temporal inconsistency, and entity confusion triggering automated review, response suppression in high-risk scenarios, and feedback to retrieval pipeline.
 
 ### Stage 6: LLM Generation
 
-Context assembled, citations tracked—now comes reasoning. The LLM synthesizes retrieved information into natural language responses grounded in actual data.
+Context assembled, citations tracked, now comes reasoning. The LLM synthesizes retrieved information into natural language responses grounded in actual data.
 
 | Model | Provider | Context | Strengths | Cost (per 1M tokens) |
 |-------|----------|---------|-----------|---------------------|
@@ -749,46 +453,10 @@ Context assembled, citations tracked—now comes reasoning. The LLM synthesizes 
 
 Healthcare requires different LLM capabilities for different tasks. Echo implemented a multi-LLM router:
 
-**Diagram 9: Multi-LLM Router Architecture**
+**Figure 5.9: Multi-LLM Router Architecture**
 
-```mermaid
-graph TB
-    TITLE["<b>Multi-LLM Router</b>"]
-    
-    Q["<b>Incoming Query</b>"]
-    
-    CLASS["<b>Query Classifier</b><br/><b>Complexity scoring</b>"]
-    
-    subgraph routing["<b>LLM Selection</b>"]
-        CLAUDE["<b>Claude Sonnet 4</b><br/><b>Complex reasoning</b><br/><b>Clinical analysis</b>"]
-        GPT["<b>GPT-4 Turbo</b><br/><b>Structured output</b><br/><b>API integrations</b>"]
-        LLAMA["<b>Llama 3.1 70B</b><br/><b>High volume</b><br/><b>Simple queries</b>"]
-    end
-    
-    OUT["<b>Response</b>"]
-    
-    TITLE -.-> Q
-    Q --> CLASS
-    CLASS -->|<b>High complexity</b>| CLAUDE
-    CLASS -->|<b>Structured need</b>| GPT
-    CLASS -->|<b>Simple/bulk</b>| LLAMA
-    CLAUDE --> OUT
-    GPT --> OUT
-    LLAMA --> OUT
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style TITLE fill:#00897b,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Q fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style CLASS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style routing fill:#fafafa,stroke:#00897b,stroke-width:2px,color:#000000
-    style CLAUDE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style GPT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style LLAMA fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style OUT fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.9: Multi-LLM Router Architecture](figures/figure-5-9.png)
 **Routing Logic:**
 - Claude Sonnet 4: Complex clinical reasoning (45% of queries)
 - GPT-4 Turbo: Structured output, FHIR[6] API calls (25% of queries)
@@ -810,48 +478,10 @@ Similar queries should not incur redundant LLM costs. Semantic caching stores re
 
 **How It Works:** New query → generate embedding → search cache index (similarity > 0.92) → if match: return cached response; if no match: execute full pipeline, cache response.
 
-**Diagram 10: Semantic Cache Architecture**
+**Figure 5.10: Semantic Cache Architecture**
 
-```mermaid
-graph TB
-    QUERY["<b>Incoming Query</b><br/>'High-risk diabetic patients'"]
-    
-    EXACT["<b>Level 1: Exact Match</b><br/><b>Redis Cache</b>"]
-    
-    SEMANTIC["<b>Level 2: Semantic Match</b><br/><b>Pinecone Vector Cache</b>"]
-    
-    PIPELINE["<b>Full RAG Pipeline</b><br/><b>If no cache hit</b>"]
-    
-    RESPONSE["<b>Response</b>"]
-    
-    CDC["<b>CDC Events</b>"]
-    
-    INVALIDATE["<b>Cache Invalidation</b>"]
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    QUERY --> EXACT
-    EXACT -->|Hit 15%| RESPONSE
-    EXACT -->|Miss| SEMANTIC
-    SEMANTIC -->|Hit 70%| RESPONSE
-    SEMANTIC -->|Miss 15%| PIPELINE
-    PIPELINE --> RESPONSE
-    RESPONSE -.->|Cache| SEMANTIC
-    
-    CDC --> INVALIDATE
-    INVALIDATE -.->|Clear| EXACT
-    INVALIDATE -.->|Clear| SEMANTIC
-    
-    style QUERY fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style EXACT fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style SEMANTIC fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style PIPELINE fill:#fff9e6,stroke:#f57c00,stroke-width:2px,color:#e65100
-    style RESPONSE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style CDC fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style INVALIDATE fill:#ffebee,stroke:#c62828,stroke-width:2px,color:#b71c1c
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.10: Semantic Cache Architecture](figures/figure-5-10.png)
 **Level 1: Exact Match (Redis):** Character-for-character matches hit instantly. TTL (Time To Live)[18]: 1 hour. Hit rate: ~15%.
 
 **Level 2: Semantic Match (Pinecone):** Semantically similar queries (similarity > 0.92) return cached responses. TTL[18]: 24 hours. Hit rate: ~70%.
@@ -860,15 +490,17 @@ graph TB
 
 **Cost Impact:**
 - Before caching: $14,500/month LLM costs
-- After caching (85% hit rate): $2,175/month effective
-- Monthly savings: $12,325
-- Net savings: $12,200/month (after $125/month cache infrastructure)
+- After caching (84% hit rate): $2,300/month effective
+- Monthly savings: $12,200
+- Net savings: $12,200/month (cache infrastructure included in Layer 4)
 
-### Prompt Caching for Additional Savings
+### Prompt Caching
 
 Modern LLMs support prompt-level caching for system prompts and context preambles. Echo implemented [Anthropic's prompt caching](https://www.anthropic.com/news/prompt-caching) and [OpenAI's prompt caching](https://platform.openai.com/docs/guides/prompt-caching), caching system instructions (8K tokens) and clinical context (4K tokens). Combined with semantic response caching, total LLM cost reduction: 93%, bringing effective cost per query from $0.034 to $0.0023.
 
-### Key Technologies Summary
+### Key Technologies
+
+For the intelligence pipeline, Echo evaluated RAG frameworks and evaluation tools based on healthcare integration requirements and observability needs:
 
 **RAG Frameworks:**
 - [LlamaIndex](https://www.llamaindex.ai) - Data framework for LLM applications
@@ -881,9 +513,11 @@ Modern LLMs support prompt-level caching for system prompts and context preamble
 - [DeepEval](https://docs.confident-ai.com) - LLM evaluation framework
 - [TruLens](https://www.trulens.org) - Evaluation and tracking
 
+Echo chose LlamaIndex for its healthcare document handling and RAGAS for retrieval quality measurement.
+
 ### Echo's Gap (Pre-Chapter 5)
 
-Echo had no intelligence infrastructure. Their initial agent prototype converted natural language to SQL using GPT-4 directly—which worked only 47% of the time. No embedding models meant no semantic search. No caching meant every query hit the LLM API. No reranking meant arbitrary result ordering. No context assembly meant truncation and token waste.
+Echo had no intelligence infrastructure. Their initial agent prototype converted natural language to SQL using GPT-4 directly which worked only 47% of the time. No embedding models meant no semantic search. No caching meant every query hit the LLM API. No reranking meant arbitrary result ordering. No context assembly meant truncation and token waste.
 
 Agent responses were slow (3-8 seconds), frequently wrong (53% error rate), and often incomplete. Users couldn't tell when answers were uncertain. LLM costs spiked unpredictably.
 
@@ -893,7 +527,7 @@ Agent responses were slow (3-8 seconds), frequently wrong (53% error rate), and 
 
 | Component | Technology | Specification |
 |-----------|------------|---------------|
-| **Vector Database** | Pinecone[13] | 10M embeddings, p50=42ms |
+| **Vector Database** | Pinecone[13] | 10M embeddings, 42ms average |
 | **Embeddings** | OpenAI text-embedding-3-large[15] | 3,072 dimensions |
 | **Keyword Search** | Azure Cognitive Search | Integrated |
 | **Graph Retrieval** | Neo4j | 847 concept traversals |
@@ -908,19 +542,11 @@ Agent responses were slow (3-8 seconds), frequently wrong (53% error rate), and 
 | **Secondary LLM** | GPT-4 Turbo | Structured output, FHIR[6] |
 | **Bulk LLM** | Llama 3.1 70B | Self-hosted, simple queries |
 | **Query Router** | Custom classifier | Complexity-based routing |
-| **Semantic Cache** | GPTCache + Pinecone | 85% hit rate |
+| **Semantic Cache** | GPTCache + Pinecone | 84% hit rate |
 
-**Investment (Layer 4):**
-- Pinecone Vector DB: $60,000/year
-- OpenAI Embeddings: $15,000 (initial indexing)
-- Cohere Rerank: $8,000/year
-- LLM APIs (annual): $102,000 (post-caching)
-- LlamaIndex Enterprise: $12,000/year
-- Self-hosted Llama infrastructure: $33,600/year
-- Professional Services: $60,000 (pipeline development)
-- **Layer 4 Total: $290,600**
 
-### INPACT™ Contribution
+
+### INPACT Contribution
 
 Layer 4 fulfills:
 
@@ -932,8 +558,6 @@ Supporting contributions:
 
 - **T (Transparent):** Citation mechanisms with confidence scores
 - **I (Instant):** Semantic caching reduces latency to milliseconds
-
-> **📓 For complete operational metrics calculation methodologies and monitoring configurations, see Appendix DA-4, Section H.4.**
 
 ### Operational Metrics
 
@@ -950,35 +574,13 @@ NDCG (Normalized Discounted Cumulative Gain) is a standard ranking evaluation me
 
 ---
 
-## 📍 Checkpoint 2: Intelligence Layers Complete
-
-**What we've covered since Checkpoint 1:**
-
-✅ **Layer 4—7-Stage Intelligence Pipeline:** Complete RAG+LLM workflow[8][9]: (1) Query understanding, (2) Embedding generation[15], (3) Hybrid retrieval (vector + keyword + graph with RRF[11]), (4) Reranking[14], (5) Context assembly, (6) LLM generation (Claude for reasoning, GPT-4 for structured output, Llama for bulk), (7) Semantic caching (85% cost reduction).
-
-✅ **Universal Context Architecture:** Seven-stream synthesis—User, Task, Data, Environmental, Business, Tooling, History contexts. Echo achieved 98% context completeness in <400ms assembly time.
-
-✅ **Model Context Protocol (MCP):** Standardized LLM-to-data integration enabling real-time retrieval with full HIPAA audit logging.[2]
-
-✅ **Cost Optimization:** Semantic caching (85% hit rate) + prompt caching (90% reduction) = 93% total LLM cost reduction from $14,500/month to $2,300/month.
-
-✅ **Echo's Investment:** $290,000 for Layer 4 deployment (Week 6-7), including Pinecone vector database[13], OpenAI embeddings[15], Cohere reranking[14], multi-model LLM architecture, and GPTCache infrastructure.
-
-✅ **INPACT™ Impact:** Natural (N) 2/6 → 5/6, Contextual (C) 4/6 → 5/6, Adaptive (A) 3/6 → 5/6, Transparent (T) 1/6 → 3/6, Instant (I) 4/6 → 5/6, Permitted (P) 1/6 → 2/6. Total score: 42/100 → 67/100 (+25 points).
-
-**Key insight:** Intelligence requires the complete pipeline—understanding (Layer 3) isn't enough. Agents need semantic comprehension, intelligent retrieval, multi-source context assembly, sophisticated reasoning, and cost-effective caching working together.
-
-**Coming next:** Echo's Week 5-7 implementation journey achieving 95.6% accuracy and sub-2-second response times.
-
----
-
-## PART 5: ECHO'S WEEK 5-7 BUILD
+## PART 5: BUILDING INTELLIGENCE
 
 ### Week 5: Semantic Infrastructure (Layer 3)
 
 Following the kickoff, Swapna's semantic team began glossary construction in Echo's war room.
 
-"We have 487 database tables," Swapna announced. "By Friday, we need 2,400 business terms mapped to them. That's 480 terms per day."
+"We have about 500 database tables," Swapna announced. "By Friday, we need 2,400 business terms mapped to them. That's 480 terms per day."
 
 The room absorbed the scale. Marcus raised an eyebrow. "Is that even possible?"
 
@@ -990,7 +592,7 @@ Tuesday brought friction. Quality team's definition of "readmission" (any admiss
 
 Sarah convened rapid governance. "We're not picking winners. We're documenting both clearly. The agent needs to know that `readmission_quality` differs from `readmission_finance` and understand when each applies."
 
-By Wednesday, first entity resolution results arrived. Patient matching achieved 94.2% confidence; provider matching reached 98.1%—NPI numbers[7] provided deterministic matching.
+By Wednesday, first entity resolution results arrived. Patient matching achieved 94% confidence; provider matching reached 98%. NPI numbers[7] provided deterministic matching.
 
 Thursday brought first semantic query success: "Show me Dr. Martinez's schedule" resolved correctly through entity resolution → provider_npi=1234567890 → 3 specific appointments returned.
 
@@ -998,13 +600,13 @@ Thursday brought first semantic query success: "Show me Dr. Martinez's schedule"
 
 **Week 5 Metrics:**
 - Business terms defined: 2,400
-- Entity resolution accuracy: 94.2% (patients), 98.1% (providers)
+- Entity resolution accuracy: 94% (patients), 98% (providers)
 - Semantic query latency: 180ms average
 - Test accuracy improvement: 47% → 72%
 
 ### Week 6: RAG Pipeline (Layer 4 Stages 1-5)
 
-Week 6 focused on intelligent retrieval. Document chunking and embedding generation took 72 hours across three OpenAI accounts[15]—8.2 million document chunks reaching 10 million with historical data.
+Week 6 focused on intelligent retrieval. Document chunking and embedding generation took 72 hours across three OpenAI accounts[15]. 8.2 million document chunks reaching 10 million with historical data.
 
 By Thursday, the vector index was live. First retrieval test demonstrated the transformation:
 
@@ -1022,12 +624,12 @@ Friday's integration milestone: hybrid retrieval operational. Vector search, key
 - Documents chunked: 10.2 million
 - Embedding dimensions: 3,072
 - Vector index size: 15.4GB
-- Retrieval latency: p50=42ms, p95=67ms
+- Retrieval latency: 42ms average, 67ms at 95th percentile
 - Hybrid retrieval recall@10: 0.91
 
 ### Week 6 Victory: Feature Store Consistency
 
-The Databricks-Tecton integration announcement[20] simplified Echo's roadmap. Rather than deploying a separate feature store platform, Swapna's team enabled Tecton capabilities directly within their existing Databricks workspace—same lakehouse, same governance, new capability.
+The Databricks-Tecton integration announcement[20] simplified Echo's roadmap. Rather than deploying a separate feature store platform, Swapna's team enabled Tecton capabilities directly within their existing Databricks workspace. Same lakehouse, same governance, new capability.
 
 The data science team's chronic pain point was finally solved. "30-day readmission risk" had been calculated three different ways:
 - Sepsis model (Python, scikit-learn, 14 features)
@@ -1052,7 +654,7 @@ With Tecton on Databricks: single feature definition in Python. All three consum
 
 The final week brought the complete pipeline together.
 
-Monday and Tuesday: LLM integration. Multi-LLM router required careful prompt engineering—Claude received system prompts emphasizing clinical reasoning, GPT-4 received schema definitions for structured output, Llama received simplified prompts for high-volume queries.
+Monday and Tuesday: LLM integration. Multi-LLM router required careful prompt engineering. Claude received system prompts emphasizing clinical reasoning, GPT-4 received schema definitions for structured output, Llama received simplified prompts for high-volume queries.
 
 Wednesday: Query routing logic deployment. Complexity classifier analyzed incoming queries for routing decisions.
 
@@ -1093,19 +695,19 @@ The response appeared:
 > "I found **23 high-risk diabetic patients** who need intervention. Here are the top 5 by clinical urgency:
 > 
 > **1. Maria Santos** (MRN: 34521)
-> - HbA1c: 9.2% (last: Oct 15, 2024)
+> - HbA1c: 9.2% (last: Oct 15)
 > - Last diabetes visit: 127 days ago
 > - Care gap: Retinal exam overdue (18 months)
-> [Sources: Epic Problem List, Lab Results Oct 2024]
+> [Sources: Epic Problem List, Lab Results]
 > 
 > **2. James Wilson** (MRN: 22890)
-> - HbA1c: 8.8% (last: Oct 22, 2024)
+> - HbA1c: 8.8% (last: Oct 22)
 > - Last diabetes visit: 94 days ago
 > - Care gap: Metformin refill overdue (21 days)
-> [Sources: Epic Medication List, Lab Results Oct 2024]
+> [Sources: Epic Medication List, Lab Results]
 > 
 > **3. Robert Chen** (MRN: 45123)
-> - HbA1c: 8.5% (last: Sep 30, 2024)
+> - HbA1c: 8.5% (last: Sep 30)
 > - Last diabetes visit: 112 days ago
 > - Care gap: Podiatry referral not completed
 > [Sources: Epic Encounter History, Referral Management]
@@ -1116,76 +718,28 @@ The response appeared:
 
 Dr. Torres examined the response. "These are accurate. I recognize three of these patients. The care gaps are real."
 
-Marcus ran the validation suite: 95.6% accuracy across 500 test queries.
+Marcus ran the validation suite: 96% accuracy across 500 test queries.
 
-"Forty-seven percent to 95.6% in three weeks," Swapna said.
+"47% percent to 96% in three weeks," Swapna said.
 
 The room was silent for a moment. Then applause.
 
 **Week 7 Metrics:**
-- Query accuracy: 95.6%
+- Query accuracy: 96%
 - End-to-end latency: 1.8s average (23ms cached)
-- Cache hit rate: 85%
+- Cache hit rate: 84%
 - LLM cost reduction: 84% (from baseline)
-- INPACT™ score: 67/100
+- INPACT score: 67/100
 
-**Diagram 11: Echo's Week 5-7 Timeline**
+**Figure 5.11: Echo's Week 5-7 Timeline**
 
-```mermaid
-gantt
-    title Echo's Intelligence Build (Weeks 5-7)
-    dateFormat  YYYY-MM-DD
-    
-    section Layer 3
-    Business Glossary (2,400 terms)    :done, w5a, 2024-11-04, 5d
-    Entity Resolution Deployment       :done, w5b, 2024-11-04, 5d
-    dbt Semantic Models               :done, w5c, 2024-11-06, 3d
-    Clinical Ontology Mapping         :done, w5d, 2024-11-07, 2d
-    
-    section Layer 4 (Stages 1-5)
-    Document Chunking                 :done, w6a, 2024-11-11, 3d
-    Embedding Generation              :done, w6b, 2024-11-11, 4d
-    Vector DB Deployment              :done, w6c, 2024-11-13, 2d
-    Search Index (Azure)              :done, w6d, 2024-11-13, 2d
-    Feature Store (Tecton)            :done, w6e, 2024-11-14, 2d
-    Hybrid Retrieval Integration      :done, w6f, 2024-11-15, 2d
-    Reranking (Cohere)                :done, w6g, 2024-11-15, 1d
-    Context Assembly                  :done, w6h, 2024-11-15, 1d
-    
-    section Layer 4 (Stages 6-7)
-    LLM Integration                   :done, w7a, 2024-11-18, 2d
-    Query Router Deployment           :done, w7b, 2024-11-19, 2d
-    Semantic Cache Activation         :done, w7c, 2024-11-20, 1d
-    First Intelligent Query           :milestone, m1, 2024-11-21, 0d
-```
 
-### INPACT™ Score: Week 4 → Week 7
+![Figure 5.11: Echo's Week 5-7 Timeline](figures/figure-5-11.png)
 
-**Diagram 12: INPACT™ Transformation (42 → 67)**
+**Figure 5.12: INPACT Score™ Transformation (Week 4:42 → Week 7:67)**
 
-```mermaid
-graph LR
-    subgraph "<b>Week 4:Foundation Layer</b>"
-        W4_TOTAL["<b>TOTAL: 42/100</b>"]
-    end
-    
-    ARROW["<b>→</b><br/><b>+25 pts</b>"]
-    
-    subgraph "<b>Week 7:Intelligence Layer</b>"
-        W7_TOTAL["<b>TOTAL: 67/100</b>"]
-    end
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    W4_TOTAL --> ARROW
-    ARROW --> W7_TOTAL
-    
-    style W4_TOTAL fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style ARROW fill:#ffffff,stroke:none,color:#000000
-    style W7_TOTAL fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
+![Figure 5.12: INPACT Transformation (42 → 67)](figures/figure-5-12.png)
 | Dimension | Week 4 | Week 7 | Change | Driver |
 |-----------|--------|--------|--------|--------|
 | **I (Instant)** | 4/6 | 5/6 | **+1** | Semantic caching |
@@ -1196,79 +750,88 @@ graph LR
 | **T (Transparent)** | 1/6 | 3/6 | **+2** | Citations link sources |
 | **TOTAL** | 42/100 | 67/100 | **+25** | Intelligence operational |
 
-*Note: INPACT™ scores incorporate weighted factors for production readiness assessment. See Appendix DA-5 for complete scoring methodology.*
+*Note: INPACT scores incorporate weighted factors for production readiness assessment. See the INPACT Practitioner Reference for complete scoring methodology.*
 
 ---
 
-## PART 6: INTELLIGENCE LAYERS COMPLETE
+## PART 6: THE FINISH LINE
+
+Friday afternoon, Week 7. Sarah convened the leadership team for intelligence review. CFO Krish Yadav joined via video to verify Phase 2 spend against the approved $380,000 budget.
+
+"Final tally: $392,000," Krish reported. "Twelve thousand over budget."
+
+"LLM API costs during Week 6 testing," Swapna explained. "We ran 47,000 test queries before caching went live."
+
+Krish nodded. "Lesson for Phase 3?"
+
+"Cache earlier," Swapna said. "We activated semantic caching in Week 7. If we'd deployed it mid-Week 6, we'd have stayed under budget."
+
+"The overage is manageable," Sarah added. "We're now at $2,300 per month for LLM costs, 84% below baseline. The operational savings will recover the implementation variance within sixty days."
+
+Krish made a note. "Phase 3 has the same $380,000 allocation. Apply the lesson."
+
+<!-- pagebreak -->
 
 ### What We Built
 
-**Diagram 13: Complete Intelligence Architecture—Layers 3-4**
+**Figure 5.13: Complete Intelligence Architecture - Layers 3-4**
 
-```mermaid
-graph TB
-    USER["<b>User Query</b><br/>'Find high-risk diabetic patients'"]
-    
-    subgraph L3["<b>Layer 3: Semantic</b>"]
-        direction LR
-        GLOSS["<b>Glossary</b>"] --> ENTITY["<b>Entity Resolution</b>"] --> ONTO["<b>Ontology</b>"]
-    end
-    
-    subgraph L4["<b>Layer 4: Intelligence</b>"]
-        direction LR
-        EMBED["<b>Embed</b>"] --> HYBRID["<b>Retrieve</b>"] --> RERANK["<b>Rerank</b>"] --> LLM["<b>LLM</b>"] --> CACHE["<b>Cache</b>"]
-    end
-    
-    RESPONSE["<b>Grounded Response</b>"]
-    
-    USER --> L3
-    L3 --> L4
-    L4 --> RESPONSE
-    
-    Copyright["<b>© 2025 Colaberry Inc.</b>"]
-    
-    style USER fill:#f9f9f9,stroke:#666666,stroke-width:2px,color:#000000
-    style GLOSS fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style ENTITY fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style ONTO fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style EMBED fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style HYBRID fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RERANK fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style LLM fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style CACHE fill:#e0f2f1,stroke:#00897b,stroke-width:2px,color:#004d40
-    style RESPONSE fill:#00695c,color:#ffffff,stroke:#004d40,stroke-width:3px
-    style Copyright fill:#ffffff,stroke:none,color:#666666
-```
 
-### Metrics Summary
+![Figure 5.13: Complete Intelligence Architecture - Layers 3-4](figures/figure-5-13.png)
+### Results
 
 | Metric | Week 4 | Week 7 | Improvement |
 |--------|--------|--------|-------------|
-| **INPACT™ Score** | 42/100 | 67/100 | +25 points |
-| **Query Accuracy** | 47% | 95.6% | 2× improvement |
+| **INPACT Score** | 42/100 | 67/100 | +25 points |
+| **Query Accuracy** | 47% | 96% | 2× improvement |
 | **Response Latency** | 9-13s | 1.8s (23ms cached) | 5-400× faster |
 | **LLM Cost** | Uncontrolled | $2,300/month | 84% reduction |
 
 ### Investment Summary: Phase 2
 
-| Category | Amount | Notes |
-|----------|--------|-------|
-| **Layer 3 (Semantic)** | $90,000 | Glossary, entity resolution |
-| **Layer 4 (Intelligence)** | $290,000 | RAG pipeline, LLMs, caching |
-| **Phase 2 Total** | $380,000 | Weeks 5-7 |
+**Phase 2 Investment ($380K budget / $392K actual):**
+
+| Component | Technology | Services | Total |
+|-----------|------------|----------|-------|
+| Layer 3 (Semantic) | $45K | $45K | $90K |
+| Layer 4 (Intelligence) | $231K | $71K | $302K |
+| **Phase 2 Total** | **$276K** | **$116K** | **$392K** |
+
+**Layer 3 Detail ($90K):**
+- Alation Data Catalog: $28,000 (annual license)
+- Senzing Entity Resolution: $12,000 (annual license)
+- dbt Cloud Semantic Layer: $5,000 (incremental)
+- Professional Services: $45,000 (glossary, ontology mapping)
+
+**Layer 4 Detail ($302K):**
+- Pinecone Vector DB: $60,000/year
+- OpenAI Embeddings: $15,000 (initial indexing)
+- Cohere Rerank: $8,000/year
+- LLM APIs (annual): $102,000 (post-caching baseline)
+- LlamaIndex Enterprise: $12,000/year
+- Self-hosted Llama infrastructure: $33,600/year
+- Professional Services: $71,400 (pipeline development, complexity adjustments)
+
+**Phase 2 Operational Costs:**
+- Monthly: $19,400 (Layer 3: $3,800 + Layer 4: $15,600)
+- LLM costs: $2,300/month (after 84% caching reduction)
+- Annual: $232,800
 
 **Cumulative Investment:**
-- Phase 1 (Foundation): $470,000
-- Phase 2 (Intelligence): $380,000
-- **Total through Week 7: $850,000**
+
+| Phase | Weeks | Budgeted | Actual | Chapter |
+|-------|-------|----------|--------|---------|
+| Phase 1: Foundation | 1-4 | $470K | $468K | Chapter 4 ✓ |
+| Phase 2: Intelligence | 5-7 | $380K | $392K | **This Chapter** ✓ |
+| Phase 3: Trust | 8-10 | $380K | - | Chapter 6 |
+| **Total through Week 7** | | **$850K** | **$860K** | **This Chapter** ✓ |
 
 ### Gaps Addressed
 
 | Gap | Status | Solution |
 |-----|--------|----------|
-| **Gap 3:** Semantic Understanding | ✅ Resolved | Layer 3: Business glossary, entity resolution |
-| **Gap 4:** Intelligent Retrieval | ✅ Resolved | Layer 4: RAG pipeline with LLM integration |
+| **Gap 3:** Semantic Understanding | Resolved | Layer 3: Business glossary, entity resolution |
+| **Gap 4:** Intelligent Retrieval | Resolved | Layer 4: RAG pipeline with LLM integration |
 
 **Remaining (Chapter 6):**
 - Gap 5: Dynamic Permissions → Layer 5 (Governance)
@@ -1283,11 +846,7 @@ Intelligence layers validated the foundation investment. Without multi-modal sto
 
 Intelligence is powerful. Ungoverned intelligence is dangerous.
 
-Echo's agents can now understand natural language, retrieve relevant context, and generate grounded responses. But they cannot yet:
-- Enforce dynamic access control based on user context
-- Audit reasoning chains for compliance review
-- Detect and respond to model drift
-- Coordinate multiple agents on complex tasks
+Echo's agents can now understand natural language, retrieve relevant context, and generate grounded responses. But they cannot yet enforce dynamic access control, audit reasoning chains, detect model drift, or coordinate multiple agents.
 
 **The Governance Gap:**
 
@@ -1297,52 +856,30 @@ The intelligence layers process correctly, but should this query be answered? Th
 
 Without Layer 5 (Governance), the intelligent response creates a compliance violation. Without Layer 6 (Observability), there's no audit trail.
 
-**What Chapter 6 delivers:**
-
-- **Layer 5 (Governance):** ABAC evaluates who, what, when, where. Policy engines like [Open Policy Agent](https://www.openpolicyagent.org) evaluate policies at agent speed. HITL workflows route high-risk decisions to human reviewers.
-
-- **Layer 6 (Observability):** Distributed tracing follows queries through the pipeline. Model monitoring detects quality degradation. Feedback loops capture corrections.
-
-- **Layer 7 (Orchestration):** Multi-agent coordination using frameworks like LangGraph. State management across workflows. Integration with all layers below.
-
-**The principle:** Intelligence before governance, but governance before production. Echo's agents are intelligent. Chapter 6 makes them trustworthy and coordinated—completing the architecture.
-
-**Echo's Remaining Journey:**
-
-| Phase | Weeks | Layers | INPACT™ Progress | Chapter |
-|-------|-------|--------|------------------|---------|
-| Phase 1: Foundation | 1-4 | 1-2 | 28 → 42 | Chapter 4 ✓ |
-| Phase 2: Intelligence | 5-7 | 3-4 | 42 → 67 | **Chapter 5 ✓** |
-| Phase 3: Trust + Orchestration | 8-10 | 5-6-7 | 67 → 85 | Chapter 6 |
-
-At Week 7, Echo has covered 70% of the journey from 28/100 to 86/100. The final 18 points require governance, observability, and orchestration—completing the architecture.
-
-Chapter 6 completes the 7-Layer Architecture, making intelligent agents production-ready.
+**The principle:** Intelligence before governance, but governance before production. Echo's agents are intelligent. Chapter 6 makes them trustworthy and coordinated by completing the architecture with Layers 5-6-7.
 
 ---
 
 ## CHAPTER 5 SUMMARY
 
-### Key Takeaways
-
 **Intelligence = Understanding + Reasoning:** Layer 3 translates business language to data structures. Layer 4 retrieves, assembles, and reasons over that data.
 
-**LLMs integrate within Layer 4:** The 7-Layer Architecture organizes by infrastructure concern. Layer 4's concern is intelligence—the complete pipeline from query understanding through LLM generation.
+**LLMs integrate within Layer 4:** The 7-Layer Architecture organizes by infrastructure concern. Layer 4's concern is intelligence, the complete pipeline from query understanding through LLM generation.
 
 **RAG prevents hallucination:** Grounding LLM responses in retrieved data reduces hallucination from >30% to <5%.[8][9]
 
-**Semantic caching transforms economics:** 85% cache hit rate reduced Echo's LLM costs from $14,500/month to $2,300/month—$12,200/month savings.
+**Semantic caching transforms economics:** 84% cache hit rate reduced Echo's LLM costs from $14,500/month to $2,300/month, a $12,200/month savings.
 
-**Natural (N) is the primary gain:** INPACT™ Natural dimension improved from 2/6 to 5/6, enabling true natural language interaction.
+**Natural (N) is the primary gain:** INPACT Natural dimension improved from 2/6 to 5/6, enabling true natural language interaction.
 
 ### Echo Health Systems: Week 7 Status
 
 | Metric | Week 0 | Week 7 | Improvement |
 |--------|--------|--------|-------------|
-| **INPACT™ Score** | 28/100 | 67/100 | +39 points |
-| **Query Accuracy** | 47% | 95.6% | 2× improvement |
+| **INPACT Score** | 28/100 | 67/100 | +39 points |
+| **Query Accuracy** | 47% | 96% | 2× improvement |
 | **Response Latency** | 9-13s | 1.8s (23ms cached) | 5-400× faster |
-| **Investment** | $0 | $850,000 | Phase 1-2 complete |
+| **Investment** | $0 | $860,000 | Phase 1-2 complete |
 
 ### Technologies Deployed
 
@@ -1350,35 +887,9 @@ Chapter 6 completes the 7-Layer Architecture, making intelligent agents producti
 
 **Layer 4:** Pinecone[13], OpenAI Embeddings[15], Cohere Rerank[14], LlamaIndex, Claude Sonnet 4, GPT-4 Turbo, Llama 3.1, GPTCache
 
-### What's Next
-
-**Chapter 6:** Trust + Orchestration Layers (Layers 5-6-7)
-- Governance: ABAC, OPA policy engines, HITL workflows
-- Observability: OpenTelemetry tracing, model monitoring
-- Orchestration: Multi-agent coordination, LangGraph
-- Echo: Weeks 8-10, INPACT™ 67 → 85
-- Architecture complete
-
 ---
 
-## ACRONYMS
 
-- **ABAC:** Attribute-Based Access Control
-- **CDC:** Change Data Capture
-- **FHIR:** Fast Healthcare Interoperability Resources[6]
-- **HNSW:** Hierarchical Navigable Small World (vector index algorithm)[10]
-- **ICD-10:** International Classification of Diseases, 10th Revision[4]
-- **LLM:** Large Language Model
-- **LOINC:** Logical Observation Identifiers Names and Codes[5]
-- **MRN:** Medical Record Number
-- **NDCG:** Normalized Discounted Cumulative Gain[12]
-- **NPI:** National Provider Identifier[7]
-- **RAG:** Retrieval-Augmented Generation[8]
-- **RRF:** Reciprocal Rank Fusion[11]
-- **SNOMED CT:** Systematized Nomenclature of Medicine—Clinical Terms[3]
-- **TTL:** Time To Live[18]
-
----
 
 ## REFERENCES
 
@@ -1422,32 +933,10 @@ Chapter 6 completes the 7-Layer Architecture, making intelligent agents producti
 
 [20] Databricks. (2025). "Tecton is Joining Databricks to Power Real-Time Data for Personalized AI Agents." https://www.databricks.com/blog/tecton-joining-databricks-power-real-time-data-personalized-ai-agents
 
----
+[21] Hogan, A., Blomqvist, E., Cochez, M., et al. (2021). "Knowledge Graphs." *ACM Computing Surveys*, 54(4), Article 71, 1-37. https://doi.org/10.1145/3447772
 
-**© 2025 Colaberry Inc. All Rights Reserved.**
+[22] Christophides, V., Efthymiou, V., Palpanas, T., Papadakis, G., & Stefanidis, K. (2021). "An Overview of End-to-End Entity Resolution for Big Data." *ACM Computing Surveys*, 53(6), Article 127, 1-42. https://doi.org/10.1145/3418896
 
-## Acronyms
+[23] Yu, T., Zhang, R., Yang, K., et al. (2018). "Spider: A Large-Scale Human-Labeled Dataset for Complex and Cross-Domain Semantic Parsing and Text-to-SQL Task." *Proceedings of EMNLP*, 3911-3921. https://arxiv.org/abs/1809.08887
 
-- **API:** Application Programming Interface
-- **BI:** Business Intelligence
-- **CDC:** Change Data Capture
-- **EHR:** Electronic Health Record
-- **ETL:** Extract, Transform, Load
-- **FHIR:** Fast Healthcare Interoperability Resources
-- **HIPAA:** Health Insurance Portability and Accountability Act
-- **HNSW:** Hierarchical Navigable Small World (graph-based vector search algorithm)
-- **ICD-10:** International Classification of Diseases, 10th Revision
-- **LLM:** Large Language Model
-- **LOINC:** Logical Observation Identifiers Names and Codes
-- **MRN:** Medical Record Number
-- **NDCG:** Normalized Discounted Cumulative Gain
-- **NPI:** National Provider Identifier
-- **RAG:** Retrieval-Augmented Generation
-- **RRF:** Reciprocal Rank Fusion
-- **SQL:** Structured Query Language
-- **TTL:** Time To Live
-
----
-
-**© 2025 Colaberry Inc. All Rights Reserved.**  
-INPACT™ and GOALS™ are trademarks of Colaberry Inc.
+[24] Li, B., Luo, Y., Chai, C., Li, G., & Tang, N. (2024). "The Dawn of Natural Language to SQL: Are We Fully Ready?" *Proceedings of the VLDB Endowment*, 17(11). https://arxiv.org/abs/2406.01265

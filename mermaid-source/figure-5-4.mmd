@@ -1,0 +1,27 @@
+graph TB
+    subgraph CURRENT["<b>CURRENT STATE (Week 4)</b>"]
+        direction LR
+        C_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> C_SQL["<b>Direct SQL</b><br/><b>No semantic</b>"] --> C_RES["<b>847 Records</b><br/><b>Unfiltered</b>"] --> C_FAIL["<b>47%</b>"]
+    end
+    
+    CURRENT -->|<b>Intelligence Layers</b>| TARGET
+    
+    subgraph TARGET["<b>TARGET STATE (Week 7)</b>"]
+        direction LR
+        T_Q["<b>User Query</b><br/>'Dr. Martinez'"] --> T_SEM["<b>Layer 3</b><br/><b>Semantic</b>"] --> T_RAG["<b>Layer 4</b><br/><b>Intelligence</b>"] --> T_WIN["<b>95%+</b>"]
+    end
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style C_Q fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style C_SQL fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style C_RES fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style C_FAIL fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    
+    style T_Q fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T_SEM fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T_RAG fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T_WIN fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#333333
+    style CURRENT fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style TARGET fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20

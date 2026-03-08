@@ -1,0 +1,46 @@
+
+graph TB
+    TITLE["LAYER 1:<br/><b>MULTI-MODAL</b><br/><b>STORAGE</b><br/>11 Categories"]
+    
+    subgraph FOUNDATION["Foundation (8 Types)"]
+        direction TB
+        S1["1. <b>RDBMS</b><br/>Transactions"]
+        S2["2. <b>NoSQL</b><br/>Documents"]
+        S3["3. <b>Graph DB</b><br/>Relationships"]
+        S4["4. <b>Object Store</b><br/>Unstructured"]
+        S5["5. <b>Lakehouse</b><br/>Analytics"]
+        S6["6. <b>Model Registry</b><br/>ML models"]
+        S7["7. <b>Time-Series</b><br/>IoT/metrics"]
+        S8["8. <b>Cache Layer</b><br/>Performance"]    
+    end
+    
+    subgraph PHASE2["Phase 2 (3 Types)"]
+        direction TB
+        S9["9. <b>Vector DB</b><br/>Embeddings"]
+        S10["10. <b>Search Index</b><br/>Full-text"]
+        S11["11. <b>Feature Store</b><br/>ML features"]
+    end
+    
+    OUTPUT["Right Storage<br/>for Each Query"]
+    
+    Copyright["© 2025 Colaberry Inc."]
+
+    TITLE --> FOUNDATION --> PHASE2 --> OUTPUT
+
+    style TITLE fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style Copyright fill:none,stroke:none,color:#333333
+    style FOUNDATION fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style PHASE2 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style S1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S4 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S5 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S6 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S7 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S8 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S9 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S10 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style S11 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style OUTPUT fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+

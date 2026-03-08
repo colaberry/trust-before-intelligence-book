@@ -1,0 +1,30 @@
+
+graph LR
+    subgraph BEFORE["<b>BEFORE: WEEK 0</b>"]
+        direction TB
+        B1["3 Failed Pilots<br/>$2M Spent<br/>0 Production Agents<br/>9–13s Response Time<br/>INPACT Score: 28/100"]
+    end
+    
+    subgraph TRANSFORM["<b>90 DAYS</b>"]
+        direction TB
+        T1["→"]
+    end
+    
+    subgraph AFTER["<b>AFTER: WEEK 12</b>"]
+        direction TB
+        A1["3 Production Agents<br/>$1.23M → 477% ROI<br/>50,000 Daily Queries<br/>1.6s Response Time<br/>INPACT Score: 89/100"]
+    end
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    BEFORE --> TRANSFORM --> AFTER
+
+    style BEFORE fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style B1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style TRANSFORM fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style T1 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style AFTER fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style A1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+
+    style Copyright fill:none,stroke:none,color:#333333
+    

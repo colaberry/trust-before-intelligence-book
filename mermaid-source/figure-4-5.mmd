@@ -1,0 +1,49 @@
+graph LR
+    subgraph BEFORE["<b>Week 0: Single-Modal</b>"]
+        OLD["<b>SQL Server Only</b><br/><b>All queries, one DB</b>"]
+        P1["<b>Cache: None</b><br/><b>Every query hits DB</b>"]
+        P2["<b>Graph queries: 8.2s</b><br/><b>Complex JOINs</b>"]
+        P3["<b>Schema: Rigid</b><br/><b>Change is slow</b>"]
+        P4["<b>ML: Spreadsheets</b><br/><b>No versioning</b>"]
+    end
+    
+    TRANSFORM["<b>4 Weeks</b>"]
+    
+    subgraph AFTER["<b>Week 4: Multi-Modal</b>"]
+        NEW["<b>8 Categories</b><br/><b>Right tool, right job</b>"]
+        S1["<b>Cache: &lt;10ms</b><br/><b>Redis MemoryDB</b>"]
+        S2["<b>Graph DB: 340ms</b><br/><b>Native traversal</b>"]
+        S3["<b>Schema: Flexible</b><br/><b>NoSQL + Lakehouse</b>"]
+        S4["<b>ML: Registry</b><br/><b>Full versioning</b>"]
+    end
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+
+    OLD --> P1
+    OLD --> P2
+    OLD --> P3
+    OLD --> P4
+    P1 --> TRANSFORM
+    P2 --> TRANSFORM
+    P3 --> TRANSFORM
+    P4 --> TRANSFORM
+    TRANSFORM --> NEW
+    NEW --> S1
+    NEW --> S2
+    NEW --> S3
+    NEW --> S4
+ 
+    style BEFORE fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style OLD fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P2 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P3 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style P4 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style TRANSFORM fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style AFTER fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style NEW fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S2 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S4 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#333333

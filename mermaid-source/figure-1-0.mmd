@@ -1,0 +1,25 @@
+
+graph LR
+    subgraph BUILT["WHAT THEY HAVE NOW"]
+        direction TB
+        B1["Batch ETL:<br/>Overnight updates<br/><br/>Static Dashboards:<br/>Human-mediated<br/><br/>Role-Based Access:<br/>Fixed permissions<br/><br/>Manual Review:<br/>No real-time audit"]
+    end
+    
+    subgraph GAP["THE GAP"]
+        direction TB
+        G1["Human-Era<br/>Infrastructure ≠<br/>AI Agent Needs<br/><br/>→ 95% Failure"]
+    end
+    
+    subgraph NEED["WHAT AGENTS NEED"]
+        direction TB
+        N1["Instant:<br/>Under 2s response<br/><br/>Natural:<br/>Semantic understanding<br/><br/>Permitted:<br/>Dynamic authorization<br/><br/>Transparent:<br/>Complete audit trail"]
+    end
+    
+    BUILT -->|"Trust Collapse"| GAP --> NEED
+    
+    style BUILT fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style B1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style GAP fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style G1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style NEED fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style N1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10

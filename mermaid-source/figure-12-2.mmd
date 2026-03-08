@@ -1,0 +1,34 @@
+
+graph LR
+    subgraph INPACT["PILLAR 1: INPACT"]
+        I1["1. Score ≥ 80/86<br/>2. Response < 10/5s<br/>3. NLU ≥ 80/85%<br/>4. Escalation < 20/15%<br/>5. Audit 100%"]
+    end
+    
+    subgraph ARCH["PILLAR 2: ARCHITECTURE"]
+        A1["6. 7 Layers Live<br/>7. 1/3+ Agents<br/>8. Orchestration < 5/3s<br/>9. Agreements Signed<br/>10. Data Residency"]
+    end
+    
+    subgraph GOALS["PILLAR 3: GOALS"]
+        G1["11. Access Control + Audit<br/>12. Dashboards Active<br/>13. SLA 99.0/99.5%+<br/>14. Semantic Mapped<br/>15. On-Call Coverage"]
+    end
+    
+    READY["PRODUCTION<br/>READY"]
+    
+    Note["Values show Generic/High-Stakes targets"]
+    
+    Copyright["© 2025 Colaberry Inc."]
+    
+    INPACT --> READY
+    ARCH --> READY
+    GOALS --> READY
+    
+    style INPACT fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style ARCH fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style GOALS fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style I1 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style A1 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style G1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style READY fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style Note fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style Copyright fill:none,stroke:none,color:#333333
+

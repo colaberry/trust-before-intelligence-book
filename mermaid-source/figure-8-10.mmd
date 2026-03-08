@@ -1,0 +1,35 @@
+
+graph TB
+  subgraph JOURNEY["<b>90-DAY TRANSFORMATION</b>"]
+    direction TB
+    D0["Day 0: Assessment<br/>INPACT 28/100"]
+    
+    subgraph BUILD["<b>Pillar 2: Build Layers</b>"]
+      direction LR
+      W4["Weeks 1-4<br/>Foundation<br/>Layers 1-2"]
+      W7["Weeks 5-7<br/>Intelligence<br/>Layers 3-4"]
+      W10["Weeks 8-10<br/>Trust<br/>Layers 5-7"]
+      W4 --> W7 --> W10
+    end
+    
+    W12["Weeks 11-12: Operations<br/>GOALS"]
+    
+    FINAL["Day 84: Production<br/>3 Agents Live"]
+  end
+  
+  Copyright["© 2025 Colaberry Inc."]
+  
+  D0 -->|"Pillar 1"| BUILD
+  BUILD -->|"Pillar 3"| W12
+  W12 --> FINAL
+  
+  style JOURNEY fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+  style D0 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+  style BUILD fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+  style W4 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style W7 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style W10 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style W12 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style FINAL fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+  style Copyright fill:none,stroke:none,color:#333333
+

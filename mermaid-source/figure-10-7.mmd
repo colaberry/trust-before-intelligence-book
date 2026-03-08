@@ -1,0 +1,52 @@
+
+graph RL
+    subgraph TRACKER["90-DAY TRACKER"]
+        direction RL
+        subgraph GATE["DAY ZERO GATE"]
+            T0["Tab 0: Day Zero Readiness<br/>(15-35 items by org size)"]
+        end
+
+        subgraph EXECUTIVE["EXECUTIVE VIEW"]
+            T1["Tab 1: Weekly Progress"]
+        end
+
+        subgraph FEEDS[" "]
+            direction TB
+            subgraph PILLARS["THREE PILLARS"]
+                direction RL
+                T2["Tab 2: INPACT Tracker"]
+                T3["Tab 3: GOALS Dashboard"]
+                T4["Tab 4: 7-Layer Status"]
+            end
+
+            subgraph OPS["OPERATIONS"]
+                direction RL
+                T5["Tab 5: Risk & Blocker Log"]
+                T6["Tab 6: Communication Log"]
+                T7["Tab 7: Budget Tracker"]
+            end
+        end
+    end
+
+    Copyright["© 2025 Colaberry Inc."]
+
+    T0 -->|"Unlocks"| T1
+    PILLARS --> T1
+    OPS --> T1
+
+    style TRACKER fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style GATE fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style EXECUTIVE fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style FEEDS fill:none,stroke:none
+    style PILLARS fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style OPS fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style T0 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style T1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style T2 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style T3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style T4 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style T5 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style T6 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style T7 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style Copyright fill:none,stroke:none,color:#333333
+

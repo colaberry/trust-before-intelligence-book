@@ -1,0 +1,40 @@
+graph TB
+    Q["<b>User Query</b><br/>'High-risk diabetic patients'"]
+    
+    subgraph ROW1["<b>Retrieval</b>"]
+        direction LR
+        S1["<b>1. Query</b>"] --> S2["<b>2. Embed</b>"] --> S3["<b>3. Retrieve</b>"]
+    end
+    
+    subgraph ROW2["<b>Processing</b>"]
+        direction LR
+        S4["<b>4. Rerank</b>"] --> S5["<b>5. Context</b>"]
+    end
+    
+    subgraph ROW3["<b>Generation</b>"]
+        direction LR
+        S6["<b>6. LLM</b>"] --> S7["<b>7. Cache</b>"]
+    end
+    
+    RESULT["<b>Grounded Response</b>"]
+    
+    Q --> ROW1
+    ROW1 --> ROW2
+    ROW2 --> ROW3
+    ROW3 --> RESULT
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+    
+    style Q fill:#ffffff,stroke:#e0e0e0,stroke-width:1px,color:#000000,rx:20,ry:20
+    style S1 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S2 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S4 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S5 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S6 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style S7 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+    style RESULT fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style Copyright fill:none,stroke:none,color:#333333
+    style ROW1 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style ROW2 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style ROW3 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20

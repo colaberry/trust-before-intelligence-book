@@ -1,0 +1,44 @@
+graph LR
+    subgraph era1["<b>SOFTWARE 1.0</b>"]
+        direction TB
+        P1["<b>Programming</b><br/><b>(1950s-2010s)</b><br/>Explicit instructions<br/>C++, Java, Python"]
+        I1["<b>Infrastructure</b><br/>Data warehouses<br/>Batch ETL, BI dashboards"]
+        P1 --> I1
+    end
+    
+    subgraph era2["<b>SOFTWARE 2.0</b>"]
+        direction TB
+        P2["<b>Programming</b><br/><b>(2010s-2023)</b><br/>Curate datasets<br/>Train ML models"]
+        I2["<b>Infrastructure</b><br/>Added ML layers<br/>MLOps, registries"]
+        P2 --> I2
+    end
+    
+    subgraph era3["<b>SOFTWARE 3.0</b>"]
+        direction TB
+        P3["<b>Programming</b><br/><b>(2023-Present)</b><br/>Natural language<br/>In-context learning"]
+        I3["<b>NEW Infrastructure</b><br/>Vector DBs, real-time<br/>Semantic layers, ABAC"]
+        P3 --> I3
+    end
+    
+    era1 -.->|<b>Added ML</b>| era2
+    era2 -.->|<b>PARADIGM SHIFT<br/>Requires INPACT</b>| era3
+    
+    Copyright["<b>© 2025 Colaberry Inc.</b>"]
+
+    %% 🔴 SOFTWARE 1.0 — FAILURE / BI-ERA
+    style era1 fill:#fff5f5,stroke:#f2caca,stroke-width:1px,color:#b71c1c,rx:20,ry:20
+    style P1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+    style I1 fill:#ffebee,stroke:none,color:#b71c1c,rx:10,ry:10
+
+    %% 🟠 SOFTWARE 2.0 — INTERMEDIATE / PRESSURE
+    style era2 fill:#edf4fa,stroke:#d6e4f2,stroke-width:1px,color:#333333,rx:20,ry:20
+    style P2 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+    style I2 fill:#4478A6,stroke:none,color:#ffffff,rx:10,ry:10
+
+    %% 🟢 SOFTWARE 3.0 — TRUSTED / INPACT-FULFILLED
+    style era3 fill:#e6f3f6,stroke:#c7e3ea,stroke-width:1px,color:#004d40,rx:20,ry:20
+    style P3 fill:#f9f9f9,stroke:none,color:#000000,rx:10,ry:10
+    style I3 fill:#30838C,stroke:none,color:#ffffff,rx:10,ry:10
+
+    %% FOOTER
+    style Copyright fill:none,stroke:none,color:#333333
